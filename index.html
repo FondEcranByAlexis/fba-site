@@ -1,129 +1,127 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#090909">
-<meta name="description" content="FondEcranByAlexis : dix univers, une identité. Créations, reportages et découverte des métiers.">
-<title>FondEcranByAlexis | L'image prend vie.</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08090d">
+<meta name="description" content="FondEcranByAlexis — L'image prend vie.">
+<title>FondEcranByAlexis — L'image prend vie.</title>
 <style>
-:root{--red:#e3212b;--silver:#c5c7cb;--bg:#090909;--panel:#151515}
+:root{--bg:#08090d;--panel:#12151c;--red:#ed1726;--white:#f5f6f8;--muted:#a8adb8;--line:#303541}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:#f5f5f5;font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+body{margin:0;background:radial-gradient(ellipse at 50% -15%,#28202a 0,#08090d 48%);color:var(--white);font-family:Arial,Helvetica,sans-serif}
 a{color:inherit;text-decoration:none}
-header{position:sticky;top:0;z-index:10;background:#090909ed;border-bottom:1px solid #333;padding:15px 6%;display:flex;justify-content:space-between;align-items:center}
-.brand{font-weight:900;letter-spacing:1px;font-size:19px}
-.brand span{color:var(--red)}
-nav{display:flex;gap:22px;font-size:13px}
+.wrap{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:5;background:#08090ded;border-bottom:1px solid #292d37;backdrop-filter:blur(12px)}
+.top{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{font-weight:900;letter-spacing:1.5px;font-size:21px}
+.brand span,h1 span{color:var(--red)}
+nav{display:flex;gap:24px;font-size:14px;color:#d5d8df}
 nav a:hover,.link:hover{color:var(--red)}
-.hero{min-height:570px;padding:100px 8%;display:flex;flex-direction:column;justify-content:center;background:radial-gradient(ellipse at 75% 45%,#501116 0%,#1a090b 30%,#090909 70%);border-bottom:1px solid #333}
-.eyebrow{color:var(--red);font-size:12px;font-weight:bold;letter-spacing:4px}
-h1{font-size:clamp(42px,8vw,82px);line-height:1.02;margin:20px 0;max-width:850px}
-h1 span{color:var(--silver)}
-.hero p{max-width:620px;color:#c3c3c3;font-size:17px}
-.btn{display:inline-block;margin-top:25px;background:var(--red);padding:14px 23px;border-radius:3px;font-weight:bold;width:max-content}
-.btn:hover{background:#b81821}
-section{padding:80px 7%}
-.section-tag{color:var(--red);font-size:12px;letter-spacing:3px;font-weight:bold}
-h2{font-size:clamp(30px,5vw,46px);margin:8px 0 15px}
-.intro{color:#aaa;max-width:680px;margin-bottom:35px}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.card{background:linear-gradient(145deg,#1b1b1b,#101010);border:1px solid #343434;padding:24px;min-height:175px;transition:.2s}
-.card:hover{border-color:var(--red);transform:translateY(-3px)}
-.number{color:var(--red);font-size:12px;letter-spacing:2px}
-.card h3{font-size:21px;margin:12px 0 5px}
-.card p{font-size:14px;color:#aaa;margin:0}
-.about{background:#121212;border-top:1px solid #292929;border-bottom:1px solid #292929}
-.columns{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
-.statement{font-size:clamp(25px,4vw,39px);font-weight:bold;line-height:1.2}
-.statement span{color:var(--red)}
-.services{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
-.service{padding:22px;border-left:2px solid var(--red);background:#171717}
-.service p{color:#aaa;font-size:14px}
-.contact{background:radial-gradient(ellipse at 80% 100%,#391014,#090909 65%)}
-.contact-box{border:1px solid #444;padding:30px;max-width:700px}
-.contact-box p{color:#bbb}
-footer{padding:28px 7%;border-top:1px solid #333;color:#888;font-size:12px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-@media(min-width:850px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:600px){header{padding:13px 5%}nav{gap:11px;font-size:11px}.brand{font-size:16px}.hero{min-height:490px;padding:75px 7%}section{padding:60px 6%}.columns{grid-template-columns:1fr}.services{grid-template-columns:1fr}.grid{grid-template-columns:1fr}footer{flex-direction:column}}
+.hero{min-height:550px;display:grid;place-items:center;text-align:center;padding:80px 0;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:560px;height:560px;border:1px solid #ed172633;border-radius:50%;box-shadow:0 0 100px #ed17261b,inset 0 0 100px #ed172611}
+.hero-inner{position:relative;max-width:820px}
+.eyebrow{color:#ff5964;text-transform:uppercase;letter-spacing:4px;font-size:12px;font-weight:800}
+h1{font-size:clamp(42px,8vw,82px);line-height:.98;margin:22px 0 18px;font-weight:900;letter-spacing:-3px}
+.hero p{font-size:clamp(16px,2.2vw,20px);line-height:1.65;color:#c1c5ce;max-width:650px;margin:0 auto 30px}
+.cta{display:inline-block;background:var(--red);padding:14px 23px;border-radius:5px;font-weight:800;letter-spacing:.5px}
+.cta:hover{background:#ff3442}
+section{padding:70px 0}
+.section-head{text-align:center;margin-bottom:34px}
+.section-head h2{font-size:clamp(28px,4vw,42px);margin:0 0 12px}
+.section-head p{color:var(--muted);line-height:1.6;margin:0}
+.redline{height:3px;width:64px;background:var(--red);margin:17px auto 0}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card{background:linear-gradient(145deg,#171b24,#0e1016);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:.2s}
+.card:hover{transform:translateY(-4px);border-color:#ed1726a8}
+.logo-box{aspect-ratio:1;background:#050609;display:grid;place-items:center;padding:12px;border-bottom:1px solid #292d37}
+.logo-box img{width:100%;height:100%;object-fit:contain}
+.logo-fallback{color:#a8adb8;text-align:center;font-weight:900;letter-spacing:1px}
+.card-body{padding:17px}
+.card h3{font-size:17px;margin:0 0 8px}
+.card p{font-size:14px;color:var(--muted);line-height:1.6;margin:0}
+.about{background:linear-gradient(180deg,transparent,#10131a 30%,#10131a 70%,transparent)}
+.intro{max-width:820px;margin:auto;text-align:center;color:#c1c5ce;line-height:1.8}
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.value,.contact{padding:24px;border:1px solid var(--line);border-radius:10px;background:#11141b}
+.value strong{display:block;margin-bottom:8px}
+.value p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+.contact{text-align:center;background:linear-gradient(135deg,#171b24,#0d0f14);padding:38px 20px}
+.contact p{color:var(--muted);line-height:1.7}
+footer{border-top:1px solid #292d37;padding:28px 0;color:#858c99;font-size:13px;text-align:center}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}nav{gap:13px;font-size:13px}}
+@media(max-width:520px){.top{flex-wrap:wrap;padding:12px 0}nav{width:100%;justify-content:space-between;padding-bottom:5px}.grid{gap:11px}.logo-box{padding:7px}.card-body{padding:11px}.card h3{font-size:14px}.card p{font-size:12px}.values{grid-template-columns:1fr}.hero{min-height:470px}}
 </style>
 </head>
 <body>
 <header>
+<div class="wrap top">
 <a class="brand" href="#">FBA<span>.</span></a>
 <nav>
-<a href="#univers">Univers</a>
-<a href="#apropos">La marque</a>
-<a href="#services">Prestations</a>
+<a href="#univers">Nos univers</a>
+<a href="#apropos">À propos</a>
 <a href="#contact">Contact</a>
 </nav>
+</div>
 </header>
-
 <main>
-<div class="hero">
-<div class="eyebrow">FONDECRANBYALEXIS · FBA</div>
-<h1>10 UNIVERS.<br><span>UNE IDENTITÉ.</span></h1>
-<p>Un écosystème créatif consacré aux métiers, aux passions, aux rencontres et aux images qui racontent des histoires.</p>
-<a class="btn" href="#univers">DÉCOUVRIR FBA ↓</a>
+<section class="hero">
+<div class="hero-inner wrap">
+<div class="eyebrow">FondEcranByAlexis</div>
+<h1>L'IMAGE<br><span>PREND VIE.</span></h1>
+<p>Un univers créatif dédié aux images, aux passions, aux métiers et aux histoires qui méritent d'être mises en lumière.</p>
+<a class="cta" href="#univers">DÉCOUVRIR NOS UNIVERS</a>
 </div>
-
+</section>
 <section id="univers">
-<div class="section-tag">NOTRE ÉCOSYSTÈME</div>
-<h2>Dix univers, une même passion.</h2>
-<p class="intro">Chaque univers possède sa propre identité et son domaine d'expression. Ensemble, ils forment la marque FondEcranByAlexis.</p>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">L'univers FBA</div>
+<h2>Nos univers</h2>
+<p>Dix identités, une même ambition : créer, raconter et partager.</p>
+<div class="redline"></div>
+</div>
 <div class="grid">
-<article class="card"><div class="number">01 / CRÉATION</div><h3>FBA Studio</h3><p>Création visuelle et projets audiovisuels.</p></article>
-<article class="card"><div class="number">02 / SECOURS</div><h3>FBA Secours</h3><p>Mettre en lumière les acteurs du secours et de l'urgence.</p></article>
-<article class="card"><div class="number">03 / SÉCURITÉ</div><h3>FBA Force de l'Ordre</h3><p>Découvrir les missions et les métiers des forces de l'ordre.</p></article>
-<article class="card"><div class="number">04 / CONSTRUCTION</div><h3>FBA BTP</h3><p>Valoriser les métiers du bâtiment et des travaux publics.</p></article>
-<article class="card"><div class="number">05 / DÉFENSE</div><h3>FBA Défense</h3><p>Explorer les univers et les métiers de la défense.</p></article>
-<article class="card"><div class="number">06 / DÉCOUVERTE</div><h3>FBA Métier Insolite</h3><p>Faire découvrir des professions rares et méconnues.</p></article>
-<article class="card"><div class="number">07 / IMMERSION</div><h3>FBA Reportage</h3><p>Rencontres, interviews et découvertes sur le terrain.</p></article>
-<article class="card"><div class="number">08 / PRODUCTION</div><h3>FBA Productions</h3><p>Des contenus vidéo imaginés et produits par FBA.</p></article>
-<article class="card"><div class="number">09 / SAVOIR-FAIRE</div><h3>FBA Métiers</h3><p>Missions, formations, parcours et réalités professionnelles.</p></article>
-<article class="card"><div class="number">10 / CRÉATION VISUELLE</div><h3>FBA Wallpapers</h3><p>Des collections de fonds d'écran autour des passions.</p></article>
+<article class="card"><div class="logo-box"><img src="images/fba-metiers.png" alt="FBA Métiers"><div class="logo-fallback">FBA MÉTIERS</div></div><div class="card-body"><h3>FBA MÉTIERS</h3><p>Découvrir les métiers, les savoir-faire et celles et ceux qui font vivre la France.</p></div></article>
+<article class="card"><div class="logo-box"><img src="images/fba-studio.png" alt="FBA Studio"><div class="logo-fallback">FBA STUDIO</div></div><div class="card-body"><h3>FBA STUDIO</h3><p>Création visuelle, identité graphique et contenus créatifs.</p></div></article>
+<article class="card"><div class="logo-box"><img src="images/fba-secours.png" alt="FBA Secours"><div class="logo-fallback">FBA SECOURS</div></div><div class="card-body"><h3>FBA SECOURS</h3><p>Les femmes, les hommes et les moyens engagés au service des autres.</p></div></article>
+<article class="card"><div class="logo-box"><img src="images/fba-force-ordre.png" alt="FBA Force de l'ordre"><div class="logo-fallback">FBA FORCE DE L'ORDRE</div></div><div class="card-body"><h3>FBA FORCE DE L'ORDRE</h3><p>Découvrir les missions des forces de sécurité et de protection.</p></div></article>
+<article class="card"><div class="logo-box"><img src="images/fba-btp.png" alt="FBA BTP"><div class="logo-fallback">FBA BTP</div></div><div class="card-body"><h3>FBA BTP</h3><p>Chantiers, construction, énergie et métiers du bâtiment.</p></div></article>
+<article class="card"><div class="logo-box"><img src="images/fba-defense.png" alt="FBA Défense"><div class="logo-fallback">FBA DÉFENSE</div></div><div class="card-body"><h3>FBA DÉFENSE</h3><p>Découverte des armées, des équipements et des savoir-faire militaires.</p></div></article>
+<article class="card"><div class="logo-box"><img src="images/fba-metier-insolite.png" alt="FBA Métier insolite"><div class="logo-fallback">FBA MÉTIER INSOLITE</div></div><div class="card-body"><h3>FBA MÉTIER INSOLITE</h3><p>Des professions rares, surprenantes et méconnues.</p></div></article>
+<article class="card"><div class="logo-box"><img src="images/fba-reportage.png" alt="FBA Reportage"><div class="logo-fallback">FBA REPORTAGE</div></div><div class="card-body"><h3>FBA REPORTAGE</h3><p>Rencontres, interviews et reportages au plus près du terrain.</p></div></article>
+<article class="card"><div class="logo-box"><img src="images/fba-productions.png" alt="FBA Productions"><div class="logo-fallback">FBA PRODUCTIONS</div></div><div class="card-body"><h3>FBA PRODUCTIONS</h3><p>Des projets vidéo construits de l'idée à la réalisation.</p></div></article>
+<article class="card"><div class="logo-box"><img src="images/fba-wallpapers.png" alt="FBA Wallpapers"><div class="logo-fallback">FBA WALLPAPERS</div></div><div class="card-body"><h3>FBA WALLPAPERS</h3><p>Des fonds d'écran pour afficher ses passions au quotidien.</p></div></article>
+</div>
 </div>
 </section>
-
 <section class="about" id="apropos">
-<div class="columns">
-<div>
-<div class="section-tag">À PROPOS DE FBA</div>
-<h2>Une marque. Des histoires. Des passions.</h2>
-<p class="intro">FondEcranByAlexis est un projet indépendant qui rassemble plusieurs univers éditoriaux et créatifs. Son ambition : produire des contenus visuels de qualité, valoriser les savoir-faire et faire découvrir des personnes et des métiers.</p>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Notre identité</div>
+<h2>Une passion, plusieurs univers</h2>
+<div class="redline"></div>
 </div>
-<div class="statement">L'image prend <span>vie.</span><br>Les passions prennent leur place.</div>
+<p class="intro">FondEcranByAlexis rassemble des univers complémentaires autour de la création de contenus et de la découverte. Chaque branche possède son identité, tout en faisant partie d'un même projet : FBA.</p>
+<div class="values">
+<div class="value"><strong>Créer</strong><p>Imaginer des visuels et des contenus soignés, avec une identité reconnaissable.</p></div>
+<div class="value"><strong>Découvrir</strong><p>Mettre en avant les métiers, les passions, les équipes et les coulisses.</p></div>
+<div class="value"><strong>Partager</strong><p>Faire vivre une communauté autour de contenus accessibles et authentiques.</p></div>
 </div>
-</section>
-
-<section id="services">
-<div class="section-tag">CE QUE FBA DÉVELOPPE</div>
-<h2>Création & prestations</h2>
-<p class="intro">Des formats pensés pour raconter, présenter et valoriser les projets, les métiers et les personnes.</p>
-<div class="services">
-<div class="service"><h3>Reportages</h3><p>Immersions, découvertes et récits de terrain.</p></div>
-<div class="service"><h3>Interviews</h3><p>Portraits et échanges pour mettre en avant les parcours.</p></div>
-<div class="service"><h3>Création vidéo</h3><p>Conception et montage de contenus audiovisuels.</p></div>
-<div class="service"><h3>Création visuelle</h3><p>Visuels, collections et supports de communication.</p></div>
 </div>
 </section>
-
-<section class="contact" id="contact">
-<div class="section-tag">ENTRER EN CONTACT</div>
-<h2>Un projet ? Parlons-en.</h2>
-<div class="contact-box">
-<p>Vous souhaitez présenter un métier, partager une histoire ou imaginer un reportage avec FBA ? Prenons contact pour en discuter.</p>
-<p><strong>FondEcranByAlexis</strong><br>Projet indépendant · France</p>
-<p>Adresse e-mail de contact à ajouter prochainement.</p>
+<section id="contact">
+<div class="wrap">
+<div class="contact">
+<div class="eyebrow">Restons en contact</div>
+<h2>Un projet ou une idée ?</h2>
+<p>FBA est en développement. Les coordonnées et les liens vers les réseaux seront ajoutés ici.</p>
+<a class="cta" href="#univers">EXPLORER FBA</a>
+</div>
 </div>
 </section>
 </main>
-
-<footer>
-<span>© 2026 FondEcranByAlexis · FBA</span>
-<span>L'image prend vie.</span>
-</footer>
+<footer>© 2026 FondEcranByAlexis — L'image prend vie.</footer>
 </body>
 </html>
