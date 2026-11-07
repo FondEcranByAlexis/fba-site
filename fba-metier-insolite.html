@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="FBA Métier Insolite : découvrez les professions rares, surprenantes et méconnues.">
+  <title>FBA Métier Insolite | FondEcranByAlexis</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080808;
+      color: #f2f2f2;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      padding: 20px;
+      border-bottom: 1px solid #292929;
+      background: #0d0d0d;
+      text-align: center;
+    }
+
+    .brand {
+      color: #fff;
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .brand span {
+      color: #e32636;
+    }
+
+    nav {
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 13px;
+    }
+
+    nav a:hover {
+      color: #e32636;
+    }
+
+    .hero {
+      padding: 65px 20px 55px;
+      text-align: center;
+      background: radial-gradient(ellipse at center, #351014 0%, #111 42%, #080808 75%);
+      border-bottom: 1px solid #292929;
+    }
+
+    .logo {
+      width: min(230px, 65%);
+      height: auto;
+      object-fit: contain;
+      margin-bottom: 25px;
+      filter: drop-shadow(0 0 20px rgba(227, 38, 54, .25));
+    }
+
+    .eyebrow {
+      color: #e32636;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(30px, 7vw, 52px);
+      line-height: 1.1;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+    }
+
+    h1 span {
+      color: #e32636;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #c7c7c7;
+      font-size: 16px;
+    }
+
+    .slogan {
+      margin-top: 25px;
+      color: #aaa;
+      font-size: 13px;
+      letter-spacing: 3px;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 1150px;
+      margin: auto;
+      padding: 55px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .section-title h2 {
+      font-size: 27px;
+      margin-bottom: 8px;
+    }
+
+    .section-title h2 span {
+      color: #e32636;
+    }
+
+    .section-title p {
+      color: #999;
+      font-size: 14px;
+    }
+
+    .intro-grid,
+    .universe-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-bottom: 60px;
+    }
+
+    .panel,
+    .universe-card {
+      background: linear-gradient(145deg, #171717, #0e0e0e);
+      border: 1px solid #303030;
+      border-radius: 12px;
+      padding: 24px;
+      transition: .25s ease;
+    }
+
+    .panel:hover,
+    .universe-card:hover {
+      border-color: #e32636;
+      transform: translateY(-4px);
+    }
+
+    .number {
+      color: #e32636;
+      font-size: 25px;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .panel h3,
+    .universe-card h3 {
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+
+    .panel p,
+    .universe-card p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .universe-card {
+      min-height: 175px;
+    }
+
+    .status {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 5px 9px;
+      border: 1px solid #713039;
+      border-radius: 20px;
+      color: #ed7c86;
+      font-size: 10px;
+      letter-spacing: 1px;
+    }
+
+    .mission {
+      padding: 40px 25px;
+      text-align: center;
+      border: 1px solid #64232b;
+      border-radius: 14px;
+      background: radial-gradient(ellipse at center, #291014, #101010 75%);
+    }
+
+    .mission h2 {
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+
+    .mission h2 span {
+      color: #e32636;
+    }
+
+    .mission p {
+      max-width: 700px;
+      margin: auto;
+      color: #bbb;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 22px;
+      border: 1px solid #e32636;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: bold;
+      transition: .2s;
+    }
+
+    .back:hover {
+      background: #e32636;
+    }
+
+    footer {
+      border-top: 1px solid #292929;
+      padding: 25px 15px;
+      text-align: center;
+      color: #777;
+      font-size: 12px;
+    }
+
+    footer strong {
+      color: #ddd;
+    }
+
+    @media (max-width: 750px) {
+      .intro-grid,
+      .universe-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .intro-grid,
+      .universe-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      main {
+        padding: 40px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a class="brand" href="index.html">FOND<span>ECRAN</span>BYALEXIS</a>
+  <nav>
+    <a href="index.html">ACCUEIL</a>
+    <a href="metiers.html">FBA MÉTIERS</a>
+    <a href="fba-reportage.html">FBA REPORTAGE</a>
+    <a href="fba-studio.html">FBA STUDIO</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <img class="logo" src="images/fba-metier-insolite.png" alt="Logo FBA Métier Insolite">
+
+  <div class="eyebrow">L'EXTRAORDINAIRE AU QUOTIDIEN</div>
+  <h1>FBA <span>MÉTIER INSOLITE</span></h1>
+
+  <p>
+    Derrière chaque profession se cache parfois un univers méconnu.
+    Partez à la découverte de métiers rares, étonnants et hors du commun.
+  </p>
+
+  <div class="slogan">LES MÉTIERS QUI FONT LA FRANCE.</div>
+</section>
+
+<main>
+
+  <div class="section-title">
+    <h2>À LA DÉCOUVERTE DE <span>L'INSOLITE</span></h2>
+    <p>Des professions surprenantes, des savoir-faire et des parcours uniques.</p>
+  </div>
+
+  <section class="intro-grid">
+
+    <article class="panel">
+      <div class="number">01</div>
+      <h3>Découvrir</h3>
+      <p>Explorer des métiers peu connus et comprendre leur réalité quotidienne.</p>
+    </article>
+
+    <article class="panel">
+      <div class="number">02</div>
+      <h3>Comprendre</h3>
+      <p>Découvrir les missions, les compétences et les contraintes de chaque profession.</p>
+    </article>
+
+    <article class="panel">
+      <div class="number">03</div>
+      <h3>Valoriser</h3>
+      <p>Mettre en lumière les femmes et les hommes qui exercent ces métiers singuliers.</p>
+    </article>
+
+  </section>
+
+  <div class="section-title">
+    <h2>NOS <span>MÉTIERS À DÉCOUVRIR</span></h2>
+    <p>Un aperçu des professions qui seront explorées dans cet univers.</p>
+  </div>
+
+  <section class="universe-grid">
+
+    <article class="universe-card">
+      <h3>🚛 Convoyeur de l'extrême</h3>
+      <p>Transport de charges exceptionnelles et acheminements hors normes.</p>
+      <span class="status">CONTENU À DÉVELOPPER</span>
+    </article>
+
+    <article class="universe-card">
+      <h3>🌊 Plongeur professionnel</h3>
+      <p>Interventions sous-marines, travaux immergés et explorations techniques.</p>
+      <span class="status">CONTENU À DÉVELOPPER</span>
+    </article>
+
+    <article class="universe-card">
+      <h3>💣 Démineur</h3>
+      <p>Détection, sécurisation et neutralisation d'engins explosifs.</p>
+      <span class="status">CONTENU À DÉVELOPPER</span>
+    </article>
+
+    <article class="universe-card">
+      <h3>🐾 Soigneur animalier spécialisé</h3>
+      <p>Prendre soin d'animaux et participer à leur protection au quotidien.</p>
+      <span class="status">CONTENU À DÉVELOPPER</span>
+    </article>
+
+    <article class="universe-card">
+      <h3>🎬 Cascadeur professionnel</h3>
+      <p>Préparer et réaliser des scènes d'action pour le cinéma et les spectacles.</p>
+      <span class="status">CONTENU À DÉVELOPPER</span>
+    </article>
+
+    <article class="universe-card">
+      <h3>🕳️ Spéléologue professionnel</h3>
+      <p>Explorer les milieux souterrains et intervenir dans des environnements complexes.</p>
+      <span class="status">CONTENU À DÉVELOPPER</span>
+    </article>
+
+    <article class="universe-card">
+      <h3>🎢 Testeur de montagnes russes</h3>
+      <p>Contrôles, essais et évaluations des attractions et de leur fonctionnement.</p>
+      <span class="status">CONTENU À DÉVELOPPER</span>
+    </article>
+
+    <article class="universe-card">
+      <h3>🎥 Technicien en effets spéciaux</h3>
+      <p>Créer des effets visuels et pratiques pour le cinéma et l'audiovisuel.</p>
+      <span class="status">CONTENU À DÉVELOPPER</span>
+    </article>
+
+    <article class="universe-card">
+      <h3>🌊 Gardien de phare</h3>
+      <p>Un métier lié à la surveillance maritime, à la signalisation et au patrimoine côtier.</p>
+      <span class="status">CONTENU À DÉVELOPPER</span>
+    </article>
+
+  </section>
+
+  <section class="mission">
+    <h2>LES MÉTIERS QUI SORTENT <span>DE L'ORDINAIRE</span></h2>
+    <p>
+      FBA Métier Insolite a pour ambition de faire découvrir des professions
+      étonnantes, de présenter leurs réalités et de donner la parole à celles
+      et ceux qui les exercent.
+    </p>
+
+    <a class="back" href="metiers.html">DÉCOUVRIR FBA MÉTIERS</a>
+    <br>
+    <a class="back" href="index.html">RETOUR À L'ACCUEIL</a>
+  </section>
+
+</main>
+
+<footer>
+  <strong>FONDECRANBYALEXIS</strong><br>
+  FBA MÉTIER INSOLITE — LES MÉTIERS QUI FONT LA FRANCE.<br>
+  © 2026 — Tous droits réservés.
+</footer>
+
+</body>
+</html>
