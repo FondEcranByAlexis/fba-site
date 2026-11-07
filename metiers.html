@@ -151,6 +151,64 @@ section {
   grid-template-columns: repeat(2, 1fr);
   gap: 25px;
 }
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin: 35px 0;
+}
+
+.category-card {
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    background: linear-gradient(145deg, #19191f, #09090c);
+    border: 1px solid #34343d;
+    border-radius: 14px;
+    transition: .3s;
+}
+
+.category-card:hover {
+    border-color: #ed1728;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px #ed172833;
+}
+
+.category-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    padding: 15px;
+    background: #101015;
+}
+
+.category-card h3 {
+    color: white;
+    font-size: 19px;
+    margin: 15px 8px 8px;
+}
+
+.category-card p {
+    color: #a4a5ae;
+    font-size: 13px;
+    padding: 0 12px 18px;
+}
+
+@media (max-width: 700px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .category-card img {
+        height: 115px;
+    }
+
+    .category-card h3 {
+        font-size: 15px;
+    }
+}
 .job-card { overflow: hidden; padding: 0; }
 .job-top {
   min-height: 145px;
@@ -308,7 +366,39 @@ footer a { color: var(--red); }
         respect et passion.
       </p>
     </div>
+<div class="category-grid">
 
+  <a href="#secours" class="category-card">
+    <img src="images/fba-secours.png" alt="Secours">
+    <h3>SECOURS</h3>
+    <p>Pompiers, ambulanciers et secouristes</p>
+  </a>
+
+  <a href="#btp" class="category-card">
+    <img src="images/fba-btp.png" alt="BTP">
+    <h3>BTP</h3>
+    <p>Électriciens, maçons, grutiers et artisans</p>
+  </a>
+
+  <a href="#forces-ordre" class="category-card">
+    <img src="images/fba-force-ordre.png" alt="Forces de l'ordre">
+    <h3>FORCES DE L'ORDRE</h3>
+    <p>Police, gendarmerie et CRS</p>
+  </a>
+
+  <a href="#defense" class="category-card">
+    <img src="images/fba-defense.png" alt="Défense">
+    <h3>DÉFENSE</h3>
+    <p>Armée de terre, air et marine</p>
+  </a>
+
+  <a href="#insolites" class="category-card">
+    <img src="images/fba-metier-insolite.png" alt="Métiers insolites">
+    <h3>MÉTIERS INSOLITES</h3>
+    <p>Professions rares et spécialisées</p>
+  </a>
+
+</div>
     <div class="job-grid">
       <a href="electricien.html" class="job-card">
         <div class="job-top">
