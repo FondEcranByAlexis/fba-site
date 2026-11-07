@@ -1,0 +1,566 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+
+  <title>FBA Force de l'Ordre | FondEcranByAlexis</title>
+
+  <meta name="description" content="FBA Force de l'Ordre : découvrez les métiers, les unités, les véhicules, les équipements et les professionnels des forces de sécurité.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #080808;
+      color: #eee;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      background: #0b0b0b;
+      border-bottom: 1px solid #292929;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .brand span {
+      color: #e32636;
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #bbb;
+      font-size: 13px;
+      transition: .2s;
+    }
+
+    nav a:hover {
+      color: #e32636;
+    }
+
+    .hero {
+      min-height: 570px;
+      padding: 70px 7%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.88)),
+        radial-gradient(circle at center, #54151d, #111 55%, #050505);
+      border-bottom: 1px solid #3b2023;
+    }
+
+    .hero img {
+      width: 190px;
+      max-width: 65%;
+      margin-bottom: 25px;
+      filter: drop-shadow(0 0 20px rgba(227,38,54,.3));
+    }
+
+    .eyebrow {
+      color: #e32636;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 5px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 7vw, 72px);
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
+
+    h1 span {
+      color: #e32636;
+    }
+
+    .hero p {
+      max-width: 750px;
+      color: #ccc;
+      font-size: 17px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 32px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 24px;
+      border: 1px solid #e32636;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      transition: .25s;
+    }
+
+    .btn.primary {
+      background: #e32636;
+    }
+
+    .btn:hover {
+      background: #fff;
+      border-color: #fff;
+      color: #111;
+    }
+
+    section {
+      padding: 75px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .section-title .eyebrow {
+      margin-bottom: 8px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(27px, 4vw, 39px);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-title h2 span {
+      color: #e32636;
+    }
+
+    .section-title p {
+      color: #999;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .intro-card {
+      background: linear-gradient(145deg, #191919, #0d0d0d);
+      border: 1px solid #303030;
+      border-top: 3px solid #e32636;
+      padding: 28px;
+    }
+
+    .intro-card h3 {
+      margin-bottom: 12px;
+      font-size: 19px;
+    }
+
+    .intro-card p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .universe {
+      background: #0d0d0d;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+    }
+
+    .universe-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .universe-card {
+      min-height: 220px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background: linear-gradient(145deg, #1d1d1d, #101010);
+      border: 1px solid #333;
+      transition: .25s;
+    }
+
+    .universe-card:hover {
+      transform: translateY(-5px);
+      border-color: #e32636;
+    }
+
+    .card-number {
+      color: #e32636;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+    }
+
+    .universe-card h3 {
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .universe-card p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .status {
+      display: inline-block;
+      align-self: flex-start;
+      margin-top: 18px;
+      padding: 5px 10px;
+      border: 1px solid #70202a;
+      color: #e32636;
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .mission {
+      text-align: center;
+      background: linear-gradient(120deg, #260d11, #101010);
+      border-top: 1px solid #492027;
+      border-bottom: 1px solid #492027;
+    }
+
+    .mission h2 {
+      font-size: clamp(27px, 4vw, 38px);
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .mission h2 span {
+      color: #e32636;
+    }
+
+    .mission p {
+      max-width: 750px;
+      margin: auto;
+      color: #ccc;
+    }
+
+    .mission .btn {
+      margin-top: 27px;
+    }
+
+    footer {
+      padding: 35px 7%;
+      text-align: center;
+      background: #050505;
+      color: #777;
+      font-size: 12px;
+    }
+
+    footer strong {
+      color: #e32636;
+    }
+
+    footer a {
+      color: #aaa;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .intro-grid,
+      .universe-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .intro-grid,
+      .universe-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 50px 6%;
+      }
+
+      .hero {
+        min-height: 500px;
+        padding: 50px 6%;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="brand">
+      FBA <span>BY ALEXIS</span>
+    </a>
+
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="#univers">Notre univers</a>
+      <a href="#mission">Notre mission</a>
+      <a href="metiers.html">FBA Métiers</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <img
+        src="images/fba-force-ordre.png"
+        alt="Logo officiel FBA Force de l'Ordre"
+      >
+
+      <div class="eyebrow">FONDECRANBYALEXIS PRÉSENTE</div>
+
+      <h1>FBA <span>FORCE DE L'ORDRE</span></h1>
+
+      <p>
+        Au service de la sécurité et de la protection de la population.
+        Découvrez les femmes et les hommes qui veillent sur notre
+        quotidien, leurs missions, leurs unités et leurs équipements.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#univers" class="btn primary">
+          EXPLORER L'UNIVERS
+        </a>
+
+        <a href="#mission" class="btn">
+          DÉCOUVRIR FBA FORCE DE L'ORDRE
+        </a>
+      </div>
+
+    </section>
+
+    <!-- PRESENTATION -->
+
+    <section>
+
+      <div class="section-title">
+        <div class="eyebrow">NOTRE UNIVERS</div>
+        <h2>Protéger et <span>servir</span></h2>
+
+        <p>
+          FBA Force de l'Ordre met en lumière les institutions,
+          les unités et les professionnels qui contribuent
+          à la sécurité de tous.
+        </p>
+      </div>
+
+      <div class="intro-grid">
+
+        <article class="intro-card">
+          <h3>Les forces de sécurité</h3>
+          <p>
+            Police nationale, gendarmerie, police municipale
+            et autres services spécialisés.
+          </p>
+        </article>
+
+        <article class="intro-card">
+          <h3>Les moyens opérationnels</h3>
+          <p>
+            Véhicules, équipements, technologies et matériels
+            mobilisés pour les missions de sécurité.
+          </p>
+        </article>
+
+        <article class="intro-card">
+          <h3>Les femmes et les hommes</h3>
+          <p>
+            Découvrez les parcours, les compétences et les
+            engagements des professionnels sur le terrain.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- RUBRIQUES -->
+
+    <section class="universe" id="univers">
+
+      <div class="section-title">
+        <div class="eyebrow">EXPLOREZ FBA FORCE DE L'ORDRE</div>
+        <h2>Nos <span>rubriques</span></h2>
+
+        <p>
+          Plusieurs espaces pour découvrir les différentes
+          facettes des forces de sécurité.
+        </p>
+      </div>
+
+      <div class="universe-grid">
+
+        <article class="universe-card">
+          <div class="card-number">01 — INSTITUTIONS</div>
+          <h3>Police nationale</h3>
+          <p>
+            Les missions, les services et les différentes
+            directions de la Police nationale.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+        <article class="universe-card">
+          <div class="card-number">02 — GENDARMERIE</div>
+          <h3>Gendarmerie nationale</h3>
+          <p>
+            Une force militaire au service de la sécurité
+            et de la protection des citoyens.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+        <article class="universe-card">
+          <div class="card-number">03 — UNITÉS</div>
+          <h3>Unités spécialisées</h3>
+          <p>
+            Découvrez les unités d'intervention et les
+            services spécialisés.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+        <article class="universe-card">
+          <div class="card-number">04 — TERRAIN</div>
+          <h3>Interventions et missions</h3>
+          <p>
+            Comprendre les missions de sécurité,
+            de prévention et d'intervention.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+        <article class="universe-card">
+          <div class="card-number">05 — MATÉRIEL</div>
+          <h3>Véhicules et équipements</h3>
+          <p>
+            Véhicules d'intervention, moyens de protection
+            et équipements professionnels.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+        <article class="universe-card">
+          <div class="card-number">06 — REPORTAGES</div>
+          <h3>Reportages et découvertes</h3>
+          <p>
+            Rencontres, présentations et découvertes
+            des métiers de la sécurité.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+        <article class="universe-card">
+          <div class="card-number">07 — COLLECTIONS</div>
+          <h3>Fonds d'écran</h3>
+          <p>
+            Retrouvez des visuels consacrés aux forces
+            de sécurité, aux unités et aux véhicules.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- MISSION -->
+
+    <section class="mission" id="mission">
+
+      <div class="eyebrow">L'ESPRIT FBA FORCE DE L'ORDRE</div>
+
+      <h2>Comprendre et <span>valoriser</span></h2>
+
+      <p>
+        Derrière chaque uniforme, chaque véhicule et chaque mission,
+        il y a des femmes et des hommes, des responsabilités
+        et des compétences. FBA Force de l'Ordre souhaite faire
+        découvrir cet univers et mettre en valeur les professionnels
+        qui contribuent à notre sécurité.
+      </p>
+
+      <a href="metiers.html" class="btn">
+        DÉCOUVRIR FBA MÉTIERS
+      </a>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <p>
+      <strong>FBA FORCE DE L'ORDRE</strong> — AU SERVICE DE LA SÉCURITÉ.
+    </p>
+
+    <p>
+      <a href="index.html">Accueil FBA</a>
+      |
+      <a href="metiers.html">FBA Métiers</a>
+    </p>
+
+    <p>
+      © 2026 FondEcranByAlexis — Tous droits réservés.
+    </p>
+
+  </footer>
+
+</body>
+</html>
