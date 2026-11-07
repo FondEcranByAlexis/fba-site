@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="FBA Wallpapers : des fonds d'écran originaux pour personnaliser vos écrans et donner vie à vos passions.">
+  <title>FBA Wallpapers | FondEcranByAlexis</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080808;
+      color: #f2f2f2;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      padding: 20px;
+      border-bottom: 1px solid #292929;
+      background: #0d0d0d;
+      text-align: center;
+    }
+
+    .brand {
+      color: #fff;
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .brand span {
+      color: #e32636;
+    }
+
+    nav {
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 13px;
+    }
+
+    nav a:hover {
+      color: #e32636;
+    }
+
+    .hero {
+      padding: 65px 20px 55px;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at center, #351014 0%, #111 42%, #080808 75%);
+      border-bottom: 1px solid #292929;
+    }
+
+    .logo {
+      width: min(230px, 65%);
+      height: auto;
+      object-fit: contain;
+      margin-bottom: 25px;
+      filter: drop-shadow(0 0 20px rgba(227, 38, 54, .25));
+    }
+
+    .eyebrow {
+      color: #e32636;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(30px, 7vw, 52px);
+      line-height: 1.1;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+    }
+
+    h1 span {
+      color: #e32636;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #c7c7c7;
+      font-size: 16px;
+    }
+
+    .slogan {
+      margin-top: 25px;
+      color: #aaa;
+      font-size: 13px;
+      letter-spacing: 3px;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 1150px;
+      margin: auto;
+      padding: 55px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .section-title h2 {
+      font-size: 27px;
+      margin-bottom: 8px;
+    }
+
+    .section-title h2 span {
+      color: #e32636;
+    }
+
+    .section-title p {
+      color: #999;
+      font-size: 14px;
+    }
+
+    .intro-grid,
+    .universe-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-bottom: 60px;
+    }
+
+    .panel,
+    .universe-card {
+      background: linear-gradient(145deg, #171717, #0e0e0e);
+      border: 1px solid #303030;
+      border-radius: 12px;
+      padding: 24px;
+      transition: .25s ease;
+    }
+
+    .panel:hover,
+    .universe-card:hover {
+      border-color: #e32636;
+      transform: translateY(-4px);
+    }
+
+    .panel h3,
+    .universe-card h3 {
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+
+    .panel p,
+    .universe-card p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .number {
+      color: #e32636;
+      font-size: 25px;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .universe-card {
+      min-height: 155px;
+    }
+
+    .status {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 5px 9px;
+      border: 1px solid #713039;
+      border-radius: 20px;
+      color: #ed7c86;
+      font-size: 10px;
+      letter-spacing: 1px;
+    }
+
+    .mission {
+      padding: 40px 25px;
+      text-align: center;
+      border: 1px solid #64232b;
+      border-radius: 14px;
+      background: radial-gradient(ellipse at center, #291014, #101010 75%);
+    }
+
+    .mission h2 {
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+
+    .mission h2 span {
+      color: #e32636;
+    }
+
+    .mission p {
+      max-width: 700px;
+      margin: auto;
+      color: #bbb;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 22px;
+      border: 1px solid #e32636;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: bold;
+      transition: .2s;
+    }
+
+    .back:hover {
+      background: #e32636;
+    }
+
+    footer {
+      border-top: 1px solid #292929;
+      padding: 25px 15px;
+      text-align: center;
+      color: #777;
+      font-size: 12px;
+    }
+
+    footer strong {
+      color: #ddd;
+    }
+
+    @media (max-width: 750px) {
+      .intro-grid,
+      .universe-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .intro-grid,
+      .universe-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      main {
+        padding: 40px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a class="brand" href="index.html">FOND<span>ECRAN</span>BYALEXIS</a>
+  <nav>
+    <a href="index.html">ACCUEIL</a>
+    <a href="metiers.html">FBA MÉTIERS</a>
+    <a href="fba-studio.html">FBA STUDIO</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <img class="logo" src="images/fba-wallpapers.png" alt="Logo FBA Wallpapers">
+
+  <div class="eyebrow">L'UNIVERS DE LA PERSONNALISATION</div>
+  <h1>FBA <span>WALLPAPERS</span></h1>
+
+  <p>
+    Des fonds d'écran originaux, immersifs et soigneusement imaginés
+    pour mettre en valeur vos passions et personnaliser vos écrans.
+  </p>
+
+  <div class="slogan">L'IMAGE PREND VIE.</div>
+</section>
+
+<main>
+
+  <div class="section-title">
+    <h2>UN UNIVERS, <span>DES PASSIONS</span></h2>
+    <p>Découvrez les différents thèmes de FBA Wallpapers.</p>
+  </div>
+
+  <section class="intro-grid">
+    <article class="panel">
+      <div class="number">01</div>
+      <h3>Création originale</h3>
+      <p>Des compositions visuelles pensées pour offrir une identité unique à chaque collection.</p>
+    </article>
+
+    <article class="panel">
+      <div class="number">02</div>
+      <h3>Qualité visuelle</h3>
+      <p>Des images conçues pour mettre en valeur les détails, les couleurs et les ambiances.</p>
+    </article>
+
+    <article class="panel">
+      <div class="number">03</div>
+      <h3>Passion et diversité</h3>
+      <p>Des collections variées autour des univers qui nous passionnent.</p>
+    </article>
+  </section>
+
+  <div class="section-title">
+    <h2>NOS <span>COLLECTIONS</span></h2>
+    <p>Les grandes thématiques de FBA Wallpapers.</p>
+  </div>
+
+  <section class="universe-grid">
+
+    <article class="universe-card">
+      <h3>🏎️ Automobile et sport mécanique</h3>
+      <p>Formule 1, MotoGP, voitures de sport et univers automobiles.</p>
+      <span class="status">CONTENU À DÉVELOPPER</span>
+    </article>
+
+    <article class="universe-card">
+      <h3>🚁 Aviation et géants du ciel</h3>
+      <p>Avions, hélicoptères, aviation civile et militaire.</p>
+      <span class="status">CONTENU À DÉVELOPPER</span>
+    </article>
+
+    <article class="universe-card">
+      <h3>🚒 Secours et interventions</h3>
+      <p>Pompiers, secours, véhicules et interventions.</p>
+      <span class="status">CONTENU À DÉVELOPPER</span>
+    </article>
+
+    <article class="universe-card">
+      <h3>🇫🇷 France et patrimoine</h3>
+      <p>Monuments, paysages, régions et lieux emblématiques.</p>
+      <span class="status">CONTENU À DÉVELOPPER</span>
+    </article>
+
+    <article class="universe-card">
+      <h3>⚔️ Défense et forces armées</h3>
+      <p>Armées, équipements, matériels et technologies.</p>
+      <span class="status">CONTENU À DÉVELOPPER</span>
+    </article>
+
+    <article class="universe-card">
+      <h3>🏗️ BTP et machines</h3>
+      <p>Engins de chantier, camions, machines et grands travaux.</p>
+      <span class="status">CONTENU À DÉVELOPPER</span>
+    </article>
+
+    <article class="universe-card">
+      <h3>🌲 Nature et paysages</h3>
+      <p>Montagnes, forêts, panoramas et grands espaces.</p>
+      <span class="status">CONTENU À DÉVELOPPER</span>
+    </article>
+
+    <article class="universe-card">
+      <h3>🎮 Gaming et univers numériques</h3>
+      <p>Ambiances gaming, créations numériques et mondes virtuels.</p>
+      <span class="status">CONTENU À DÉVELOPPER</span>
+    </article>
+
+    <article class="universe-card">
+      <h3>🎨 Collections spéciales</h3>
+      <p>Éditions thématiques, séries limitées et créations originales.</p>
+      <span class="status">CONTENU À DÉVELOPPER</span>
+    </article>
+
+  </section>
+
+  <section class="mission">
+    <h2>DONNEZ VIE À <span>VOS ÉCRANS</span></h2>
+    <p>
+      FBA Wallpapers rassemble des créations visuelles autour des passions,
+      des métiers, des machines et des paysages. De nouvelles collections
+      viendront enrichir cet univers progressivement.
+    </p>
+
+    <a class="back" href="index.html">RETOUR À L'ACCUEIL</a>
+  </section>
+
+</main>
+
+<footer>
+  <strong>FONDECRANBYALEXIS</strong><br>
+  FBA WALLPAPERS — L'IMAGE PREND VIE.<br>
+  © 2026 — Tous droits réservés.
+</footer>
+
+</body>
+</html>
