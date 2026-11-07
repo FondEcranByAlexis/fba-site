@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="FBA Boutique : tableaux décoratifs et créations numériques exclusives par FondEcranByAlexis.">
+<title>FBA Boutique | FondEcranByAlexis</title>
+<style>
+:root {
+  --bg:#08090c;
+  --panel:#15171d;
+  --red:#d71920;
+  --silver:#d8dbe2;
+  --muted:#a0a5af;
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  margin:0;
+  background:var(--bg);
+  color:#fff;
+  font-family:Arial,Helvetica,sans-serif;
+}
+a {color:inherit}
+header {
+  text-align:center;
+  padding:65px 20px 55px;
+  background:linear-gradient(145deg,#20232b,#08090c 75%);
+  border-bottom:2px solid var(--red);
+}
+.brand {
+  color:var(--red);
+  letter-spacing:4px;
+  font-weight:bold;
+  font-size:14px;
+}
+h1 {
+  font-size:clamp(38px,8vw,70px);
+  margin:20px 0 12px;
+  letter-spacing:2px;
+}
+h1 span,.accent {color:var(--red)}
+header p {
+  color:var(--silver);
+  line-height:1.7;
+  max-width:650px;
+  margin:0 auto;
+}
+nav {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+  padding:20px;
+  border-bottom:1px solid #252832;
+}
+nav a,.button {
+  display:inline-block;
+  padding:12px 19px;
+  text-decoration:none;
+  border:1px solid #454955;
+  border-radius:6px;
+  font-weight:bold;
+  font-size:13px;
+  transition:.2s;
+}
+nav a:hover,.button:hover {
+  background:var(--red);
+  border-color:var(--red);
+}
+main {
+  width:min(1150px,92%);
+  margin:auto;
+}
+.intro {
+  text-align:center;
+  padding:50px 0 20px;
+}
+.intro h2 {
+  font-size:clamp(25px,5vw,37px);
+  margin:0 0 16px;
+}
+.intro p {
+  max-width:730px;
+  margin:auto;
+  color:var(--muted);
+  line-height:1.8;
+}
+.section-title {
+  border-left:4px solid var(--red);
+  padding-left:15px;
+  margin:45px 0 22px;
+  font-size:24px;
+}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+.card {
+  background:var(--panel);
+  border:1px solid #30333d;
+  border-radius:10px;
+  overflow:hidden;
+}
+.visual {
+  min-height:240px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+  background:radial-gradient(ellipse at center,#363a46,#101116 75%);
+  border-bottom:2px solid var(--red);
+}
+.visual strong {
+  font-size:22px;
+  letter-spacing:2px;
+  color:var(--silver);
+}
+.card-content {padding:22px}
+.card h3 {margin:0 0 12px;font-size:20px}
+.card p {
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.7;
+}
+.status {
+  display:inline-block;
+  margin-top:12px;
+  padding:8px 12px;
+  border:1px solid #70343a;
+  color:#ff777e;
+  border-radius:4px;
+  font-size:12px;
+  font-weight:bold;
+}
+.info {
+  background:var(--panel);
+  border-left:4px solid var(--red);
+  border-radius:6px;
+  padding:25px;
+  margin:45px 0;
+  color:var(--silver);
+  line-height:1.8;
+}
+.cta {
+  text-align:center;
+  padding:35px 15px 65px;
+}
+.cta p {color:var(--muted);line-height:1.7}
+.button {
+  background:var(--red);
+  border-color:var(--red);
+  margin-top:12px;
+}
+footer {
+  text-align:center;
+  border-top:1px solid #292c35;
+  padding:30px 15px;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.8;
+}
+footer strong {color:var(--red)}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">FOND ECRAN BY ALEXIS</div>
+  <h1>FBA <span>BOUTIQUE</span></h1>
+  <p>
+    Des passions à accrocher aux murs.<br>
+    Des créations à emporter partout.<br>
+    L'image prend vie.
+  </p>
+</header>
+
+<nav>
+  <a href="index.html">ACCUEIL FBA</a>
+  <a href="#tableaux">TABLEAUX</a>
+  <a href="#numerique">CRÉATIONS NUMÉRIQUES</a>
+  <a href="fba-wallpapers.html">FBA WALLPAPERS</a>
+</nav>
+
+<main>
+
+<section class="intro">
+  <h2>L'UNIVERS <span class="accent">FBA BOUTIQUE</span></h2>
+  <p>
+    Bienvenue dans l'espace commercial de FondEcranByAlexis.
+    Découvrez prochainement des tableaux décoratifs et des
+    créations numériques originales, inspirés de l'automobile,
+    de l'aviation, des métiers, de la nature et de bien
+    d'autres passions.
+  </p>
+</section>
+
+<section id="tableaux">
+  <h2 class="section-title">TABLEAUX DÉCORATIFS</h2>
+
+  <div class="grid">
+
+    <article class="card">
+      <div class="visual"><strong>AUTOMOBILE<br>& SPORT</strong></div>
+      <div class="card-content">
+        <h3>Collection Automobile</h3>
+        <p>Des créations décoratives inspirées des voitures, des circuits et du sport mécanique.</p>
+        <span class="status">PROCHAINEMENT</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="visual"><strong>AVIATION<br>& CIEL</strong></div>
+      <div class="card-content">
+        <h3>Collection Aviation</h3>
+        <p>Avions, hélicoptères et machines aériennes dans des compositions spectaculaires.</p>
+        <span class="status">PROCHAINEMENT</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="visual"><strong>MÉTIERS<br>& PASSIONS</strong></div>
+      <div class="card-content">
+        <h3>Collection Métiers</h3>
+        <p>Des œuvres dédiées aux professionnels, aux machines et aux métiers qui nous passionnent.</p>
+        <span class="status">PROCHAINEMENT</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="visual"><strong>NATURE<br>& PATRIMOINE</strong></div>
+      <div class="card-content">
+        <h3>Collection Paysages</h3>
+        <p>Montagnes, paysages et patrimoine français à mettre en valeur dans votre intérieur.</p>
+        <span class="status">PROCHAINEMENT</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="numerique">
+  <h2 class="section-title">CRÉATIONS NUMÉRIQUES</h2>
+
+  <div class="grid">
+
+    <article class="card">
+      <div class="visual"><strong>FONDS D'ÉCRAN<br>EXCLUSIFS</strong></div>
+      <div class="card-content">
+        <h3>Wallpapers Premium</h3>
+        <p>Des fonds d'écran exclusifs en haute définition, conçus pour personnaliser vos appareils.</p>
+        <span class="status">PROCHAINEMENT</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="visual"><strong>AFFICHES<br>NUMÉRIQUES</strong></div>
+      <div class="card-content">
+        <h3>Affiches à imprimer</h3>
+        <p>Des créations numériques à télécharger pour une impression personnelle.</p>
+        <span class="status">PROCHAINEMENT</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="visual"><strong>PACKS<br>THÉMATIQUES</strong></div>
+      <div class="card-content">
+        <h3>Collections numériques</h3>
+        <p>Des ensembles de créations regroupées autour d'une passion ou d'un univers.</p>
+        <span class="status">PROCHAINEMENT</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<div class="info">
+  <strong>OUVERTURE PROCHAINE DE FBA BOUTIQUE</strong>
+  <p>
+    Notre catalogue est en préparation. Les visuels,
+    les formats, les tarifs et les modalités de commande
+    seront communiqués lors de l'ouverture officielle.
+  </p>
+  <p>
+    Aucun achat ni paiement n'est actuellement possible
+    depuis cette page.
+  </p>
+</div>
+
+<section class="cta">
+  <h2>EN ATTENDANT, DÉCOUVREZ NOS CRÉATIONS</h2>
+  <p>Explorez les collections de fonds d'écran FBA.</p>
+  <a class="button" href="fba-wallpapers.html">
+    DÉCOUVRIR FBA WALLPAPERS
+  </a>
+</section>
+
+</main>
+
+<footer>
+  <strong>FOND ECRAN BY ALEXIS</strong><br>
+  L'image prend vie.<br>
+  © 2026 FondEcranByAlexis — Tous droits réservés.
+</footer>
+
+</body>
+</html>
