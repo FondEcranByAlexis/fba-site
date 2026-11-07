@@ -1,0 +1,577 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+
+  <title>FBA BTP | FondEcranByAlexis</title>
+
+  <meta name="description" content="FBA BTP : découvrez les métiers du bâtiment et des travaux publics, les engins, les équipements et les chantiers.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #080808;
+      color: #eee;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      background: #0b0b0b;
+      border-bottom: 1px solid #292929;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .brand span {
+      color: #e32636;
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #bbb;
+      font-size: 13px;
+      transition: .2s;
+    }
+
+    nav a:hover {
+      color: #e32636;
+    }
+
+    .hero {
+      min-height: 570px;
+      padding: 70px 7%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.88)),
+        radial-gradient(circle at center, #54151d, #111 55%, #050505);
+      border-bottom: 1px solid #3b2023;
+    }
+
+    .hero img {
+      width: 190px;
+      max-width: 65%;
+      margin-bottom: 25px;
+      filter: drop-shadow(0 0 20px rgba(227,38,54,.3));
+    }
+
+    .eyebrow {
+      color: #e32636;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 5px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
+
+    h1 span {
+      color: #e32636;
+    }
+
+    .hero p {
+      max-width: 750px;
+      color: #ccc;
+      font-size: 17px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 32px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 24px;
+      border: 1px solid #e32636;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      transition: .25s;
+    }
+
+    .btn.primary {
+      background: #e32636;
+    }
+
+    .btn:hover {
+      background: #fff;
+      border-color: #fff;
+      color: #111;
+    }
+
+    section {
+      padding: 75px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .section-title .eyebrow {
+      margin-bottom: 8px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(27px, 4vw, 39px);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-title h2 span {
+      color: #e32636;
+    }
+
+    .section-title p {
+      color: #999;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .intro-card {
+      background: linear-gradient(145deg, #191919, #0d0d0d);
+      border: 1px solid #303030;
+      border-top: 3px solid #e32636;
+      padding: 28px;
+    }
+
+    .intro-card h3 {
+      margin-bottom: 12px;
+      font-size: 19px;
+    }
+
+    .intro-card p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .universe {
+      background: #0d0d0d;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+    }
+
+    .universe-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .universe-card {
+      min-height: 220px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background: linear-gradient(145deg, #1d1d1d, #101010);
+      border: 1px solid #333;
+      transition: .25s;
+    }
+
+    .universe-card:hover {
+      transform: translateY(-5px);
+      border-color: #e32636;
+    }
+
+    .card-number {
+      color: #e32636;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+    }
+
+    .universe-card h3 {
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .universe-card p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .status {
+      display: inline-block;
+      align-self: flex-start;
+      margin-top: 18px;
+      padding: 5px 10px;
+      border: 1px solid #70202a;
+      color: #e32636;
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .mission {
+      text-align: center;
+      background: linear-gradient(120deg, #260d11, #101010);
+      border-top: 1px solid #492027;
+      border-bottom: 1px solid #492027;
+    }
+
+    .mission h2 {
+      font-size: clamp(27px, 4vw, 38px);
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .mission h2 span {
+      color: #e32636;
+    }
+
+    .mission p {
+      max-width: 750px;
+      margin: auto;
+      color: #ccc;
+    }
+
+    .mission .btn {
+      margin-top: 27px;
+    }
+
+    footer {
+      padding: 35px 7%;
+      text-align: center;
+      background: #050505;
+      color: #777;
+      font-size: 12px;
+    }
+
+    footer strong {
+      color: #e32636;
+    }
+
+    footer a {
+      color: #aaa;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .intro-grid,
+      .universe-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .intro-grid,
+      .universe-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 50px 6%;
+      }
+
+      .hero {
+        min-height: 500px;
+        padding: 50px 6%;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="brand">
+      FBA <span>BY ALEXIS</span>
+    </a>
+
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="#univers">Nos univers</a>
+      <a href="#mission">Notre mission</a>
+      <a href="metiers.html">FBA Métiers</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <img
+        src="images/fba-btp.png"
+        alt="Logo officiel FBA BTP"
+      >
+
+      <div class="eyebrow">FONDECRANBYALEXIS PRÉSENTE</div>
+
+      <h1>FBA <span>BTP</span></h1>
+
+      <p>
+        Au cœur des chantiers et des grandes constructions.
+        Découvrez les métiers du bâtiment et des travaux publics,
+        les engins, les équipements et les professionnels
+        qui construisent les infrastructures de demain.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#univers" class="btn primary">
+          EXPLORER L'UNIVERS
+        </a>
+
+        <a href="#mission" class="btn">
+          DÉCOUVRIR FBA BTP
+        </a>
+      </div>
+
+    </section>
+
+    <!-- PRESENTATION -->
+
+    <section>
+
+      <div class="section-title">
+        <div class="eyebrow">NOTRE UNIVERS</div>
+        <h2>Construire <span>l'avenir</span></h2>
+
+        <p>
+          FBA BTP met en lumière les métiers, les engins
+          et les savoir-faire qui participent à la construction
+          et à l'aménagement de notre environnement.
+        </p>
+      </div>
+
+      <div class="intro-grid">
+
+        <article class="intro-card">
+          <h3>Les professionnels</h3>
+          <p>
+            Électriciens, maçons, grutiers, conducteurs d'engins
+            et tous les professionnels du bâtiment et des travaux publics.
+          </p>
+        </article>
+
+        <article class="intro-card">
+          <h3>Les machines et engins</h3>
+          <p>
+            Pelles mécaniques, grues, bulldozers, camions
+            et matériels utilisés sur les chantiers.
+          </p>
+        </article>
+
+        <article class="intro-card">
+          <h3>Les grands chantiers</h3>
+          <p>
+            Construction, rénovation, infrastructures
+            et projets qui transforment nos territoires.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- RUBRIQUES -->
+
+    <section class="universe" id="univers">
+
+      <div class="section-title">
+        <div class="eyebrow">EXPLOREZ FBA BTP</div>
+        <h2>Nos <span>rubriques</span></h2>
+
+        <p>
+          Plusieurs espaces pour découvrir les différentes
+          facettes du bâtiment et des travaux publics.
+        </p>
+      </div>
+
+      <div class="universe-grid">
+
+        <article class="universe-card">
+          <div class="card-number">01 — MÉTIERS</div>
+          <h3>Les métiers du BTP</h3>
+          <p>
+            Découvrez les professions du bâtiment,
+            des travaux publics et leurs spécialités.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+        <article class="universe-card">
+          <div class="card-number">02 — ENGINS</div>
+          <h3>Engins de chantier</h3>
+          <p>
+            Pelles, chargeuses, bulldozers, grues
+            et machines de travaux publics.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+        <article class="universe-card">
+          <div class="card-number">03 — VÉHICULES</div>
+          <h3>Camions et transport</h3>
+          <p>
+            Camions-bennes, porte-engins, véhicules
+            spécialisés et transport de matériaux.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+        <article class="universe-card">
+          <div class="card-number">04 — CHANTIERS</div>
+          <h3>Grands chantiers</h3>
+          <p>
+            Construction, rénovation, routes,
+            ouvrages d'art et infrastructures.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+        <article class="universe-card">
+          <div class="card-number">05 — MATÉRIEL</div>
+          <h3>Outils et équipements</h3>
+          <p>
+            Matériel professionnel, outillage,
+            protections et équipements de chantier.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+        <article class="universe-card">
+          <div class="card-number">06 — TECHNOLOGIES</div>
+          <h3>Innovations et technologies</h3>
+          <p>
+            Nouvelles machines, méthodes de construction
+            et évolutions technologiques du secteur.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+        <article class="universe-card">
+          <div class="card-number">07 — REPORTAGES</div>
+          <h3>Reportages et découvertes</h3>
+          <p>
+            Immersion sur les chantiers, rencontres
+            et présentation des professionnels.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+        <article class="universe-card">
+          <div class="card-number">08 — COLLECTIONS</div>
+          <h3>Fonds d'écran</h3>
+          <p>
+            Retrouvez des visuels consacrés aux engins,
+            aux camions et aux métiers du BTP.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- MISSION -->
+
+    <section class="mission" id="mission">
+
+      <div class="eyebrow">L'ESPRIT FBA BTP</div>
+
+      <h2>Des métiers qui <span>bâtissent demain</span></h2>
+
+      <p>
+        Derrière chaque bâtiment, chaque route et chaque ouvrage,
+        il y a des femmes et des hommes, des machines,
+        des compétences et un savoir-faire.
+        FBA BTP souhaite faire découvrir cet univers
+        et valoriser celles et ceux qui le font avancer.
+      </p>
+
+      <a href="metiers.html" class="btn">
+        DÉCOUVRIR FBA MÉTIERS
+      </a>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <p>
+      <strong>FBA BTP</strong> — AU CŒUR DES CHANTIERS.
+    </p>
+
+    <p>
+      <a href="index.html">Accueil FBA</a>
+      |
+      <a href="metiers.html">FBA Métiers</a>
+    </p>
+
+    <p>
+      © 2026 FondEcranByAlexis — Tous droits réservés.
+    </p>
+
+  </footer>
+
+</body>
+</html>
