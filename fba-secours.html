@@ -1,0 +1,556 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+
+  <title>FBA Secours | FondEcranByAlexis</title>
+
+  <meta name="description" content="FBA Secours : découvrez les métiers du secours, les véhicules, les équipements, les interventions et les professionnels qui protègent la population.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #080808;
+      color: #eee;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      background: #0b0b0b;
+      border-bottom: 1px solid #292929;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .brand span {
+      color: #e32636;
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #bbb;
+      font-size: 13px;
+      transition: .2s;
+    }
+
+    nav a:hover {
+      color: #e32636;
+    }
+
+    .hero {
+      min-height: 570px;
+      padding: 70px 7%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.88)),
+        radial-gradient(circle at center, #54151d, #111 55%, #050505);
+      border-bottom: 1px solid #3b2023;
+    }
+
+    .hero img {
+      width: 190px;
+      max-width: 65%;
+      margin-bottom: 25px;
+      filter: drop-shadow(0 0 20px rgba(227,38,54,.3));
+    }
+
+    .eyebrow {
+      color: #e32636;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 5px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
+
+    h1 span {
+      color: #e32636;
+    }
+
+    .hero p {
+      max-width: 750px;
+      color: #ccc;
+      font-size: 17px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 32px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 24px;
+      border: 1px solid #e32636;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      transition: .25s;
+    }
+
+    .btn.primary {
+      background: #e32636;
+    }
+
+    .btn:hover {
+      background: #fff;
+      border-color: #fff;
+      color: #111;
+    }
+
+    section {
+      padding: 75px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .section-title .eyebrow {
+      margin-bottom: 8px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(27px, 4vw, 39px);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-title h2 span {
+      color: #e32636;
+    }
+
+    .section-title p {
+      color: #999;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .intro-card {
+      background: linear-gradient(145deg, #191919, #0d0d0d);
+      border: 1px solid #303030;
+      border-top: 3px solid #e32636;
+      padding: 28px;
+    }
+
+    .intro-card h3 {
+      margin-bottom: 12px;
+      font-size: 19px;
+    }
+
+    .intro-card p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .universe {
+      background: #0d0d0d;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+    }
+
+    .universe-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .universe-card {
+      min-height: 220px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background: linear-gradient(145deg, #1d1d1d, #101010);
+      border: 1px solid #333;
+      transition: .25s;
+    }
+
+    .universe-card:hover {
+      transform: translateY(-5px);
+      border-color: #e32636;
+    }
+
+    .card-number {
+      color: #e32636;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+    }
+
+    .universe-card h3 {
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .universe-card p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .status {
+      display: inline-block;
+      align-self: flex-start;
+      margin-top: 18px;
+      padding: 5px 10px;
+      border: 1px solid #70202a;
+      color: #e32636;
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .mission {
+      text-align: center;
+      background: linear-gradient(120deg, #260d11, #101010);
+      border-top: 1px solid #492027;
+      border-bottom: 1px solid #492027;
+    }
+
+    .mission h2 {
+      font-size: clamp(27px, 4vw, 38px);
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .mission h2 span {
+      color: #e32636;
+    }
+
+    .mission p {
+      max-width: 750px;
+      margin: auto;
+      color: #ccc;
+    }
+
+    .mission .btn {
+      margin-top: 27px;
+    }
+
+    footer {
+      padding: 35px 7%;
+      text-align: center;
+      background: #050505;
+      color: #777;
+      font-size: 12px;
+    }
+
+    footer strong {
+      color: #e32636;
+    }
+
+    footer a {
+      color: #aaa;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .intro-grid,
+      .universe-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .intro-grid,
+      .universe-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 50px 6%;
+      }
+
+      .hero {
+        min-height: 500px;
+        padding: 50px 6%;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="brand">
+      FBA <span>BY ALEXIS</span>
+    </a>
+
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="#univers">Notre univers</a>
+      <a href="#mission">Notre mission</a>
+      <a href="metiers.html">FBA Métiers</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <img
+        src="images/fba-secours.png"
+        alt="Logo officiel FBA Secours"
+      >
+
+      <div class="eyebrow">FONDECRANBYALEXIS PRÉSENTE</div>
+
+      <h1>FBA <span>SECOURS</span></h1>
+
+      <p>
+        Au cœur de l'action, à la rencontre de celles et ceux
+        qui portent secours, protègent et interviennent chaque jour.
+        Découvrez un univers consacré aux métiers, aux véhicules,
+        aux équipements et aux femmes et hommes du secours.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#univers" class="btn primary">
+          EXPLORER L'UNIVERS
+        </a>
+
+        <a href="#mission" class="btn">
+          DÉCOUVRIR FBA SECOURS
+        </a>
+      </div>
+
+    </section>
+
+    <!-- PRESENTATION -->
+
+    <section>
+
+      <div class="section-title">
+        <div class="eyebrow">NOTRE UNIVERS</div>
+        <h2>Au service de <span>la protection</span></h2>
+
+        <p>
+          FBA Secours met en lumière les métiers et les moyens
+          mobilisés pour porter assistance à la population.
+        </p>
+      </div>
+
+      <div class="intro-grid">
+
+        <article class="intro-card">
+          <h3>Les professionnels</h3>
+          <p>
+            À la découverte des femmes et des hommes qui
+            consacrent leurs compétences aux missions de secours.
+          </p>
+        </article>
+
+        <article class="intro-card">
+          <h3>Les moyens d'intervention</h3>
+          <p>
+            Véhicules, matériels, équipements et technologies
+            utilisés au quotidien sur le terrain.
+          </p>
+        </article>
+
+        <article class="intro-card">
+          <h3>Les histoires du terrain</h3>
+          <p>
+            Des reportages et des présentations pour mieux
+            comprendre les réalités de cet univers.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- UNIVERS -->
+
+    <section class="universe" id="univers">
+
+      <div class="section-title">
+        <div class="eyebrow">EXPLOREZ FBA SECOURS</div>
+        <h2>Nos <span>rubriques</span></h2>
+
+        <p>
+          Plusieurs espaces pour découvrir toutes les facettes
+          du monde du secours.
+        </p>
+      </div>
+
+      <div class="universe-grid">
+
+        <article class="universe-card">
+          <div class="card-number">01 — PROFESSIONNELS</div>
+          <h3>Les métiers du secours</h3>
+          <p>
+            Pompiers, ambulanciers, secouristes et autres
+            professionnels de l'assistance.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+        <article class="universe-card">
+          <div class="card-number">02 — VÉHICULES</div>
+          <h3>Les véhicules</h3>
+          <p>
+            Camions de pompiers, ambulances, hélicoptères
+            et véhicules spécialisés.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+        <article class="universe-card">
+          <div class="card-number">03 — ÉQUIPEMENTS</div>
+          <h3>Matériels et équipements</h3>
+          <p>
+            Découvrez les outils, les tenues et les équipements
+            utilisés lors des interventions.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+        <article class="universe-card">
+          <div class="card-number">04 — INTERVENTIONS</div>
+          <h3>Les interventions</h3>
+          <p>
+            Comprendre les différentes missions et les moyens
+            engagés pour porter secours.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+        <article class="universe-card">
+          <div class="card-number">05 — REPORTAGES</div>
+          <h3>Reportages et découvertes</h3>
+          <p>
+            Rencontres, présentations et immersion
+            dans les différents métiers du secours.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+        <article class="universe-card">
+          <div class="card-number">06 — COLLECTIONS</div>
+          <h3>Fonds d'écran</h3>
+          <p>
+            Retrouvez des visuels consacrés aux secours,
+            aux véhicules et aux professionnels.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- MISSION -->
+
+    <section class="mission" id="mission">
+
+      <div class="eyebrow">L'ESPRIT FBA SECOURS</div>
+
+      <h2>Valoriser celles et <span>ceux qui agissent</span></h2>
+
+      <p>
+        Derrière chaque intervention, il y a des femmes et des hommes,
+        des compétences, du matériel et un engagement.
+        FBA Secours souhaite faire découvrir cet univers,
+        transmettre des connaissances et mettre en valeur
+        les professionnels du secours.
+      </p>
+
+      <a href="metiers.html" class="btn">
+        DÉCOUVRIR FBA MÉTIERS
+      </a>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <p>
+      <strong>FBA SECOURS</strong> — AU CŒUR DE L'ACTION.
+    </p>
+
+    <p>
+      <a href="index.html">Accueil FBA</a>
+      |
+      <a href="metiers.html">FBA Métiers</a>
+    </p>
+
+    <p>
+      © 2026 FondEcranByAlexis — Tous droits réservés.
+    </p>
+
+  </footer>
+
+</body>
+</html>
