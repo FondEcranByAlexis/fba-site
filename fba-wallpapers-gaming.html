@@ -1,0 +1,512 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="FBA Wallpapers : fonds d'écran gaming, jeux vidéo et univers numériques.">
+  <title>Gaming et Univers Numériques | FBA Wallpapers</title>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080808;
+      color: #f2f2f2;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    header {
+      background: #0d0d0d;
+      border-bottom: 1px solid #292929;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .brand {
+      font-size: 21px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .brand span, h1 span, h2 span { color: #e32636; }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 12px;
+      font-size: 13px;
+    }
+
+    nav a:hover { color: #e32636; }
+
+    .hero {
+      padding: 75px 20px;
+      text-align: center;
+      background: radial-gradient(ellipse at center, #28143d, #111 48%, #080808 80%);
+      border-bottom: 1px solid #292929;
+    }
+
+    .eyebrow {
+      color: #e32636;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: clamp(35px, 8vw, 65px);
+      letter-spacing: 2px;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      max-width: 750px;
+      margin: auto;
+      color: #c5c5c5;
+    }
+
+    .slogan {
+      margin-top: 25px;
+      font-size: 13px;
+      letter-spacing: 3px;
+      color: #aaa;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 1150px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 20px 0 30px;
+    }
+
+    .section-title h2 {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #999;
+      font-size: 14px;
+    }
+
+    .category-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 45px;
+    }
+
+    .category-nav a {
+      border: 1px solid #713039;
+      border-radius: 25px;
+      padding: 9px 17px;
+      font-size: 12px;
+      font-weight: bold;
+      transition: .2s;
+    }
+
+    .category-nav a:hover {
+      background: #e32636;
+      border-color: #e32636;
+    }
+
+    .wallpaper-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 55px;
+    }
+
+    .wallpaper-card {
+      overflow: hidden;
+      background: #141414;
+      border: 1px solid #303030;
+      border-radius: 12px;
+      transition: .25s;
+    }
+
+    .wallpaper-card:hover {
+      border-color: #e32636;
+      transform: translateY(-4px);
+    }
+
+    .wallpaper-preview {
+      aspect-ratio: 9 / 16;
+      background: linear-gradient(145deg, #28143d, #151515 65%, #080808);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+      color: #aaa;
+      border-bottom: 1px solid #303030;
+    }
+
+    .wallpaper-preview .symbol {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .wallpaper-preview strong {
+      color: #fff;
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+
+    .wallpaper-preview small {
+      color: #e32636;
+      margin-top: 8px;
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+
+    .wallpaper-info { padding: 17px; }
+
+    .wallpaper-info h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .wallpaper-info p {
+      color: #999;
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
+
+    .download {
+      display: block;
+      text-align: center;
+      padding: 10px;
+      background: #292929;
+      border: 1px solid #555;
+      border-radius: 6px;
+      color: #777;
+      font-size: 12px;
+      font-weight: bold;
+      cursor: not-allowed;
+    }
+
+    .notice {
+      max-width: 750px;
+      margin: 0 auto 45px;
+      padding: 20px;
+      border: 1px solid #713039;
+      border-radius: 10px;
+      background: #170d0f;
+      text-align: center;
+      color: #bbb;
+      font-size: 13px;
+    }
+
+    .back {
+      display: inline-block;
+      padding: 12px 22px;
+      border: 1px solid #e32636;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .back:hover { background: #e32636; }
+
+    .return {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    footer {
+      border-top: 1px solid #292929;
+      padding: 25px 15px;
+      text-align: center;
+      color: #777;
+      font-size: 12px;
+    }
+
+    footer strong { color: #ddd; }
+
+    @media (max-width: 750px) {
+      .wallpaper-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 480px) {
+      .wallpaper-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a class="brand" href="index.html">FOND<span>ECRAN</span>BYALEXIS</a>
+  <nav>
+    <a href="index.html">ACCUEIL</a>
+    <a href="fba-wallpapers.html">WALLPAPERS</a>
+    <a href="fba-wallpapers-f1.html">FORMULA 1</a>
+    <a href="fba-wallpapers-motogp.html">MOTOGP</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">FBA WALLPAPERS PRÉSENTE</div>
+  <h1>GAMING <span>& UNIVERS NUMÉRIQUES</span></h1>
+  <p>
+    Entrez dans des univers virtuels extraordinaires.
+    Des consoles aux jeux vidéo, de la science-fiction
+    aux mondes fantastiques, découvrez une collection
+    dédiée à la culture gaming et numérique.
+  </p>
+  <div class="slogan">L'IMAGE PREND VIE.</div>
+</section>
+
+<main>
+
+  <div class="section-title">
+    <h2>LA COLLECTION <span>GAMING</span></h2>
+    <p>Quatre univers pour les passionnés de jeux vidéo.</p>
+  </div>
+
+  <div class="category-nav">
+    <a href="#consoles">CONSOLES</a>
+    <a href="#jeux">JEUX VIDÉO</a>
+    <a href="#science-fiction">SCIENCE-FICTION</a>
+    <a href="#fantastique">FANTASTIQUE</a>
+  </div>
+
+  <section id="consoles">
+    <div class="section-title">
+      <h2>CONSOLES ET <span>GAMING</span></h2>
+      <p>Les machines et les univers du jeu vidéo.</p>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="symbol">🎮</div>
+          <strong>PLAYSTATION</strong>
+          <small>VISUELS À AJOUTER</small>
+        </div>
+        <div class="wallpaper-info">
+          <h3>Univers PlayStation</h3>
+          <p>Consoles, manettes et ambiance gaming PlayStation.</p>
+          <span class="download">BIENTÔT DISPONIBLE</span>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="symbol">🕹️</div>
+          <strong>XBOX</strong>
+          <small>VISUELS À AJOUTER</small>
+        </div>
+        <div class="wallpaper-info">
+          <h3>Univers Xbox</h3>
+          <p>Consoles, accessoires et univers Xbox.</p>
+          <span class="download">BIENTÔT DISPONIBLE</span>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="symbol">⭐</div>
+          <strong>NINTENDO</strong>
+          <small>VISUELS À AJOUTER</small>
+        </div>
+        <div class="wallpaper-info">
+          <h3>Univers Nintendo</h3>
+          <p>Consoles et univers de jeux Nintendo.</p>
+          <span class="download">BIENTÔT DISPONIBLE</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="jeux">
+    <div class="section-title">
+      <h2>UNIVERS <span>JEUX VIDÉO</span></h2>
+      <p>Des ambiances et des mondes vidéoludiques variés.</p>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="symbol">🏎️</div>
+          <strong>JEUX DE COURSE</strong>
+          <small>VISUELS À AJOUTER</small>
+        </div>
+        <div class="wallpaper-info">
+          <h3>Course et simulation</h3>
+          <p>Automobile, sport mécanique et simulation de conduite.</p>
+          <span class="download">BIENTÔT DISPONIBLE</span>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="symbol">🏗️</div>
+          <strong>SIMULATION ET GESTION</strong>
+          <small>VISUELS À AJOUTER</small>
+        </div>
+        <div class="wallpaper-info">
+          <h3>Simulation et gestion</h3>
+          <p>Construction, agriculture, gestion et création de parcs.</p>
+          <span class="download">BIENTÔT DISPONIBLE</span>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="symbol">⚔️</div>
+          <strong>ACTION ET AVENTURE</strong>
+          <small>VISUELS À AJOUTER</small>
+        </div>
+        <div class="wallpaper-info">
+          <h3>Action et aventure</h3>
+          <p>Exploration, aventures et univers d'action.</p>
+          <span class="download">BIENTÔT DISPONIBLE</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="science-fiction">
+    <div class="section-title">
+      <h2>SCIENCE-<span>FICTION</span></h2>
+      <p>Un voyage vers le futur et au-delà de notre planète.</p>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="symbol">🚀</div>
+          <strong>EXPLORATION SPATIALE</strong>
+          <small>VISUELS À AJOUTER</small>
+        </div>
+        <div class="wallpaper-info">
+          <h3>Espace et exploration</h3>
+          <p>Planètes, vaisseaux et voyages interstellaires.</p>
+          <span class="download">BIENTÔT DISPONIBLE</span>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="symbol">🤖</div>
+          <strong>TECHNOLOGIES DU FUTUR</strong>
+          <small>VISUELS À AJOUTER</small>
+        </div>
+        <div class="wallpaper-info">
+          <h3>Technologies futuristes</h3>
+          <p>Robots, intelligence artificielle et technologies avancées.</p>
+          <span class="download">BIENTÔT DISPONIBLE</span>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="symbol">🌌</div>
+          <strong>UNIVERS COSMIQUES</strong>
+          <small>VISUELS À AJOUTER</small>
+        </div>
+        <div class="wallpaper-info">
+          <h3>Univers cosmiques</h3>
+          <p>Nébuleuses, galaxies et paysages interstellaires.</p>
+          <span class="download">BIENTÔT DISPONIBLE</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="fantastique">
+    <div class="section-title">
+      <h2>UNIVERS <span>FANTASTIQUES</span></h2>
+      <p>Des mondes imaginaires et des créatures extraordinaires.</p>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="symbol">🐉</div>
+          <strong>DRAGONS ET CRÉATURES</strong>
+          <small>VISUELS À AJOUTER</small>
+        </div>
+        <div class="wallpaper-info">
+          <h3>Créatures fantastiques</h3>
+          <p>Dragons, créatures mythiques et monstres imaginaires.</p>
+          <span class="download">BIENTÔT DISPONIBLE</span>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="symbol">🏰</div>
+          <strong>MONDES FANTASY</strong>
+          <small>VISUELS À AJOUTER</small>
+        </div>
+        <div class="wallpaper-info">
+          <h3>Mondes fantastiques</h3>
+          <p>Royaumes, châteaux et paysages imaginaires.</p>
+          <span class="download">BIENTÔT DISPONIBLE</span>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="symbol">✨</div>
+          <strong>MAGIE ET LÉGENDES</strong>
+          <small>VISUELS À AJOUTER</small>
+        </div>
+        <div class="wallpaper-info">
+          <h3>Magie et légendes</h3>
+          <p>Univers mystiques, pouvoirs et mondes légendaires.</p>
+          <span class="download">BIENTÔT DISPONIBLE</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="notice">
+    <strong>COLLECTION EN CONSTRUCTION</strong><br>
+    Les emplacements sont prêts. Les fonds d'écran originaux seront
+    ajoutés progressivement. Les téléchargements seront activés
+    lorsque les fichiers seront disponibles.
+  </div>
+
+  <div class="return">
+    <a class="back" href="fba-wallpapers.html">RETOUR À FBA WALLPAPERS</a>
+  </div>
+
+</main>
+
+<footer>
+  <strong>FONDECRANBYALEXIS</strong><br>
+  FBA WALLPAPERS — GAMING ET UNIVERS NUMÉRIQUES<br>
+  © 2026 — Tous droits réservés.
+</footer>
+
+</body>
+</html>
