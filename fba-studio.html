@@ -1,0 +1,555 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+
+  <title>FBA Studio | FondEcranByAlexis</title>
+
+  <meta name="description" content="FBA Studio : création visuelle, photographie, vidéo, graphisme et production de contenus numériques.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #080808;
+      color: #eee;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      background: #0b0b0b;
+      border-bottom: 1px solid #292929;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .brand span {
+      color: #e32636;
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #bbb;
+      font-size: 13px;
+      transition: .2s;
+    }
+
+    nav a:hover {
+      color: #e32636;
+    }
+
+    .hero {
+      min-height: 570px;
+      padding: 70px 7%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.88)),
+        radial-gradient(circle at center, #54151d, #111 55%, #050505);
+      border-bottom: 1px solid #3b2023;
+    }
+
+    .hero img {
+      width: 190px;
+      max-width: 65%;
+      margin-bottom: 25px;
+      filter: drop-shadow(0 0 20px rgba(227,38,54,.3));
+    }
+
+    .eyebrow {
+      color: #e32636;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 5px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
+
+    h1 span {
+      color: #e32636;
+    }
+
+    .hero p {
+      max-width: 750px;
+      color: #ccc;
+      font-size: 17px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 32px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 24px;
+      border: 1px solid #e32636;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      transition: .25s;
+    }
+
+    .btn.primary {
+      background: #e32636;
+    }
+
+    .btn:hover {
+      background: #fff;
+      border-color: #fff;
+      color: #111;
+    }
+
+    section {
+      padding: 75px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .section-title .eyebrow {
+      margin-bottom: 8px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(27px, 4vw, 39px);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-title h2 span {
+      color: #e32636;
+    }
+
+    .section-title p {
+      color: #999;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .intro-card {
+      background: linear-gradient(145deg, #191919, #0d0d0d);
+      border: 1px solid #303030;
+      border-top: 3px solid #e32636;
+      padding: 28px;
+    }
+
+    .intro-card h3 {
+      margin-bottom: 12px;
+      font-size: 19px;
+    }
+
+    .intro-card p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .universe {
+      background: #0d0d0d;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+    }
+
+    .universe-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .universe-card {
+      min-height: 220px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background: linear-gradient(145deg, #1d1d1d, #101010);
+      border: 1px solid #333;
+      transition: .25s;
+    }
+
+    .universe-card:hover {
+      transform: translateY(-5px);
+      border-color: #e32636;
+    }
+
+    .card-number {
+      color: #e32636;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+    }
+
+    .universe-card h3 {
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .universe-card p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .status {
+      display: inline-block;
+      align-self: flex-start;
+      margin-top: 18px;
+      padding: 5px 10px;
+      border: 1px solid #70202a;
+      color: #e32636;
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .mission {
+      text-align: center;
+      background: linear-gradient(120deg, #260d11, #101010);
+      border-top: 1px solid #492027;
+      border-bottom: 1px solid #492027;
+    }
+
+    .mission h2 {
+      font-size: clamp(27px, 4vw, 38px);
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .mission h2 span {
+      color: #e32636;
+    }
+
+    .mission p {
+      max-width: 750px;
+      margin: auto;
+      color: #ccc;
+    }
+
+    .mission .btn {
+      margin-top: 27px;
+    }
+
+    footer {
+      padding: 35px 7%;
+      text-align: center;
+      background: #050505;
+      color: #777;
+      font-size: 12px;
+    }
+
+    footer strong {
+      color: #e32636;
+    }
+
+    footer a {
+      color: #aaa;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .intro-grid,
+      .universe-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .intro-grid,
+      .universe-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 50px 6%;
+      }
+
+      .hero {
+        min-height: 500px;
+        padding: 50px 6%;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="brand">
+      FBA <span>BY ALEXIS</span>
+    </a>
+
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="#univers">Nos activités</a>
+      <a href="#mission">Notre mission</a>
+      <a href="metiers.html">FBA Métiers</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <img
+        src="images/fba-studio.png"
+        alt="Logo officiel FBA Studio"
+      >
+
+      <div class="eyebrow">FONDECRANBYALEXIS PRÉSENTE</div>
+
+      <h1>FBA <span>STUDIO</span></h1>
+
+      <p>
+        L'univers de la création visuelle et numérique.
+        Des idées prennent forme, des images racontent
+        des histoires et chaque projet devient une création unique.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#univers" class="btn primary">
+          EXPLORER LE STUDIO
+        </a>
+
+        <a href="#mission" class="btn">
+          DÉCOUVRIR FBA STUDIO
+        </a>
+      </div>
+
+    </section>
+
+    <!-- PRESENTATION -->
+
+    <section>
+
+      <div class="section-title">
+        <div class="eyebrow">NOTRE IDENTITÉ</div>
+        <h2>La création prend <span>forme</span></h2>
+
+        <p>
+          FBA Studio rassemble les activités créatives
+          de FondEcranByAlexis : imaginer, concevoir,
+          produire et partager des contenus visuels.
+        </p>
+      </div>
+
+      <div class="intro-grid">
+
+        <article class="intro-card">
+          <h3>Imaginer</h3>
+          <p>
+            Transformer une idée en concept visuel,
+            avec une identité et une direction artistique.
+          </p>
+        </article>
+
+        <article class="intro-card">
+          <h3>Créer</h3>
+          <p>
+            Concevoir des images, des vidéos et des supports
+            graphiques adaptés à chaque projet.
+          </p>
+        </article>
+
+        <article class="intro-card">
+          <h3>Partager</h3>
+          <p>
+            Donner vie aux créations et les faire découvrir
+            à travers les différents univers FBA.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- ACTIVITES -->
+
+    <section class="universe" id="univers">
+
+      <div class="section-title">
+        <div class="eyebrow">EXPLOREZ FBA STUDIO</div>
+        <h2>Nos <span>activités</span></h2>
+
+        <p>
+          Découvrez les différents domaines de création
+          réunis au sein de FBA Studio.
+        </p>
+      </div>
+
+      <div class="universe-grid">
+
+        <article class="universe-card">
+          <div class="card-number">01 — IMAGE</div>
+          <h3>Création visuelle</h3>
+          <p>
+            Conception de visuels, compositions graphiques
+            et créations originales.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+        <article class="universe-card">
+          <div class="card-number">02 — PHOTOGRAPHIE</div>
+          <h3>Photographie</h3>
+          <p>
+            Images, cadrages, ambiances et mise en valeur
+            de sujets variés.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+        <article class="universe-card">
+          <div class="card-number">03 — VIDÉO</div>
+          <h3>Production vidéo</h3>
+          <p>
+            Création de vidéos, séquences, présentations
+            et contenus audiovisuels.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+        <article class="universe-card">
+          <div class="card-number">04 — GRAPHISME</div>
+          <h3>Identité graphique</h3>
+          <p>
+            Logos, chartes visuelles, affiches
+            et supports de communication.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+        <article class="universe-card">
+          <div class="card-number">05 — NUMÉRIQUE</div>
+          <h3>Contenus numériques</h3>
+          <p>
+            Créations destinées aux sites web,
+            réseaux sociaux et plateformes numériques.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+        <article class="universe-card">
+          <div class="card-number">06 — PROJETS</div>
+          <h3>Projets créatifs</h3>
+          <p>
+            Expérimentations, concepts originaux
+            et collaborations artistiques.
+          </p>
+          <span class="status">CONTENU À DÉVELOPPER</span>
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- MISSION -->
+
+    <section class="mission" id="mission">
+
+      <div class="eyebrow">L'ESPRIT FBA STUDIO</div>
+
+      <h2>Une idée devient <span>une création</span></h2>
+
+      <p>
+        FBA Studio est l'espace dédié à l'imagination,
+        à la création et à la production de contenus.
+        Notre ambition : développer une identité visuelle
+        reconnaissable et faire vivre les différents univers FBA.
+      </p>
+
+      <a href="index.html" class="btn">
+        RETOUR À L'ACCUEIL FBA
+      </a>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <p>
+      <strong>FBA STUDIO</strong> — L'IMAGE PREND VIE.
+    </p>
+
+    <p>
+      <a href="index.html">Accueil FBA</a>
+      |
+      <a href="metiers.html">FBA Métiers</a>
+    </p>
+
+    <p>
+      © 2026 FondEcranByAlexis — Tous droits réservés.
+    </p>
+
+  </footer>
+
+</body>
+</html>
