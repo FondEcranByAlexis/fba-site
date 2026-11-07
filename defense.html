@@ -1,0 +1,515 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#09090c">
+<title>FBA DÉFENSE – Les métiers des armées</title>
+<meta name="description" content="Découvrez les métiers des armées françaises avec FBA MÉTIERS : Terre, Air et Espace, Marine nationale et spécialités militaires.">
+
+<style>
+:root {
+  --red: #ed1728;
+  --black: #09090c;
+  --panel: #15151b;
+  --silver: #d5d6dc;
+  --muted: #a4a5ae;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--black);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+}
+
+header {
+  background: #09090c;
+  border-bottom: 1px solid #303039;
+  padding: 22px;
+}
+
+.nav {
+  max-width: 1150px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.brand {
+  color: white;
+  font-size: 30px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.brand span {
+  color: var(--red);
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: var(--silver);
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: var(--red);
+}
+
+.hero {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 65px 22px;
+  background:
+    radial-gradient(ellipse at center, #36121a 0%, #111116 48%, #09090c 80%);
+  border-bottom: 1px solid #303039;
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.hero img {
+  width: 175px;
+  height: 175px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.eyebrow {
+  color: var(--red);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(34px, 6vw, 58px);
+  line-height: 1.15;
+  margin: 12px 0;
+  text-transform: uppercase;
+}
+
+h1 span {
+  color: var(--red);
+}
+
+.hero p {
+  color: var(--silver);
+  font-size: 19px;
+  max-width: 700px;
+  margin: 20px auto 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 24px;
+  margin: 6px;
+  border: 1px solid var(--red);
+  background: var(--red);
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: .2s;
+}
+
+.btn-outline {
+  background: transparent;
+}
+
+.btn:hover {
+  background: transparent;
+}
+
+section {
+  max-width: 1150px;
+  margin: auto;
+  padding: 75px 22px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: clamp(27px, 5vw, 42px);
+  margin: 8px 0;
+  text-transform: uppercase;
+}
+
+.red-line {
+  width: 85px;
+  height: 4px;
+  background: var(--red);
+  margin: 20px auto;
+}
+
+.section-title p {
+  color: var(--muted);
+  max-width: 700px;
+  margin: auto;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.info-card {
+  background: linear-gradient(145deg, #19191f, #101014);
+  border: 1px solid #34343d;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+}
+
+.info-card h3 {
+  color: var(--red);
+  margin-top: 0;
+}
+
+.info-card p {
+  color: var(--muted);
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.category-card {
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+  background: linear-gradient(145deg, #19191f, #09090c);
+  border: 1px solid #34343d;
+  border-radius: 14px;
+  transition: .3s;
+  color: white;
+}
+
+.category-card:hover {
+  border-color: var(--red);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px #ed172833;
+}
+
+.category-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  padding: 15px;
+  background: #101015;
+}
+
+.category-card h3 {
+  color: white;
+  font-size: 19px;
+  margin: 15px 8px 8px;
+}
+
+.category-card p {
+  color: var(--muted);
+  font-size: 14px;
+  padding: 0 12px 18px;
+}
+
+.tag {
+  display: inline-block;
+  color: var(--red);
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.engagement {
+  text-align: center;
+  background: radial-gradient(ellipse at center, #36121a, #101014 70%);
+  border: 1px solid #34343d;
+  border-radius: 14px;
+  padding: 45px 25px;
+}
+
+.engagement p {
+  color: var(--silver);
+  max-width: 650px;
+  margin: 15px auto 25px;
+}
+
+footer {
+  border-top: 1px solid #303039;
+  padding: 30px 20px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+footer strong {
+  color: white;
+}
+
+footer a {
+  color: var(--red);
+  text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .category-card img {
+    height: 115px;
+  }
+
+  .category-card h3 {
+    font-size: 15px;
+  }
+
+  section {
+    padding: 55px 18px;
+  }
+}
+
+@media (max-width: 380px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="brand" href="index.html">FBA<span>.</span></a>
+
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="metiers.html">Catalogue</a>
+      <a href="#professions">Les professions</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<div class="hero">
+  <div class="hero-content">
+
+    <img src="images/fba-defense.png" alt="Logo FBA Défense">
+
+    <div class="eyebrow">FBA MÉTIERS</div>
+
+    <h1>Les métiers de la <span>DÉFENSE</span></h1>
+
+    <p>
+      Servir, protéger et défendre la France.
+      Découvrez les femmes et les hommes qui s'engagent
+      au sein des armées françaises.
+    </p>
+
+    <a class="btn" href="#professions">Découvrir les professions</a>
+    <a class="btn btn-outline" href="metiers.html">Retour au catalogue</a>
+
+  </div>
+</div>
+
+<section>
+
+  <div class="section-title">
+    <div class="eyebrow">Un engagement national</div>
+    <h2>Trois armées, une même mission</h2>
+    <div class="red-line"></div>
+
+    <p>
+      Les armées françaises regroupent une grande diversité
+      de métiers militaires et civils, indispensables à la
+      défense du territoire et aux opérations extérieures.
+    </p>
+  </div>
+
+  <div class="intro-grid">
+
+    <article class="info-card">
+      <h3>Protéger</h3>
+      <p>
+        Contribuer à la sécurité nationale et protéger
+        les intérêts de la France.
+      </p>
+    </article>
+
+    <article class="info-card">
+      <h3>Servir</h3>
+      <p>
+        S'engager dans une mission collective
+        fondée sur la discipline et la cohésion.
+      </p>
+    </article>
+
+    <article class="info-card">
+      <h3>Défendre</h3>
+      <p>
+        Participer à la protection du territoire,
+        des populations et des intérêts français.
+      </p>
+    </article>
+
+  </div>
+
+</section>
+
+<section id="professions">
+
+  <div class="section-title">
+    <div class="eyebrow">Nos univers</div>
+    <h2>À la découverte des métiers</h2>
+    <div class="red-line"></div>
+
+    <p>
+      Découvrez les grandes composantes des armées
+      et leurs nombreuses spécialités professionnelles.
+    </p>
+  </div>
+
+  <div class="category-grid">
+
+    <article class="category-card">
+      <img src="images/fba-defense.png" alt="Armée de Terre">
+      <span class="tag">À découvrir</span>
+      <h3>ARMÉE DE TERRE</h3>
+      <p>
+        Infanterie, cavalerie, génie, artillerie,
+        logistique et maintenance.
+      </p>
+    </article>
+
+    <article class="category-card">
+      <img src="images/fba-defense.png" alt="Armée de l'Air et de l'Espace">
+      <span class="tag">À découvrir</span>
+      <h3>ARMÉE DE L'AIR ET DE L'ESPACE</h3>
+      <p>
+        Pilotes, mécaniciens aéronautiques,
+        contrôleurs et spécialistes de l'espace.
+      </p>
+    </article>
+
+    <article class="category-card">
+      <img src="images/fba-defense.png" alt="Marine nationale">
+      <span class="tag">À découvrir</span>
+      <h3>MARINE NATIONALE</h3>
+      <p>
+        Marins, sous-mariniers, fusiliers marins,
+        mécaniciens et navigateurs.
+      </p>
+    </article>
+
+    <article class="category-card">
+      <img src="images/fba-defense.png" alt="Gendarmerie nationale">
+      <span class="tag">À découvrir</span>
+      <h3>GENDARMERIE NATIONALE</h3>
+      <p>
+        Institution militaire chargée notamment
+        de missions de sécurité et de police judiciaire.
+      </p>
+    </article>
+
+    <article class="category-card">
+      <img src="images/fba-defense.png" alt="Service de santé des armées">
+      <span class="tag">À découvrir</span>
+      <h3>SERVICE DE SANTÉ DES ARMÉES</h3>
+      <p>
+        Médecins, infirmiers, pharmaciens
+        et personnels de santé militaires.
+      </p>
+    </article>
+
+    <article class="category-card">
+      <img src="images/fba-defense.png" alt="Spécialités militaires">
+      <span class="tag">À découvrir</span>
+      <h3>MÉTIERS SPÉCIALISÉS</h3>
+      <p>
+        Renseignement, transmissions,
+        cybersécurité et soutien opérationnel.
+      </p>
+    </article>
+
+  </div>
+
+</section>
+
+<section>
+
+  <div class="engagement">
+
+    <div class="eyebrow">FBA MÉTIERS</div>
+
+    <h2>Un engagement qui mérite d'être mis en lumière.</h2>
+
+    <p>
+      Militaire ou ancien militaire ?
+      Vous souhaitez faire découvrir votre spécialité ?
+      Proposez-nous une idée pour une prochaine collection.
+    </p>
+
+    <a class="btn" href="metiers.html">Retour au catalogue</a>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  <strong>FBA MÉTIERS</strong> – Les métiers qui font la France.
+  <p>Les métiers, les savoir-faire et celles et ceux qui les font vivre.</p>
+  <a href="index.html">Retour au site principal</a>
+</footer>
+
+</body>
+</html>
