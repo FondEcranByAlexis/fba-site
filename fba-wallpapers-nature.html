@@ -1,0 +1,512 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="FBA Wallpapers : fonds d'écran nature, montagnes, forêts, océans et animaux.">
+  <title>Nature et Paysages | FBA Wallpapers</title>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080808;
+      color: #f2f2f2;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    header {
+      background: #0d0d0d;
+      border-bottom: 1px solid #292929;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .brand {
+      font-size: 21px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .brand span, h1 span, h2 span { color: #e32636; }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 12px;
+      font-size: 13px;
+    }
+
+    nav a:hover { color: #e32636; }
+
+    .hero {
+      padding: 75px 20px;
+      text-align: center;
+      background: radial-gradient(ellipse at center, #24352c, #111 48%, #080808 80%);
+      border-bottom: 1px solid #292929;
+    }
+
+    .eyebrow {
+      color: #e32636;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: clamp(35px, 8vw, 65px);
+      letter-spacing: 2px;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      max-width: 750px;
+      margin: auto;
+      color: #c5c5c5;
+    }
+
+    .slogan {
+      margin-top: 25px;
+      font-size: 13px;
+      letter-spacing: 3px;
+      color: #aaa;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 1150px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 20px 0 30px;
+    }
+
+    .section-title h2 {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #999;
+      font-size: 14px;
+    }
+
+    .category-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 45px;
+    }
+
+    .category-nav a {
+      border: 1px solid #713039;
+      border-radius: 25px;
+      padding: 9px 17px;
+      font-size: 12px;
+      font-weight: bold;
+      transition: .2s;
+    }
+
+    .category-nav a:hover {
+      background: #e32636;
+      border-color: #e32636;
+    }
+
+    .wallpaper-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 55px;
+    }
+
+    .wallpaper-card {
+      overflow: hidden;
+      background: #141414;
+      border: 1px solid #303030;
+      border-radius: 12px;
+      transition: .25s;
+    }
+
+    .wallpaper-card:hover {
+      border-color: #e32636;
+      transform: translateY(-4px);
+    }
+
+    .wallpaper-preview {
+      aspect-ratio: 9 / 16;
+      background: linear-gradient(145deg, #24352c, #151515 65%, #080808);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+      color: #aaa;
+      border-bottom: 1px solid #303030;
+    }
+
+    .wallpaper-preview .symbol {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .wallpaper-preview strong {
+      color: #fff;
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+
+    .wallpaper-preview small {
+      color: #e32636;
+      margin-top: 8px;
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+
+    .wallpaper-info { padding: 17px; }
+
+    .wallpaper-info h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .wallpaper-info p {
+      color: #999;
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
+
+    .download {
+      display: block;
+      text-align: center;
+      padding: 10px;
+      background: #292929;
+      border: 1px solid #555;
+      border-radius: 6px;
+      color: #777;
+      font-size: 12px;
+      font-weight: bold;
+      cursor: not-allowed;
+    }
+
+    .notice {
+      max-width: 750px;
+      margin: 0 auto 45px;
+      padding: 20px;
+      border: 1px solid #713039;
+      border-radius: 10px;
+      background: #170d0f;
+      text-align: center;
+      color: #bbb;
+      font-size: 13px;
+    }
+
+    .back {
+      display: inline-block;
+      padding: 12px 22px;
+      border: 1px solid #e32636;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .back:hover { background: #e32636; }
+
+    .return {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    footer {
+      border-top: 1px solid #292929;
+      padding: 25px 15px;
+      text-align: center;
+      color: #777;
+      font-size: 12px;
+    }
+
+    footer strong { color: #ddd; }
+
+    @media (max-width: 750px) {
+      .wallpaper-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 480px) {
+      .wallpaper-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a class="brand" href="index.html">FOND<span>ECRAN</span>BYALEXIS</a>
+  <nav>
+    <a href="index.html">ACCUEIL</a>
+    <a href="fba-wallpapers.html">WALLPAPERS</a>
+    <a href="fba-wallpapers-monuments.html">MONUMENTS</a>
+    <a href="fba-wallpapers-motos.html">MOTOS</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">FBA WALLPAPERS PRÉSENTE</div>
+  <h1>NATURE <span>& PAYSAGES</span></h1>
+  <p>
+    Évadez-vous à travers les plus beaux paysages.
+    Des sommets des Alpes aux forêts profondes, des océans
+    aux animaux sauvages, découvrez une collection dédiée
+    à la beauté de notre planète.
+  </p>
+  <div class="slogan">L'IMAGE PREND VIE.</div>
+</section>
+
+<main>
+
+  <div class="section-title">
+    <h2>LA COLLECTION <span>NATURE</span></h2>
+    <p>Quatre univers pour admirer la beauté du monde.</p>
+  </div>
+
+  <div class="category-nav">
+    <a href="#montagnes">MONTAGNES</a>
+    <a href="#forets">FORÊTS</a>
+    <a href="#oceans">OCÉANS</a>
+    <a href="#animaux">ANIMAUX</a>
+  </div>
+
+  <section id="montagnes">
+    <div class="section-title">
+      <h2>LES <span>MONTAGNES</span></h2>
+      <p>Des sommets majestueux et des panoramas grandioses.</p>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="symbol">🏔️</div>
+          <strong>LES ALPES</strong>
+          <small>VISUELS À AJOUTER</small>
+        </div>
+        <div class="wallpaper-info">
+          <h3>Les Alpes</h3>
+          <p>Sommets, glaciers et paysages alpins spectaculaires.</p>
+          <span class="download">BIENTÔT DISPONIBLE</span>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="symbol">❄️</div>
+          <strong>MONTAGNES EN HIVER</strong>
+          <small>VISUELS À AJOUTER</small>
+        </div>
+        <div class="wallpaper-info">
+          <h3>Paysages enneigés</h3>
+          <p>Montagnes blanches, forêts enneigées et ambiance hivernale.</p>
+          <span class="download">BIENTÔT DISPONIBLE</span>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="symbol">🌄</div>
+          <strong>LEVER ET COUCHER DE SOLEIL</strong>
+          <small>VISUELS À AJOUTER</small>
+        </div>
+        <div class="wallpaper-info">
+          <h3>Lumières des sommets</h3>
+          <p>Les montagnes baignées par les lumières du soleil.</p>
+          <span class="download">BIENTÔT DISPONIBLE</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="forets">
+    <div class="section-title">
+      <h2>FORÊTS ET <span>CAMPAGNES</span></h2>
+      <p>Des espaces naturels pour retrouver le calme et l'évasion.</p>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="symbol">🌲</div>
+          <strong>FORÊTS PROFONDES</strong>
+          <small>VISUELS À AJOUTER</small>
+        </div>
+        <div class="wallpaper-info">
+          <h3>Forêts</h3>
+          <p>Forêts verdoyantes, sentiers et grands arbres.</p>
+          <span class="download">BIENTÔT DISPONIBLE</span>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="symbol">🏞️</div>
+          <strong>LACS ET RIVIÈRES</strong>
+          <small>VISUELS À AJOUTER</small>
+        </div>
+        <div class="wallpaper-info">
+          <h3>Lacs et rivières</h3>
+          <p>Eaux paisibles, cascades et paysages aquatiques.</p>
+          <span class="download">BIENTÔT DISPONIBLE</span>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="symbol">🌾</div>
+          <strong>CAMPAGNES</strong>
+          <small>VISUELS À AJOUTER</small>
+        </div>
+        <div class="wallpaper-info">
+          <h3>Campagnes françaises</h3>
+          <p>Champs, prairies et paysages ruraux.</p>
+          <span class="download">BIENTÔT DISPONIBLE</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="oceans">
+    <div class="section-title">
+      <h2>OCÉANS ET <span>LITTORAUX</span></h2>
+      <p>La puissance de la mer et la beauté des côtes.</p>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="symbol">🌊</div>
+          <strong>OCÉANS ET VAGUES</strong>
+          <small>VISUELS À AJOUTER</small>
+        </div>
+        <div class="wallpaper-info">
+          <h3>Océans</h3>
+          <p>Vagues, mer agitée et grands espaces marins.</p>
+          <span class="download">BIENTÔT DISPONIBLE</span>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="symbol">🏖️</div>
+          <strong>PLAGES ET LITTORAUX</strong>
+          <small>VISUELS À AJOUTER</small>
+        </div>
+        <div class="wallpaper-info">
+          <h3>Plages</h3>
+          <p>Sable, criques et paysages côtiers.</p>
+          <span class="download">BIENTÔT DISPONIBLE</span>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="symbol">🌅</div>
+          <strong>COUCHERS DE SOLEIL</strong>
+          <small>VISUELS À AJOUTER</small>
+        </div>
+        <div class="wallpaper-info">
+          <h3>Soleil sur la mer</h3>
+          <p>Des couchers de soleil et des lumières exceptionnelles.</p>
+          <span class="download">BIENTÔT DISPONIBLE</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="animaux">
+    <div class="section-title">
+      <h2>ANIMAUX ET <span>FAUNE SAUVAGE</span></h2>
+      <p>À la rencontre des animaux dans leur environnement naturel.</p>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="symbol">🐺</div>
+          <strong>ANIMAUX SAUVAGES</strong>
+          <small>VISUELS À AJOUTER</small>
+        </div>
+        <div class="wallpaper-info">
+          <h3>Mammifères sauvages</h3>
+          <p>Loups, renards, cerfs et autres animaux emblématiques.</p>
+          <span class="download">BIENTÔT DISPONIBLE</span>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="symbol">🦅</div>
+          <strong>OISEAUX ET RAPACES</strong>
+          <small>VISUELS À AJOUTER</small>
+        </div>
+        <div class="wallpaper-info">
+          <h3>Oiseaux</h3>
+          <p>Aigles, rapaces et oiseaux photographiés en pleine nature.</p>
+          <span class="download">BIENTÔT DISPONIBLE</span>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="symbol">🦌</div>
+          <strong>FAUNE DES MONTAGNES</strong>
+          <small>VISUELS À AJOUTER</small>
+        </div>
+        <div class="wallpaper-info">
+          <h3>Animaux des montagnes</h3>
+          <p>Bouquetins, chamois et animaux des milieux alpins.</p>
+          <span class="download">BIENTÔT DISPONIBLE</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="notice">
+    <strong>COLLECTION EN CONSTRUCTION</strong><br>
+    Les emplacements sont prêts. Les fonds d'écran originaux seront
+    ajoutés progressivement. Les téléchargements seront activés
+    lorsque les fichiers seront disponibles.
+  </div>
+
+  <div class="return">
+    <a class="back" href="fba-wallpapers.html">RETOUR À FBA WALLPAPERS</a>
+  </div>
+
+</main>
+
+<footer>
+  <strong>FONDECRANBYALEXIS</strong><br>
+  FBA WALLPAPERS — NATURE ET PAYSAGES<br>
+  © 2026 — Tous droits réservés.
+</footer>
+
+</body>
+</html>
