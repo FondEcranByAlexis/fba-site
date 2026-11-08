@@ -344,13 +344,9 @@ cart.forEach(product => {
 
   // Miniature du fond d'écran
   const img = document.createElement("img");
-
-  const images = {
-    "f1-verstappen-01": "images/f1/f1-verstappen-portrait-apercu.jpg",
-    "f1-verstappen-02": "images/f1/f1-verstappen-monoplace-apercu.jpg",
-    "f1-verstappen-03": "images/f1/f1-verstappen-champion-apercu.jpg"
-  };
-
+  
+const images = previewFiles;
+  
   img.src = images[product.id] || "";
   img.alt = product.name;
   img.style.width = "55px";
