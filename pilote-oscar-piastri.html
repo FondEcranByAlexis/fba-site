@@ -31,6 +31,37 @@
     object-fit: contain;
     background: #08090d;
   }
+  
+.profile .piastri-photo {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #111318;
+}
+
+.profile .piastri-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.profile .piastri-photo .photo-disclaimer {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 12px 10px;
+  color: #a1a1aa;
+  background: #111318;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+  
 </style>
 </head>
 
@@ -101,25 +132,18 @@
 
   <div class="profile">
 
-    <div class="portrait">
+    <div class="portrait piastri-photo">
   <img
     src="images/pilotes/oscar-piastri-photo.png"
-    alt="Portrait photoréaliste généré par IA d'Oscar Piastri"
+    alt="Portrait photoréaliste d'Oscar Piastri généré par IA"
     loading="lazy">
 
-  <p style="
-    text-align:center;
-    font-size:12px;
-    color:#a1a1aa;
-    padding:12px 8px;
-    margin:0;
-    background:#111318;
-  ">
-    Portrait photoréaliste généré par intelligence artificielle.
-    Illustration non officielle.
+  <p class="photo-disclaimer">
+    Portrait généré par intelligence artificielle
+    — illustration non officielle.
   </p>
 </div>
-
+    
     <div class="panel">
       <div class="details">
 
