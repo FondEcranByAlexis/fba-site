@@ -625,11 +625,67 @@ content="Esteban Ocon : biographie, victoire en Formule 1, carrière, statistiqu
     Portrait, Racing et Célébration.
     Aperçus avec filigrane FBA.
   </p>
+  
+<div class="gallery" id="products">
 
-  <div
-    class="gallery"
-    id="products">
-  </div>
+  <article class="product">
+    <div class="preview">
+      <img
+        src="images/f1/f1-ocon-portrait-apercu.jpg"
+        alt="Esteban Ocon — Portrait"
+        loading="lazy">
+    </div>
+    <div class="productbody">
+      <h3>Esteban Ocon — Portrait</h3>
+      <div class="price">1,99 €</div>
+      <button
+        class="btn primary"
+        type="button"
+        onclick="addOcon('f1-ocon-01','Esteban Ocon — Portrait')">
+        Ajouter au panier
+      </button>
+    </div>
+  </article>
+
+  <article class="product">
+    <div class="preview">
+      <img
+        src="images/f1/f1-ocon-racing-apercu.jpg"
+        alt="Esteban Ocon — Racing"
+        loading="lazy">
+    </div>
+    <div class="productbody">
+      <h3>Esteban Ocon — Racing</h3>
+      <div class="price">1,99 €</div>
+      <button
+        class="btn primary"
+        type="button"
+        onclick="addOcon('f1-ocon-02','Esteban Ocon — Racing')">
+        Ajouter au panier
+      </button>
+    </div>
+  </article>
+
+  <article class="product">
+    <div class="preview">
+      <img
+        src="images/f1/f1-ocon-celebration-apercu.jpg"
+        alt="Esteban Ocon — Célébration"
+        loading="lazy">
+    </div>
+    <div class="productbody">
+      <h3>Esteban Ocon — Célébration</h3>
+      <div class="price">1,99 €</div>
+      <button
+        class="btn primary"
+        type="button"
+        onclick="addOcon('f1-ocon-03','Esteban Ocon — Célébration')">
+        Ajouter au panier
+      </button>
+    </div>
+  </article>
+
+</div>
 
 </section>
 
@@ -1023,4 +1079,107 @@ function renderCart() {
   const root =
     document.getElementById("cart-lines");
 
-  root.re
+   root.replaceChildren();
+
+  document.getElementById(
+    "cart-count"
+  ).textContent = cart.length;
+
+  if (!cart.length) {
+    root.textContent = "Votre panier est vide.";
+  }
+
+  cart.forEach(product => {
+    const row =
+      document.createElement("div");
+
+    row.className = "cart-line";
+
+    const file = previewFiles[product.id];
+
+    if (file) {
+      const img =
+        document.createElement("img");
+
+      img.src = file;
+      img.alt = product.name;
+
+      row.append(img);
+    }
+
+    const info =
+      document.createElement("div");
+
+    info.className = "cart-line-info";
+
+    const name =
+      document.createElement("strong");
+
+    name.textContent = product.name;
+
+    const price =
+      document.createElement("span");
+
+    price.textContent = "1,99 €";
+
+    info.append(name, price);
+
+    const remove =
+      document.createElement("button");
+
+    remove.type = "button";
+    remove.textContent = "Retirer";
+
+    remove.addEventListener("click", () => {
+      saveCart(
+        getCart().filter(
+          p => p.id !== product.id
+        )
+      );
+    });
+
+    row.append(info, remove);
+    root.append(row);
+  });
+
+  const standard = cart.length * 1.99;
+  const total = totalFor(cart.length);
+
+  document.getElementById(
+    "cart-discount"
+  ).textContent =
+    cart.length
+      ? "Réduction packs : " +
+        euro(Math.max(0, standard - total))
+      : "";
+
+  document.getElementById(
+    "cart-total"
+  ).textContent =
+    "Total : " + euro(total);
+}
+
+document.getElementById("open-cart")
+  .addEventListener("click", openCart);
+
+document.getElementById("close-cart")
+  .addEventListener("click", closeCart);
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") {
+    closeCart();
+  }
+});
+
+window.addEventListener("storage", event => {
+  if (event.key === KEY) {
+    renderCart();
+  }
+});
+
+renderProducts();
+renderCart();
+</script>
+
+</body>
+</html>
