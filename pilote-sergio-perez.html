@@ -524,8 +524,13 @@ function renderCart() {
     const line = document.createElement("div");
     line.className = "cart-line";
 
-    const imagePath =
-      previewFiles[item.id] || item.image;
+    
+const imagePath =
+  window.FBA_IMAGES?.[item.id] ||
+  previewFiles[item.id] ||
+  item.image ||
+  "";
+    
 
     if (imagePath) {
       const img = document.createElement("img");
