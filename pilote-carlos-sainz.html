@@ -508,8 +508,99 @@ function renderCart() {
     const line = document.createElement("div");
     line.className = "cart-line";
 
-    const imgPath = item.image ||
-      products.find(p => p.id === item.id)?.image;
+     
+const allImages = {
+  "f1-verstappen": [
+    "portrait", "monoplace", "champion"
+  ],
+  "f1-hadjar": [
+    "portrait", "monoplace", "podium"
+  ],
+  "f1-leclerc": [
+    "portrait", "monoplace", "victoire"
+  ],
+  "f1-hamilton": [
+    "portrait", "monoplace", "champion"
+  ],
+  "f1-russell": [
+    "portrait", "monoplace", "celebration"
+  ],
+  "f1-antonelli": [
+    "portrait", "racing", "celebration"
+  ],
+  "f1-norris": [
+    "portrait", "racing", "celebration"
+  ],
+  "f1-piastri": [
+    "portrait", "racing", "celebration"
+  ],
+  "f1-alonso": [
+    "portrait", "racing", "celebration"
+  ],
+  "f1-stroll": [
+    "portrait", "racing", "celebration"
+  ],
+  "f1-albon": [
+    "portrait", "racing", "celebration"
+  ],
+  "f1-sainz": [
+    "portrait", "racing", "celebration"
+  ],
+  "f1-lawson": [
+    "portrait", "racing", "celebration"
+  ],
+  "f1-lindblad": [
+    "portrait", "racing", "celebration"
+  ],
+  "f1-gasly": [
+    "portrait", "racing", "celebration"
+  ],
+  "f1-colapinto": [
+    "portrait", "racing", "celebration"
+  ],
+  "f1-hulkenberg": [
+    "portrait", "racing", "celebration"
+  ],
+  "f1-bortoleto": [
+    "portrait", "racing", "celebration"
+  ],
+  "f1-ocon": [
+    "portrait", "racing", "celebration"
+  ],
+  "f1-bearman": [
+    "portrait", "racing", "celebration"
+  ],
+  "f1-perez": [
+    "portrait", "racing", "celebration"
+  ],
+  "f1-bottas": [
+    "portrait", "racing", "celebration"
+  ]
+};
+
+function findImage(item) {
+  const match = item.id.match(
+    /^(f1-[a-z]+)-0([1-3])$/
+  );
+
+  if (match) {
+    const variants = allImages[match[1]];
+    const index = Number(match[2]) - 1;
+
+    if (variants && variants[index]) {
+      return "images/f1/" +
+        match[1] + "-" +
+        variants[index] + "-apercu.jpg";
+    }
+  }
+
+  return item.image ||
+    products.find(p => p.id === item.id)?.image ||
+    "";
+}
+
+const imgPath = findImage(item);
+    
 
     if (imgPath) {
       const img = document.createElement("img");
