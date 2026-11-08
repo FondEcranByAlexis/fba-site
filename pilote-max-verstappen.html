@@ -387,7 +387,7 @@ cart.forEach(product => {
   row.append(info, remove);
   root.append(row);
 });
-  
+  const standard = cart.length * 1.99;
   const total = totalFor(cart.length);
 
   document.getElementById("cart-discount").textContent =
