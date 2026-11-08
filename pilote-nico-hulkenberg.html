@@ -819,7 +819,11 @@ function renderProducts() {
       document.createElement("div");
     preview.className = "preview";
 
-    const file = previewFiles[product.id];
+    
+const file =
+  product.image ||
+  previewFiles[product.id];
+    
 
     if (file) {
       const img =
@@ -890,7 +894,11 @@ function renderCart() {
       document.createElement("div");
     row.className = "cart-line";
 
-    const file = previewFiles[product.id];
+    
+const file =
+  product.image ||
+  previewFiles[product.id];
+
 
     if (file) {
       const img =
