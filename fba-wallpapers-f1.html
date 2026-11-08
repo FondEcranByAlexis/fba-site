@@ -49,8 +49,42 @@ main{max-width:1150px;margin:auto;padding:50px 20px}
 .return{text-align:center;margin-top:20px}
 footer{border-top:1px solid #292929;padding:25px 15px;text-align:center;color:#777;font-size:12px}
 footer strong{color:#ddd}
-@media(max-width:750px){.wallpaper-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:480px){.wallpaper-grid{grid-template-columns:1fr}}
+
+/* Affichage des pilotes : 2 colonnes sur mobile */
+@media (max-width: 750px) {
+  #pilotes .wallpaper-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  #pilotes .wallpaper-info {
+    padding: 10px;
+  }
+
+  #pilotes .wallpaper-info h3 {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  #pilotes .wallpaper-info p {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  #pilotes .view-profile {
+    font-size: 10px;
+    padding: 9px 4px;
+  }
+}
+
+/* Autres collections : 1 colonne sur petit écran */
+@media (max-width: 480px) {
+  #ecuries .wallpaper-grid,
+  #circuits .wallpaper-grid {
+    grid-template-columns: 1fr;
+  }
+}
+  
 </style>
 </head>
 <body>
