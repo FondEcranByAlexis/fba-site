@@ -971,4 +971,16 @@ document.addEventListener("keydown", event => {
   }
 });
 
-window.addEventListener("storage", eve
+window.addEventListener("storage", event => {
+  if (event.key === KEY) {
+    renderCart();
+  }
+});
+
+renderProducts();
+renderCart();
+
+</script>
+</body>
+</html>
+
