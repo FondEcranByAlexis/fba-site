@@ -325,26 +325,69 @@ function renderCart() {
   if (!cart.length) {
     root.textContent = "Votre panier est vide.";
   }
+  
+cart.forEach(product => {
+  const row = document.createElement("div");
+  row.className = "cart-line";
 
-  cart.forEach(product => {
-    const row = document.createElement("div");
-    row.className = "cart-line";
+  // Présentation de l'article
+  row.style.display = "flex";
+  row.style.alignItems = "center";
+  row.style.gap = "12px";
+  row.style.padding = "12px 0";
 
-    const name = document.createElement("span");
-    name.textContent = product.name;
+  // Miniature du fond d'écran
+  const img = document.createElement("img");
 
-    const remove = document.createElement("button");
-    remove.type = "button";
-    remove.textContent = "Retirer";
-    remove.addEventListener("click", () => {
-      saveCart(getCart().filter(p => p.id !== product.id));
-    });
+  const images = {
+    "f1-verstappen-01": "images/f1/f1-verstappen-portrait-apercu.jpg",
+    "f1-verstappen-02": "images/f1/f1-verstappen-monoplace-apercu.jpg",
+    "f1-verstappen-03": "images/f1/f1-verstappen-champion-apercu.jpg"
+  };
 
-    row.append(name, remove);
-    root.append(row);
+  img.src = images[product.id] || "";
+  img.alt = product.name;
+  img.style.width = "55px";
+  img.style.height = "98px";
+  img.style.objectFit = "cover";
+  img.style.borderRadius = "8px";
+  img.style.flexShrink = "0";
+
+  if (images[product.id]) {
+    row.append(img);
+  }
+
+  // Nom et prix
+  const info = document.createElement("div");
+  info.style.flex = "1";
+  info.style.minWidth = "0";
+
+  const name = document.createElement("strong");
+  name.textContent = product.name;
+  name.style.display = "block";
+  name.style.fontSize = "13px";
+  name.style.overflowWrap = "anywhere";
+
+  const price = document.createElement("span");
+  price.textContent = "1,99 €";
+  price.style.display = "block";
+  price.style.marginTop = "6px";
+
+  info.append(name, price);
+
+  // Bouton retirer
+  const remove = document.createElement("button");
+  remove.type = "button";
+  remove.textContent = "Retirer";
+
+  remove.addEventListener("click", () => {
+    saveCart(getCart().filter(p => p.id !== product.id));
   });
 
-  const standard = cart.length * 1.99;
+  row.append(info, remove);
+  root.append(row);
+});
+  
   const total = totalFor(cart.length);
 
   document.getElementById("cart-discount").textContent =
