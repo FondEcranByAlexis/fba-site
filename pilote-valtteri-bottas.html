@@ -757,9 +757,13 @@ function renderCart() {
 
     const current = products.find(p => p.id === item.id);
 
-    const imagePath = current
-      ? current.image
-      : item.image;
+    
+const imagePath =
+  window.FBA_IMAGES?.[item.id] ||
+  current?.image ||
+  item.image ||
+  "";
+    
 
     if (imagePath) {
       const img = document.createElement("img");
