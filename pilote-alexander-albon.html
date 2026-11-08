@@ -365,7 +365,7 @@
     Paiement bientôt disponible
   </button>
 </aside>
-
+ <script src="fba-cart-images.js"></script>
 <script>
 "use strict";
 
@@ -503,8 +503,12 @@ function renderCart() {
     const line = document.createElement("div");
     line.className = "cart-line";
 
-    const imgPath = item.image ||
-      products.find(p => p.id === item.id)?.image;
+    const imgPath =
+  window.FBA_IMAGES?.[item.id] ||
+  item.image ||
+  products.find(p => p.id === item.id)?.image ||
+  "";
+    
 
     if (imgPath) {
       const img = document.createElement("img");
