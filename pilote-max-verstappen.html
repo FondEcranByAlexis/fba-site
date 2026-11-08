@@ -4,202 +4,363 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08090d">
+<meta name="description" content="Fiche pilote Max Verstappen : biographie, statistiques, palmarès et fonds d'écran FondEcranByAlexis.">
 <title>Max Verstappen | FBA Wallpapers</title>
-<style>
-:root {
-  --bg:#08090d;--panel:#15171e;--red:#e32735;
-  --text:#fff;--muted:#b4b6c0;
-}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,sans-serif;line-height:1.6}
-a{color:inherit;text-decoration:none}
-header{background:#101116;padding:22px;text-align:center;border-bottom:2px solid var(--red)}
-.logo{font-size:23px;font-weight:900;letter-spacing:2px}
-.logo span,.red{color:var(--red)}
-nav{margin-top:14px;display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
-nav a{font-size:14px}
-.container{max-width:1100px;margin:auto;padding:30px 20px}
-.hero{text-align:center;padding:65px 20px;background:linear-gradient(135deg,#152b54,#08090d)}
-.hero h1{font-size:clamp(40px,9vw,76px);line-height:1.1;margin:15px 0}
-.hero p{color:#d1d3dc}
-.number{font-size:50px;font-weight:900;color:#ff4755}
-h2{font-size:29px;margin:20px 0}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.card{background:var(--panel);border:1px solid #343640;border-radius:14px;padding:22px}
-.card small{display:block;color:var(--muted)}
-.card strong{font-size:20px}
-.stat{text-align:center}
-.stat strong{display:block;font-size:42px;color:#fff}
-.portrait{min-height:300px;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(135deg,#1b3765,#101116);border-radius:16px;color:#cbd2df;padding:25px}
-.btn{background:var(--red);color:white;border:0;border-radius:9px;padding:13px 19px;font-weight:bold;cursor:pointer}
-.secondary{background:#292c35}
-.product{overflow:hidden;padding:0}
-.preview{aspect-ratio:9/16;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(#17417d,#08090d);position:relative}
-.preview:after{content:"FBA • APERÇU";position:absolute;transform:rotate(-30deg);font-size:24px;font-weight:bold;color:#ffffff35}
-.product-info{padding:20px}
-.price{font-size:24px;font-weight:bold;margin:12px 0}
-.product button{width:100%}
-.packs{margin-top:25px}
-.cart{position:fixed;right:0;top:0;width:min(400px,100%);height:100vh;background:#171920;z-index:20;padding:24px;overflow:auto;display:none;box-shadow:-10px 0 40px #0009}
-.cart.open{display:block}
-.cart-line{padding:12px 0;border-bottom:1px solid #444;display:flex;justify-content:space-between;gap:10px}
-.cart-line button{background:#333;color:white;border:0;border-radius:6px;padding:7px}
-footer{text-align:center;padding:35px;color:#aaa;border-top:1px solid #333}
-.note{color:#c5c5cc;font-size:13px}
-</style>
+<link rel="stylesheet" href="fba-pilotes.css">
 </head>
 <body>
+
 <header>
- <div class="logo">FOND<span>ECRAN</span>BYALEXIS</div>
- <nav>
-  <a href="index.html">ACCUEIL</a>
-  <a href="fba-wallpapers.html">WALLPAPERS</a>
-  <a href="fba-wallpapers-f1.html">FORMULE 1</a>
-  <a href="boutique.html">BOUTIQUE</a>
- </nav>
+  <div class="wrap head">
+    <a class="brand" href="index.html">FOND<span>ECRAN</span>BYALEXIS</a>
+    <nav aria-label="Navigation">
+      <a href="fba-wallpapers.html">Wallpapers</a>
+      <a href="fba-wallpapers-f1.html">Formule 1</a>
+      <a href="boutique.html">Boutique</a>
+    </nav>
+    <button class="cartbtn" id="open-cart" type="button">
+      Panier (<span id="cart-count">0</span>)
+    </button>
+  </div>
 </header>
 
-<section class="hero">
- <div class="number">03</div>
- <h1>MAX <span class="red">VERSTAPPEN</span></h1>
- <p>RED BULL RACING · PAYS-BAS · SAISON 2026</p>
- <p>Quadruple champion du monde de Formule 1</p>
- <a href="#wallpapers" class="btn" style="display:inline-block;margin-top:15px">VOIR SES FONDS D'ÉCRAN</a>
-</section>
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">FBA Wallpapers / Formule 1 / Pilotes</div>
+      <h1>MAX<br><span class="accent">VERSTAPPEN</span></h1>
+      <span class="pill">Red Bull Racing · N° 3 · Pays-Bas</span>
+      <p>
+        Quatre fois champion du monde de Formule 1.
+        Découvrez son parcours, ses performances et les
+        créations FBA qui lui sont consacrées.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#wallpapers">Voir ses fonds d'écran</a>
+        <a class="btn" href="#statistiques">Statistiques</a>
+      </div>
+    </div>
+  </section>
 
-<main class="container">
- <h2>PRÉSENTATION <span class="red">DU PILOTE</span></h2>
- <div class="grid">
-  <div class="portrait">PHOTO OFFICIELLE À AJOUTER</div>
-  <div class="card">
-   <p><strong>Max Emilian Verstappen</strong></p>
-   <p>Nationalité : Pays-Bas</p>
-   <p>Naissance : 30 septembre 1997</p>
-   <p>Débuts en F1 : 2015</p>
-   <p>Écurie 2026 : Red Bull Racing</p>
-   <p>Numéro 2026 : 3</p>
-   <p>Première victoire : Espagne 2016</p>
-   <p>Championnats du monde : 2021, 2022, 2023 et 2024</p>
-  </div>
- </div>
+  <section class="section wrap">
+    <h2>Présentation <span class="accent">du pilote</span></h2>
+    <p class="sub">Biographie, parcours et informations personnelles.</p>
 
- <h2>STATISTIQUES <span class="red">DE CARRIÈRE</span></h2>
- <div class="grid">
-  <div class="card stat"><strong>4</strong>Titres mondiaux</div>
-  <div class="card stat"><strong>—</strong>Grands Prix</div>
-  <div class="card stat"><strong>—</strong>Victoires</div>
-  <div class="card stat"><strong>—</strong>Podiums</div>
-  <div class="card stat"><strong>—</strong>Pole positions</div>
-  <div class="card stat"><strong>—</strong>Meilleurs tours</div>
- </div>
- <p class="note">Statistiques à compléter après vérification des données officielles.</p>
+    <div class="profile">
+      <div class="portrait">
+        <div class="empty">
+          <strong>PORTRAIT À INTÉGRER</strong>
+          <p>Photographie officielle à ajouter après vérification des droits.</p>
+        </div>
+      </div>
 
- <h2>SON <span class="red">PALMARÈS</span></h2>
- <div class="grid">
-  <div class="card"><strong>2021</strong><p>Champion du monde</p></div>
-  <div class="card"><strong>2022</strong><p>Champion du monde</p></div>
-  <div class="card"><strong>2023</strong><p>Champion du monde</p></div>
-  <div class="card"><strong>2024</strong><p>Champion du monde</p></div>
- </div>
+      <div class="panel">
+        <div class="details">
+          <div><small>Nom complet</small><strong>Max Emilian Verstappen</strong></div>
+          <div><small>Nationalité</small><strong>Néerlandaise</strong></div>
+          <div><small>Date de naissance</small><strong>30 septembre 1997</strong></div>
+          <div><small>Débuts en F1</small><strong>2015</strong></div>
+          <div><small>Écurie 2026</small><strong>Red Bull Racing</strong></div>
+          <div><small>Numéro 2026</small><strong>3</strong></div>
+          <div><small>Titres mondiaux</small><strong>4</strong></div>
+          <div><small>Première victoire</small><strong>Espagne 2016</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
- <section id="wallpapers">
-  <h2>FONDS D'ÉCRAN <span class="red">MAX VERSTAPPEN</span></h2>
-  <p>Découvrez les créations exclusives FBA consacrées au pilote.</p>
-  <div class="grid" id="gallery"></div>
- </section>
+  <section class="section wrap">
+    <h2>Biographie <span class="accent">& parcours</span></h2>
+    <div class="bio">
+      <p>
+        Max Emilian Verstappen est un pilote néerlandais né
+        le 30 septembre 1997 à Hasselt, en Belgique.
+        Après une progression rapide en karting et en monoplace,
+        il débute en Formule 1 avec Toro Rosso en 2015.
+      </p>
+      <p>
+        Promu chez Red Bull Racing en 2016, il remporte le
+        Grand Prix d'Espagne dès sa première course avec
+        cette équipe.
+      </p>
+      <p>
+        Il décroche son premier titre mondial en 2021,
+        puis conserve sa couronne en 2022, 2023 et 2024.
+      </p>
+      <p>
+        Son pilotage se distingue par son rythme en course,
+        sa précision et sa capacité à se battre en duel.
+      </p>
+    </div>
+  </section>
 
- <h2>NOS <span class="red">TARIFS</span></h2>
- <div class="grid packs">
-  <div class="card"><strong>1,99 €</strong><p>1 fond d'écran</p></div>
-  <div class="card"><strong>6,99 €</strong><p>5 fonds d'écran au choix</p></div>
-  <div class="card"><strong>11,99 €</strong><p>10 fonds d'écran au choix</p></div>
- </div>
- <p class="note">Boutique en démonstration. Paiement et téléchargement HD non disponibles pour le moment.</p>
+  <section class="section wrap" id="statistiques">
+    <h2>Statistiques <span class="accent">de carrière</span></h2>
+    <p class="sub">Les données évolutives seront actualisées à partir de sources officielles.</p>
+
+    <div class="stats">
+      <div class="stat"><strong>4</strong><span>Titres mondiaux</span></div>
+      <div class="stat"><strong>—</strong><span>Grands Prix disputés</span></div>
+      <div class="stat"><strong>—</strong><span>Victoires</span></div>
+      <div class="stat"><strong>—</strong><span>Podiums</span></div>
+      <div class="stat"><strong>—</strong><span>Pole positions</span></div>
+      <div class="stat"><strong>—</strong><span>Meilleurs tours</span></div>
+    </div>
+
+    <p class="note">
+      Statistiques à compléter après vérification et datation.
+    </p>
+    <p class="source-note">
+      Sources :
+      <a href="https://www.formula1.com/en/drivers/max-verstappen" target="_blank" rel="noopener noreferrer">Formula 1</a>
+      et
+      <a href="https://www.fia.com/" target="_blank" rel="noopener noreferrer">FIA</a>.
+    </p>
+  </section>
+
+  <section class="section wrap">
+    <h2>Son <span class="accent">palmarès</span></h2>
+    <div class="years">
+      <div class="year"><b>2021</b> · Champion du monde</div>
+      <div class="year"><b>2022</b> · Champion du monde</div>
+      <div class="year"><b>2023</b> · Champion du monde</div>
+      <div class="year"><b>2024</b> · Champion du monde</div>
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <h2>Saison <span class="accent">2026</span></h2>
+    <div class="season">
+      <div class="stat"><strong>—</strong><span>Points</span></div>
+      <div class="stat"><strong>—</strong><span>Victoires</span></div>
+      <div class="stat"><strong>—</strong><span>Classement mondial</span></div>
+    </div>
+    <p class="note">Résultats de la saison 2026 à vérifier et actualiser.</p>
+  </section>
+
+  <section class="section wrap" id="wallpapers">
+    <h2>Ses fonds d'écran <span class="accent">FBA</span></h2>
+    <p class="sub">
+      Retrouvez les créations FondEcranByAlexis consacrées à Max Verstappen.
+    </p>
+    <div class="gallery" id="products"></div>
+  </section>
+
+  <section class="section wrap">
+    <h2>Tarifs <span class="accent">FBA Wallpapers</span></h2>
+    <div class="packs">
+      <div class="pack">
+        <div>1 fond d'écran</div>
+        <strong>1,99 €</strong>
+        <p>À l'unité</p>
+      </div>
+      <div class="pack">
+        <div>5 fonds d'écran</div>
+        <strong>6,99 €</strong>
+        <p>Au choix, toutes collections confondues</p>
+      </div>
+      <div class="pack">
+        <div>10 fonds d'écran</div>
+        <strong>11,99 €</strong>
+        <p>Au choix, toutes collections confondues</p>
+      </div>
+    </div>
+    <p class="note">
+      Boutique de démonstration. Aucun paiement ni téléchargement HD
+      n'est encore disponible.
+    </p>
+  </section>
 </main>
 
-<footer>
- © 2026 FondEcranByAlexis — Création indépendante, non affiliée à la Formule 1 ou Red Bull Racing.
+<footer class="footer">
+  <div class="wrap">
+    © 2026 FondEcranByAlexis — Création indépendante,
+    non affiliée à Formula 1, Red Bull Racing ou Max Verstappen.
+    <a href="fba-wallpapers-f1.html">Retour à la collection F1</a>
+  </div>
 </footer>
 
-<aside class="cart" id="cart">
- <button class="btn secondary" onclick="toggleCart(false)">FERMER</button>
- <h2>MON PANIER</h2>
- <div id="items"></div>
- <h3 id="total"></h3>
- <p class="note">Paiement prochainement.</p>
+<aside class="cart-panel" id="cart-panel" aria-label="Panier" aria-hidden="true">
+  <div class="cart-top">
+    <h2>Mon panier</h2>
+    <button class="close" id="close-cart" type="button">Fermer</button>
+  </div>
+  <div id="cart-lines"></div>
+  <p id="cart-discount"></p>
+  <p class="total" id="cart-total"></p>
+  <button class="btn primary disabled" type="button" disabled>
+    Paiement prochainement
+  </button>
+  <p class="sub">Aucun achat ne peut encore être effectué.</p>
 </aside>
-<button class="btn" onclick="toggleCart(true)" style="position:fixed;bottom:18px;right:18px;z-index:10">
- PANIER <span id="count">0</span>
-</button>
 
 <script>
-const KEY="fba_cart_v1";
-const products=[
- {id:"f1-verstappen-01",name:"Verstappen — Portrait"},
- {id:"f1-verstappen-02",name:"Verstappen — Racing"},
- {id:"f1-verstappen-03",name:"Verstappen — Champion"}
+"use strict";
+
+const KEY = "fba_cart_v1";
+
+const products = [
+  {id:"f1-verstappen-01",name:"Max Verstappen — Portrait"},
+  {id:"f1-verstappen-02",name:"Max Verstappen — Racing"},
+  {id:"f1-verstappen-03",name:"Max Verstappen — Champion"}
 ];
 
-function getCart(){
- try{
-  const data=JSON.parse(localStorage.getItem(KEY)||"[]");
-  return Array.isArray(data)?data:[];
- }catch{return []}
+// Emplacements pour les futurs aperçus publics.
+// Ne pas mettre les fichiers HD originaux dans ce dossier.
+const previewFiles = {
+  // "f1-verstappen-01": "images/f1/verstappen-apercu.webp"
+};
+
+function getCart() {
+  try {
+    const data = JSON.parse(localStorage.getItem(KEY) || "[]");
+    return Array.isArray(data)
+      ? data.filter(p => p && typeof p.id === "string" && typeof p.name === "string")
+      : [];
+  } catch {
+    return [];
+  }
 }
-function saveCart(cart){
- localStorage.setItem(KEY,JSON.stringify(cart));
- renderCart();
+
+function saveCart(cart) {
+  try {
+    localStorage.setItem(KEY, JSON.stringify(cart));
+  } catch {}
+  renderCart();
 }
-function priceFor(n){
- return Math.floor(n/10)*11.99+
- Math.floor((n%10)/5)*6.99+(n%5)*1.99;
+
+function euro(value) {
+  return value.toLocaleString("fr-FR", {
+    style: "currency",
+    currency: "EUR"
+  });
 }
-function euro(n){
- return n.toLocaleString("fr-FR",{style:"currency",currency:"EUR"});
+
+function totalFor(n) {
+  const tens = Math.floor(n / 10);
+  const remaining = n % 10;
+  const fives = Math.floor(remaining / 5);
+  const singles = remaining % 5;
+  return tens * 11.99 + fives * 6.99 + singles * 1.99;
 }
-function toggleCart(open){
- document.getElementById("cart").classList.toggle("open",open);
+
+function openCart() {
+  const panel = document.getElementById("cart-panel");
+  panel.classList.add("open");
+  panel.setAttribute("aria-hidden", "false");
 }
-function addProduct(product){
- const cart=getCart();
- if(!cart.some(p=>p.id===product.id)){
-  cart.push(product);
-  saveCart(cart);
- }
- toggleCart(true);
+
+function closeCart() {
+  const panel = document.getElementById("cart-panel");
+  panel.classList.remove("open");
+  panel.setAttribute("aria-hidden", "true");
 }
-function removeProduct(id){
- saveCart(getCart().filter(p=>p.id!==id));
+
+function renderProducts() {
+  const gallery = document.getElementById("products");
+
+  products.forEach((product, index) => {
+    const card = document.createElement("article");
+    card.className = "product";
+
+    const preview = document.createElement("div");
+    preview.className = "preview";
+
+    const file = previewFiles[product.id];
+
+    if (file) {
+      const img = document.createElement("img");
+      img.src = file;
+      img.alt = "Aperçu de " + product.name;
+      img.loading = "lazy";
+      preview.append(img);
+    } else {
+      const placeholder = document.createElement("div");
+      placeholder.className = "placeholder";
+      placeholder.textContent = "MAX VERSTAPPEN — VISUEL À INTÉGRER";
+      preview.append(placeholder);
+    }
+
+    const body = document.createElement("div");
+    body.className = "productbody";
+
+    const title = document.createElement("h3");
+    title.textContent = product.name;
+
+    const price = document.createElement("div");
+    price.className = "price";
+    price.textContent = "1,99 €";
+
+    const button = document.createElement("button");
+    button.className = "btn primary";
+    button.type = "button";
+    button.textContent = "Ajouter au panier";
+
+    button.addEventListener("click", () => {
+      const cart = getCart();
+      if (!cart.some(p => p.id === product.id)) {
+        cart.push(product);
+        saveCart(cart);
+      }
+      openCart();
+    });
+
+    body.append(title, price, button);
+    card.append(preview, body);
+    gallery.append(card);
+  });
 }
-function renderCart(){
- const cart=getCart();
- const root=document.getElementById("items");
- root.replaceChildren();
- document.getElementById("count").textContent=cart.length;
- cart.forEach(p=>{
-  const row=document.createElement("div");
-  row.className="cart-line";
-  const name=document.createElement("span");
-  name.textContent=p.name;
-  const button=document.createElement("button");
-  button.textContent="Retirer";
-  button.onclick=()=>removeProduct(p.id);
-  row.append(name,button);
-  root.append(row);
- });
- if(!cart.length)root.textContent="Votre panier est vide.";
- document.getElementById("total").textContent="TOTAL : "+euro(priceFor(cart.length));
+
+function renderCart() {
+  const cart = getCart();
+  const root = document.getElementById("cart-lines");
+
+  root.replaceChildren();
+  document.getElementById("cart-count").textContent = cart.length;
+
+  if (!cart.length) {
+    root.textContent = "Votre panier est vide.";
+  }
+
+  cart.forEach(product => {
+    const row = document.createElement("div");
+    row.className = "cart-line";
+
+    const name = document.createElement("span");
+    name.textContent = product.name;
+
+    const remove = document.createElement("button");
+    remove.type = "button";
+    remove.textContent = "Retirer";
+    remove.addEventListener("click", () => {
+      saveCart(getCart().filter(p => p.id !== product.id));
+    });
+
+    row.append(name, remove);
+    root.append(row);
+  });
+
+  const standard = cart.length * 1.99;
+  const total = totalFor(cart.length);
+
+  document.getElementById("cart-discount").textContent =
+    cart.length ? "Réduction packs : " + euro(Math.max(0, standard - total)) : "";
+
+  document.getElementById("cart-total").textContent =
+    "Total : " + euro(total);
 }
-const gallery=document.getElementById("gallery");
-products.forEach((p,i)=>{
- const card=document.createElement("div");
- card.className="card product";
- card.innerHTML='<div class="preview">FOND D’ÉCRAN '+(i+1)+'<br>VISUEL À AJOUTER</div><div class="product-info"><h3></h3><div class="price">1,99 €</div><button class="btn">AJOUTER AU PANIER</button></div>';
- card.querySelector("h3").textContent=p.name;
- card.querySelector("button").onclick=()=>addProduct(p);
- gallery.append(card);
+
+document.getElementById("open-cart").addEventListener("click", openCart);
+document.getElementById("close-cart").addEventListener("click", closeCart);
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") closeCart();
 });
+
+renderProducts();
 renderCart();
 </script>
+
 </body>
 </html>
