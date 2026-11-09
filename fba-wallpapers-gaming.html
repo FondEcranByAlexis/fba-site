@@ -3,250 +3,357 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#080808">
-  <meta name="description" content="FBA Wallpapers : fonds d'écran gaming, jeux vidéo et univers numériques.">
-  <title>Gaming et Univers Numériques | FBA Wallpapers</title>
+  <meta name="description" content="FBA Wallpapers : découvrez les collections Gaming, Simulation, Course automobile, Action, Aventure et Technologie.">
+  <title>Gaming & Jeux vidéo | FBA Wallpapers</title>
 
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080808;
+      --surface: #141414;
+      --red: #e32636;
+      --muted: #aaa;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
+      margin: 0;
+      background: var(--bg);
+      color: #f4f4f4;
       font-family: Arial, Helvetica, sans-serif;
-      background: #080808;
-      color: #f2f2f2;
       line-height: 1.6;
     }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
     header {
-      background: #0d0d0d;
-      border-bottom: 1px solid #292929;
       padding: 20px;
+      background: #0d0d0d;
+      border-bottom: 1px solid #303030;
       text-align: center;
     }
 
     .brand {
-      font-size: 21px;
+      font-size: 22px;
       font-weight: 900;
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
     }
 
-    .brand span, h1 span, h2 span { color: #e32636; }
+    .brand span {
+      color: var(--red);
+    }
 
     nav {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 18px;
-      margin-top: 12px;
-      font-size: 13px;
+      margin-top: 13px;
+      font-size: 12px;
+      font-weight: bold;
     }
 
-    nav a:hover { color: #e32636; }
+    nav a:hover {
+      color: var(--red);
+    }
 
     .hero {
-      padding: 75px 20px;
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 90px 20px;
       text-align: center;
-      background: radial-gradient(ellipse at center, #28143d, #111 48%, #080808 80%);
-      border-bottom: 1px solid #292929;
+      background:
+        radial-gradient(
+          ellipse at 50% 35%,
+          #351849,
+          #19101f 55%,
+          #080808 90%
+        );
+      border-bottom: 1px solid #49214f;
+    }
+
+    .hero-content {
+      max-width: 850px;
     }
 
     .eyebrow {
-      color: #e32636;
+      color: #ff7a86;
       font-size: 12px;
       font-weight: bold;
-      letter-spacing: 4px;
-      margin-bottom: 15px;
-    }
-
-    h1 {
-      font-size: clamp(35px, 8vw, 65px);
-      letter-spacing: 2px;
-      line-height: 1.1;
+      letter-spacing: 3px;
       margin-bottom: 18px;
     }
 
+    h1 {
+      font-size: clamp(35px, 7vw, 68px);
+      line-height: 1.08;
+      text-transform: uppercase;
+      margin: 0 0 22px;
+    }
+
+    h1 span {
+      color: #ff394c;
+    }
+
     .hero p {
-      max-width: 750px;
+      max-width: 650px;
       margin: auto;
-      color: #c5c5c5;
+      color: #d0d0d0;
+      font-size: 16px;
     }
 
-    .slogan {
-      margin-top: 25px;
-      font-size: 13px;
-      letter-spacing: 3px;
-      color: #aaa;
-      font-weight: bold;
-    }
-
-    main {
-      max-width: 1150px;
-      margin: auto;
-      padding: 50px 20px;
-    }
-
-    .section-title {
-      text-align: center;
-      margin: 20px 0 30px;
-    }
-
-    .section-title h2 {
-      font-size: 26px;
-      margin-bottom: 8px;
-    }
-
-    .section-title p {
-      color: #999;
-      font-size: 14px;
-    }
-
-    .category-nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 45px;
-    }
-
-    .category-nav a {
-      border: 1px solid #713039;
-      border-radius: 25px;
-      padding: 9px 17px;
+    .hero-button {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 13px 25px;
+      background: var(--red);
+      border-radius: 7px;
       font-size: 12px;
       font-weight: bold;
+      letter-spacing: 1px;
       transition: .2s;
     }
 
-    .category-nav a:hover {
-      background: #e32636;
-      border-color: #e32636;
+    .hero-button:hover {
+      background: #ff4053;
+      transform: translateY(-2px);
     }
 
-    .wallpaper-grid {
+    main {
+      max-width: 1180px;
+      margin: auto;
+      padding: 65px 20px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 38px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(25px, 5vw, 36px);
+      margin: 0 0 10px;
+      text-transform: uppercase;
+    }
+
+    .section-heading h2 span {
+      color: var(--red);
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .category-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-bottom: 55px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 25px;
+      margin-bottom: 70px;
     }
 
-    .wallpaper-card {
-      overflow: hidden;
-      background: #141414;
-      border: 1px solid #303030;
-      border-radius: 12px;
-      transition: .25s;
-    }
-
-    .wallpaper-card:hover {
-      border-color: #e32636;
-      transform: translateY(-4px);
-    }
-
-    .wallpaper-preview {
-      aspect-ratio: 9 / 16;
-      background: linear-gradient(145deg, #28143d, #151515 65%, #080808);
+    .category-card {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      text-align: center;
-      color: #aaa;
-      border-bottom: 1px solid #303030;
+      overflow: hidden;
+      border: 1px solid #343434;
+      border-radius: 16px;
+      background: linear-gradient(145deg, #191919, #101010);
+      transition: transform .3s, border-color .3s, box-shadow .3s;
     }
 
-    .wallpaper-preview .symbol {
+    .category-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--red);
+      box-shadow: 0 12px 35px rgba(227,38,54,.15);
+    }
+
+    .category-visual {
+      position: relative;
+      aspect-ratio: 9 / 10;
+      min-height: 280px;
+      display: flex;
+      align-items: flex-end;
+      padding: 22px;
+      overflow: hidden;
+      isolation: isolate;
+      background-color: #191919;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .category-visual::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(
+        180deg,
+        rgba(0,0,0,.04) 25%,
+        rgba(0,0,0,.12) 55%,
+        rgba(0,0,0,.85) 100%
+      );
+    }
+
+    /* COUVERTURES GAMING */
+
+    .simulation {
+      background-image:
+        url("images/Gaming/FBA_Simulation_et_Gestion.png");
+    }
+
+    .course {
+      background-image:
+        url("images/Gaming/FBA_Course_et_Automobile.png");
+    }
+
+    .aventure {
+      background-image:
+        url("images/Gaming/FBA_Action_et_Aventure.png");
+    }
+
+    .technologie {
+      background-image:
+        url("images/Gaming/FBA_Gaming_et_Technologie.png");
+    }
+
+    .category-number {
+      position: absolute;
+      top: 18px;
+      right: 20px;
       font-size: 42px;
-      margin-bottom: 15px;
+      font-weight: 900;
+      color: rgba(255,255,255,.32);
+      text-shadow: 0 2px 10px #000;
     }
 
-    .wallpaper-preview strong {
-      color: #fff;
-      font-size: 16px;
-      letter-spacing: 1px;
+    .category-visual h3 {
+      margin: 0;
+      font-size: clamp(24px, 4vw, 36px);
+      text-transform: uppercase;
+      line-height: 1.15;
+      text-shadow: 0 3px 12px #000;
     }
 
-    .wallpaper-preview small {
-      color: #e32636;
-      margin-top: 8px;
-      font-size: 10px;
-      letter-spacing: 2px;
+    .category-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 25px;
     }
 
-    .wallpaper-info { padding: 17px; }
-
-    .wallpaper-info h3 {
-      font-size: 16px;
-      margin-bottom: 5px;
+    .category-content p {
+      margin: 0 0 24px;
+      color: #bcbcbc;
+      font-size: 14px;
+      flex: 1;
     }
 
-    .wallpaper-info p {
-      color: #999;
-      font-size: 12px;
-      margin-bottom: 15px;
-    }
-
-    .download {
-      display: block;
-      text-align: center;
-      padding: 10px;
-      background: #292929;
-      border: 1px solid #555;
-      border-radius: 6px;
-      color: #777;
+    .category-status {
+      display: inline-block;
+      align-self: flex-start;
+      padding: 11px 16px;
+      border: 1px solid #a33b48;
+      border-radius: 7px;
+      color: #ff9ca5;
       font-size: 12px;
       font-weight: bold;
-      cursor: not-allowed;
     }
 
-    .notice {
-      max-width: 750px;
-      margin: 0 auto 45px;
-      padding: 20px;
-      border: 1px solid #713039;
-      border-radius: 10px;
-      background: #170d0f;
+    .highlight {
+      padding: 45px 30px;
+      border: 1px solid #67252d;
+      border-radius: 15px;
+      background: radial-gradient(
+        ellipse at center,
+        #351116,
+        #111 75%
+      );
       text-align: center;
+    }
+
+    .highlight h2 {
+      font-size: 27px;
+      margin: 0 0 15px;
+    }
+
+    .highlight h2 span {
+      color: var(--red);
+    }
+
+    .highlight p {
+      max-width: 700px;
+      margin: auto;
       color: #bbb;
-      font-size: 13px;
+      font-size: 15px;
     }
 
     .back {
       display: inline-block;
-      padding: 12px 22px;
-      border: 1px solid #e32636;
-      border-radius: 6px;
-      font-size: 13px;
+      margin-top: 27px;
+      padding: 12px 20px;
+      border: 1px solid var(--red);
+      border-radius: 7px;
+      font-size: 12px;
       font-weight: bold;
-      margin-top: 15px;
     }
 
-    .back:hover { background: #e32636; }
-
-    .return {
-      text-align: center;
-      margin-top: 20px;
+    .back:hover {
+      background: var(--red);
     }
 
     footer {
+      padding: 30px 15px;
       border-top: 1px solid #292929;
-      padding: 25px 15px;
       text-align: center;
-      color: #777;
+      color: #888;
       font-size: 12px;
     }
 
-    footer strong { color: #ddd; }
-
-    @media (max-width: 750px) {
-      .wallpaper-grid { grid-template-columns: repeat(2, 1fr); }
+    footer strong {
+      color: #eee;
     }
 
-    @media (max-width: 480px) {
-      .wallpaper-grid { grid-template-columns: 1fr; }
+    @media (max-width: 700px) {
+      .category-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 420px;
+        padding: 75px 18px;
+      }
+
+      .category-visual {
+        aspect-ratio: 9 / 10;
+        min-height: 0;
+      }
+
+      main {
+        padding: 45px 16px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
     }
   </style>
 </head>
@@ -254,257 +361,133 @@
 <body>
 
 <header>
-  <a class="brand" href="index.html">FOND<span>ECRAN</span>BYALEXIS</a>
+  <a class="brand" href="index.html">
+    FOND<span>ECRAN</span>BYALEXIS
+  </a>
+
   <nav>
     <a href="index.html">ACCUEIL</a>
     <a href="fba-wallpapers.html">WALLPAPERS</a>
-    <a href="fba-wallpapers-f1.html">FORMULA 1</a>
-    <a href="fba-wallpapers-motogp.html">MOTOGP</a>
+    <a href="fba-studio.html">FBA STUDIO</a>
   </nav>
 </header>
 
 <section class="hero">
-  <div class="eyebrow">FBA WALLPAPERS PRÉSENTE</div>
-  <h1>GAMING <span>& UNIVERS NUMÉRIQUES</span></h1>
-  <p>
-    Entrez dans des univers virtuels extraordinaires.
-    Des consoles aux jeux vidéo, de la science-fiction
-    aux mondes fantastiques, découvrez une collection
-    dédiée à la culture gaming et numérique.
-  </p>
-  <div class="slogan">L'IMAGE PREND VIE.</div>
+  <div class="hero-content">
+    <div class="eyebrow">FBA WALLPAPERS / UNIVERS 08</div>
+
+    <h1>GAMING <span>& JEUX VIDÉO</span></h1>
+
+    <p>
+      Plongez dans l'univers du jeu vidéo :
+      simulations réalistes, compétitions automobiles,
+      aventures spectaculaires et technologies gaming.
+      Quatre collections pour les passionnés.
+    </p>
+
+    <a href="#collections" class="hero-button">
+      EXPLORER LES COLLECTIONS
+    </a>
+  </div>
 </section>
 
 <main>
 
-  <div class="section-title">
-    <h2>LA COLLECTION <span>GAMING</span></h2>
-    <p>Quatre univers pour les passionnés de jeux vidéo.</p>
-  </div>
-
-  <div class="category-nav">
-    <a href="#consoles">CONSOLES</a>
-    <a href="#jeux">JEUX VIDÉO</a>
-    <a href="#science-fiction">SCIENCE-FICTION</a>
-    <a href="#fantastique">FANTASTIQUE</a>
-  </div>
-
-  <section id="consoles">
-    <div class="section-title">
-      <h2>CONSOLES ET <span>GAMING</span></h2>
-      <p>Les machines et les univers du jeu vidéo.</p>
+  <section id="collections">
+    <div class="section-heading">
+      <h2>CHOISISSEZ <span>VOTRE UNIVERS</span></h2>
+      <p>Quatre univers pour découvrir la culture gaming.</p>
     </div>
 
-    <div class="wallpaper-grid">
+    <div class="category-grid">
 
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">🎮</div>
-          <strong>PLAYSTATION</strong>
-          <small>VISUELS À AJOUTER</small>
+      <article class="category-card">
+        <div class="category-visual simulation">
+          <span class="category-number">01</span>
+          <h3>SIMULATION & GESTION</h3>
         </div>
-        <div class="wallpaper-info">
-          <h3>Univers PlayStation</h3>
-          <p>Consoles, manettes et ambiance gaming PlayStation.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
+        <div class="category-content">
+          <p>
+            Construction, agriculture, transports,
+            aviation et gestion d'entreprises.
+            Découvrez les univers de simulation.
+          </p>
+          <span class="category-status">
+            COLLECTION EN PRÉPARATION
+          </span>
         </div>
       </article>
 
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">🕹️</div>
-          <strong>XBOX</strong>
-          <small>VISUELS À AJOUTER</small>
+      <article class="category-card">
+        <div class="category-visual course">
+          <span class="category-number">02</span>
+          <h3>COURSE & AUTOMOBILE</h3>
         </div>
-        <div class="wallpaper-info">
-          <h3>Univers Xbox</h3>
-          <p>Consoles, accessoires et univers Xbox.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">⭐</div>
-          <strong>NINTENDO</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Univers Nintendo</h3>
-          <p>Consoles et univers de jeux Nintendo.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
+        <div class="category-content">
+          <p>
+            Formule 1, voitures de compétition,
+            circuits mythiques et courses automobiles.
+          </p>
+          <span class="category-status">
+            COLLECTION EN PRÉPARATION
+          </span>
         </div>
       </article>
 
-    </div>
-  </section>
-
-  <section id="jeux">
-    <div class="section-title">
-      <h2>UNIVERS <span>JEUX VIDÉO</span></h2>
-      <p>Des ambiances et des mondes vidéoludiques variés.</p>
-    </div>
-
-    <div class="wallpaper-grid">
-
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">🏎️</div>
-          <strong>JEUX DE COURSE</strong>
-          <small>VISUELS À AJOUTER</small>
+      <article class="category-card">
+        <div class="category-visual aventure">
+          <span class="category-number">03</span>
+          <h3>ACTION & AVENTURE</h3>
         </div>
-        <div class="wallpaper-info">
-          <h3>Course et simulation</h3>
-          <p>Automobile, sport mécanique et simulation de conduite.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
+        <div class="category-content">
+          <p>
+            Exploration, mondes ouverts, aventures
+            épiques et expériences immersives.
+          </p>
+          <span class="category-status">
+            COLLECTION EN PRÉPARATION
+          </span>
         </div>
       </article>
 
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">🏗️</div>
-          <strong>SIMULATION ET GESTION</strong>
-          <small>VISUELS À AJOUTER</small>
+      <article class="category-card">
+        <div class="category-visual technologie">
+          <span class="category-number">04</span>
+          <h3>GAMING & TECHNOLOGIE</h3>
         </div>
-        <div class="wallpaper-info">
-          <h3>Simulation et gestion</h3>
-          <p>Construction, agriculture, gestion et création de parcs.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">⚔️</div>
-          <strong>ACTION ET AVENTURE</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Action et aventure</h3>
-          <p>Exploration, aventures et univers d'action.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
+        <div class="category-content">
+          <p>
+            Consoles, ordinateurs gaming,
+            équipements RGB et setups spectaculaires.
+          </p>
+          <span class="category-status">
+            COLLECTION EN PRÉPARATION
+          </span>
         </div>
       </article>
 
     </div>
   </section>
 
-  <section id="science-fiction">
-    <div class="section-title">
-      <h2>SCIENCE-<span>FICTION</span></h2>
-      <p>Un voyage vers le futur et au-delà de notre planète.</p>
-    </div>
+  <section class="highlight">
+    <h2>LE GAMING <span>SANS LIMITES</span></h2>
 
-    <div class="wallpaper-grid">
+    <p>
+      FBA Wallpapers rassemble les passions du jeu vidéo
+      dans des créations originales, immersives et
+      adaptées aux écrans modernes.
+    </p>
 
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">🚀</div>
-          <strong>EXPLORATION SPATIALE</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Espace et exploration</h3>
-          <p>Planètes, vaisseaux et voyages interstellaires.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">🤖</div>
-          <strong>TECHNOLOGIES DU FUTUR</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Technologies futuristes</h3>
-          <p>Robots, intelligence artificielle et technologies avancées.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">🌌</div>
-          <strong>UNIVERS COSMIQUES</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Univers cosmiques</h3>
-          <p>Nébuleuses, galaxies et paysages interstellaires.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-    </div>
+    <a href="fba-wallpapers.html" class="back">
+      RETOUR AUX COLLECTIONS FBA
+    </a>
   </section>
-
-  <section id="fantastique">
-    <div class="section-title">
-      <h2>UNIVERS <span>FANTASTIQUES</span></h2>
-      <p>Des mondes imaginaires et des créatures extraordinaires.</p>
-    </div>
-
-    <div class="wallpaper-grid">
-
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">🐉</div>
-          <strong>DRAGONS ET CRÉATURES</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Créatures fantastiques</h3>
-          <p>Dragons, créatures mythiques et monstres imaginaires.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">🏰</div>
-          <strong>MONDES FANTASY</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Mondes fantastiques</h3>
-          <p>Royaumes, châteaux et paysages imaginaires.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">✨</div>
-          <strong>MAGIE ET LÉGENDES</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Magie et légendes</h3>
-          <p>Univers mystiques, pouvoirs et mondes légendaires.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <div class="notice">
-    <strong>COLLECTION EN CONSTRUCTION</strong><br>
-    Les emplacements sont prêts. Les fonds d'écran originaux seront
-    ajoutés progressivement. Les téléchargements seront activés
-    lorsque les fichiers seront disponibles.
-  </div>
-
-  <div class="return">
-    <a class="back" href="fba-wallpapers.html">RETOUR À FBA WALLPAPERS</a>
-  </div>
 
 </main>
 
 <footer>
   <strong>FONDECRANBYALEXIS</strong><br>
-  FBA WALLPAPERS — GAMING ET UNIVERS NUMÉRIQUES<br>
+  FBA WALLPAPERS — GAMING & JEUX VIDÉO<br>
   © 2026 — Tous droits réservés.
 </footer>
 
