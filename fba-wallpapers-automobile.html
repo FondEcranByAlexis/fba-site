@@ -2,228 +2,288 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080808">
-  <meta name="description" content="Explorez l'univers Automobile et sport mécanique de FBA Wallpapers : Formule 1, MotoGP, voitures de sport et motos.">
-  <title>Automobile & Sport Mécanique | FBA Wallpapers</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08090d">
+<meta name="description" content="Découvrez l'univers Automobile et Sport Mécanique de FBA Wallpapers : Formule 1, MotoGP, voitures de sport et motos.">
+<title>Automobile & Sport Mécanique | FBA Wallpapers</title>
 
-  <style>
-    :root {
-      --bg: #080808;
-      --surface: #141414;
-      --red: #e32636;
-      --silver: #d8d8d8;
-      --muted: #aaa;
-    }
+<style>
+:root {
+  --bg: #08090d;
+  --panel: #12151c;
+  --red: #ed1726;
+  --white: #f5f6f8;
+  --muted: #a8adb8;
+  --line: #303541;
+}
 
-    * {
-      box-sizing: border-box;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
 
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: #f4f4f4;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-    }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-    header {
-      padding: 20px;
-      background: #0d0d0d;
-      border-bottom: 1px solid #303030;
-      text-align: center;
-    }
+a:focus-visible {
+  outline: 3px solid #ff5964;
+  outline-offset: 4px;
+}
 
-    .brand {
-      font-size: 22px;
-      font-weight: 900;
-      letter-spacing: 1.5px;
-    }
+.wrap {
+  width: min(1160px, 92%);
+  margin: auto;
+}
 
-    .brand span {
-      color: var(--red);
-    }
+/* HEADER */
 
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 18px;
-      margin-top: 13px;
-      font-size: 12px;
-      font-weight: bold;
-    }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(8,9,13,.94);
+  border-bottom: 1px solid #292d37;
+  backdrop-filter: blur(12px);
+}
 
-    nav a:hover {
-      color: var(--red);
-    }
+.top {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
 
-    .hero {
-      position: relative;
-      min-height: 520px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 90px 20px;
-      text-align: center;
-      background:
-        linear-gradient(
-          180deg,
-          rgba(0,0,0,.38),
-          rgba(0,0,0,.82)
-        ),
-        url("images/couvertures/FBA_Wallpapers_Automobile_Premium.png")
-        center 38% / cover no-repeat;
-      border-bottom: 1px solid #572029;
-    }
+.brand {
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  font-size: 21px;
+  white-space: nowrap;
+}
 
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 850px;
-    }
+.brand span,
+h1 span,
+h2 span {
+  color: var(--red);
+}
 
-    .eyebrow {
-      color: #ff7a86;
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 3px;
-      margin-bottom: 18px;
-    }
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px 22px;
+  font-size: 14px;
+  color: #d5d8df;
+}
 
-    h1 {
-      font-size: clamp(35px, 7vw, 68px);
-      line-height: 1.08;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin: 0 0 22px;
-      text-shadow: 0 3px 18px #000;
-    }
+nav a {
+  padding: 8px 0;
+}
 
-    h1 span {
-      color: #ff394c;
-    }
+nav a:hover {
+  color: var(--red);
+}
 
-    .hero p {
-      max-width: 650px;
-      margin: auto;
-      color: #e0e0e0;
-      font-size: 16px;
-      text-shadow: 0 2px 8px #000;
-    }
+/* HERO */
 
-    .hero-button {
-      display: inline-block;
-      margin-top: 28px;
-      padding: 13px 25px;
-      background: var(--red);
-      border-radius: 7px;
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      transition: background .2s, transform .2s;
-    }
+.hero {
+  position: relative;
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 20px;
+  text-align: center;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8,9,13,.55),
+      rgba(8,9,13,.88)
+    ),
+    url("images/couvertures/FBA_Wallpapers_Automobile_Premium.png")
+    center 38% / cover no-repeat;
+  border-bottom: 1px solid #572029;
+}
 
-    .hero-button:hover {
-      background: #ff4053;
-      transform: translateY(-2px);
-    }
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+}
 
-    main {
-      max-width: 1180px;
-      margin: auto;
-      padding: 65px 20px;
-    }
+.eyebrow {
+  color: #ff5964;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
 
-    .section-heading {
-      text-align: center;
-      margin-bottom: 38px;
-    }
+h1 {
+  font-size: clamp(35px,7vw,68px);
+  line-height: 1.08;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin: 20px 0 24px;
+  text-shadow: 0 3px 18px #000;
+}
 
-    .section-heading h2 {
-      font-size: clamp(25px, 5vw, 36px);
-      margin: 0 0 10px;
-      text-transform: uppercase;
-    }
+.hero p {
+  max-width: 680px;
+  margin: auto;
+  color: #e0e2e7;
+  font-size: clamp(15px,2vw,18px);
+  line-height: 1.8;
+  text-shadow: 0 2px 8px #000;
+}
 
-    .section-heading h2 span {
-      color: var(--red);
-    }
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+}
 
-    .section-heading p {
-      color: var(--muted);
-      font-size: 14px;
-      margin: 0;
-    }
+.cta {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 14px 23px;
+  background: var(--red);
+  border: 1px solid var(--red);
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: .5px;
+  transition: background .2s,transform .2s;
+}
 
-    .category-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 25px;
-      margin-bottom: 70px;
-    }
+.cta:hover {
+  background: #ff3442;
+  transform: translateY(-2px);
+}
 
-    .category-card {
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      border: 1px solid #343434;
-      border-radius: 16px;
-      background: linear-gradient(145deg, #191919, #101010);
-      transition: transform .3s, border-color .3s, box-shadow .3s;
-    }
+.cta.secondary {
+  background: rgba(8,9,13,.6);
+  border-color: #777d89;
+}
 
-    .category-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--red);
-      box-shadow: 0 12px 35px rgba(227,38,54,.15);
-    }
+.cta.secondary:hover {
+  background: #191c25;
+}
 
-    .category-visual {
-      position: relative;
-      height: 230px;
-      display: flex;
-      align-items: flex-end;
-      padding: 22px;
-      overflow: hidden;
-      isolation: isolate;
-      background-color: #191919;
-      background-size: cover;
-      background-position: center;
-    }
+/* SECTIONS */
 
-    .category-visual::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      background: linear-gradient(
-        180deg,
-        rgba(0,0,0,.12),
-        rgba(0,0,0,.88)
-      );
-    }
+.content-section {
+  padding: 75px 0;
+}
 
-    
-/* FBA WALLPAPERS — COUVERTURES AUTOMOBILE */
+.section-head {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.section-head h2 {
+  font-size: clamp(27px,4vw,42px);
+  line-height: 1.2;
+  margin: 12px 0;
+  text-transform: uppercase;
+}
+
+.section-head p {
+  max-width: 700px;
+  margin: auto;
+  color: var(--muted);
+}
+
+.redline {
+  height: 3px;
+  width: 64px;
+  background: var(--red);
+  margin: 17px auto 0;
+}
+
+/* CATEGORY CARDS */
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 25px;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #383d49;
+  border-radius: 16px;
+  background: linear-gradient(
+    145deg,#171b24,#0e1016
+  );
+  transition:
+    transform .25s,
+    border-color .25s,
+    box-shadow .25s;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--red);
+  box-shadow: 0 12px 38px #e3263625;
+}
+
+.category-visual {
+  position: relative;
+  height: 260px;
+  display: flex;
+  align-items: flex-end;
+  padding: 24px;
+  overflow: hidden;
+  isolation: isolate;
+  background-color: #191919;
+  background-size: cover;
+  background-position: center;
+}
+
+.category-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,.05),
+    rgba(0,0,0,.82)
+  );
+}
+
+/* EXISTING CATEGORY IMAGES */
 
 .f1 {
   background-image:
     linear-gradient(
       180deg,
-      rgba(0,0,0,0.05),
-      rgba(0,0,0,0.55)
+      rgba(0,0,0,.05),
+      rgba(0,0,0,.55)
     ),
     url("images/automobile/FBA_Formule_1_Cinematique.png");
 }
@@ -232,8 +292,8 @@
   background-image:
     linear-gradient(
       180deg,
-      rgba(0,0,0,0.05),
-      rgba(0,0,0,0.55)
+      rgba(0,0,0,.05),
+      rgba(0,0,0,.55)
     ),
     url("images/automobile/FBA_MotoGP_Cinematique.png");
 }
@@ -242,8 +302,8 @@
   background-image:
     linear-gradient(
       180deg,
-      rgba(0,0,0,0.05),
-      rgba(0,0,0,0.55)
+      rgba(0,0,0,.05),
+      rgba(0,0,0,.55)
     ),
     url("images/automobile/FBA_voiture_de_sport_Cimenatique.png");
 }
@@ -252,265 +312,588 @@
   background-image:
     linear-gradient(
       180deg,
-      rgba(0,0,0,0.05),
-      rgba(0,0,0,0.55)
+      rgba(0,0,0,.05),
+      rgba(0,0,0,.55)
     ),
     url("images/automobile/FBA_Motos_Cinematique.png");
 }
-    
 
-    .category-number {
-      position: absolute;
-      top: 18px;
-      right: 20px;
-      font-size: 42px;
-      font-weight: 900;
-      color: rgba(255,255,255,.2);
-    }
+.category-number {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-size: 44px;
+  font-weight: 900;
+  color: rgba(255,255,255,.25);
+}
 
-    .category-visual h3 {
-      margin: 0;
-      font-size: clamp(25px, 4vw, 36px);
-      text-transform: uppercase;
-      line-height: 1.15;
-      text-shadow: 0 3px 12px #000;
-    }
+.category-visual h3 {
+  margin: 0;
+  font-size: clamp(25px,4vw,38px);
+  text-transform: uppercase;
+  line-height: 1.15;
+  text-shadow: 0 3px 12px #000;
+}
 
-    .category-content {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      padding: 25px;
-    }
+.category-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 26px;
+}
 
-    .category-content p {
-      margin: 0 0 24px;
-      color: #bcbcbc;
-      font-size: 14px;
-      flex: 1;
-    }
+.category-content p {
+  margin: 0 0 24px;
+  color: #b9bec8;
+  font-size: 14px;
+  line-height: 1.8;
+  flex: 1;
+}
 
-    .category-link {
-      display: inline-block;
-      align-self: flex-start;
-      padding: 11px 16px;
-      border: 1px solid #a33b48;
-      border-radius: 7px;
-      color: #ff9ca5;
-      font-size: 12px;
-      font-weight: bold;
-      transition: background .2s, color .2s;
-    }
+.category-link {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 11px 16px;
+  border: 1px solid #a33b48;
+  border-radius: 7px;
+  color: #ff9ca5;
+  font-size: 12px;
+  font-weight: 800;
+}
 
-    .category-card:hover .category-link {
-      background: var(--red);
-      color: white;
-    }
+.category-card:hover .category-link {
+  background: var(--red);
+  color: white;
+}
 
-    .highlight {
-      padding: 45px 30px;
-      border: 1px solid #67252d;
-      border-radius: 15px;
-      background: radial-gradient(
-        ellipse at center,
-        #351116,
-        #111 75%
-      );
-      text-align: center;
-    }
+/* F1 HIGHLIGHT */
 
-    .highlight h2 {
-      font-size: 27px;
-      margin: 0 0 15px;
-    }
+.f1-highlight {
+  background: linear-gradient(
+    145deg,#171019,#10131a 65%,#0b0d13
+  );
+  border-top: 1px solid #292d37;
+  border-bottom: 1px solid #292d37;
+}
 
-    .highlight h2 span {
-      color: var(--red);
-    }
+.feature-panel {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 30px;
+  padding: 40px;
+  border: 1px solid #3c303b;
+  border-radius: 16px;
+  background:
+    radial-gradient(
+      ellipse at 85% 20%,
+      rgba(237,23,38,.16),
+      transparent 60%
+    ),
+    #11141b;
+}
 
-    .highlight p {
-      max-width: 700px;
-      margin: auto;
-      color: #bbb;
-      font-size: 15px;
-    }
+.feature-panel h2 {
+  font-size: clamp(29px,4vw,43px);
+  line-height: 1.15;
+  margin: 14px 0;
+}
 
-    .back {
-      display: inline-block;
-      margin-top: 27px;
-      padding: 12px 20px;
-      border: 1px solid var(--red);
-      border-radius: 7px;
-      font-size: 12px;
-      font-weight: bold;
-    }
+.feature-panel p {
+  color: #c1c5ce;
+  line-height: 1.8;
+}
 
-    .back:hover {
-      background: var(--red);
-    }
+.feature-stats {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 14px;
+}
 
-    footer {
-      padding: 30px 15px;
-      border-top: 1px solid #292929;
-      text-align: center;
-      color: #888;
-      font-size: 12px;
-    }
+.feature-stat {
+  padding: 24px 12px;
+  border: 1px solid #383d49;
+  border-radius: 12px;
+  background: #0c0e14;
+  text-align: center;
+}
 
-    footer strong {
-      color: #eee;
-    }
+.feature-stat strong {
+  display: block;
+  color: #ff5964;
+  font-size: clamp(28px,4vw,40px);
+}
 
-    @media (max-width: 700px) {
-      .category-grid {
-        grid-template-columns: 1fr;
-      }
+.feature-stat span {
+  color: var(--muted);
+  font-size: 13px;
+}
 
-      .hero {
-        min-height: 480px;
-        padding: 75px 18px;
-      }
+/* FINAL PANEL */
 
-      .category-visual {
-        height: 210px;
-      }
+.highlight {
+  padding: 46px 28px;
+  text-align: center;
+  border: 1px solid #64232b;
+  border-radius: 16px;
+  background: radial-gradient(
+    ellipse at center,
+    #291014,
+    #10131a 75%
+  );
+}
 
-      main {
-        padding: 45px 16px;
-      }
-    }
+.highlight h2 {
+  font-size: clamp(26px,4vw,38px);
+  margin: 0 0 15px;
+}
 
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        scroll-behavior: auto !important;
-        transition: none !important;
-      }
-    }
-  </style>
+.highlight p {
+  max-width: 700px;
+  margin: auto;
+  color: #c1c5ce;
+  line-height: 1.8;
+}
+
+.highlight-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid #292d37;
+  padding: 32px 15px;
+  text-align: center;
+  color: #858c99;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+footer strong {
+  color: #ddd;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+  margin-top: 15px;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+  .feature-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 480px;
+    padding: 75px 18px;
+  }
+
+  .category-visual {
+    height: 220px;
+  }
+
+  .feature-panel {
+    padding: 24px;
+  }
+
+  .content-section {
+    padding: 52px 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .top {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  nav {
+    width: 100%;
+    gap: 10px 16px;
+    font-size: 12px;
+  }
+
+  .hero-actions .cta {
+    width: 100%;
+  }
+
+  .feature-stat {
+    padding: 18px 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .category-card,
+  .cta {
+    transition: none;
+  }
+
+  .category-card:hover,
+  .cta:hover {
+    transform: none;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <a class="brand" href="index.html">
-    FOND<span>ECRAN</span>BYALEXIS
-  </a>
+  <div class="wrap top">
 
-  <nav>
-    <a href="index.html">ACCUEIL</a>
-    <a href="fba-wallpapers.html">WALLPAPERS</a>
-    <a href="fba-studio.html">FBA STUDIO</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <div class="hero-content">
-    <div class="eyebrow">FBA WALLPAPERS / UNIVERS 01</div>
-
-    <h1>AUTOMOBILE <span>& SPORT MÉCANIQUE</span></h1>
-
-    <p>
-      Vivez la passion de la vitesse, des circuits et des machines
-      d'exception. Explorez nos collections consacrées aux sports
-      mécaniques et aux véhicules emblématiques.
-    </p>
-
-    <a href="#collections" class="hero-button">
-      EXPLORER LES COLLECTIONS
+    <a class="brand" href="index.html">
+      FOND<span>ECRAN</span>BYALEXIS
     </a>
+
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="fba-wallpapers.html">Wallpapers</a>
+      <a href="#collections">Collections</a>
+      <a href="fba-wallpapers-f1.html">Formule 1</a>
+    </nav>
+
   </div>
-</section>
+</header>
 
 <main>
 
-  <section id="collections">
-    <div class="section-heading">
-      <h2>CHOISISSEZ <span>VOTRE UNIVERS</span></h2>
-      <p>Quatre univers pour découvrir les passions mécaniques.</p>
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      FBA Wallpapers / Univers 01
+    </div>
+
+    <h1>
+      AUTOMOBILE
+      <span>& SPORT MÉCANIQUE</span>
+    </h1>
+
+    <p>
+      Vivez la passion de la vitesse,
+      des circuits et des machines d'exception.
+      Explorez nos collections consacrées
+      aux sports mécaniques et aux
+      véhicules emblématiques.
+    </p>
+
+    <div class="hero-actions">
+
+      <a href="#collections" class="cta">
+        EXPLORER LES COLLECTIONS
+      </a>
+
+      <a href="fba-wallpapers.html" class="cta secondary">
+        TOUS LES UNIVERS FBA
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="content-section" id="collections">
+
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        Les univers automobiles
+      </div>
+
+      <h2>
+        CHOISISSEZ <span>VOTRE UNIVERS</span>
+      </h2>
+
+      <p>
+        Quatre univers pour découvrir
+        les passions mécaniques.
+      </p>
+
+      <div class="redline"></div>
     </div>
 
     <div class="category-grid">
 
+      <!-- FORMULE 1 -->
+
       <a href="fba-wallpapers-f1.html" class="category-card">
+
         <div class="category-visual f1">
           <span class="category-number">01</span>
           <h3>FORMULE 1</h3>
         </div>
+
         <div class="category-content">
           <p>
-            Pilotes, écuries, circuits légendaires et monoplaces.
-            Découvrez les collections de la discipline reine.
+            Pilotes, écuries, circuits légendaires
+            et monoplaces. Découvrez les collections
+            de la discipline reine.
           </p>
-          <span class="category-link">DÉCOUVRIR LA FORMULE 1</span>
+
+          <span class="category-link">
+            DÉCOUVRIR LA FORMULE 1
+          </span>
         </div>
+
       </a>
 
+      <!-- MOTOGP -->
+
       <a href="fba-wallpapers-motogp.html" class="category-card">
+
         <div class="category-visual motogp">
           <span class="category-number">02</span>
           <h3>MOTOGP</h3>
         </div>
+
         <div class="category-content">
           <p>
-            Les pilotes, les motos de compétition et l'intensité
-            des courses sur les plus grands circuits.
+            Les pilotes, les motos de compétition
+            et l'intensité des courses sur
+            les plus grands circuits.
           </p>
-          <span class="category-link">DÉCOUVRIR LE MOTOGP</span>
+
+          <span class="category-link">
+            DÉCOUVRIR LE MOTOGP
+          </span>
         </div>
+
       </a>
 
+      <!-- VOITURES DE SPORT -->
+
       <a href="fba-wallpapers-voitures.html" class="category-card">
+
         <div class="category-visual cars">
           <span class="category-number">03</span>
           <h3>VOITURES DE SPORT</h3>
         </div>
+
         <div class="category-content">
           <p>
-            Supercars, hypercars, modèles légendaires et créations
+            Supercars, hypercars, modèles
+            légendaires et créations
             automobiles d'exception.
           </p>
-          <span class="category-link">DÉCOUVRIR LES VOITURES</span>
+
+          <span class="category-link">
+            DÉCOUVRIR LES VOITURES
+          </span>
         </div>
+
       </a>
 
+      <!-- MOTOS -->
+
       <a href="fba-wallpapers-motos.html" class="category-card">
+
         <div class="category-visual motos">
           <span class="category-number">04</span>
           <h3>MOTOS</h3>
         </div>
+
         <div class="category-content">
           <p>
-            Sportives, roadsters, trails et motos mythiques.
-            Des machines qui incarnent la liberté et la performance.
+            Sportives, roadsters, trails
+            et motos mythiques.
+            Des machines qui incarnent
+            la liberté et la performance.
           </p>
-          <span class="category-link">DÉCOUVRIR LES MOTOS</span>
+
+          <span class="category-link">
+            DÉCOUVRIR LES MOTOS
+          </span>
         </div>
+
       </a>
 
     </div>
-  </section>
 
-  <section class="highlight">
-    <h2>LA PASSION <span>SANS LIMITES</span></h2>
+  </div>
 
-    <p>
-      FBA Wallpapers donne vie aux univers de l'automobile et
-      des sports mécaniques à travers des collections visuelles
-      immersives. De nouvelles créations viendront enrichir
-      régulièrement cet espace.
-    </p>
+</section>
 
-    <a href="fba-wallpapers.html" class="back">
-      RETOUR AUX COLLECTIONS FBA
-    </a>
-  </section>
+<!-- COLLECTION FORMULE 1 -->
+
+<section class="content-section f1-highlight">
+
+  <div class="wrap">
+
+    <div class="feature-panel">
+
+      <div>
+
+        <div class="eyebrow">
+          Collection phare FBA Wallpapers
+        </div>
+
+        <h2>
+          LA FORMULE <span>1</span>
+          À L'HONNEUR
+        </h2>
+
+        <p>
+          Découvrez notre collection
+          consacrée aux pilotes de
+          Formule 1 de la saison 2026.
+        </p>
+
+        <p>
+          Chaque pilote possède trois
+          créations exclusives :
+          Portrait, Racing et Célébration.
+        </p>
+
+        <p>
+          Explorez les biographies,
+          les statistiques et les aperçus
+          protégés des fonds d'écran.
+          La boutique est actuellement
+          en préparation.
+        </p>
+
+        <a href="fba-wallpapers-f1.html" class="cta">
+          DÉCOUVRIR LES 22 PILOTES
+        </a>
+
+      </div>
+
+      <div class="feature-stats">
+
+        <div class="feature-stat">
+          <strong>22</strong>
+          <span>Pilotes</span>
+        </div>
+
+        <div class="feature-stat">
+          <strong>66</strong>
+          <span>Fonds d'écran</span>
+        </div>
+
+        <div class="feature-stat">
+          <strong>3</strong>
+          <span>Créations par pilote</span>
+        </div>
+
+        <div class="feature-stat">
+          <strong>2026</strong>
+          <span>Saison F1</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONCLUSION -->
+
+<section class="content-section">
+
+  <div class="wrap">
+
+    <div class="highlight">
+
+      <div class="eyebrow">
+        L'esprit automobile FBA
+      </div>
+
+      <h2>
+        LA PASSION <span>SANS LIMITES</span>
+      </h2>
+
+      <p>
+        FBA Wallpapers donne vie
+        aux univers de l'automobile
+        et des sports mécaniques à travers
+        des collections visuelles immersives.
+        De nouvelles créations viendront
+        enrichir régulièrement cet espace.
+      </p>
+
+      <div class="highlight-actions">
+
+        <a href="fba-wallpapers.html" class="cta">
+          RETOUR AUX COLLECTIONS FBA
+        </a>
+
+        <a href="index.html" class="cta secondary">
+          ACCUEIL FONDECRANBYALEXIS
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 </main>
 
+<!-- FOOTER -->
+
 <footer>
-  <strong>FONDECRANBYALEXIS</strong><br>
-  FBA WALLPAPERS — AUTOMOBILE & SPORT MÉCANIQUE<br>
-  © 2026 — Tous droits réservés.
+
+  <div class="wrap">
+
+    <strong>FONDECRANBYALEXIS</strong>
+
+    <div>
+      FBA WALLPAPERS — AUTOMOBILE & SPORT MÉCANIQUE
+    </div>
+
+    <div>
+      © 2026 — Tous droits réservés.
+    </div>
+
+    <div class="footer-links">
+
+      <a href="index.html">Accueil</a>
+
+      <a href="fba-wallpapers.html">
+        FBA Wallpapers
+      </a>
+
+      <a href="fba-wallpapers-f1.html">
+        Formule 1
+      </a>
+
+    </div>
+
+  </div>
+
 </footer>
 
 </body>
