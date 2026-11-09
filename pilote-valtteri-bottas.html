@@ -10,92 +10,82 @@
 <title>Valtteri Bottas | FBA Wallpapers</title>
 
 <link rel="stylesheet" href="fba-pilotes.css">
+<link rel="stylesheet" href="fba-cart.css">
 
 <style>
-:root { --accent:#e31b36; }
+:root {
+  --accent: #e31b36;
+}
 
 .hero {
   background:
-    radial-gradient(ellipse at 80% 20%,
-      rgba(227,27,54,.24),transparent 55%),
+    radial-gradient(
+      ellipse at 80% 20%,
+      rgba(227,27,54,.24),
+      transparent 55%
+    ),
     linear-gradient(145deg,#15151c,#08090d);
 }
 
 .hero h1 span,
 .section h2 span {
-  color:var(--accent);
+  color: var(--accent);
 }
 
 .pill {
-  border-color:rgba(227,27,54,.4);
+  border-color: rgba(227,27,54,.4);
 }
 
 .btn.primary {
-  background:var(--accent);
-  color:#fff;
+  background: var(--accent);
+  color: #fff;
 }
 
 .profile .driver-photo {
-  display:flex;
-  flex-direction:column;
-  height:auto;
-  min-height:0;
-  overflow:hidden;
-  border-radius:18px;
-  background:#111318;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #111318;
 }
 
 .profile .driver-photo img {
-  display:block;
-  width:100%;
-  height:auto;
-  object-fit:contain;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .photo-disclaimer {
-  display:block;
-  width:100%;
-  box-sizing:border-box;
-  margin:0;
-  padding:12px;
-  color:#a1a1aa;
-  background:#111318;
-  font-size:12px;
-  line-height:1.5;
-  text-align:center;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 12px;
+  color: #a1a1aa;
+  background: #111318;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
 }
 
-.preview img {
-  display:block;
-  width:100%;
-  height:auto;
-  object-fit:contain;
+/* Aperçus FBA sans recadrage */
+
+#products .preview {
+  display: block !important;
+  min-height: 200px !important;
+  overflow: visible !important;
 }
 
-.cart-line {
-  display:flex;
-  align-items:center;
-  gap:12px;
-  padding:12px 0;
-}
-
-.cart-line img {
-  width:55px;
-  height:98px;
-  object-fit:cover;
-  border-radius:8px;
-  flex-shrink:0;
-}
-
-.cart-line-info {
-  flex:1;
-  min-width:0;
-}
-
-.cart-line-info strong {
-  display:block;
-  font-size:13px;
-  overflow-wrap:anywhere;
+#products .preview img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  object-fit: contain;
 }
 </style>
 </head>
@@ -115,8 +105,16 @@
       <a href="boutique.html">Boutique</a>
     </nav>
 
-    <button class="cartbtn" id="open-cart" type="button">
-      Panier (<span id="cart-count">0</span>)
+    <button
+      class="fba-cart-trigger"
+      data-fba-cart-open
+      type="button"
+    >
+      Mon panier
+      <span
+        class="fba-cart-badge"
+        data-fba-cart-count
+      >0</span>
     </button>
 
   </div>
@@ -147,6 +145,7 @@
     </p>
 
     <div class="actions">
+
       <a class="btn primary" href="#wallpapers">
         Voir ses fonds d'écran
       </a>
@@ -154,6 +153,7 @@
       <a class="btn" href="#statistiques">
         Statistiques
       </a>
+
     </div>
 
   </div>
@@ -176,7 +176,8 @@
       <img
         src="images/pilotes/valtteri-bottas-photo.png"
         alt="Portrait de Valtteri Bottas généré par intelligence artificielle"
-        loading="lazy">
+        loading="lazy"
+      >
 
       <p class="photo-disclaimer">
         Portrait généré par intelligence artificielle
@@ -386,19 +387,25 @@
 
   <p class="source-note">
     Sources :
+
     <a
       href="https://www.formula1.com/en/drivers/valtteri-bottas"
       target="_blank"
-      rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       Formula 1
     </a>
+
     et
+
     <a
       href="https://www.formula1.com/en/teams/cadillac"
       target="_blank"
-      rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       Cadillac F1 Team
     </a>.
+
   </p>
 
 </section>
@@ -497,7 +504,8 @@
       <a
         href="https://www.formula1.com/en/drivers/valtteri-bottas"
         target="_blank"
-        rel="noopener noreferrer">
+        rel="noopener noreferrer"
+      >
         Consulter ses résultats actualisés
       </a>
     </p>
@@ -561,6 +569,7 @@
 </main>
 
 <footer class="footer">
+
   <div class="wrap">
 
     © 2026 FondEcranByAlexis —
@@ -572,265 +581,118 @@
     </a>
 
   </div>
+
 </footer>
 
-<aside
-  class="cart-panel"
-  id="cart-panel"
-  aria-label="Panier"
-  aria-hidden="true">
+<!-- PANIER CENTRALISÉ FBA -->
 
-  <div class="cart-top">
-    <h2>Mon panier</h2>
-
-    <button
-      class="close"
-      id="close-cart"
-      type="button">
-      Fermer
-    </button>
-  </div>
-
-  <div id="cart-lines"></div>
-
-  <p id="cart-discount"></p>
-
-  <p class="total" id="cart-total"></p>
-
-  <button
-    class="btn primary"
-    type="button"
-    disabled>
-    Paiement prochainement
-  </button>
-
-  <p class="sub">
-    Aucun achat ne peut encore être effectué.
-  </p>
-</aside>
+<script src="fba-cart.js"></script>
 <script src="fba-cart-images.js"></script>
+<script src="fba-cart-ui.js"></script>
+
+<!-- PRODUITS VALTTERI BOTTAS -->
+
 <script>
 "use strict";
-
-const KEY = "fba_cart_v1";
 
 const products = [
   {
     id: "f1-bottas-01",
-    name: "Valtteri Bottas — Portrait",
-    image: "images/f1/f1-bottas-portrait-apercu.jpg"
+    name: "Valtteri Bottas — Portrait"
   },
   {
     id: "f1-bottas-02",
-    name: "Valtteri Bottas — Racing",
-    image: "images/f1/f1-bottas-racing-apercu.jpg"
+    name: "Valtteri Bottas — Racing"
   },
   {
     id: "f1-bottas-03",
-    name: "Valtteri Bottas — Célébration",
-    image: "images/f1/f1-bottas-celebration-apercu.jpg"
+    name: "Valtteri Bottas — Célébration"
   }
 ];
 
-function getCart() {
-  try {
-    const data = JSON.parse(
-      localStorage.getItem(KEY) || "[]"
-    );
-
-    return Array.isArray(data)
-      ? data.filter(item =>
-          item &&
-          typeof item.id === "string" &&
-          typeof item.name === "string"
-        )
-      : [];
-  } catch {
-    return [];
-  }
-}
-
-function saveCart(cart) {
-  try {
-    localStorage.setItem(KEY, JSON.stringify(cart));
-  } catch (error) {
-    console.warn("Panier non enregistré :", error);
-  }
-  renderCart();
-}
-
-function euro(value) {
-  return value.toLocaleString("fr-FR", {
-    style: "currency",
-    currency: "EUR"
-  });
-}
-
-function totalFor(count) {
-  const tens = Math.floor(count / 10);
-  const remaining = count % 10;
-  const fives = Math.floor(remaining / 5);
-  const singles = remaining % 5;
-
-  return tens * 11.99 +
-         fives * 6.99 +
-         singles * 1.99;
-}
-
-function openCart() {
-  const panel = document.getElementById("cart-panel");
-  panel.classList.add("open");
-  panel.setAttribute("aria-hidden", "false");
-}
-
-function closeCart() {
-  const panel = document.getElementById("cart-panel");
-  panel.classList.remove("open");
-  panel.setAttribute("aria-hidden", "true");
-}
-
 function renderProducts() {
-  const gallery = document.getElementById("products");
+
+  const gallery =
+    document.getElementById("products");
+
+  if (!gallery) return;
+
   gallery.replaceChildren();
 
   products.forEach(product => {
-    const card = document.createElement("article");
+
+    const card =
+      document.createElement("article");
+
     card.className = "product";
 
-    const preview = document.createElement("div");
+    const preview =
+      document.createElement("div");
+
     preview.className = "preview";
 
-    const img = document.createElement("img");
-    img.src = product.image;
-    img.alt = "Aperçu de " + product.name;
-    img.loading = "lazy";
-    preview.append(img);
+    const file =
+      window.FBA_IMAGES?.[product.id];
 
-    const body = document.createElement("div");
+    if (file) {
+
+      const img =
+        document.createElement("img");
+
+      img.src = file;
+      img.alt = "Aperçu protégé : " + product.name;
+      img.loading = "lazy";
+
+      preview.append(img);
+
+    } else {
+
+      const placeholder =
+        document.createElement("div");
+
+      placeholder.className = "placeholder";
+      placeholder.textContent =
+        "APERÇU EN PRÉPARATION";
+
+      preview.append(placeholder);
+
+    }
+
+    const body =
+      document.createElement("div");
+
     body.className = "productbody";
 
-    const title = document.createElement("h3");
+    const title =
+      document.createElement("h3");
+
     title.textContent = product.name;
 
-    const price = document.createElement("div");
+    const price =
+      document.createElement("div");
+
     price.className = "price";
     price.textContent = "1,99 €";
 
-    const button = document.createElement("button");
+    const button =
+      document.createElement("button");
+
     button.className = "btn primary";
     button.type = "button";
     button.textContent = "Ajouter au panier";
 
-    button.addEventListener("click", () => {
-      const cart = getCart();
-
-      if (!cart.some(item => item.id === product.id)) {
-        cart.push(product);
-        saveCart(cart);
-      }
-
-      openCart();
-    });
+    button.dataset.fbaAdd = "";
+    button.dataset.fbaId = product.id;
+    button.dataset.fbaName = product.name;
 
     body.append(title, price, button);
     card.append(preview, body);
     gallery.append(card);
+
   });
 }
-
-function renderCart() {
-  const cart = getCart();
-  const root = document.getElementById("cart-lines");
-
-  root.replaceChildren();
-
-  document.getElementById("cart-count")
-    .textContent = cart.length;
-
-  if (!cart.length) {
-    root.textContent = "Votre panier est vide.";
-  }
-
-  cart.forEach(item => {
-    const line = document.createElement("div");
-    line.className = "cart-line";
-
-    const current = products.find(p => p.id === item.id);
-
-    
-const imagePath =
-  window.FBA_IMAGES?.[item.id] ||
-  current?.image ||
-  item.image ||
-  "";
-    
-
-    if (imagePath) {
-      const img = document.createElement("img");
-      img.src = imagePath;
-      img.alt = "";
-      img.loading = "lazy";
-      line.append(img);
-    }
-
-    const info = document.createElement("div");
-    info.className = "cart-line-info";
-
-    const name = document.createElement("strong");
-    name.textContent = item.name;
-
-    const price = document.createElement("span");
-    price.textContent = "1,99 €";
-
-    info.append(name, price);
-
-    const remove = document.createElement("button");
-    remove.type = "button";
-    remove.textContent = "Retirer";
-
-    remove.addEventListener("click", () => {
-      saveCart(
-        getCart().filter(p => p.id !== item.id)
-      );
-    });
-
-    line.append(info, remove);
-    root.append(line);
-  });
-
-  const standard = cart.length * 1.99;
-  const total = totalFor(cart.length);
-
-  document.getElementById("cart-discount")
-    .textContent = cart.length
-      ? "Réduction packs : " +
-        euro(Math.max(0, standard - total))
-      : "";
-
-  document.getElementById("cart-total")
-    .textContent = "Total : " + euro(total);
-}
-
-document.getElementById("open-cart")
-  .addEventListener("click", openCart);
-
-document.getElementById("close-cart")
-  .addEventListener("click", closeCart);
-
-document.addEventListener("keydown", event => {
-  if (event.key === "Escape") {
-    closeCart();
-  }
-});
-
-window.addEventListener("storage", event => {
-  if (event.key === KEY) {
-    renderCart();
-  }
-});
 
 renderProducts();
-renderCart();
 </script>
 
 </body>
