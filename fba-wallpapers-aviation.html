@@ -3,284 +3,535 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FBA Wallpapers - Aviation et Géants du ciel</title>
-<meta name="description" content="Découvrez les fonds d'écran FBA consacrés à l'aviation, aux avions, aux hélicoptères et aux géants du ciel.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+
+<meta name="description"
+content="Explorez l'univers Aviation de FBA Wallpapers : aviation civile, avions militaires, hélicoptères et avions légendaires.">
+
+<title>Aviation & Géants du Ciel | FBA Wallpapers</title>
+
 <style>
 :root {
-  --red: #d71920;
-  --black: #08090c;
-  --panel: #15171d;
-  --silver: #d8dbe2;
-  --muted: #999eaa;
+  --bg: #080808;
+  --surface: #141414;
+  --red: #e32636;
+  --muted: #aaa;
 }
-* { box-sizing: border-box; }
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  background: var(--black);
-  color: white;
+  background: var(--bg);
+  color: #f4f4f4;
   font-family: Arial, Helvetica, sans-serif;
-}
-header {
-  padding: 35px 20px;
-  text-align: center;
-  background: linear-gradient(145deg,#1b1d24,#08090c 70%);
-  border-bottom: 2px solid var(--red);
-}
-.logo {
-  color: var(--red);
-  font-size: 15px;
-  font-weight: bold;
-  letter-spacing: 5px;
-}
-h1 {
-  font-size: clamp(30px,6vw,54px);
-  margin: 20px 0 10px;
-  text-transform: uppercase;
-}
-h1 span { color: var(--red); }
-header p {
-  color: var(--silver);
-  max-width: 650px;
-  margin: auto;
   line-height: 1.6;
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  padding: 20px;
+  background: #0d0d0d;
+  border-bottom: 1px solid #303030;
+  text-align: center;
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.brand span {
+  color: var(--red);
+}
+
 nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 12px;
-  padding: 20px;
-}
-nav a, .back {
-  color: white;
-  text-decoration: none;
-  border: 1px solid #444750;
-  padding: 11px 17px;
-  border-radius: 5px;
-  font-size: 13px;
-}
-nav a:hover, .back:hover {
-  background: var(--red);
-  border-color: var(--red);
-}
-.container {
-  width: min(1100px,92%);
-  margin: 35px auto;
-}
-.intro {
-  text-align: center;
-  margin-bottom: 35px;
-}
-.intro h2 {
-  text-transform: uppercase;
-  font-size: 25px;
-}
-.intro h2 span { color: var(--red); }
-.intro p {
-  color: var(--muted);
-  line-height: 1.7;
-}
-.section-title {
-  border-left: 4px solid var(--red);
-  padding-left: 13px;
-  margin: 40px 0 20px;
-  font-size: 21px;
-  text-transform: uppercase;
-}
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
   gap: 18px;
+  margin-top: 13px;
+  font-size: 12px;
+  font-weight: bold;
 }
-.card {
-  background: var(--panel);
-  border: 1px solid #292c35;
-  border-radius: 9px;
-  overflow: hidden;
-  transition: .2s;
+
+nav a:hover {
+  color: var(--red);
 }
-.card:hover {
-  transform: translateY(-4px);
-  border-color: var(--red);
-}
-.preview {
-  aspect-ratio: 9 / 16;
-  max-height: 300px;
+
+/* HERO */
+
+.hero {
+  position: relative;
+  min-height: 520px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 90px 20px;
   text-align: center;
+
   background:
-    radial-gradient(ellipse at 50% 35%,#343945 0%,#171a22 45%,#08090c 100%);
-  border-bottom: 2px solid var(--red);
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.35),
+      rgba(0,0,0,.85)
+    ),
+    url("images/couvertures/FBA_Wallpapers_Aviation_Premium.png")
+    center 38% / cover no-repeat;
+
+  border-bottom: 1px solid #572029;
 }
-.preview span {
-  font-size: 19px;
+
+.hero-content {
+  max-width: 850px;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  color: #ff7a86;
+  font-size: 12px;
   font-weight: bold;
-  letter-spacing: 2px;
-  color: var(--silver);
+  letter-spacing: 3px;
+  margin-bottom: 18px;
 }
-.card-content { padding: 17px; }
-.card h3 {
-  margin: 0 0 9px;
-  font-size: 18px;
+
+h1 {
+  font-size: clamp(35px, 7vw, 68px);
+  line-height: 1.08;
+  text-transform: uppercase;
+  margin: 0 0 22px;
+  text-shadow: 0 3px 18px #000;
 }
-.card p {
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.5;
-  min-height: 42px;
+
+h1 span {
+  color: #ff394c;
 }
-.status {
+
+.hero p {
+  max-width: 650px;
+  margin: auto;
+  color: #e0e0e0;
+  font-size: 16px;
+  text-shadow: 0 2px 8px #000;
+}
+
+.hero-button {
   display: inline-block;
-  margin-top: 7px;
-  color: var(--red);
-  font-size: 11px;
+  margin-top: 28px;
+  padding: 13px 25px;
+  background: var(--red);
+  border-radius: 7px;
+  font-size: 12px;
   font-weight: bold;
   letter-spacing: 1px;
 }
-.notice {
-  margin: 40px 0;
-  padding: 22px;
-  background: #15171d;
-  border: 1px solid #343741;
-  border-left: 4px solid var(--red);
-  border-radius: 6px;
-  color: var(--silver);
-  line-height: 1.7;
+
+.hero-button:hover {
+  background: #ff4053;
 }
-footer {
+
+/* CONTENU */
+
+main {
+  max-width: 1180px;
+  margin: auto;
+  padding: 65px 20px;
+}
+
+.section-heading {
   text-align: center;
-  padding: 30px 15px;
-  border-top: 1px solid #292c35;
-  color: var(--muted);
-  font-size: 13px;
+  margin-bottom: 38px;
 }
-footer strong { color: var(--red); }
+
+.section-heading h2 {
+  font-size: clamp(25px, 5vw, 36px);
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.section-heading h2 span {
+  color: var(--red);
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* CARTES */
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  margin-bottom: 70px;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #343434;
+  border-radius: 16px;
+  background: linear-gradient(145deg,#191919,#101010);
+  transition: transform .3s, border-color .3s, box-shadow .3s;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--red);
+  box-shadow: 0 12px 35px rgba(227,38,54,.15);
+}
+
+.category-visual {
+  position: relative;
+  height: 230px;
+  display: flex;
+  align-items: flex-end;
+  padding: 22px;
+  overflow: hidden;
+  isolation: isolate;
+  background-color: #191919;
+  background-size: cover;
+  background-position: center;
+}
+
+.category-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,.05),
+    rgba(0,0,0,.75)
+  );
+}
+
+/* LES QUATRE COUVERTURES */
+
+.civile {
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.05),
+      rgba(0,0,0,.45)
+    ),
+    url("images/aviation/FBA_Aviation_Civile.png");
+}
+
+.militaire {
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.05),
+      rgba(0,0,0,.45)
+    ),
+    url("images/aviation/FBA_Aviation_Militaire.png");
+}
+
+.helicopteres {
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.05),
+      rgba(0,0,0,.45)
+    ),
+    url("images/aviation/FBA_Helicopteres.png");
+}
+
+.legendaires {
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.05),
+      rgba(0,0,0,.45)
+    ),
+    url("images/aviation/FBA_Avions_Legendaires.png");
+}
+
+.category-number {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-size: 42px;
+  font-weight: 900;
+  color: rgba(255,255,255,.2);
+}
+
+.category-visual h3 {
+  margin: 0;
+  font-size: clamp(25px,4vw,36px);
+  text-transform: uppercase;
+  line-height: 1.15;
+  text-shadow: 0 3px 12px #000;
+}
+
+.category-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 25px;
+}
+
+.category-content p {
+  margin: 0 0 24px;
+  color: #bcbcbc;
+  font-size: 14px;
+  flex: 1;
+}
+
+.category-link {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 11px 16px;
+  border: 1px solid #a33b48;
+  border-radius: 7px;
+  color: #ff9ca5;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.category-card:hover .category-link {
+  background: var(--red);
+  color: white;
+}
+
+/* BAS DE PAGE */
+
+.highlight {
+  padding: 45px 30px;
+  border: 1px solid #67252d;
+  border-radius: 15px;
+  background: radial-gradient(
+    ellipse at center,
+    #351116,
+    #111 75%
+  );
+  text-align: center;
+}
+
+.highlight h2 {
+  font-size: 27px;
+  margin: 0 0 15px;
+}
+
+.highlight h2 span {
+  color: var(--red);
+}
+
+.highlight p {
+  max-width: 700px;
+  margin: auto;
+  color: #bbb;
+  font-size: 15px;
+}
+
+.back {
+  display: inline-block;
+  margin-top: 27px;
+  padding: 12px 20px;
+  border: 1px solid var(--red);
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.back:hover {
+  background: var(--red);
+}
+
+footer {
+  padding: 30px 15px;
+  border-top: 1px solid #292929;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+}
+
+footer strong {
+  color: #eee;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 480px;
+    padding: 75px 18px;
+  }
+
+  .category-visual {
+    height: 210px;
+  }
+
+  main {
+    padding: 45px 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
 </style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">FOND ECRAN BY ALEXIS</div>
-  <h1>AVIATION ET <span>GÉANTS DU CIEL</span></h1>
-  <p>Des machines extraordinaires, des appareils mythiques et des images qui donnent envie de prendre de la hauteur.</p>
+  <a class="brand" href="index.html">
+    FOND<span>ECRAN</span>BYALEXIS
+  </a>
+
+  <nav>
+    <a href="index.html">ACCUEIL</a>
+    <a href="fba-wallpapers.html">WALLPAPERS</a>
+    <a href="fba-studio.html">FBA STUDIO</a>
+  </nav>
 </header>
 
-<nav>
-  <a href="index.html">ACCUEIL FBA</a>
-  <a href="fba-wallpapers.html">FBA WALLPAPERS</a>
-</nav>
+<section class="hero">
+  <div class="hero-content">
 
-<main class="container">
+    <div class="eyebrow">
+      FBA WALLPAPERS / UNIVERS 02
+    </div>
 
-  <section class="intro">
-    <h2>Explorez l'univers <span>aérien</span></h2>
+    <h1>AVIATION <span>& GÉANTS DU CIEL</span></h1>
+
     <p>
-      Retrouvez prochainement une sélection de fonds d'écran consacrés
-      aux avions de chasse, aux avions de ligne, aux hélicoptères,
-      aux appareils historiques et aux grandes machines volantes.
+      Explorez les merveilles de l'aviation,
+      des avions de ligne aux chasseurs militaires,
+      des hélicoptères aux appareils légendaires.
     </p>
-  </section>
 
-  <h2 class="section-title">Les collections aériennes</h2>
+    <a href="#collections" class="hero-button">
+      EXPLORER LES COLLECTIONS
+    </a>
 
-  <section class="grid">
+  </div>
+</section>
 
-    <article class="card">
-      <div class="preview"><span>AVIATION MILITAIRE</span></div>
-      <div class="card-content">
-        <h3>Avions de chasse</h3>
-        <p>Rafale, Mirage, Eurofighter, F-35 et autres appareils militaires.</p>
-        <span class="status">VISUELS À AJOUTER</span>
-      </div>
-    </article>
+<main>
 
-    <article class="card">
-      <div class="preview"><span>GÉANTS DU CIEL</span></div>
-      <div class="card-content">
-        <h3>Avions de ligne</h3>
-        <p>Airbus, Boeing et les plus grands avions de transport de passagers.</p>
-        <span class="status">VISUELS À AJOUTER</span>
-      </div>
-    </article>
+<section id="collections">
 
-    <article class="card">
-      <div class="preview"><span>HÉLICOPTÈRES</span></div>
-      <div class="card-content">
-        <h3>Hélicoptères</h3>
-        <p>Hélicoptères civils, militaires, de secours et de transport.</p>
-        <span class="status">VISUELS À AJOUTER</span>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="preview"><span>AVIATION CIVILE</span></div>
-      <div class="card-content">
-        <h3>Aviation civile</h3>
-        <p>Avions privés, aviation régionale et appareils de tourisme.</p>
-        <span class="status">VISUELS À AJOUTER</span>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="preview"><span>AVIATION HISTORIQUE</span></div>
-      <div class="card-content">
-        <h3>Avions historiques</h3>
-        <p>Les appareils légendaires qui ont marqué l'histoire de l'aviation.</p>
-        <span class="status">VISUELS À AJOUTER</span>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="preview"><span>SECOURS AÉRIEN</span></div>
-      <div class="card-content">
-        <h3>Secours et interventions</h3>
-        <p>Dragon, Sécurité civile, SAMU, recherche et sauvetage.</p>
-        <span class="status">VISUELS À AJOUTER</span>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="preview"><span>TRANSPORT MILITAIRE</span></div>
-      <div class="card-content">
-        <h3>Transport militaire</h3>
-        <p>A400M, C-130 Hercules et autres avions de transport tactique.</p>
-        <span class="status">VISUELS À AJOUTER</span>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="preview"><span>ACROBATIE AÉRIENNE</span></div>
-      <div class="card-content">
-        <h3>Patrouilles et voltige</h3>
-        <p>Patrouille de France, démonstrations et figures aériennes.</p>
-        <span class="status">VISUELS À AJOUTER</span>
-      </div>
-    </article>
-
-  </section>
-
-  <div class="notice">
-    <strong>COLLECTION EN CONSTRUCTION</strong><br>
-    Les collections FBA Aviation seront progressivement enrichies
-    avec des fonds d'écran au format vertical, pensés pour les smartphones.
-    <br><br>
-    <strong>FBA — L'image prend vie.</strong>
+  <div class="section-heading">
+    <h2>CHOISISSEZ <span>VOTRE UNIVERS</span></h2>
+    <p>
+      Quatre univers pour découvrir les machines du ciel.
+    </p>
   </div>
 
-  <p style="text-align:center;">
-    <a class="back" href="fba-wallpapers.html">← RETOUR À FBA WALLPAPERS</a>
+  <div class="category-grid">
+
+    <a href="#aviation-civile" class="category-card">
+      <div class="category-visual civile">
+        <span class="category-number">01</span>
+        <h3>AVIATION CIVILE</h3>
+      </div>
+      <div class="category-content" id="aviation-civile">
+        <p>
+          Airbus, Boeing, avions de ligne,
+          aviation privée et appareils régionaux.
+        </p>
+        <span class="category-link">
+          DÉCOUVRIR L'AVIATION CIVILE
+        </span>
+      </div>
+    </a>
+
+    <a href="#aviation-militaire" class="category-card">
+      <div class="category-visual militaire">
+        <span class="category-number">02</span>
+        <h3>AVIATION MILITAIRE</h3>
+      </div>
+      <div class="category-content" id="aviation-militaire">
+        <p>
+          Rafale, Mirage, F-35, avions de transport
+          militaire et patrouilles acrobatiques.
+        </p>
+        <span class="category-link">
+          DÉCOUVRIR L'AVIATION MILITAIRE
+        </span>
+      </div>
+    </a>
+
+    <a href="#helicopteres" class="category-card">
+      <div class="category-visual helicopteres">
+        <span class="category-number">03</span>
+        <h3>HÉLICOPTÈRES</h3>
+      </div>
+      <div class="category-content" id="helicopteres">
+        <p>
+          Sécurité civile, SAMU, hélicoptères
+          militaires et missions de sauvetage.
+        </p>
+        <span class="category-link">
+          DÉCOUVRIR LES HÉLICOPTÈRES
+        </span>
+      </div>
+    </a>
+
+    <a href="#avions-legendaires" class="category-card">
+      <div class="category-visual legendaires">
+        <span class="category-number">04</span>
+        <h3>AVIONS LÉGENDAIRES</h3>
+      </div>
+      <div class="category-content" id="avions-legendaires">
+        <p>
+          Concorde, Boeing 747, Antonov An-225
+          et les appareils qui ont marqué l'histoire.
+        </p>
+        <span class="category-link">
+          DÉCOUVRIR LES LÉGENDES
+        </span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<section class="highlight">
+  <h2>LA PASSION <span>DU CIEL</span></h2>
+
+  <p>
+    FBA Wallpapers célèbre l'aviation à travers
+    des collections visuelles immersives.
+    De nouvelles créations viendront
+    enrichir régulièrement cet univers.
   </p>
+
+  <a href="fba-wallpapers.html" class="back">
+    RETOUR AUX COLLECTIONS FBA
+  </a>
+</section>
 
 </main>
 
 <footer>
-  <strong>FOND ECRAN BY ALEXIS</strong><br>
-  L'image prend vie.<br>
+  <strong>FONDECRANBYALEXIS</strong><br>
+  FBA WALLPAPERS — AVIATION & GÉANTS DU CIEL<br>
   © 2026 — Tous droits réservés.
 </footer>
 
