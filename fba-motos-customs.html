@@ -1,0 +1,896 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08090d">
+<meta name="description" content="Découvrez les collections premium Customs de FBA Wallpapers : Cruisers, Bobbers et Café Racers.">
+<title>Customs | FBA Wallpapers</title>
+
+<style>
+:root {
+  --bg: #08090d;
+  --panel: #12151c;
+  --red: #ed1726;
+  --white: #f5f6f8;
+  --muted: #a8adb8;
+  --line: #303541;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 3px solid #ff5964;
+  outline-offset: 4px;
+}
+
+.wrap {
+  width: min(1160px, 92%);
+  margin: auto;
+}
+
+/* HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(8,9,13,.95);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.top {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+}
+
+.brand span,
+h1 span,
+h2 span {
+  color: var(--red);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 22px;
+  font-size: 13px;
+}
+
+nav a:hover { color: var(--red); }
+
+/* HERO */
+
+.hero {
+  min-height: 470px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+  background:
+    radial-gradient(
+      ellipse at 50% 20%,
+      rgba(237,23,38,.22),
+      transparent 65%
+    ),
+    linear-gradient(180deg,#231916,#08090d);
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.eyebrow {
+  color: #ff6673;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(42px,8vw,80px);
+  line-height: 1.08;
+  margin: 20px 0;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  color: #c5c9d2;
+  font-size: 16px;
+}
+
+.slogan {
+  margin-top: 25px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+/* BUTTONS */
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.cta {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 20px;
+  background: var(--red);
+  border: 1px solid var(--red);
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+  transition: background .2s;
+}
+
+.cta:hover { background: #ff3442; }
+
+.cta.secondary {
+  background: transparent;
+  border-color: #777d89;
+}
+
+.cta.secondary:hover {
+  background: #222631;
+}
+
+/* SECTIONS */
+
+.content-section {
+  padding: 75px 0;
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-head h2 {
+  font-size: clamp(27px,4vw,40px);
+  margin: 12px 0;
+  line-height: 1.2;
+}
+
+.section-head p {
+  max-width: 700px;
+  margin: auto;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.redline {
+  width: 65px;
+  height: 3px;
+  margin: 18px auto 0;
+  background: var(--red);
+}
+
+/* WALLPAPER CARDS */
+
+.wallpaper-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 22px;
+}
+
+.wallpaper-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  transition: transform .25s, border-color .25s;
+}
+
+.wallpaper-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--red);
+}
+
+.wallpaper-preview {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  text-align: center;
+  background:
+    radial-gradient(
+      ellipse at center,
+      #49301d,
+      #171920 70%
+    );
+  border-bottom: 1px solid var(--line);
+}
+
+.wallpaper-preview strong {
+  font-size: 19px;
+  line-height: 1.3;
+  letter-spacing: 1px;
+}
+
+.wallpaper-preview small {
+  margin-top: 12px;
+  color: #ff9ca5;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.preview-number {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  color: rgba(255,255,255,.3);
+  font-size: 32px;
+  font-weight: 900;
+}
+
+/* INFORMATION */
+
+.wallpaper-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+}
+
+.wallpaper-info h3 {
+  font-size: 17px;
+  margin: 0 0 8px;
+}
+
+.wallpaper-info p {
+  flex: 1;
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0 0 18px;
+}
+
+.collection-label {
+  color: #ff9ca5;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.status {
+  display: block;
+  padding: 11px;
+  background: #252932;
+  border: 1px solid #454b57;
+  border-radius: 7px;
+  color: #b5bac5;
+  font-size: 11px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* NOTICE */
+
+.notice {
+  padding: 35px 25px;
+  background: #151016;
+  border: 1px solid #713039;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.notice h2 {
+  font-size: clamp(25px,4vw,35px);
+  margin: 12px 0;
+}
+
+.notice p {
+  max-width: 720px;
+  margin: 0 auto 16px;
+  color: #c1c5ce;
+  font-size: 14px;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 32px 15px;
+  text-align: center;
+  color: #858c99;
+  font-size: 13px;
+}
+
+footer strong { color: #ddd; }
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+  margin-top: 15px;
+}
+
+.footer-links a:hover { color: white; }
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .wallpaper-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .top {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  nav {
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  .wallpaper-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 430px;
+    padding: 65px 18px;
+  }
+
+  .content-section {
+    padding: 55px 0;
+  }
+
+  .hero-actions .cta {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  .wallpaper-card { transition: none; }
+
+  .wallpaper-card:hover { transform: none; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap top">
+    <a class="brand" href="index.html">
+      FOND<span>ECRAN</span>BYALEXIS
+    </a>
+
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="fba-wallpapers.html">Wallpapers</a>
+      <a href="fba-wallpapers-automobile.html">Automobile</a>
+      <a href="fba-wallpapers-motos.html">Motos</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      FBA Wallpapers / Motos
+    </div>
+
+    <h1>
+      UNIVERS <span>CUSTOMS</span>
+    </h1>
+
+    <p>
+      Découvrez l'univers des motos de caractère :
+      cruisers imposants, bobbers personnalisés
+      et café racers au style intemporel.
+    </p>
+
+    <div class="slogan">
+      DES PASSIONS À ACCROCHER AUX MURS.
+    </div>
+
+    <div class="hero-actions">
+      <a href="#cruisers" class="cta">
+        EXPLORER LA COLLECTION
+      </a>
+
+      <a href="fba-wallpapers-motos.html"
+         class="cta secondary">
+        RETOUR AUX MOTOS
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SECTION 01 : CRUISERS -->
+
+<section class="content-section" id="cruisers">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 01 / CUSTOMS
+      </div>
+
+      <h2>LES <span>CRUISERS</span></h2>
+
+      <p>
+        Des motos imposantes au caractère
+        affirmé, conçues pour les longues
+        routes et la liberté.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- HARLEY-DAVIDSON FAT BOY -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">01</div>
+          <strong>HARLEY-DAVIDSON FAT BOY</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Harley-Davidson Fat Boy</h3>
+          <p>
+            Un cruiser américain emblématique,
+            reconnaissable à ses roues pleines,
+            son imposante silhouette et
+            son moteur V-Twin.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- INDIAN CHIEF DARK HORSE -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">02</div>
+          <strong>INDIAN CHIEF DARK HORSE</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Indian Chief Dark Horse</h3>
+          <p>
+            Un cruiser au style minimaliste,
+            avec une finition sombre
+            et un moteur V-Twin
+            au couple généreux.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- HONDA REBEL 1100 -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">03</div>
+          <strong>HONDA REBEL 1100</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Honda Rebel 1100</h3>
+          <p>
+            Un cruiser moderne associant
+            un design épuré, une position
+            de conduite basse et
+            un moteur bicylindre.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 02 : BOBBERS & CUSTOMS -->
+
+<section class="content-section"
+         id="bobbers"
+         style="background:#0d1016;">
+
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 02 / CUSTOMS
+      </div>
+
+      <h2>BOBBERS <span>& CUSTOMS</span></h2>
+
+      <p>
+        Des motos au style dépouillé,
+        aux lignes personnalisées
+        et à l'identité unique.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- TRIUMPH BONNEVILLE BOBBER -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">04</div>
+          <strong>TRIUMPH BONNEVILLE BOBBER</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Triumph Bonneville Bobber</h3>
+          <p>
+            Une moto britannique au style
+            rétro, avec selle monoplace,
+            lignes épurées et
+            finition soignée.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- HARLEY-DAVIDSON STREET BOB -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">05</div>
+          <strong>HARLEY-DAVIDSON STREET BOB</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Harley-Davidson Street Bob</h3>
+          <p>
+            Un bobber américain au caractère
+            brut, reconnaissable à son
+            style minimaliste et
+            son moteur V-Twin.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- INDIAN SCOUT BOBBER -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">06</div>
+          <strong>INDIAN SCOUT BOBBER</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Indian Scout Bobber</h3>
+          <p>
+            Une moto au profil bas,
+            aux finitions sombres
+            et au design musclé,
+            inspiré de l'univers custom.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 03 : CAFE RACERS -->
+
+<section class="content-section" id="cafe-racers">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 03 / CUSTOMS
+      </div>
+
+      <h2>CAFÉ <span>RACERS</span></h2>
+
+      <p>
+        Des motos inspirées de la culture
+        britannique des années 1960,
+        associant élégance rétro
+        et esprit sportif.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- TRIUMPH THRUXTON RS -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">07</div>
+          <strong>TRIUMPH THRUXTON RS</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Triumph Thruxton RS</h3>
+          <p>
+            Une sportive néo-rétro
+            britannique, avec guidons
+            bracelets et silhouette
+            inspirée des café racers.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- BMW R NINET RACER -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">08</div>
+          <strong>BMW R NINET RACER</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>BMW R nineT Racer</h3>
+          <p>
+            Une moto néo-rétro au carénage
+            sportif, inspirée des machines
+            de compétition classiques
+            de la marque allemande.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- ROYAL ENFIELD CONTINENTAL GT -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">09</div>
+          <strong>ROYAL ENFIELD CONTINENTAL GT 650</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Royal Enfield Continental GT 650</h3>
+          <p>
+            Un café racer au style classique,
+            doté d'un bicylindre parallèle
+            et d'une silhouette
+            fidèle à la tradition.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- INFORMATIONS COMMERCIALES -->
+
+<section class="content-section"
+         style="background:#0d1016;
+         border-top:1px solid #292d37;">
+
+  <div class="wrap">
+    <div class="notice">
+
+      <div class="eyebrow">
+        FBA WALLPAPERS PREMIUM
+      </div>
+
+      <h2>
+        L'ART <span>DU CUSTOM</span>
+      </h2>
+
+      <p>
+        Découvrez prochainement
+        des créations originales
+        dédiées aux motos Customs,
+        au format vertical 9:16.
+      </p>
+
+      <p>
+        Les visuels publics seront
+        présentés sous forme d'aperçus
+        basse résolution avec filigrane.
+        Les originaux haute définition
+        resteront dans un espace privé.
+      </p>
+
+      <p>
+        Lorsque la boutique sera activée,
+        les visiteurs pourront ajouter
+        leurs fonds d'écran au panier
+        directement sur FBA Wallpapers
+        et régler leurs achats
+        par paiement sécurisé.
+      </p>
+
+      <p>
+        L'accès aux fichiers numériques
+        sera réservé aux commandes
+        dont le paiement aura été confirmé.
+      </p>
+
+      <div class="hero-actions">
+
+        <a href="fba-wallpapers-motos.html"
+           class="cta">
+          RETOUR AUX MOTOS
+        </a>
+
+        <a href="fba-wallpapers-automobile.html"
+           class="cta secondary">
+          RETOUR À L'AUTOMOBILE
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="wrap">
+
+    <strong>FONDECRANBYALEXIS</strong>
+
+    <div>
+      FBA WALLPAPERS — CUSTOMS
+    </div>
+
+    <div>
+      © 2026 — Tous droits réservés.
+    </div>
+
+    <div class="footer-links">
+
+      <a href="index.html">Accueil</a>
+
+      <a href="fba-wallpapers.html">
+        FBA Wallpapers
+      </a>
+
+      <a href="fba-wallpapers-motos.html">
+        Univers Motos
+      </a>
+
+      <a href="#cruisers">Cruisers</a>
+
+      <a href="#bobbers">
+        Bobbers & Customs
+      </a>
+
+      <a href="#cafe-racers">
+        Café Racers
+      </a>
+
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
