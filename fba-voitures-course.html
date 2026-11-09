@@ -1,0 +1,823 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08090d">
+<meta name="description" content="Découvrez les voitures de course de FBA Wallpapers : endurance, GT3, prototypes et machines de compétition.">
+<title>Voitures de course | FBA Wallpapers</title>
+
+<style>
+:root {
+  --bg: #08090d;
+  --panel: #12151c;
+  --red: #ed1726;
+  --white: #f5f6f8;
+  --muted: #a8adb8;
+  --line: #303541;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 3px solid #ff5964;
+  outline-offset: 4px;
+}
+
+.wrap {
+  width: min(1160px, 92%);
+  margin: auto;
+}
+
+/* HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(8,9,13,.95);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.top {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+}
+
+.brand span,
+h1 span,
+h2 span {
+  color: var(--red);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 22px;
+  font-size: 13px;
+}
+
+nav a:hover {
+  color: var(--red);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 20px;
+  text-align: center;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8,9,13,.30),
+      rgba(8,9,13,.95)
+    ),
+    url("images/automobile/voitures/FBA_VOITURES_COURSE_COUVERTURE_001.png")
+    center / cover no-repeat;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-content {
+  max-width: 820px;
+}
+
+.eyebrow {
+  color: #ff6673;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(40px,8vw,78px);
+  line-height: 1.05;
+  margin: 20px 0;
+  text-shadow: 0 4px 20px #000;
+}
+
+.hero p {
+  max-width: 680px;
+  margin: auto;
+  color: #e1e3e9;
+  font-size: 17px;
+  text-shadow: 0 2px 8px #000;
+}
+
+.slogan {
+  margin-top: 25px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.cta {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 22px;
+  background: var(--red);
+  border: 1px solid var(--red);
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+  transition: background .2s;
+}
+
+.cta:hover {
+  background: #ff3442;
+}
+
+.cta.secondary {
+  background: rgba(8,9,13,.7);
+  border-color: #777d89;
+}
+
+.cta.secondary:hover {
+  background: #222631;
+}
+
+/* CONTENT */
+
+.content-section {
+  padding: 75px 0;
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-head h2 {
+  font-size: clamp(28px,4vw,42px);
+  margin: 12px 0;
+  line-height: 1.2;
+}
+
+.section-head p {
+  max-width: 700px;
+  margin: auto;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.redline {
+  width: 65px;
+  height: 3px;
+  margin: 18px auto 0;
+  background: var(--red);
+}
+
+/* WALLPAPER GRID */
+
+.wallpaper-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 22px;
+}
+
+.wallpaper-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  transition: transform .25s, border-color .25s;
+}
+
+.wallpaper-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--red);
+}
+
+.wallpaper-preview {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  background: linear-gradient(
+    145deg,#24131a,#0d1016
+  );
+  overflow: hidden;
+}
+
+.wallpaper-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.wallpaper-preview::after {
+  content: "FBA WALLPAPERS";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%) rotate(-25deg);
+  color: rgba(255,255,255,.34);
+  font-size: clamp(12px,2vw,22px);
+  font-weight: 900;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  text-shadow: 0 1px 6px #000;
+  pointer-events: none;
+}
+
+.wallpaper-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+}
+
+.wallpaper-info h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.wallpaper-info p {
+  flex: 1;
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.status {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 9px 14px;
+  border: 1px solid #713039;
+  border-radius: 20px;
+  color: #ff9ca5;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* PLACEHOLDERS */
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 25px;
+  text-align: center;
+  color: #a8adb8;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* INFORMATION */
+
+.notice {
+  padding: 38px 25px;
+  border: 1px solid #713039;
+  border-radius: 15px;
+  background: radial-gradient(
+    ellipse at center,
+    #291014,
+    #10131a 75%
+  );
+  text-align: center;
+}
+
+.notice h2 {
+  font-size: clamp(25px,4vw,36px);
+  margin: 12px 0;
+}
+
+.notice p {
+  max-width: 730px;
+  margin: 0 auto 16px;
+  color: #c1c5ce;
+  font-size: 14px;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 32px 15px;
+  text-align: center;
+  color: #858c99;
+  font-size: 13px;
+}
+
+footer strong {
+  color: #ddd;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+  margin-top: 15px;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .wallpaper-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .top {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  nav {
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  .wallpaper-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 460px;
+    padding: 70px 18px;
+  }
+
+  .content-section {
+    padding: 55px 0;
+  }
+
+  .hero-actions .cta {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .wallpaper-card {
+    transition: none;
+  }
+
+  .wallpaper-card:hover {
+    transform: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap top">
+
+    <a class="brand" href="index.html">
+      FOND<span>ECRAN</span>BYALEXIS
+    </a>
+
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="fba-wallpapers.html">Wallpapers</a>
+      <a href="fba-wallpapers-voitures.html">Voitures de sport</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      FBA Wallpapers / Voitures de sport
+    </div>
+
+    <h1>
+      VOITURES <span>DE COURSE</span>
+    </h1>
+
+    <p>
+      Entrez dans l'univers de la compétition
+      automobile : GT3, endurance,
+      prototypes, voitures de rallye
+      et machines conçues pour la victoire.
+    </p>
+
+    <div class="slogan">
+      DES PASSIONS À ACCROCHER AUX MURS.
+    </div>
+
+    <div class="hero-actions">
+
+      <a href="#wallpapers" class="cta">
+        DÉCOUVRIR LA COLLECTION
+      </a>
+
+      <a href="fba-wallpapers-voitures.html"
+         class="cta secondary">
+        RETOUR AUX VOITURES
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- COLLECTION VOITURES DE COURSE -->
+
+<section class="content-section" id="wallpapers">
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Collection automobile premium
+      </div>
+
+      <h2>
+        LES VOITURES <span>DE COURSE</span>
+      </h2>
+
+      <p>
+        Découvrez l'univers de la compétition
+        automobile à travers des créations
+        cinématiques dédiées aux voitures
+        de course les plus impressionnantes.
+      </p>
+
+      <div class="redline"></div>
+
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- COUVERTURE -->
+
+      <article class="wallpaper-card">
+
+        <div class="wallpaper-preview">
+
+          <img
+            src="images/automobile/voitures/FBA_VOITURES_COURSE_COUVERTURE_001.png"
+            alt="Couverture de la collection Voitures de course"
+            loading="lazy"
+          >
+
+        </div>
+
+        <div class="wallpaper-info">
+
+          <h3>Collection Voitures de course</h3>
+
+          <p>
+            Une composition réunissant
+            plusieurs machines de compétition
+            dans une ambiance cinématique.
+          </p>
+
+          <span class="status">
+            APERÇU DE LA COLLECTION
+          </span>
+
+        </div>
+
+      </article>
+
+      <!-- GT3 -->
+
+      <article class="wallpaper-card">
+
+        <div class="wallpaper-preview">
+
+          <div class="placeholder">
+            GT3
+            <br>
+            PROCHAINEMENT
+          </div>
+
+        </div>
+
+        <div class="wallpaper-info">
+
+          <h3>Voitures GT3</h3>
+
+          <p>
+            Une future série consacrée
+            aux voitures de compétition GT3,
+            avec leurs livrées spectaculaires
+            et leurs performances sur circuit.
+          </p>
+
+          <span class="status">
+            VISUEL EN PRÉPARATION
+          </span>
+
+        </div>
+
+      </article>
+
+      <!-- ENDURANCE -->
+
+      <article class="wallpaper-card">
+
+        <div class="wallpaper-preview">
+
+          <div class="placeholder">
+            ENDURANCE
+            <br>
+            PROCHAINEMENT
+          </div>
+
+        </div>
+
+        <div class="wallpaper-info">
+
+          <h3>Voitures d'endurance</h3>
+
+          <p>
+            Des créations à venir autour
+            des voitures engagées dans
+            les grandes courses d'endurance,
+            notamment les 24 Heures du Mans.
+          </p>
+
+          <span class="status">
+            VISUEL EN PRÉPARATION
+          </span>
+
+        </div>
+
+      </article>
+
+      <!-- PROTOTYPES -->
+
+      <article class="wallpaper-card">
+
+        <div class="wallpaper-preview">
+
+          <div class="placeholder">
+            PROTOTYPES
+            <br>
+            PROCHAINEMENT
+          </div>
+
+        </div>
+
+        <div class="wallpaper-info">
+
+          <h3>Prototypes de course</h3>
+
+          <p>
+            Une future collection dédiée
+            aux prototypes de compétition,
+            à leur aérodynamique
+            et à leurs technologies.
+          </p>
+
+          <span class="status">
+            VISUEL EN PRÉPARATION
+          </span>
+
+        </div>
+
+      </article>
+
+      <!-- RALLYE -->
+
+      <article class="wallpaper-card">
+
+        <div class="wallpaper-preview">
+
+          <div class="placeholder">
+            RALLYE
+            <br>
+            PROCHAINEMENT
+          </div>
+
+        </div>
+
+        <div class="wallpaper-info">
+
+          <h3>Voitures de rallye</h3>
+
+          <p>
+            Des créations cinématiques
+            autour des voitures de rallye,
+            entre routes de montagne,
+            terre, neige et vitesse.
+          </p>
+
+          <span class="status">
+            VISUEL EN PRÉPARATION
+          </span>
+
+        </div>
+
+      </article>
+
+      <!-- FUTURES CRÉATIONS -->
+
+      <article class="wallpaper-card">
+
+        <div class="wallpaper-preview">
+
+          <div class="placeholder">
+            NOUVELLES
+            <br>
+            MACHINES
+          </div>
+
+        </div>
+
+        <div class="wallpaper-info">
+
+          <h3>Prochaines créations</h3>
+
+          <p>
+            D'autres disciplines
+            et voitures de compétition
+            viendront progressivement
+            enrichir cette collection.
+          </p>
+
+          <span class="status">
+            PROCHAINEMENT
+          </span>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- INFORMATIONS COLLECTION -->
+
+<section class="content-section"
+  style="background:#0d1016;border-top:1px solid #292d37;">
+
+  <div class="wrap">
+
+    <div class="notice">
+
+      <div class="eyebrow">
+        FBA Wallpapers Premium
+      </div>
+
+      <h2>
+        LA PASSION <span>DE LA COURSE</span>
+      </h2>
+
+      <p>
+        La collection Voitures de course
+        met à l'honneur les machines
+        conçues pour la compétition,
+        la performance et la victoire.
+      </p>
+
+      <p>
+        Les fonds d'écran individuels
+        seront ajoutés progressivement
+        au format vertical 9:16.
+      </p>
+
+      <p>
+        Les images publiques serviront
+        uniquement d'aperçus.
+        Les fichiers originaux haute
+        définition destinés à la vente
+        seront conservés dans
+        un stockage privé.
+      </p>
+
+      <p>
+        Les achats et les téléchargements
+        ne sont pas encore activés.
+      </p>
+
+      <div class="hero-actions">
+
+        <a href="fba-wallpapers-voitures.html"
+           class="cta">
+          RETOUR AUX VOITURES DE SPORT
+        </a>
+
+        <a href="fba-wallpapers.html"
+           class="cta secondary">
+          EXPLORER FBA WALLPAPERS
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="wrap">
+
+    <strong>
+      FONDECRANBYALEXIS
+    </strong>
+
+    <div>
+      FBA WALLPAPERS — VOITURES DE COURSE
+    </div>
+
+    <div>
+      © 2026 — Tous droits réservés.
+    </div>
+
+    <div class="footer-links">
+
+      <a href="index.html">
+        Accueil
+      </a>
+
+      <a href="fba-wallpapers.html">
+        FBA Wallpapers
+      </a>
+
+      <a href="fba-wallpapers-voitures.html">
+        Voitures de sport
+      </a>
+
+      <a href="#wallpapers">
+        Voitures de course
+      </a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
