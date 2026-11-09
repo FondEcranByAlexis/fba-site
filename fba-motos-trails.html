@@ -1,0 +1,928 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08090d">
+<meta name="description" content="Découvrez les fonds d'écran premium Trails & Aventures de FBA Wallpapers : maxi-trails, trails aventure et motos grand tourisme.">
+<title>Trails & Aventures | FBA Wallpapers</title>
+
+<style>
+:root {
+  --bg: #08090d;
+  --panel: #12151c;
+  --red: #ed1726;
+  --white: #f5f6f8;
+  --muted: #a8adb8;
+  --line: #303541;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 3px solid #ff5964;
+  outline-offset: 4px;
+}
+
+.wrap {
+  width: min(1160px, 92%);
+  margin: auto;
+}
+
+/* HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(8,9,13,.95);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.top {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+}
+
+.brand span,
+h1 span,
+h2 span {
+  color: var(--red);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 22px;
+  font-size: 13px;
+}
+
+nav a:hover {
+  color: var(--red);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 470px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+  background:
+    radial-gradient(
+      ellipse at 50% 20%,
+      rgba(237,23,38,.20),
+      transparent 65%
+    ),
+    linear-gradient(
+      180deg,
+      #19231f,
+      #08090d
+    );
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.eyebrow {
+  color: #ff6673;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(42px,8vw,80px);
+  line-height: 1.08;
+  margin: 20px 0;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  color: #c5c9d2;
+  font-size: 16px;
+}
+
+.slogan {
+  margin-top: 25px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+/* BUTTONS */
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.cta {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 20px;
+  background: var(--red);
+  border: 1px solid var(--red);
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+  transition: background .2s;
+}
+
+.cta:hover {
+  background: #ff3442;
+}
+
+.cta.secondary {
+  background: transparent;
+  border-color: #777d89;
+}
+
+.cta.secondary:hover {
+  background: #222631;
+}
+
+/* COLLECTION SECTIONS */
+
+.content-section {
+  padding: 75px 0;
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-head h2 {
+  font-size: clamp(27px,4vw,40px);
+  margin: 12px 0;
+  line-height: 1.2;
+}
+
+.section-head p {
+  max-width: 700px;
+  margin: auto;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.redline {
+  width: 65px;
+  height: 3px;
+  margin: 18px auto 0;
+  background: var(--red);
+}
+
+/* WALLPAPER GRID */
+
+.wallpaper-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 22px;
+}
+
+.wallpaper-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  transition: transform .25s, border-color .25s;
+}
+
+.wallpaper-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--red);
+}
+
+.wallpaper-preview {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  text-align: center;
+  background:
+    radial-gradient(
+      ellipse at center,
+      #293c32,
+      #171920 70%
+    );
+  border-bottom: 1px solid var(--line);
+}
+
+.wallpaper-preview strong {
+  font-size: 19px;
+  line-height: 1.3;
+  letter-spacing: 1px;
+}
+
+.wallpaper-preview small {
+  margin-top: 12px;
+  color: #ff9ca5;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.preview-number {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  color: rgba(255,255,255,.3);
+  font-size: 32px;
+  font-weight: 900;
+}
+
+/* CARD INFORMATION */
+
+.wallpaper-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+}
+
+.wallpaper-info h3 {
+  font-size: 17px;
+  margin: 0 0 8px;
+}
+
+.wallpaper-info p {
+  flex: 1;
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0 0 18px;
+}
+
+.collection-label {
+  color: #ff9ca5;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.status {
+  display: block;
+  padding: 11px;
+  background: #252932;
+  border: 1px solid #454b57;
+  border-radius: 7px;
+  color: #b5bac5;
+  font-size: 11px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* COMMERCIAL NOTICE */
+
+.notice {
+  padding: 35px 25px;
+  background: #151016;
+  border: 1px solid #713039;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.notice h2 {
+  font-size: clamp(25px,4vw,35px);
+  margin: 12px 0;
+}
+
+.notice p {
+  max-width: 720px;
+  margin: 0 auto 16px;
+  color: #c1c5ce;
+  font-size: 14px;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 32px 15px;
+  text-align: center;
+  color: #858c99;
+  font-size: 13px;
+}
+
+footer strong {
+  color: #ddd;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+  margin-top: 15px;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .wallpaper-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .top {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  nav {
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  .wallpaper-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 430px;
+    padding: 65px 18px;
+  }
+
+  .content-section {
+    padding: 55px 0;
+  }
+
+  .hero-actions .cta {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .wallpaper-card {
+    transition: none;
+  }
+
+  .wallpaper-card:hover {
+    transform: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+  <div class="wrap top">
+
+    <a class="brand" href="index.html">
+      FOND<span>ECRAN</span>BYALEXIS
+    </a>
+
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="fba-wallpapers.html">Wallpapers</a>
+      <a href="fba-wallpapers-automobile.html">Automobile</a>
+      <a href="fba-wallpapers-motos.html">Motos</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      FBA Wallpapers / Motos
+    </div>
+
+    <h1>
+      TRAILS <span>& AVENTURES</span>
+    </h1>
+
+    <p>
+      Découvrez les motos conçues pour
+      explorer le monde : maxi-trails,
+      trails aventure et machines
+      de grand tourisme.
+    </p>
+
+    <div class="slogan">
+      DES PASSIONS À ACCROCHER AUX MURS.
+    </div>
+
+    <div class="hero-actions">
+
+      <a href="#maxi-trails" class="cta">
+        EXPLORER LA COLLECTION
+      </a>
+
+      <a href="fba-wallpapers-motos.html"
+         class="cta secondary">
+        RETOUR AUX MOTOS
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SECTION 01 : MAXI-TRAILS -->
+
+<section class="content-section" id="maxi-trails">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 01 / TRAILS & AVENTURES
+      </div>
+
+      <h2>LES <span>MAXI-TRAILS</span></h2>
+
+      <p>
+        Des motos puissantes et polyvalentes,
+        conçues pour les grands voyages,
+        les longues distances et l'aventure.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- BMW R 1300 GS ADVENTURE -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">01</div>
+          <strong>BMW R 1300 GS ADVENTURE</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>BMW R 1300 GS Adventure</h3>
+          <p>
+            Une référence du voyage à moto,
+            équipée d'un moteur boxer
+            et conçue pour parcourir
+            de longues distances.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- DUCATI MULTISTRADA V4 -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">02</div>
+          <strong>DUCATI MULTISTRADA V4</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Ducati Multistrada V4</h3>
+          <p>
+            Une moto italienne associant
+            performances sportives,
+            confort de voyage et
+            technologies avancées.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- TRIUMPH TIGER 1200 -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">03</div>
+          <strong>TRIUMPH TIGER 1200</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Triumph Tiger 1200</h3>
+          <p>
+            Un maxi-trail britannique
+            doté d'un moteur trois-cylindres,
+            pensé pour le tourisme
+            et les escapades aventureuses.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 02 : TRAILS AVENTURE -->
+
+<section class="content-section"
+         id="trails-aventure"
+         style="background:#0d1016;">
+
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 02 / TRAILS & AVENTURES
+      </div>
+
+      <h2>TRAILS <span>AVENTURE</span></h2>
+
+      <p>
+        Des motos capables d'explorer
+        routes, pistes et chemins,
+        avec un véritable esprit
+        d'aventure et de découverte.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- HONDA AFRICA TWIN -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">04</div>
+          <strong>HONDA AFRICA TWIN</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Honda Africa Twin</h3>
+          <p>
+            Une moto d'aventure emblématique,
+            héritière d'une longue tradition
+            de rallye-raid et de voyages
+            hors des sentiers battus.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- YAMAHA TENERE 700 -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">05</div>
+          <strong>YAMAHA TÉNÉRÉ 700</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Yamaha Ténéré 700</h3>
+          <p>
+            Un trail polyvalent inspiré
+            de l'univers du rallye,
+            apprécié pour sa simplicité
+            et ses capacités tout-terrain.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- KTM 890 ADVENTURE R -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">06</div>
+          <strong>KTM 890 ADVENTURE R</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>KTM 890 Adventure R</h3>
+          <p>
+            Un trail orienté tout-terrain,
+            conçu pour les pilotes
+            recherchant des performances
+            élevées sur les pistes.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 03 : GRAND TOURISME -->
+
+<section class="content-section" id="grand-tourisme">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 03 / TRAILS & AVENTURES
+      </div>
+
+      <h2>GRAND <span>TOURISME</span></h2>
+
+      <p>
+        Des motos pensées pour parcourir
+        des milliers de kilomètres,
+        avec confort, technologie
+        et performances.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- BMW R 1250 RT -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">07</div>
+          <strong>BMW R 1250 RT</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>BMW R 1250 RT</h3>
+          <p>
+            Une routière allemande
+            reconnue pour son confort,
+            sa protection aérodynamique
+            et ses équipements de voyage.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- HONDA GOLD WING -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">08</div>
+          <strong>HONDA GOLD WING</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Honda Gold Wing</h3>
+          <p>
+            Une référence du tourisme
+            haut de gamme, célèbre
+            pour son moteur six-cylindres
+            et son confort exceptionnel.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- KAWASAKI NINJA H2 SX -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">09</div>
+          <strong>KAWASAKI NINJA H2 SX</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Kawasaki Ninja H2 SX</h3>
+          <p>
+            Une sportive de grand tourisme
+            équipée d'un moteur suralimenté,
+            associant puissance,
+            technologie et aptitude au voyage.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- INFORMATIONS COMMERCIALES -->
+
+<section class="content-section"
+         style="background:#0d1016;
+         border-top:1px solid #292d37;">
+
+  <div class="wrap">
+    <div class="notice">
+
+      <div class="eyebrow">
+        FBA WALLPAPERS PREMIUM
+      </div>
+
+      <h2>
+        L'APPEL <span>DE L'AVENTURE</span>
+      </h2>
+
+      <p>
+        Cette collection accueillera
+        des créations originales
+        dédiées aux motos de voyage
+        et d'aventure, au format 9:16.
+      </p>
+
+      <p>
+        Les images publiques seront
+        des aperçus basse résolution
+        avec filigrane.
+        Les fichiers originaux haute
+        définition resteront privés.
+      </p>
+
+      <p>
+        Lorsque la boutique sera activée,
+        les visiteurs pourront ajouter
+        les fonds d'écran au panier
+        directement sur FBA Wallpapers
+        et finaliser leur commande
+        par paiement sécurisé.
+      </p>
+
+      <p>
+        L'accès aux fichiers numériques
+        sera réservé aux commandes
+        dont le paiement aura été confirmé.
+      </p>
+
+      <div class="hero-actions">
+
+        <a href="fba-wallpapers-motos.html"
+           class="cta">
+          RETOUR AUX MOTOS
+        </a>
+
+        <a href="fba-wallpapers-automobile.html"
+           class="cta secondary">
+          RETOUR À L'AUTOMOBILE
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="wrap">
+
+    <strong>FONDECRANBYALEXIS</strong>
+
+    <div>
+      FBA WALLPAPERS — TRAILS & AVENTURES
+    </div>
+
+    <div>
+      © 2026 — Tous droits réservés.
+    </div>
+
+    <div class="footer-links">
+
+      <a href="index.html">Accueil</a>
+
+      <a href="fba-wallpapers.html">
+        FBA Wallpapers
+      </a>
+
+      <a href="fba-wallpapers-motos.html">
+        Univers Motos
+      </a>
+
+      <a href="#maxi-trails">
+        Maxi-trails
+      </a>
+
+      <a href="#trails-aventure">
+        Trails aventure
+      </a>
+
+      <a href="#grand-tourisme">
+        Grand tourisme
+      </a>
+
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
