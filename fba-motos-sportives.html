@@ -1,0 +1,986 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08090d">
+<meta name="description" content="Découvrez les fonds d'écran premium Motos sportives de FBA Wallpapers : Superbikes, Hypersportives et Sportives iconiques.">
+<title>Motos sportives | FBA Wallpapers</title>
+
+<style>
+:root {
+  --bg: #08090d;
+  --panel: #12151c;
+  --red: #ed1726;
+  --white: #f5f6f8;
+  --muted: #a8adb8;
+  --line: #303541;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 3px solid #ff6673;
+  outline-offset: 4px;
+}
+
+.wrap {
+  width: min(1160px, 92%);
+  margin: auto;
+}
+
+/* HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(8,9,13,.95);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.top {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+}
+
+.brand span,
+h1 span,
+h2 span {
+  color: var(--red);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 22px;
+  font-size: 13px;
+}
+
+nav a:hover {
+  color: var(--red);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 470px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+  background:
+    radial-gradient(
+      ellipse at 50% 20%,
+      rgba(237,23,38,.25),
+      transparent 65%
+    ),
+    linear-gradient(180deg,#18121a,#08090d);
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.eyebrow {
+  color: #ff6673;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(42px,8vw,80px);
+  line-height: 1.08;
+  margin: 20px 0;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  color: #c5c9d2;
+  font-size: 16px;
+}
+
+.slogan {
+  margin-top: 25px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.cta {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 20px;
+  background: var(--red);
+  border: 1px solid var(--red);
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+  transition: background .2s;
+}
+
+.cta:hover {
+  background: #ff3442;
+}
+
+.cta.secondary {
+  background: transparent;
+  border-color: #777d89;
+}
+
+.cta.secondary:hover {
+  background: #222631;
+}
+
+/* COLLECTIONS */
+
+.content-section {
+  padding: 75px 0;
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-head h2 {
+  font-size: clamp(27px,4vw,40px);
+  margin: 12px 0;
+  line-height: 1.2;
+}
+
+.section-head p {
+  max-width: 700px;
+  margin: auto;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.redline {
+  width: 65px;
+  height: 3px;
+  margin: 18px auto 0;
+  background: var(--red);
+}
+
+/* WALLPAPER GRID */
+
+.wallpaper-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 22px;
+}
+
+.wallpaper-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  transition: transform .25s, border-color .25s;
+}
+
+.wallpaper-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--red);
+}
+
+.wallpaper-preview {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  text-align: center;
+  background:
+    radial-gradient(
+      ellipse at center,
+      #4a1721,
+      #171920 70%
+    );
+  border-bottom: 1px solid var(--line);
+}
+
+.wallpaper-preview strong {
+  font-size: 19px;
+  line-height: 1.3;
+  letter-spacing: 1px;
+}
+
+.wallpaper-preview small {
+  margin-top: 12px;
+  color: #ff9ca5;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.preview-number {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  color: rgba(255,255,255,.3);
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.wallpaper-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+}
+
+.wallpaper-info h3 {
+  font-size: 17px;
+  margin: 0 0 8px;
+}
+
+.wallpaper-info p {
+  flex: 1;
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0 0 18px;
+}
+
+.status {
+  display: block;
+  padding: 11px;
+  background: #252932;
+  border: 1px solid #454b57;
+  border-radius: 7px;
+  color: #b5bac5;
+  font-size: 11px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.collection-label {
+  color: #ff9ca5;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+/* NOTICE */
+
+.notice {
+  padding: 35px 25px;
+  background: #151016;
+  border: 1px solid #713039;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.notice h2 {
+  font-size: clamp(25px,4vw,35px);
+  margin: 12px 0;
+}
+
+.notice p {
+  max-width: 720px;
+  margin: 0 auto 16px;
+  color: #c1c5ce;
+  font-size: 14px;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 32px 15px;
+  text-align: center;
+  color: #858c99;
+  font-size: 13px;
+}
+
+footer strong {
+  color: #ddd;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+  margin-top: 15px;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+  .wallpaper-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .top {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  nav {
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  .wallpaper-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 430px;
+    padding: 65px 18px;
+  }
+
+  .content-section {
+    padding: 55px 0;
+  }
+
+  .hero-actions .cta {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .wallpaper-card {
+    transition: none;
+  }
+
+  .wallpaper-card:hover {
+    transform: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap top">
+
+    <a class="brand" href="index.html">
+      FOND<span>ECRAN</span>BYALEXIS
+    </a>
+
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="fba-wallpapers.html">Wallpapers</a>
+      <a href="fba-wallpapers-automobile.html">Automobile</a>
+      <a href="fba-wallpapers-motos.html">Motos</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      FBA Wallpapers / Motos
+    </div>
+
+    <h1>
+      MOTOS <span>SPORTIVES</span>
+    </h1>
+
+    <p>
+      Découvrez les machines les plus
+      impressionnantes de l'univers sportif :
+      Superbikes, Hypersportives et
+      Sportives iconiques.
+    </p>
+
+    <div class="slogan">
+      DES PASSIONS À ACCROCHER AUX MURS.
+    </div>
+
+    <div class="hero-actions">
+
+      <a href="#superbikes" class="cta">
+        EXPLORER LA COLLECTION
+      </a>
+
+      <a href="fba-wallpapers-motos.html"
+         class="cta secondary">
+        RETOUR AUX MOTOS
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SECTION 01 : SUPERBIKES -->
+
+<section class="content-section" id="superbikes">
+
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 01 / MOTOS SPORTIVES
+      </div>
+
+      <h2>
+        LES <span>SUPERBIKES</span>
+      </h2>
+
+      <p>
+        Des sportives de haute performance
+        conçues pour offrir des sensations
+        exceptionnelles sur route et circuit.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- YAMAHA R1 -->
+
+      <article class="wallpaper-card">
+
+        <div class="wallpaper-preview">
+          <div class="preview-number">01</div>
+          <strong>YAMAHA YZF-R1</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Yamaha YZF-R1</h3>
+
+          <p>
+            Une superbike emblématique
+            au design agressif,
+            inspirée de l'univers
+            de la compétition.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+
+      </article>
+
+      <!-- BMW S1000RR -->
+
+      <article class="wallpaper-card">
+
+        <div class="wallpaper-preview">
+          <div class="preview-number">02</div>
+          <strong>BMW S1000RR</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>BMW S1000RR</h3>
+
+          <p>
+            Technologie de pointe,
+            aérodynamisme et puissance
+            réunis dans une sportive
+            allemande d'exception.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+
+      </article>
+
+      <!-- DUCATI PANIGALE V4 -->
+
+      <article class="wallpaper-card">
+
+        <div class="wallpaper-preview">
+          <div class="preview-number">03</div>
+          <strong>DUCATI PANIGALE V4</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Ducati Panigale V4</h3>
+
+          <p>
+            Une sportive italienne
+            associant élégance,
+            technologie et performances
+            de très haut niveau.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SECTION 02 : HYPERSPORTIVES -->
+
+<section class="content-section"
+  id="hypersportives"
+  style="background:#0d1016;">
+
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 02 / MOTOS SPORTIVES
+      </div>
+
+      <h2>
+        LES <span>HYPERSPORTIVES</span>
+      </h2>
+
+      <p>
+        Des machines extrêmes
+        qui repoussent les limites
+        de la puissance, de la vitesse
+        et de l'ingénierie.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- KAWASAKI NINJA H2 -->
+
+      <article class="wallpaper-card">
+
+        <div class="wallpaper-preview">
+          <div class="preview-number">04</div>
+          <strong>KAWASAKI NINJA H2</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Kawasaki Ninja H2</h3>
+
+          <p>
+            Une hypersportive
+            spectaculaire équipée
+            d'un moteur suralimenté
+            et d'un design futuriste.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+
+      </article>
+
+      <!-- SUZUKI HAYABUSA -->
+
+      <article class="wallpaper-card">
+
+        <div class="wallpaper-preview">
+          <div class="preview-number">05</div>
+          <strong>SUZUKI HAYABUSA</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Suzuki Hayabusa</h3>
+
+          <p>
+            Une icône de la vitesse,
+            reconnue pour sa puissance,
+            sa silhouette distinctive
+            et son héritage.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+
+      </article>
+
+      <!-- DUCATI SUPERLEGGERA V4 -->
+
+      <article class="wallpaper-card">
+
+        <div class="wallpaper-preview">
+          <div class="preview-number">06</div>
+          <strong>DUCATI SUPERLEGGERA V4</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Ducati Superleggera V4</h3>
+
+          <p>
+            Une moto exclusive
+            caractérisée par l'emploi
+            de matériaux légers
+            et une conception
+            tournée vers la performance.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SECTION 03 : SPORTIVES ICONIQUES -->
+
+<section class="content-section"
+  id="iconiques">
+
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 03 / MOTOS SPORTIVES
+      </div>
+
+      <h2>
+        SPORTIVES <span>ICONIQUES</span>
+      </h2>
+
+      <p>
+        Des motos qui ont marqué
+        l'histoire du sport motocycliste
+        et inspiré plusieurs générations
+        de passionnés.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- HONDA RC30 -->
+
+      <article class="wallpaper-card">
+
+        <div class="wallpaper-preview">
+          <div class="preview-number">07</div>
+          <strong>HONDA RC30</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Honda VFR750R RC30</h3>
+
+          <p>
+            Une sportive historique
+            devenue une référence
+            grâce à son héritage
+            en compétition.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+
+      </article>
+
+      <!-- DUCATI 916 -->
+
+      <article class="wallpaper-card">
+
+        <div class="wallpaper-preview">
+          <div class="preview-number">08</div>
+          <strong>DUCATI 916</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Ducati 916</h3>
+
+          <p>
+            Une légende italienne
+            au design intemporel
+            qui a profondément marqué
+            l'histoire des superbikes.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+
+      </article>
+
+      <!-- SUZUKI GSX-R750 -->
+
+      <article class="wallpaper-card">
+
+        <div class="wallpaper-preview">
+          <div class="preview-number">09</div>
+          <strong>SUZUKI GSX-R750</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Suzuki GSX-R750</h3>
+
+          <p>
+            Une sportive emblématique
+            qui a contribué
+            à populariser les motos
+            de route inspirées
+            de la compétition.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- INFORMATIONS COMMERCIALES -->
+
+<section class="content-section"
+  style="background:#0d1016;
+  border-top:1px solid #292d37;">
+
+  <div class="wrap">
+
+    <div class="notice">
+
+      <div class="eyebrow">
+        FBA WALLPAPERS PREMIUM
+      </div>
+
+      <h2>
+        LA PASSION <span>DE LA PERFORMANCE</span>
+      </h2>
+
+      <p>
+        Cette collection réunira
+        des créations originales
+        dédiées aux motos sportives,
+        au format vertical 9:16.
+      </p>
+
+      <p>
+        Les images présentées
+        publiquement seront des aperçus
+        de qualité réduite avec filigrane.
+        Les fichiers originaux haute définition
+        ne seront pas exposés publiquement.
+      </p>
+
+      <p>
+        Lorsque la boutique sera activée,
+        les visiteurs pourront ajouter
+        leurs fonds d'écran au panier
+        et finaliser leur commande
+        par paiement sécurisé.
+      </p>
+
+      <p>
+        L'accès aux fichiers numériques
+        sera réservé aux commandes
+        dont le paiement aura été confirmé.
+      </p>
+
+      <div class="hero-actions">
+
+        <a href="fba-wallpapers-motos.html"
+           class="cta">
+          RETOUR AUX MOTOS
+        </a>
+
+        <a href="fba-wallpapers-automobile.html"
+           class="cta secondary">
+          RETOUR À L'AUTOMOBILE
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="wrap">
+
+    <strong>
+      FONDECRANBYALEXIS
+    </strong>
+
+    <div>
+      FBA WALLPAPERS — MOTOS SPORTIVES
+    </div>
+
+    <div>
+      © 2026 — Tous droits réservés.
+    </div>
+
+    <div class="footer-links">
+
+      <a href="index.html">Accueil</a>
+
+      <a href="fba-wallpapers.html">
+        FBA Wallpapers
+      </a>
+
+      <a href="fba-wallpapers-motos.html">
+        Univers Motos
+      </a>
+
+      <a href="#superbikes">
+        Superbikes
+      </a>
+
+      <a href="#hypersportives">
+        Hypersportives
+      </a>
+
+      <a href="#iconiques">
+        Sportives iconiques
+      </a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
