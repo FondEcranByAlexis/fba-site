@@ -2,397 +2,375 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#080808">
-<meta name="description" content="Découvrez l'univers Secours de FBA Wallpapers : sapeurs-pompiers, secours médicaux, police, gendarmerie et sauvetages spécialisés.">
-<title>Secours & Interventions | FBA Wallpapers</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="FBA Wallpapers : éditions limitées, cinéma et séries, art et créativité, événements et saisons. Découvrez nos collections spéciales.">
+  <title>Collections spéciales | FBA Wallpapers</title>
 
-<style>
-:root {
-  --bg: #080808;
-  --red: #e32636;
-  --muted: #aaa;
-}
+  <style>
+    :root {
+      --bg: #080808;
+      --surface: #141414;
+      --red: #e32636;
+      --gold: #d6ad59;
+      --muted: #aaa;
+    }
 
-* {
-  box-sizing: border-box;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-html {
-  scroll-behavior: smooth;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-body {
-  margin: 0;
-  background: var(--bg);
-  color: #f4f4f4;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-}
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: #f4f4f4;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-header {
-  padding: 20px;
-  background: #0d0d0d;
-  border-bottom: 1px solid #303030;
-  text-align: center;
-}
+    header {
+      padding: 20px;
+      background: #0d0d0d;
+      border-bottom: 1px solid #303030;
+      text-align: center;
+    }
 
-.brand {
-  font-size: 22px;
-  font-weight: 900;
-  letter-spacing: 1.5px;
-}
+    .brand {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+    }
 
-.brand span {
-  color: var(--red);
-}
+    .brand span {
+      color: var(--red);
+    }
 
-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 18px;
-  margin-top: 13px;
-  font-size: 12px;
-  font-weight: bold;
-}
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 13px;
+      font-size: 12px;
+      font-weight: bold;
+    }
 
-nav a:hover {
-  color: var(--red);
-}
+    nav a:hover {
+      color: var(--red);
+    }
 
-/* HERO */
+    .hero {
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 90px 20px;
+      text-align: center;
+      background:
+        radial-gradient(
+          ellipse at 50% 35%,
+          #4b2818,
+          #21131a 52%,
+          #080808 90%
+        );
+      border-bottom: 1px solid #61412a;
+    }
 
-.hero {
-  position: relative;
-  min-height: 520px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 90px 20px;
-  text-align: center;
+    .hero-content {
+      max-width: 850px;
+    }
 
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,.35),
-      rgba(0,0,0,.85)
-    ),
-    url("images/couvertures/FBA_Wallpapers_Secours_Premium.png")
-    center 38% / cover no-repeat;
+    .eyebrow {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-bottom: 18px;
+    }
 
-  border-bottom: 1px solid #572029;
-}
+    h1 {
+      font-size: clamp(35px, 7vw, 68px);
+      line-height: 1.08;
+      text-transform: uppercase;
+      margin: 0 0 22px;
+    }
 
-.hero-content {
-  max-width: 850px;
-  position: relative;
-  z-index: 1;
-}
+    h1 span {
+      color: #ff394c;
+    }
 
-.eyebrow {
-  color: #ff7a86;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 3px;
-  margin-bottom: 18px;
-}
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      color: #d0d0d0;
+      font-size: 16px;
+    }
 
-h1 {
-  font-size: clamp(35px,7vw,68px);
-  line-height: 1.08;
-  text-transform: uppercase;
-  margin: 0 0 22px;
-  text-shadow: 0 3px 18px #000;
-}
+    .hero-button {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 13px 25px;
+      background: var(--red);
+      border-radius: 7px;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      transition: .2s;
+    }
 
-h1 span {
-  color: #ff394c;
-}
+    .hero-button:hover {
+      background: #ff4053;
+      transform: translateY(-2px);
+    }
 
-.hero p {
-  max-width: 650px;
-  margin: auto;
-  color: #e0e0e0;
-  font-size: 16px;
-  text-shadow: 0 2px 8px #000;
-}
+    main {
+      max-width: 1180px;
+      margin: auto;
+      padding: 65px 20px;
+    }
 
-.hero-button {
-  display: inline-block;
-  margin-top: 28px;
-  padding: 13px 25px;
-  background: var(--red);
-  border-radius: 7px;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
+    .section-heading {
+      text-align: center;
+      margin-bottom: 38px;
+    }
 
-.hero-button:hover {
-  background: #ff4053;
-}
+    .section-heading h2 {
+      font-size: clamp(25px, 5vw, 36px);
+      margin: 0 0 10px;
+      text-transform: uppercase;
+    }
 
-/* CONTENU */
+    .section-heading h2 span {
+      color: var(--red);
+    }
 
-main {
-  max-width: 1180px;
-  margin: auto;
-  padding: 65px 20px;
-}
+    .section-heading p {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+    }
 
-.section-heading {
-  text-align: center;
-  margin-bottom: 38px;
-}
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 25px;
+      margin-bottom: 70px;
+    }
 
-.section-heading h2 {
-  font-size: clamp(25px,5vw,36px);
-  margin: 0 0 10px;
-  text-transform: uppercase;
-}
+    .category-card {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid #343434;
+      border-radius: 16px;
+      background: linear-gradient(145deg, #191919, #101010);
+      transition: transform .3s, border-color .3s, box-shadow .3s;
+    }
 
-.section-heading h2 span {
-  color: var(--red);
-}
+    .category-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--red);
+      box-shadow: 0 12px 35px rgba(227,38,54,.15);
+    }
 
-.section-heading p {
-  color: var(--muted);
-  font-size: 14px;
-}
+    .category-card.limited {
+      border-color: #70532e;
+    }
 
-/* CARTES */
+    .category-card.limited:hover {
+      border-color: var(--gold);
+      box-shadow: 0 12px 35px rgba(214,173,89,.15);
+    }
 
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(2,minmax(0,1fr));
-  gap: 25px;
-  margin-bottom: 70px;
-}
+    .category-visual {
+      position: relative;
+      aspect-ratio: 9 / 10;
+      min-height: 280px;
+      display: flex;
+      align-items: flex-end;
+      padding: 22px;
+      overflow: hidden;
+      isolation: isolate;
+      background-color: #191919;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
 
-.category-card {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  border: 1px solid #343434;
-  border-radius: 16px;
-  background: linear-gradient(145deg,#191919,#101010);
-  transition: transform .3s, border-color .3s, box-shadow .3s;
-}
+    .category-visual::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(
+        180deg,
+        rgba(0,0,0,.04) 25%,
+        rgba(0,0,0,.12) 55%,
+        rgba(0,0,0,.85) 100%
+      );
+    }
 
-.category-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--red);
-  box-shadow: 0 12px 35px rgba(227,38,54,.15);
-}
+    /* COUVERTURES COLLECTIONS SPÉCIALES */
 
-.category-visual {
-  position: relative;
-  height: auto;
-  aspect-ratio: 9 / 12;
-  display: flex;
-  align-items: flex-end;
-  padding: 22px;
-  overflow: hidden;
-  isolation: isolate;
-  background-color: #191919;
-  background-size: cover;
-  background-position: center;
-}
+    .editions {
+      background-image:
+        url("images/Speciales/FBA_Editions_Limitees.png");
+    }
 
-.category-visual::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(
-    180deg,
-    rgba(0,0,0,.05),
-    rgba(0,0,0,.75)
-  );
-}
+    .cinema {
+      background-image:
+        url("images/Speciales/FBA_Cinema_et_Series.png");
+    }
 
-/* COUVERTURES SECOURS */
+    .art {
+      background-image:
+        url("images/Speciales/FBA_Art_et_Creativite.png");
+    }
 
-.pompiers {
-  background-image:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,.05),
-      rgba(0,0,0,.45)
-    ),
-    url("images/secours/FBA_Sapeurs_Pompiers.png");
-}
+    .evenements {
+      background-image:
+        url("images/Speciales/FBA_Evenements_et_Saisons.png");
+    }
 
-.medicaux {
-  background-image:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,.05),
-      rgba(0,0,0,.45)
-    ),
-    url("images/secours/FBA_Secours_Medicaux.png");
-}
+    .category-number {
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      font-size: 42px;
+      font-weight: 900;
+      color: rgba(255,255,255,.32);
+      text-shadow: 0 2px 10px #000;
+    }
 
-.police {
-  background-image:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,.05),
-      rgba(0,0,0,.45)
-    ),
-    url("images/secours/FBA_Police_Gendarmerie.png");
-}
+    .category-visual h3 {
+      margin: 0;
+      font-size: clamp(24px, 4vw, 36px);
+      text-transform: uppercase;
+      line-height: 1.15;
+      text-shadow: 0 3px 12px #000;
+    }
 
-.specialises {
-  background-image:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,.05),
-      rgba(0,0,0,.45)
-    ),
-    url("images/secours/FBA_Secours_Specialises.png");
-}
+    .category-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 25px;
+    }
 
-.category-number {
-  position: absolute;
-  top: 18px;
-  right: 20px;
-  font-size: 42px;
-  font-weight: 900;
-  color: rgba(255,255,255,.2);
-}
+    .category-content p {
+      margin: 0 0 24px;
+      color: #bcbcbc;
+      font-size: 14px;
+      flex: 1;
+    }
 
-.category-visual h3 {
-  margin: 0;
-  font-size: clamp(25px,4vw,36px);
-  text-transform: uppercase;
-  line-height: 1.15;
-  text-shadow: 0 3px 12px #000;
-}
+    .category-status {
+      display: inline-block;
+      align-self: flex-start;
+      padding: 11px 16px;
+      border: 1px solid #a33b48;
+      border-radius: 7px;
+      color: #ff9ca5;
+      font-size: 12px;
+      font-weight: bold;
+    }
 
-.category-content {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  padding: 25px;
-}
+    .limited .category-status {
+      border-color: #a47d3c;
+      color: #e8c57b;
+    }
 
-.category-content p {
-  margin: 0 0 24px;
-  color: #bcbcbc;
-  font-size: 14px;
-  flex: 1;
-}
+    .highlight {
+      padding: 45px 30px;
+      border: 1px solid #73502c;
+      border-radius: 15px;
+      background: radial-gradient(
+        ellipse at center,
+        #352217,
+        #111 75%
+      );
+      text-align: center;
+    }
 
-.category-link {
-  display: inline-block;
-  align-self: flex-start;
-  padding: 11px 16px;
-  border: 1px solid #a33b48;
-  border-radius: 7px;
-  color: #ff9ca5;
-  font-size: 12px;
-  font-weight: bold;
-}
+    .highlight h2 {
+      font-size: 27px;
+      margin: 0 0 15px;
+    }
 
-.category-card:hover .category-link {
-  background: var(--red);
-  color: white;
-}
+    .highlight h2 span {
+      color: var(--gold);
+    }
 
-/* BAS DE PAGE */
+    .highlight p {
+      max-width: 700px;
+      margin: auto;
+      color: #bbb;
+      font-size: 15px;
+    }
 
-.highlight {
-  padding: 45px 30px;
-  border: 1px solid #67252d;
-  border-radius: 15px;
-  background: radial-gradient(
-    ellipse at center,
-    #351116,
-    #111 75%
-  );
-  text-align: center;
-}
+    .back {
+      display: inline-block;
+      margin-top: 27px;
+      padding: 12px 20px;
+      border: 1px solid var(--red);
+      border-radius: 7px;
+      font-size: 12px;
+      font-weight: bold;
+    }
 
-.highlight h2 {
-  font-size: 27px;
-  margin: 0 0 15px;
-}
+    .back:hover {
+      background: var(--red);
+    }
 
-.highlight h2 span {
-  color: var(--red);
-}
+    footer {
+      padding: 30px 15px;
+      border-top: 1px solid #292929;
+      text-align: center;
+      color: #888;
+      font-size: 12px;
+    }
 
-.highlight p {
-  max-width: 700px;
-  margin: auto;
-  color: #bbb;
-  font-size: 15px;
-}
+    footer strong {
+      color: #eee;
+    }
 
-.back {
-  display: inline-block;
-  margin-top: 27px;
-  padding: 12px 20px;
-  border: 1px solid var(--red);
-  border-radius: 7px;
-  font-size: 12px;
-  font-weight: bold;
-}
+    @media (max-width: 700px) {
+      .category-grid {
+        grid-template-columns: 1fr;
+      }
 
-.back:hover {
-  background: var(--red);
-}
+      .hero {
+        min-height: 420px;
+        padding: 75px 18px;
+      }
 
-footer {
-  padding: 30px 15px;
-  border-top: 1px solid #292929;
-  text-align: center;
-  color: #888;
-  font-size: 12px;
-}
+      .category-visual {
+        aspect-ratio: 9 / 10;
+        min-height: 0;
+      }
 
-footer strong {
-  color: #eee;
-}
+      main {
+        padding: 45px 16px;
+      }
+    }
 
-/* VERSION MOBILE */
-
-@media (max-width: 700px) {
-  .category-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero {
-    min-height: 480px;
-    padding: 75px 18px;
-  }
-
-  .category-visual {
-    height: auto;
-    aspect-ratio: 9 / 12;
-    background-position: center;
-  }
-
-  main {
-    padding: 45px 16px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    scroll-behavior: auto !important;
-    transition: none !important;
-  }
-}
-</style>
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -411,128 +389,123 @@ footer strong {
 
 <section class="hero">
   <div class="hero-content">
+    <div class="eyebrow">FBA WALLPAPERS / UNIVERS 09</div>
 
-    <div class="eyebrow">
-      FBA WALLPAPERS / UNIVERS 03
-    </div>
-
-    <h1>SECOURS <span>& INTERVENTIONS</span></h1>
+    <h1>COLLECTIONS <span>SPÉCIALES</span></h1>
 
     <p>
-      Découvrez les femmes et les hommes engagés
-      au service de la population, leurs véhicules,
-      leurs équipements et leurs interventions.
+      Découvrez les créations les plus exclusives de FBA Wallpapers :
+      éditions limitées, cinéma et séries, art numérique
+      et événements exceptionnels.
+      Des univers uniques pour des fonds d'écran originaux.
     </p>
 
     <a href="#collections" class="hero-button">
       EXPLORER LES COLLECTIONS
     </a>
-
   </div>
 </section>
 
 <main>
 
-<section id="collections">
+  <section id="collections">
+    <div class="section-heading">
+      <h2>DÉCOUVREZ <span>NOS EXCLUSIVITÉS</span></h2>
+      <p>Quatre collections originales à explorer.</p>
+    </div>
 
-  <div class="section-heading">
-    <h2>CHOISISSEZ <span>VOTRE UNIVERS</span></h2>
+    <div class="category-grid">
+
+      <article class="category-card limited">
+        <div class="category-visual editions">
+          <span class="category-number">01</span>
+          <h3>ÉDITIONS LIMITÉES</h3>
+        </div>
+        <div class="category-content">
+          <p>
+            Des créations exclusives et numérotées,
+            identifiées par notre billet d'or signature.
+            Chaque visuel appartient à une série spéciale.
+          </p>
+          <span class="category-status">
+            COLLECTION EN PRÉPARATION
+          </span>
+        </div>
+      </article>
+
+      <article class="category-card">
+        <div class="category-visual cinema">
+          <span class="category-number">02</span>
+          <h3>CINÉMA & SÉRIES</h3>
+        </div>
+        <div class="category-content">
+          <p>
+            Ambiances cinématographiques, univers de fiction,
+            personnages et créations inspirées
+            du grand et du petit écran.
+          </p>
+          <span class="category-status">
+            COLLECTION EN PRÉPARATION
+          </span>
+        </div>
+      </article>
+
+      <article class="category-card">
+        <div class="category-visual art">
+          <span class="category-number">03</span>
+          <h3>ART & CRÉATIVITÉ</h3>
+        </div>
+        <div class="category-content">
+          <p>
+            Art numérique, compositions abstraites,
+            créations colorées et expérimentations visuelles.
+          </p>
+          <span class="category-status">
+            COLLECTION EN PRÉPARATION
+          </span>
+        </div>
+      </article>
+
+      <article class="category-card">
+        <div class="category-visual evenements">
+          <span class="category-number">04</span>
+          <h3>ÉVÉNEMENTS & SAISONS</h3>
+        </div>
+        <div class="category-content">
+          <p>
+            Noël, Halloween, printemps, été,
+            fêtes de fin d'année et événements spéciaux.
+          </p>
+          <span class="category-status">
+            COLLECTION EN PRÉPARATION
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="highlight">
+    <h2>DES CRÉATIONS <span>UNIQUES</span></h2>
+
     <p>
-      Quatre univers consacrés aux métiers
-      du secours et de l'intervention.
+      Les Collections spéciales réunissent les créations
+      les plus originales de FondEcranByAlexis.
+      Les éditions limitées seront reconnaissables
+      à leur billet d'or numéroté, intégré discrètement
+      dans chaque composition.
     </p>
-  </div>
 
-  <div class="category-grid">
-
-    <article class="category-card" id="pompiers">
-      <div class="category-visual pompiers">
-        <span class="category-number">01</span>
-        <h3>SAPEURS-POMPIERS</h3>
-      </div>
-      <div class="category-content">
-        <p>
-          Camions, interventions incendie,
-          véhicules spécialisés, équipements
-          et portraits des soldats du feu.
-        </p>
-        <span class="category-link">
-          COLLECTION EN PRÉPARATION
-        </span>
-      </div>
-    </article>
-
-    <article class="category-card" id="medicaux">
-      <div class="category-visual medicaux">
-        <span class="category-number">02</span>
-        <h3>SECOURS MÉDICAUX</h3>
-      </div>
-      <div class="category-content">
-        <p>
-          SAMU, SMUR, ambulances, équipes médicales
-          et interventions d'urgence.
-        </p>
-        <span class="category-link">
-          COLLECTION EN PRÉPARATION
-        </span>
-      </div>
-    </article>
-
-    <article class="category-card" id="police">
-      <div class="category-visual police">
-        <span class="category-number">03</span>
-        <h3>POLICE & GENDARMERIE</h3>
-      </div>
-      <div class="category-content">
-        <p>
-          Véhicules de patrouille, unités spécialisées,
-          équipements et missions d'intervention.
-        </p>
-        <span class="category-link">
-          COLLECTION EN PRÉPARATION
-        </span>
-      </div>
-    </article>
-
-    <article class="category-card" id="specialises">
-      <div class="category-visual specialises">
-        <span class="category-number">04</span>
-        <h3>SECOURS SPÉCIALISÉS</h3>
-      </div>
-      <div class="category-content">
-        <p>
-          Sauvetage en montagne, interventions maritimes,
-          hélitreuillage et opérations exceptionnelles.
-        </p>
-        <span class="category-link">
-          COLLECTION EN PRÉPARATION
-        </span>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<section class="highlight">
-  <h2>LE COURAGE <span>EN IMAGES</span></h2>
-
-  <p>
-    FBA Wallpapers rend hommage aux professionnels
-    et bénévoles du secours à travers des collections
-    visuelles immersives. De nouvelles créations
-    enrichiront régulièrement cet univers.
-  </p>
-
-  <a href="fba-wallpapers.html" class="back">
-    RETOUR AUX COLLECTIONS FBA
-  </a>
-</section>
+    <a href="fba-wallpapers.html" class="back">
+      RETOUR AUX COLLECTIONS FBA
+    </a>
+  </section>
 
 </main>
 
 <footer>
   <strong>FONDECRANBYALEXIS</strong><br>
-  FBA WALLPAPERS — SECOURS & INTERVENTIONS<br>
+  FBA WALLPAPERS — COLLECTIONS SPÉCIALES<br>
   © 2026 — Tous droits réservés.
 </footer>
 
