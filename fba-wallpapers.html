@@ -2,586 +2,1169 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080808">
-  <meta name="description" content="FBA Wallpapers : collections de fonds d'écran autour de l'automobile, l'aviation, les secours, la nature et bien plus.">
-  <title>FBA Wallpapers | FondEcranByAlexis</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08090d">
+<meta name="description" content="FBA Wallpapers par FondEcranByAlexis : découvrez nos collections de fonds d'écran Formule 1, aviation, secours, automobile, nature, gaming et bien plus.">
+<title>FBA Wallpapers | FondEcranByAlexis</title>
 
-  <style>
-    :root {
-      --bg: #080808;
-      --panel: #141414;
-      --red: #e32636;
-      --text: #f2f2f2;
-      --muted: #aaa;
-    }
+<style>
+:root {
+  --bg: #08090d;
+  --panel: #12151c;
+  --red: #ed1726;
+  --white: #f5f6f8;
+  --muted: #a8adb8;
+  --line: #303541;
+}
 
-    * { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-    html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 105px;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
+body {
+  margin: 0;
+  background: radial-gradient(
+    ellipse at 50% -10%,
+    #28202a 0,
+    #08090d 48%
+  );
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
 
-    a { color: inherit; text-decoration: none; }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-    header {
-      padding: 20px;
-      background: #0d0d0d;
-      border-bottom: 1px solid #292929;
-      text-align: center;
-    }
+a:focus-visible {
+  outline: 3px solid #ff5964;
+  outline-offset: 4px;
+}
 
-    .brand {
-      font-size: 22px;
-      font-weight: 900;
-      letter-spacing: 2px;
-    }
+.wrap {
+  width: min(1160px, 92%);
+  margin: auto;
+}
 
-    .brand span,
-    h1 span,
-    h2 span { color: var(--red); }
+/* HEADER */
 
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 18px;
-      margin-top: 12px;
-      font-size: 13px;
-    }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(8,9,13,.94);
+  border-bottom: 1px solid #292d37;
+  backdrop-filter: blur(12px);
+}
 
-    nav a:hover { color: var(--red); }
+.top {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
 
-    .hero {
-      padding: 65px 20px 55px;
-      text-align: center;
-      background: radial-gradient(
-        ellipse at center,
-        #351014 0%, #111 42%, #080808 75%
-      );
-      border-bottom: 1px solid #292929;
-    }
+.brand {
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  font-size: 21px;
+  white-space: nowrap;
+}
 
-    .logo {
-      width: min(230px, 65%);
-      height: auto;
-      margin-bottom: 25px;
-      filter: drop-shadow(0 0 20px #e3263640);
-    }
+.brand span,
+h1 span,
+h2 span {
+  color: var(--red);
+}
 
-    .eyebrow {
-      color: var(--red);
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 4px;
-      margin-bottom: 12px;
-    }
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px 22px;
+  font-size: 14px;
+  color: #d5d8df;
+}
 
-    h1 {
-      font-size: clamp(30px, 7vw, 52px);
-      line-height: 1.1;
-      letter-spacing: 2px;
-      margin: 0 0 18px;
-    }
+nav a {
+  padding: 8px 0;
+}
 
-    .hero p {
-      max-width: 700px;
-      margin: auto;
-      color: #c7c7c7;
-    }
+nav a:hover {
+  color: var(--red);
+}
 
-    .slogan {
-      margin-top: 25px;
-      color: #aaa;
-      font-size: 13px;
-      letter-spacing: 3px;
-      font-weight: bold;
-    }
+/* HERO */
 
-    main {
-      max-width: 1200px;
-      margin: auto;
-      padding: 55px 20px;
-    }
+.hero {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 78px 0 72px;
+  border-bottom: 1px solid #292d37;
+  background: radial-gradient(
+    ellipse at 50% 20%,
+    rgba(237,23,38,.17),
+    transparent 65%
+  );
+}
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  max-width: 95vw;
+  max-height: 95vw;
+  border: 1px solid rgba(237,23,38,.18);
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow:
+    0 0 100px rgba(237,23,38,.08),
+    inset 0 0 100px rgba(237,23,38,.04);
+  pointer-events: none;
+}
 
-    .section-title h2 {
-      font-size: clamp(23px, 4vw, 30px);
-      margin: 0 0 8px;
-    }
+.hero-inner {
+  position: relative;
+  z-index: 1;
+}
 
-    .section-title p {
-      color: #999;
-      font-size: 14px;
-    }
+.logo {
+  display: block;
+  width: min(200px, 55%);
+  height: auto;
+  margin: 0 auto 25px;
+  filter: drop-shadow(0 0 20px #e3263640);
+}
 
-    .intro-grid,
-    .universe-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      margin-bottom: 60px;
-    }
+.eyebrow {
+  color: #ff5964;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 800;
+}
 
-    .panel,
-    .universe-card {
-      background: linear-gradient(145deg, #171717, #0e0e0e);
-      border: 1px solid #303030;
-      border-radius: 12px;
-      padding: 24px;
-      transition: transform .25s, border-color .25s;
-    }
+h1 {
+  font-size: clamp(36px, 7vw, 70px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin: 20px 0;
+  font-weight: 900;
+}
 
-    .panel:hover,
-    .universe-card:hover {
-      border-color: var(--red);
-      transform: translateY(-4px);
-    }
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 28px;
+  color: #c1c5ce;
+  font-size: clamp(15px, 2vw, 19px);
+  line-height: 1.8;
+}
 
-    .panel h3,
-    .universe-card h3 {
-      font-size: 17px;
-      margin: 0 0 10px;
-    }
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
 
-    .panel p,
-    .universe-card p {
-      color: var(--muted);
-      font-size: 14px;
-      margin: 0;
-    }
+.cta {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 14px 23px;
+  background: var(--red);
+  border: 1px solid var(--red);
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: .5px;
+  transition: background .2s, transform .2s;
+}
 
-    .number {
-      color: var(--red);
-      font-size: 25px;
-      font-weight: 900;
-      margin-bottom: 12px;
-    }
+.cta:hover {
+  background: #ff3442;
+  transform: translateY(-2px);
+}
 
-    /* CARTES PREMIUM */
-    .premium-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 24px;
-      margin-bottom: 65px;
-    }
+.cta.secondary {
+  background: transparent;
+  border-color: #565c69;
+}
 
-    .premium-card {
-      display: block;
-      min-width: 0;
-      overflow: hidden;
-      border: 1px solid #383838;
-      border-radius: 16px;
-      background: var(--panel);
-      transition: transform .3s, border-color .3s,
-                  box-shadow .3s;
-    }
+.cta.secondary:hover {
+  background: #191c25;
+}
 
-    .premium-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--red);
-      box-shadow: 0 12px 38px #e3263625;
-    }
+.slogan {
+  margin-top: 28px;
+  color: #a8adb8;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 800;
+}
 
-    .premium-image {
-      position: relative;
-      aspect-ratio: 9 / 16;
-      overflow: hidden;
-      background: linear-gradient(145deg, #291014, #111);
-    }
+/* SECTIONS */
 
-    .premium-image img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform .5s;
-    }
+section.content-section {
+  padding: 72px 0;
+}
 
-    .premium-card:hover img {
-      transform: scale(1.035);
-    }
+.section-head {
+  text-align: center;
+  margin-bottom: 35px;
+}
 
-    .premium-info {
-      padding: 19px;
-      border-top: 2px solid #7f1d27;
-    }
+.section-head h2 {
+  font-size: clamp(27px, 4vw, 42px);
+  margin: 10px 0 12px;
+  line-height: 1.2;
+}
 
-    .premium-info h3 {
-      font-size: 17px;
-      margin: 0 0 9px;
-    }
+.section-head p {
+  max-width: 720px;
+  margin: auto;
+  color: var(--muted);
+  line-height: 1.7;
+}
 
-    .premium-info p {
-      font-size: 13px;
-      color: #aaa;
-      margin: 0 0 17px;
-    }
+.redline {
+  height: 3px;
+  width: 64px;
+  background: var(--red);
+  margin: 17px auto 0;
+}
 
-    .premium-link {
-      display: inline-block;
-      padding: 9px 13px;
-      border: 1px solid #8c303b;
-      border-radius: 6px;
-      color: #ff9ca5;
-      font-size: 11px;
-      font-weight: bold;
-      letter-spacing: .6px;
-    }
+/* INTRO */
 
-    .premium-card:hover .premium-link {
-      background: var(--red);
-      color: white;
-      border-color: var(--red);
-    }
+.intro-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 18px;
+}
 
-    .status {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 5px 9px;
-      border: 1px solid #713039;
-      border-radius: 20px;
-      color: #ed7c86;
-      font-size: 10px;
-      letter-spacing: 1px;
-    }
+.panel {
+  padding: 26px;
+  background: linear-gradient(145deg,#171b24,#0e1016);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
 
-    .mission {
-      padding: 40px 25px;
-      text-align: center;
-      border: 1px solid #64232b;
-      border-radius: 14px;
-      background: radial-gradient(
-        ellipse at center, #291014, #101010 75%
-      );
-    }
+.number {
+  color: #ff5964;
+  font-size: 28px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
 
-    .mission h2 {
-      font-size: 26px;
-      margin: 0 0 15px;
-    }
+.panel h3 {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
 
-    .mission p {
-      max-width: 700px;
-      margin: auto;
-      color: #bbb;
-    }
+.panel p {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0;
+}
 
-    .back {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 12px 22px;
-      border: 1px solid var(--red);
-      border-radius: 6px;
-      font-size: 13px;
-      font-weight: bold;
-    }
+/* FORMULE 1 FEATURE */
 
-    .back:hover { background: var(--red); }
+.f1-feature {
+  background: linear-gradient(
+    145deg,#171019,#10131a 65%,#0b0d13
+  );
+  border-top: 1px solid #292d37;
+  border-bottom: 1px solid #292d37;
+}
 
-    footer {
-      border-top: 1px solid #292929;
-      padding: 25px 15px;
-      text-align: center;
-      color: #777;
-      font-size: 12px;
-    }
+.feature-panel {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: center;
+  gap: 32px;
+  padding: 40px;
+  border: 1px solid #3c303b;
+  border-radius: 16px;
+  background:
+    radial-gradient(
+      ellipse at 85% 20%,
+      rgba(237,23,38,.16),
+      transparent 60%
+    ),
+    #11141b;
+}
 
-    footer strong { color: #ddd; }
+.feature-panel h2 {
+  font-size: clamp(30px,4vw,44px);
+  line-height: 1.15;
+  margin: 12px 0;
+}
 
-    @media (max-width: 850px) {
-      .premium-grid,
-      .intro-grid,
-      .universe-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
+.feature-panel p {
+  color: #c1c5ce;
+  line-height: 1.8;
+}
 
-    @media (max-width: 520px) {
-      .premium-grid,
-      .intro-grid,
-      .universe-grid {
-        grid-template-columns: 1fr;
-      }
+.feature-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
 
-      .premium-card {
-        max-width: 390px;
-        width: 100%;
-        margin: auto;
-      }
+.feature-stats {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 14px;
+}
 
-      nav { gap: 12px; }
-      main { padding: 40px 16px; }
-    }
+.feature-stat {
+  padding: 24px 12px;
+  border: 1px solid #383d49;
+  border-radius: 12px;
+  background: #0c0e14;
+  text-align: center;
+}
 
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        scroll-behavior: auto !important;
-        transition: none !important;
-      }
-    }
-  </style>
+.feature-stat strong {
+  display: block;
+  font-size: clamp(28px,4vw,40px);
+  color: #ff5964;
+  margin-bottom: 8px;
+}
+
+.feature-stat span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* PREMIUM COLLECTIONS */
+
+.premium-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 24px;
+}
+
+.premium-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #383d49;
+  border-radius: 16px;
+  background: var(--panel);
+  transition:
+    transform .25s,
+    border-color .25s,
+    box-shadow .25s;
+}
+
+.premium-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--red);
+  box-shadow: 0 12px 38px #e3263625;
+}
+
+.premium-image {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  background: #111318;
+}
+
+.premium-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform .4s;
+}
+
+.premium-card:hover img {
+  transform: scale(1.025);
+}
+
+.premium-info {
+  padding: 20px;
+  border-top: 2px solid #7f1d27;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.premium-info h3 {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.premium-info p {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 0 20px;
+  line-height: 1.7;
+  flex: 1;
+}
+
+.premium-link {
+  align-self: flex-start;
+  display: inline-block;
+  padding: 10px 13px;
+  border: 1px solid #8c303b;
+  border-radius: 6px;
+  color: #ff9ca5;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+
+.premium-card:hover .premium-link {
+  background: var(--red);
+  color: white;
+  border-color: var(--red);
+}
+
+/* OTHER COLLECTIONS */
+
+.other-section {
+  background: linear-gradient(
+    180deg,transparent,#10131a,transparent
+  );
+}
+
+.universe-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 18px;
+}
+
+.universe-card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: linear-gradient(145deg,#171b24,#0e1016);
+  transition: transform .2s,border-color .2s;
+}
+
+.universe-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--red);
+}
+
+.universe-card h3 {
+  font-size: 17px;
+  margin: 0 0 10px;
+}
+
+.universe-card p {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 0 18px;
+  flex: 1;
+}
+
+.status {
+  align-self: flex-start;
+  display: inline-block;
+  padding: 7px 10px;
+  border: 1px solid #713039;
+  border-radius: 20px;
+  color: #ed7c86;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .6px;
+}
+
+/* MISSION */
+
+.mission {
+  padding: 46px 28px;
+  text-align: center;
+  border: 1px solid #64232b;
+  border-radius: 16px;
+  background: radial-gradient(
+    ellipse at center,#291014,#10131a 75%
+  );
+}
+
+.mission h2 {
+  font-size: clamp(26px,4vw,38px);
+  margin: 0 0 15px;
+}
+
+.mission p {
+  max-width: 700px;
+  margin: auto;
+  color: #c1c5ce;
+  line-height: 1.8;
+}
+
+.mission-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid #292d37;
+  padding: 32px 15px;
+  text-align: center;
+  color: #858c99;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+footer strong {
+  color: #ddd;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+  margin-top: 15px;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .premium-grid,
+  .intro-grid,
+  .universe-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  .feature-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .top {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  nav {
+    width: 100%;
+    gap: 10px 16px;
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 60px 0;
+  }
+
+  .premium-grid,
+  .intro-grid,
+  .universe-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .premium-card {
+    width: 100%;
+    max-width: 390px;
+    margin: auto;
+  }
+
+  .feature-panel {
+    padding: 22px;
+  }
+
+  .feature-actions .cta {
+    width: 100%;
+  }
+
+  .feature-stat {
+    padding: 18px 8px;
+  }
+
+  section.content-section {
+    padding: 52px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .premium-card,
+  .premium-image img,
+  .universe-card,
+  .cta {
+    transition: none;
+  }
+
+  .premium-card:hover,
+  .premium-card:hover img,
+  .universe-card:hover,
+  .cta:hover {
+    transform: none;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <a class="brand" href="index.html">
-    FOND<span>ECRAN</span>BYALEXIS
-  </a>
-  <nav>
-    <a href="index.html">ACCUEIL</a>
-    <a href="metiers.html">FBA MÉTIERS</a>
-    <a href="fba-studio.html">FBA STUDIO</a>
-  </nav>
+  <div class="wrap top">
+
+    <a class="brand" href="index.html">
+      FOND<span>ECRAN</span>BYALEXIS
+    </a>
+
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="#collections">Collections</a>
+      <a href="fba-wallpapers-f1.html">Formule 1</a>
+      <a href="boutique.html">Boutique</a>
+    </nav>
+
+  </div>
 </header>
-
-<section class="hero">
-  <img class="logo" src="images/fba-wallpapers.png"
-       alt="Logo FBA Wallpapers">
-
-  <div class="eyebrow">L'UNIVERS DE LA PERSONNALISATION</div>
-  <h1>FBA <span>WALLPAPERS</span></h1>
-
-  <p>
-    Des fonds d'écran originaux, immersifs et soigneusement
-    imaginés pour mettre en valeur vos passions et
-    personnaliser vos écrans.
-  </p>
-
-  <div class="slogan">L'IMAGE PREND VIE.</div>
-</section>
 
 <main>
 
-  <div class="section-title">
-    <h2>UN UNIVERS, <span>DES PASSIONS</span></h2>
-    <p>Découvrez les différents thèmes de FBA Wallpapers.</p>
+<section class="hero">
+  <div class="wrap hero-inner">
+
+    <img
+      class="logo"
+      src="images/fba-wallpapers.png"
+      alt="Logo FBA Wallpapers"
+    >
+
+    <div class="eyebrow">
+      L'univers de la personnalisation
+    </div>
+
+    <h1>
+      FBA <span>WALLPAPERS</span>
+    </h1>
+
+    <p>
+      Des fonds d'écran originaux, immersifs
+      et soigneusement imaginés pour mettre
+      en valeur vos passions et personnaliser
+      vos écrans.
+    </p>
+
+    <div class="hero-actions">
+
+      <a class="cta" href="#collections">
+        EXPLORER LES COLLECTIONS
+      </a>
+
+      <a class="cta secondary" href="boutique.html">
+        DÉCOUVRIR LA BOUTIQUE
+      </a>
+
+    </div>
+
+    <div class="slogan">
+      L'IMAGE PREND VIE.
+    </div>
+
+  </div>
+</section>
+
+<section class="content-section">
+
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">Notre approche</div>
+      <h2>UN UNIVERS, <span>DES PASSIONS</span></h2>
+      <p>
+        Des créations visuelles pensées
+        pour donner vie à vos passions.
+      </p>
+      <div class="redline"></div>
+    </div>
+
+    <div class="intro-grid">
+
+      <article class="panel">
+        <div class="number">01</div>
+        <h3>Création originale</h3>
+        <p>
+          Des compositions visuelles pensées
+          pour offrir une identité unique
+          à chaque collection.
+        </p>
+      </article>
+
+      <article class="panel">
+        <div class="number">02</div>
+        <h3>Qualité visuelle</h3>
+        <p>
+          Des images conçues pour mettre
+          en valeur les détails,
+          les couleurs et les ambiances.
+        </p>
+      </article>
+
+      <article class="panel">
+        <div class="number">03</div>
+        <h3>Passion et diversité</h3>
+        <p>
+          Des collections variées autour
+          des univers qui nous passionnent.
+        </p>
+      </article>
+
+    </div>
+
   </div>
 
-  <section class="intro-grid">
-    <article class="panel">
-      <div class="number">01</div>
-      <h3>Création originale</h3>
-      <p>Des compositions visuelles pensées pour offrir
-      une identité unique à chaque collection.</p>
-    </article>
+</section>
 
-    <article class="panel">
-      <div class="number">02</div>
-      <h3>Qualité visuelle</h3>
-      <p>Des images conçues pour mettre en valeur les détails,
-      les couleurs et les ambiances.</p>
-    </article>
+<section class="content-section f1-feature">
 
-    <article class="panel">
-      <div class="number">03</div>
-      <h3>Passion et diversité</h3>
-      <p>Des collections variées autour des univers
-      qui nous passionnent.</p>
-    </article>
-  </section>
+  <div class="wrap">
 
-  <div class="section-title">
-    <h2>NOS <span>COLLECTIONS PREMIUM</span></h2>
-    <p>Choisissez votre univers et découvrez les collections FBA.</p>
+    <div class="feature-panel">
+
+      <div>
+
+        <div class="eyebrow">
+          Collection à découvrir
+        </div>
+
+        <h2>
+          FORMULE <span>1</span><br>
+          FBA WALLPAPERS
+        </h2>
+
+        <p>
+          Retrouvez les 22 pilotes de Formule 1
+          dans une collection de 66 créations :
+          Portrait, Racing et Célébration.
+        </p>
+
+        <p>
+          Découvrez les biographies,
+          les statistiques et les aperçus
+          protégés de chaque pilote.
+          La boutique est actuellement
+          en préparation.
+        </p>
+
+        <div class="feature-actions">
+
+          <a class="cta" href="fba-wallpapers-f1.html">
+            DÉCOUVRIR LES PILOTES
+          </a>
+
+          <a class="cta secondary" href="fba-wallpapers-automobile.html">
+            UNIVERS AUTOMOBILE
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="feature-stats">
+
+        <div class="feature-stat">
+          <strong>22</strong>
+          <span>Pilotes F1</span>
+        </div>
+
+        <div class="feature-stat">
+          <strong>66</strong>
+          <span>Fonds d'écran</span>
+        </div>
+
+        <div class="feature-stat">
+          <strong>3</strong>
+          <span>Créations par pilote</span>
+        </div>
+
+        <div class="feature-stat">
+          <strong>2026</strong>
+          <span>Collection F1</span>
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 
-  <section class="premium-grid">
+</section>
 
-    <a class="premium-card" href="fba-wallpapers-automobile.html">
-      <div class="premium-image">
-        <img src="images/couvertures/FBA_Wallpapers_Automobile_Premium.png"
-             alt="Couverture Automobile et sport mécanique"
-             loading="lazy">
-      </div>
-      <div class="premium-info">
-        <h3>Automobile et sport mécanique</h3>
-        <p>Formule 1, MotoGP, voitures de sport et univers automobiles.</p>
-        <span class="premium-link">DÉCOUVRIR LA COLLECTION</span>
-      </div>
-    </a>
 
-    <a class="premium-card" href="fba-wallpapers-aviation.html">
-      <div class="premium-image">
-        <img src="images/couvertures/FBA_Wallpapers_Aviation_Premium.png"
-             alt="Couverture Aviation et géants du ciel"
-             loading="lazy">
-      </div>
-      <div class="premium-info">
-        <h3>Aviation et géants du ciel</h3>
-        <p>Avions, hélicoptères, aviation civile et militaire.</p>
-        <span class="premium-link">DÉCOUVRIR LA COLLECTION</span>
-      </div>
-    </a>
+<section class="content-section" id="collections">
 
-    <a class="premium-card" href="fba-wallpapers-secours.html">
-      <div class="premium-image">
-        <img src="images/couvertures/FBA_Wallpapers_Secours_Premium.png"
-             alt="Couverture Secours et interventions"
-             loading="lazy">
-      </div>
-      <div class="premium-info">
-        <h3>Secours et interventions</h3>
-        <p>Pompiers, secours, véhicules et interventions.</p>
-        <span class="premium-link">DÉCOUVRIR LA COLLECTION</span>
-      </div>
-    </a>
+  <div class="wrap">
 
-    <a class="premium-card" href="fba-wallpapers-monuments.html">
-      <div class="premium-image">
-        <img src="images/couvertures/FBA_Wallpapers_France_Patrimoine_Premium.png"
-             alt="Couverture France et patrimoine"
-             loading="lazy">
-      </div>
-      <div class="premium-info">
-        <h3>France et patrimoine</h3>
-        <p>Monuments, paysages, régions et lieux emblématiques.</p>
-        <span class="premium-link">DÉCOUVRIR LA COLLECTION</span>
-      </div>
-    </a>
+    <div class="section-head">
+      <div class="eyebrow">Catalogue FBA</div>
+      <h2>NOS <span>COLLECTIONS PREMIUM</span></h2>
+      <p>
+        Choisissez votre univers
+        et découvrez les collections FBA.
+      </p>
+      <div class="redline"></div>
+    </div>
 
-    <a class="premium-card" href="fba-wallpapers-defense.html">
-      <div class="premium-image">
-        <img src="images/couvertures/FBA_Wallpapers_Defense_Premium.png"
-             alt="Couverture Défense et forces armées"
-             loading="lazy">
-      </div>
-      <div class="premium-info">
-        <h3>Défense et forces armées</h3>
-        <p>Armées, équipements, matériels et technologies.</p>
-        <span class="premium-link">DÉCOUVRIR LA COLLECTION</span>
-      </div>
-    </a>
+    <div class="premium-grid">
 
-    <a class="premium-card" href="fba-wallpapers-btp.html">
-      <div class="premium-image">
-        <img src="images/couvertures/FBA_Wallpapers_BTP_Premium.png"
-             alt="Couverture BTP et machines"
-             loading="lazy">
-      </div>
-      <div class="premium-info">
-        <h3>BTP et machines</h3>
-        <p>Engins de chantier, camions, machines et grands travaux.</p>
-        <span class="premium-link">DÉCOUVRIR LA COLLECTION</span>
-      </div>
-    </a>
+      <a class="premium-card" href="fba-wallpapers-automobile.html">
+        <div class="premium-image">
+          <img
+            src="images/couvertures/FBA_Wallpapers_Automobile_Premium.png"
+            alt="Couverture Automobile et sport mécanique"
+            loading="lazy"
+          >
+        </div>
+        <div class="premium-info">
+          <h3>Automobile et sport mécanique</h3>
+          <p>
+            Formule 1, MotoGP, voitures
+            de sport et univers automobiles.
+          </p>
+          <span class="premium-link">
+            DÉCOUVRIR LA COLLECTION
+          </span>
+        </div>
+      </a>
 
-    <a class="premium-card" href="fba-wallpapers-nature.html">
-      <div class="premium-image">
-        <img src="images/couvertures/FBA_Wallpapers_Nature_Premium.png"
-             alt="Couverture Nature et paysages"
-             loading="lazy">
-      </div>
-      <div class="premium-info">
-        <h3>Nature et paysages</h3>
-        <p>Montagnes, forêts, panoramas et grands espaces.</p>
-        <span class="premium-link">DÉCOUVRIR LA COLLECTION</span>
-      </div>
-    </a>
+      <a class="premium-card" href="fba-wallpapers-aviation.html">
+        <div class="premium-image">
+          <img
+            src="images/couvertures/FBA_Wallpapers_Aviation_Premium.png"
+            alt="Couverture Aviation et géants du ciel"
+            loading="lazy"
+          >
+        </div>
+        <div class="premium-info">
+          <h3>Aviation et géants du ciel</h3>
+          <p>
+            Avions, hélicoptères,
+            aviation civile et militaire.
+          </p>
+          <span class="premium-link">
+            DÉCOUVRIR LA COLLECTION
+          </span>
+        </div>
+      </a>
 
-    <a class="premium-card" href="fba-wallpapers-gaming.html">
-      <div class="premium-image">
-        <img src="images/couvertures/FBA_Wallpapers_Gaming_Premium.png"
-             alt="Couverture Gaming et univers numériques"
-             loading="lazy">
-      </div>
-      <div class="premium-info">
-        <h3>Gaming et univers numériques</h3>
-        <p>Ambiances gaming, créations numériques et mondes virtuels.</p>
-        <span class="premium-link">DÉCOUVRIR LA COLLECTION</span>
-      </div>
-    </a>
+      <a class="premium-card" href="fba-wallpapers-secours.html">
+        <div class="premium-image">
+          <img
+            src="images/couvertures/FBA_Wallpapers_Secours_Premium.png"
+            alt="Couverture Secours et interventions"
+            loading="lazy"
+          >
+        </div>
+        <div class="premium-info">
+          <h3>Secours et interventions</h3>
+          <p>
+            Pompiers, secours,
+            véhicules et interventions.
+          </p>
+          <span class="premium-link">
+            DÉCOUVRIR LA COLLECTION
+          </span>
+        </div>
+      </a>
 
-    <a class="premium-card" href="fba-wallpapers-speciales.html">
-      <div class="premium-image">
-        <img src="images/couvertures/FBA_Wallpapers_Collections_Speciales_Premium.png"
-             alt="Couverture Collections spéciales"
-             loading="lazy">
-      </div>
-      <div class="premium-info">
-        <h3>Collections spéciales</h3>
-        <p>Éditions thématiques, séries limitées et créations originales.</p>
-        <span class="premium-link">DÉCOUVRIR LA COLLECTION</span>
-      </div>
-    </a>
+      <a class="premium-card" href="fba-wallpapers-monuments.html">
+        <div class="premium-image">
+          <img
+            src="images/couvertures/FBA_Wallpapers_France_Patrimoine_Premium.png"
+            alt="Couverture France et patrimoine"
+            loading="lazy"
+          >
+        </div>
+        <div class="premium-info">
+          <h3>France et patrimoine</h3>
+          <p>
+            Monuments, paysages,
+            régions et lieux emblématiques.
+          </p>
+          <span class="premium-link">
+            DÉCOUVRIR LA COLLECTION
+          </span>
+        </div>
+      </a>
 
-  </section>
+      <a class="premium-card" href="fba-wallpapers-defense.html">
+        <div class="premium-image">
+          <img
+            src="images/couvertures/FBA_Wallpapers_Defense_Premium.png"
+            alt="Couverture Défense et forces armées"
+            loading="lazy"
+          >
+        </div>
+        <div class="premium-info">
+          <h3>Défense et forces armées</h3>
+          <p>
+            Armées, équipements,
+            matériels et technologies.
+          </p>
+          <span class="premium-link">
+            DÉCOUVRIR LA COLLECTION
+          </span>
+        </div>
+      </a>
 
-  <section class="gallery">
-    <div class="section-title">
-      <h2>NOS <span>COLLECTIONS DE FONDS D'ÉCRAN</span></h2>
-      <p>Explorez nos univers et découvrez les prochaines collections FBA.</p>
+      <a class="premium-card" href="fba-wallpapers-btp.html">
+        <div class="premium-image">
+          <img
+            src="images/couvertures/FBA_Wallpapers_BTP_Premium.png"
+            alt="Couverture BTP et machines"
+            loading="lazy"
+          >
+        </div>
+        <div class="premium-info">
+          <h3>BTP et machines</h3>
+          <p>
+            Engins de chantier,
+            camions, machines et grands travaux.
+          </p>
+          <span class="premium-link">
+            DÉCOUVRIR LA COLLECTION
+          </span>
+        </div>
+      </a>
+
+      <a class="premium-card" href="fba-wallpapers-nature.html">
+        <div class="premium-image">
+          <img
+            src="images/couvertures/FBA_Wallpapers_Nature_Premium.png"
+            alt="Couverture Nature et paysages"
+            loading="lazy"
+          >
+        </div>
+        <div class="premium-info">
+          <h3>Nature et paysages</h3>
+          <p>
+            Montagnes, forêts,
+            panoramas et grands espaces.
+          </p>
+          <span class="premium-link">
+            DÉCOUVRIR LA COLLECTION
+          </span>
+        </div>
+      </a>
+
+      <a class="premium-card" href="fba-wallpapers-gaming.html">
+        <div class="premium-image">
+          <img
+            src="images/couvertures/FBA_Wallpapers_Gaming_Premium.png"
+            alt="Couverture Gaming et univers numériques"
+            loading="lazy"
+          >
+        </div>
+        <div class="premium-info">
+          <h3>Gaming et univers numériques</h3>
+          <p>
+            Ambiances gaming,
+            créations numériques et mondes virtuels.
+          </p>
+          <span class="premium-link">
+            DÉCOUVRIR LA COLLECTION
+          </span>
+        </div>
+      </a>
+
+      <a class="premium-card" href="fba-wallpapers-speciales.html">
+        <div class="premium-image">
+          <img
+            src="images/couvertures/FBA_Wallpapers_Collections_Speciales_Premium.png"
+            alt="Couverture Collections spéciales"
+            loading="lazy"
+          >
+        </div>
+        <div class="premium-info">
+          <h3>Collections spéciales</h3>
+          <p>
+            Éditions thématiques,
+            séries limitées et créations originales.
+          </p>
+          <span class="premium-link">
+            DÉCOUVRIR LA COLLECTION
+          </span>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="content-section other-section">
+
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">Explorer davantage</div>
+      <h2>NOS <span>UNIVERS THÉMATIQUES</span></h2>
+      <p>
+        Accédez directement à vos thèmes préférés.
+      </p>
+      <div class="redline"></div>
     </div>
 
     <div class="universe-grid">
 
       <a href="fba-wallpapers-f1.html" class="universe-card">
-        <h3>🏎️ FORMULA 1</h3>
-        <p>Pilotes, écuries, circuits et bolides de la discipline reine.</p>
+        <h3>FORMULE 1</h3>
+        <p>
+          Pilotes, écuries, circuits
+          et bolides de la discipline reine.
+        </p>
         <span class="status">DÉCOUVRIR LA COLLECTION</span>
       </a>
 
       <a href="fba-wallpapers-motogp.html" class="universe-card">
-        <h3>🏍️ MOTOGP</h3>
-        <p>Pilotes, motos et moments forts du championnat.</p>
+        <h3>MOTOGP</h3>
+        <p>
+          Pilotes, motos et moments
+          forts du championnat.
+        </p>
         <span class="status">DÉCOUVRIR LA COLLECTION</span>
       </a>
 
       <a href="fba-wallpapers-aviation.html" class="universe-card">
-        <h3>🚁 GÉANTS DU CIEL</h3>
-        <p>Hélicoptères, avions et machines aériennes impressionnantes.</p>
+        <h3>GÉANTS DU CIEL</h3>
+        <p>
+          Hélicoptères, avions et machines
+          aériennes impressionnantes.
+        </p>
         <span class="status">DÉCOUVRIR LA COLLECTION</span>
       </a>
 
       <a href="fba-wallpapers-secours.html" class="universe-card">
-        <h3>🚒 POMPIERS</h3>
-        <p>Véhicules, interventions, uniformes et matériel de secours.</p>
+        <h3>POMPIERS</h3>
+        <p>
+          Véhicules, interventions,
+          uniformes et matériel de secours.
+        </p>
         <span class="status">DÉCOUVRIR LA COLLECTION</span>
       </a>
 
       <a href="fba-wallpapers-motos.html" class="universe-card">
-        <h3>🏍️ MOTOS</h3>
-        <p>Motos sportives, roadsters, trails et machines mythiques.</p>
+        <h3>MOTOS</h3>
+        <p>
+          Motos sportives, roadsters,
+          trails et machines mythiques.
+        </p>
         <span class="status">DÉCOUVRIR LA COLLECTION</span>
       </a>
 
       <a href="fba-wallpapers-monuments.html" class="universe-card">
-        <h3>🇫🇷 MONUMENTS DE FRANCE</h3>
-        <p>Patrimoine, monuments emblématiques et paysages français.</p>
+        <h3>MONUMENTS DE FRANCE</h3>
+        <p>
+          Patrimoine, monuments emblématiques
+          et paysages français.
+        </p>
         <span class="status">DÉCOUVRIR LA COLLECTION</span>
       </a>
 
     </div>
-  </section>
 
-  <section class="mission">
-    <h2>DONNEZ VIE À <span>VOS ÉCRANS</span></h2>
-    <p>
-      FBA Wallpapers rassemble des créations visuelles autour des passions,
-      des métiers, des machines et des paysages. De nouvelles collections
-      viendront enrichir cet univers progressivement.
-    </p>
-    <a class="back" href="index.html">RETOUR À L'ACCUEIL</a>
-  </section>
+  </div>
+
+</section>
+
+<section class="content-section">
+
+  <div class="wrap">
+
+    <div class="mission">
+
+      <div class="eyebrow">
+        L'univers FBA
+      </div>
+
+      <h2>
+        DONNEZ VIE À <span>VOS ÉCRANS</span>
+      </h2>
+
+      <p>
+        FBA Wallpapers rassemble des créations
+        visuelles autour des passions,
+        des métiers, des machines et des paysages.
+        De nouvelles collections viendront
+        enrichir cet univers progressivement.
+      </p>
+
+      <div class="mission-actions">
+
+        <a class="cta" href="boutique.html">
+          DÉCOUVRIR LA BOUTIQUE
+        </a>
+
+        <a class="cta secondary" href="index.html">
+          RETOUR À L'ACCUEIL
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 </main>
 
 <footer>
-  <strong>FONDECRANBYALEXIS</strong><br>
-  FBA WALLPAPERS — L'IMAGE PREND VIE.<br>
-  © 2026 — Tous droits réservés.
+
+  <div class="wrap">
+
+    <strong>FONDECRANBYALEXIS</strong>
+
+    <div>
+      FBA WALLPAPERS — L'IMAGE PREND VIE.
+    </div>
+
+    <div>
+      © 2026 — Tous droits réservés.
+    </div>
+
+    <div class="footer-links">
+      <a href="index.html">Accueil</a>
+      <a href="fba-wallpapers-f1.html">Formule 1</a>
+      <a href="boutique.html">Boutique</a>
+    </div>
+
+  </div>
+
 </footer>
 
 </body>
