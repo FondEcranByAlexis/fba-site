@@ -1,222 +1,996 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <!-- Relance du déploiement GitHub Pages -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#08090d">
-<meta name="description" content="FondEcranByAlexis — L'image prend vie.">
+<meta name="description" content="FondEcranByAlexis — L'image prend vie. Découvrez nos dix univers créatifs, nos fonds d'écran et nos projets.">
 <title>FondEcranByAlexis — L'image prend vie.</title>
+
 <style>
-:root{--bg:#08090d;--panel:#12151c;--red:#ed1726;--white:#f5f6f8;--muted:#a8adb8;--line:#303541}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:radial-gradient(ellipse at 50% -15%,#28202a 0,#08090d 48%);color:var(--white);font-family:Arial,Helvetica,sans-serif}
-a{color:inherit;text-decoration:none}
-.wrap{width:min(1160px,92%);margin:auto}
-header{position:sticky;top:0;z-index:5;background:#08090ded;border-bottom:1px solid #292d37;backdrop-filter:blur(12px)}
-.top{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.brand{font-weight:900;letter-spacing:1.5px;font-size:21px}
-.brand span,h1 span{color:var(--red)}
-nav{display:flex;gap:24px;font-size:14px;color:#d5d8df}
-nav{flex-wrap:wrap;justify-content:center;row-gap:12px}
-nav a:hover,.link:hover{color:var(--red)}
-.hero{min-height:550px;display:grid;place-items:center;text-align:center;padding:80px 0;position:relative;overflow:hidden}
-.hero:before{content:"";position:absolute;width:560px;height:560px;border:1px solid #ed172633;border-radius:50%;box-shadow:0 0 100px #ed17261b,inset 0 0 100px #ed172611}
-.hero-inner{position:relative;max-width:820px}
-.eyebrow{color:#ff5964;text-transform:uppercase;letter-spacing:4px;font-size:12px;font-weight:800}
-h1{font-size:clamp(42px,8vw,82px);line-height:.98;margin:22px 0 18px;font-weight:900;letter-spacing:-3px}
-.hero p{font-size:clamp(16px,2.2vw,20px);line-height:1.65;color:#c1c5ce;max-width:650px;margin:0 auto 30px}
-.cta{display:inline-block;background:var(--red);padding:14px 23px;border-radius:5px;font-weight:800;letter-spacing:.5px}
-.cta:hover{background:#ff3442}
-section{padding:70px 0}
-.section-head{text-align:center;margin-bottom:34px}
-.section-head h2{font-size:clamp(28px,4vw,42px);margin:0 0 12px}
-.section-head p{color:var(--muted);line-height:1.6;margin:0}
-.redline{height:3px;width:64px;background:var(--red);margin:17px auto 0}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.card{background:linear-gradient(145deg,#171b24,#0e1016);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:.2s}
-.card:hover{transform:translateY(-4px);border-color:#ed1726a8}
-.logo-box{aspect-ratio:1;background:#050609;display:grid;place-items:center;padding:12px;border-bottom:1px solid #292d37}
-.logo-box img{width:100%;height:100%;object-fit:contain}
-.logo-fallback{color:#a8adb8;text-align:center;font-weight:900;letter-spacing:1px}
-.card-body{padding:17px}
-.card h3{font-size:17px;margin:0 0 8px}
-.card p{font-size:14px;color:var(--muted);line-height:1.6;margin:0}
-.about{background:linear-gradient(180deg,transparent,#10131a 30%,#10131a 70%,transparent)}
-.intro{max-width:820px;margin:auto;text-align:center;color:#c1c5ce;line-height:1.8}
-.values{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
-.value,.contact{padding:24px;border:1px solid var(--line);border-radius:10px;background:#11141b}
-.value strong{display:block;margin-bottom:8px}
-.value p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
-.contact{text-align:center;background:linear-gradient(135deg,#171b24,#0d0f14);padding:38px 20px}
-.contact p{color:var(--muted);line-height:1.7}
-footer{border-top:1px solid #292d37;padding:28px 0;color:#858c99;font-size:13px;text-align:center}
-@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}nav{gap:13px;font-size:13px}}
-@media(max-width:520px){.top{flex-wrap:wrap;padding:12px 0}nav{width:100%;justify-content:space-between;padding-bottom:5px}.grid{gap:11px}.logo-box{padding:7px}.card-body{padding:11px}.card h3{font-size:14px}.card p{font-size:12px}.values{grid-template-columns:1fr}.hero{min-height:470px}}
-@media(max-width:520px){nav{justify-content:center;flex-wrap:wrap;gap:12px 18px}nav a{white-space:nowrap}}
+:root {
+  --bg: #08090d;
+  --panel: #12151c;
+  --red: #ed1726;
+  --white: #f5f6f8;
+  --muted: #a8adb8;
+  --line: #303541;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(
+      ellipse at 50% -15%,
+      #28202a 0,
+      #08090d 48%
+    );
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #ff5964;
+  outline-offset: 4px;
+}
+
+.wrap {
+  width: min(1160px, 92%);
+  margin: auto;
+}
+
+/* HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(8,9,13,.94);
+  border-bottom: 1px solid #292d37;
+  backdrop-filter: blur(12px);
+}
+
+.top {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.brand {
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  font-size: 21px;
+  white-space: nowrap;
+}
+
+.brand span,
+h1 span {
+  color: var(--red);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px 24px;
+  font-size: 14px;
+  color: #d5d8df;
+}
+
+nav a {
+  padding: 8px 0;
+}
+
+nav a:hover,
+.link:hover {
+  color: var(--red);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 550px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 560px;
+  height: 560px;
+  max-width: 95vw;
+  max-height: 95vw;
+  border: 1px solid #ed172633;
+  border-radius: 50%;
+  box-shadow:
+    0 0 100px #ed17261b,
+    inset 0 0 100px #ed172611;
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  max-width: 820px;
+}
+
+.eyebrow {
+  color: #ff5964;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+h1 {
+  font-size: clamp(42px, 8vw, 82px);
+  line-height: .98;
+  margin: 22px 0 18px;
+  font-weight: 900;
+  letter-spacing: -3px;
+}
+
+.hero p {
+  font-size: clamp(16px, 2.2vw, 20px);
+  line-height: 1.65;
+  color: #c1c5ce;
+  max-width: 650px;
+  margin: 0 auto 30px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.cta {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--red);
+  padding: 14px 23px;
+  border-radius: 6px;
+  font-weight: 800;
+  letter-spacing: .5px;
+  font-size: 14px;
+  transition: background .2s, transform .2s;
+}
+
+.cta:hover {
+  background: #ff3442;
+  transform: translateY(-2px);
+}
+
+.cta.secondary {
+  background: transparent;
+  border: 1px solid #565c69;
+}
+
+.cta.secondary:hover {
+  background: #191c25;
+}
+
+/* SECTIONS */
+
+section {
+  padding: 70px 0;
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+.section-head h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  margin: 10px 0 12px;
+}
+
+.section-head p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.redline {
+  height: 3px;
+  width: 64px;
+  background: var(--red);
+  margin: 17px auto 0;
+}
+
+/* UNIVERS */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(145deg,#171b24,#0e1016);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform .2s, border-color .2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #ed1726a8;
+}
+
+.logo-box {
+  aspect-ratio: 1;
+  background: #050609;
+  display: grid;
+  place-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #292d37;
+  position: relative;
+}
+
+.logo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo-fallback {
+  display: none;
+  color: #a8adb8;
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+
+.logo-box.image-error img {
+  display: none;
+}
+
+.logo-box.image-error .logo-fallback {
+  display: block;
+}
+
+.card-body {
+  padding: 17px;
+  flex: 1;
+}
+
+.card h3 {
+  font-size: 17px;
+  margin: 0 0 8px;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* FBA WALLPAPERS */
+
+.featured {
+  background:
+    linear-gradient(
+      145deg,
+      #171019,
+      #10131a 65%,
+      #0b0d13
+    );
+  border-top: 1px solid #292d37;
+  border-bottom: 1px solid #292d37;
+}
+
+.feature-panel {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 32px;
+  align-items: center;
+  padding: 38px;
+  border: 1px solid #3c303b;
+  border-radius: 16px;
+  background:
+    radial-gradient(
+      ellipse at 85% 20%,
+      rgba(237,23,38,.16),
+      transparent 60%
+    ),
+    #11141b;
+}
+
+.feature-panel h2 {
+  font-size: clamp(28px,4vw,42px);
+  line-height: 1.15;
+  margin: 12px 0;
+}
+
+.feature-panel p {
+  color: #c1c5ce;
+  line-height: 1.8;
+}
+
+.feature-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.feature-stats {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 14px;
+}
+
+.feature-stat {
+  padding: 24px 12px;
+  border: 1px solid #383d49;
+  border-radius: 12px;
+  background: #0c0e14;
+  text-align: center;
+}
+
+.feature-stat strong {
+  display: block;
+  font-size: clamp(28px,4vw,40px);
+  color: #ff5964;
+  margin-bottom: 8px;
+}
+
+.feature-stat span {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ABOUT */
+
+.about {
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      #10131a 30%,
+      #10131a 70%,
+      transparent
+    );
+}
+
+.intro {
+  max-width: 820px;
+  margin: auto;
+  text-align: center;
+  color: #c1c5ce;
+  line-height: 1.8;
+}
+
+.values {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.value,
+.contact {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #11141b;
+}
+
+.value strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.value p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* CONTACT */
+
+.contact {
+  text-align: center;
+  background:
+    linear-gradient(135deg,#171b24,#0d0f14);
+  padding: 38px 20px;
+}
+
+.contact h2 {
+  font-size: clamp(26px,4vw,38px);
+}
+
+.contact p {
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 650px;
+  margin: 15px auto 25px;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid #292d37;
+  padding: 30px 0;
+  color: #858c99;
+  font-size: 13px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-top: 12px;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  nav {
+    gap: 12px;
+    font-size: 13px;
+  }
+
+  .feature-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .top {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: center;
+    gap: 10px 18px;
+    padding-bottom: 5px;
+  }
+
+  nav a {
+    white-space: nowrap;
+  }
+
+  .hero {
+    min-height: 470px;
+    padding: 65px 0;
+  }
+
+  h1 {
+    letter-spacing: -2px;
+  }
+
+  .grid {
+    gap: 11px;
+  }
+
+  .logo-box {
+    padding: 7px;
+  }
+
+  .card-body {
+    padding: 11px;
+  }
+
+  .card h3 {
+    font-size: 14px;
+  }
+
+  .card p {
+    font-size: 12px;
+  }
+
+  .values {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-panel {
+    padding: 20px;
+  }
+
+  .feature-actions .cta {
+    width: 100%;
+  }
+
+  .feature-stat {
+    padding: 18px 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .card,
+  .cta {
+    transition: none;
+  }
+
+  .card:hover,
+  .cta:hover {
+    transform: none;
+  }
+}
 </style>
 </head>
+
 <body>
+
 <header>
-<div class="wrap top">
-<a class="brand" href="#">FBA<span>.</span></a>
-<nav>
-<a href="#univers">Nos univers</a>
-<a href="#apropos">À propos</a>
-<a href="#contact">Contact</a>
-<a href="boutique.html">BOUTIQUE</a>
-</nav>
-</div>
+  <div class="wrap top">
+
+    <a class="brand" href="index.html" aria-label="Accueil FondEcranByAlexis">
+      FBA<span>.</span>
+    </a>
+
+    <nav aria-label="Navigation principale">
+      <a href="#univers">Nos univers</a>
+      <a href="#wallpapers">Wallpapers</a>
+      <a href="#apropos">À propos</a>
+      <a href="#contact">Contact</a>
+      <a href="boutique.html">Boutique</a>
+    </nav>
+
+  </div>
 </header>
+
 <main>
+
 <section class="hero">
-<div class="hero-inner wrap">
-<div class="eyebrow">FondEcranByAlexis</div>
-<h1>L'IMAGE<br><span>PREND VIE.</span></h1>
-<p>Un univers créatif dédié aux images, aux passions, aux métiers et aux histoires qui méritent d'être mises en lumière.</p>
-<a class="cta" href="#univers">DÉCOUVRIR NOS UNIVERS</a>
-</div>
+  <div class="hero-inner wrap">
+
+    <div class="eyebrow">
+      FondEcranByAlexis
+    </div>
+
+    <h1>
+      L'IMAGE<br>
+      <span>PREND VIE.</span>
+    </h1>
+
+    <p>
+      Un univers créatif dédié aux images,
+      aux passions, aux métiers et aux histoires
+      qui méritent d'être mises en lumière.
+    </p>
+
+    <div class="hero-actions">
+
+      <a class="cta" href="#univers">
+        DÉCOUVRIR NOS UNIVERS
+      </a>
+
+      <a class="cta secondary" href="fba-wallpapers.html">
+        EXPLORER LES WALLPAPERS
+      </a>
+
+    </div>
+
+  </div>
 </section>
+
 <section id="univers">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow">L'univers FBA</div>
-<h2>Nos univers</h2>
-<p>Dix identités, une même ambition : créer, raconter et partager.</p>
-<div class="redline"></div>
-</div>
-<div class="grid">
-<a href="metiers.html" class="card"><div class="logo-box"><img src="images/fba-metiers.png" alt="FBA Métiers"><div class="logo-fallback">FBA MÉTIERS</div></div><div class="card-body"><h3>FBA MÉTIERS</h3><p>Découvrir les métiers, les savoir-faire et celles et ceux qui font vivre la France.</p></div></a>
 
-<a href="fba-studio.html" class="card">
-  <div class="logo-box">
-    <img src="images/fba-studio.png" alt="FBA Studio">
-  </div>
-  <div class="logo-fallback">FBA STUDIO</div>
-  <div class="card-body">
-    <h3>FBA STUDIO</h3>
-    <p>Création visuelle, identité graphique et contenus créatifs.</p>
-  </div>
-</a>
-  
-<a href="fba-secours.html" class="card">
-  <div class="logo-box">
-    <img src="images/fba-secours.png" alt="FBA Secours">
-  </div>
-  <div class="logo-fallback">FBA SECOURS</div>
-  <div class="card-body">
-    <h3>FBA SECOURS</h3>
-    <p>Au cœur de l'action, auprès des femmes et des hommes engagés au service des autres.</p>
-  </div>
-</a>
+  <div class="wrap">
 
-<a href="fba-force-ordre.html" class="card">
-  <div class="logo-box">
-    <img src="images/fba-force-ordre.png" alt="FBA Force de l'Ordre">
-  </div>
-  <div class="logo-fallback">FBA FORCE DE L'ORDRE</div>
-  <div class="card-body">
-    <h3>FBA FORCE DE L'ORDRE</h3>
-    <p>Au service de la sécurité et de la protection de la population.</p>
-  </div>
-</a>
-  
+    <div class="section-head">
+      <div class="eyebrow">L'univers FBA</div>
+      <h2>Nos univers</h2>
+      <p>
+        Dix identités, une même ambition :
+        créer, raconter et partager.
+      </p>
+      <div class="redline"></div>
+    </div>
 
-<a href="fba-btp.html" class="card">
-  <div class="logo-box">
-    <img src="images/fba-btp.png" alt="FBA BTP">
-  </div>
-  <div class="logo-fallback">FBA BTP</div>
-  <div class="card-body">
-    <h3>FBA BTP</h3>
-    <p>Au cœur des chantiers, des engins et des métiers du bâtiment et des travaux publics.</p>
-  </div>
-</a>
-  
+    <div class="grid">
 
-<a href="fba-defense.html" class="card">
-  <div class="logo-box">
-    <img src="images/fba-defense.png" alt="FBA Défense">
-  </div>
-  <div class="logo-fallback">FBA DÉFENSE</div>
-  <div class="card-body">
-    <h3>FBA DÉFENSE</h3>
-    <p>Au cœur des armées françaises, de leurs missions, équipements et technologies.</p>
-  </div>
-</a>
-  
-<a href="metiers-insolites.html" class="card">
-  <div class="logo-box">
-    <img src="images/fba-metier-insolite.png" alt="FBA Métier Insolite">
-  </div>
-  <div class="logo-fallback">FBA MÉTIER INSOLITE</div>
-  <div class="card-body">
-    <h3>FBA MÉTIER INSOLITE</h3>
-    <p>Des professions rares, surprenantes et méconnues.</p>
-  </div>
-</a>
+      <a href="metiers.html" class="card">
+        <div class="logo-box">
+          <img src="images/fba-metiers.png" alt="Logo FBA Métiers" loading="lazy">
+          <div class="logo-fallback">FBA MÉTIERS</div>
+        </div>
+        <div class="card-body">
+          <h3>FBA MÉTIERS</h3>
+          <p>
+            Découvrir les métiers, les savoir-faire
+            et celles et ceux qui font vivre la France.
+          </p>
+        </div>
+      </a>
 
-<a href="fba-reportage.html" class="card">
-  <div class="logo-box">
-    <img src="images/fba-reportage.png" alt="FBA Reportage">
+      <a href="fba-studio.html" class="card">
+        <div class="logo-box">
+          <img src="images/fba-studio.png" alt="Logo FBA Studio" loading="lazy">
+          <div class="logo-fallback">FBA STUDIO</div>
+        </div>
+        <div class="card-body">
+          <h3>FBA STUDIO</h3>
+          <p>
+            Création visuelle, identité graphique
+            et contenus créatifs.
+          </p>
+        </div>
+      </a>
+
+      <a href="fba-secours.html" class="card">
+        <div class="logo-box">
+          <img src="images/fba-secours.png" alt="Logo FBA Secours" loading="lazy">
+          <div class="logo-fallback">FBA SECOURS</div>
+        </div>
+        <div class="card-body">
+          <h3>FBA SECOURS</h3>
+          <p>
+            Au cœur de l'action, auprès des femmes
+            et des hommes engagés au service des autres.
+          </p>
+        </div>
+      </a>
+
+      <a href="fba-force-ordre.html" class="card">
+        <div class="logo-box">
+          <img src="images/fba-force-ordre.png" alt="Logo FBA Force de l'Ordre" loading="lazy">
+          <div class="logo-fallback">FBA FORCE DE L'ORDRE</div>
+        </div>
+        <div class="card-body">
+          <h3>FBA FORCE DE L'ORDRE</h3>
+          <p>
+            Au service de la sécurité
+            et de la protection de la population.
+          </p>
+        </div>
+      </a>
+
+      <a href="fba-btp.html" class="card">
+        <div class="logo-box">
+          <img src="images/fba-btp.png" alt="Logo FBA BTP" loading="lazy">
+          <div class="logo-fallback">FBA BTP</div>
+        </div>
+        <div class="card-body">
+          <h3>FBA BTP</h3>
+          <p>
+            Au cœur des chantiers, des engins
+            et des métiers du bâtiment
+            et des travaux publics.
+          </p>
+        </div>
+      </a>
+
+      <a href="fba-defense.html" class="card">
+        <div class="logo-box">
+          <img src="images/fba-defense.png" alt="Logo FBA Défense" loading="lazy">
+          <div class="logo-fallback">FBA DÉFENSE</div>
+        </div>
+        <div class="card-body">
+          <h3>FBA DÉFENSE</h3>
+          <p>
+            Au cœur des armées françaises,
+            de leurs missions, équipements
+            et technologies.
+          </p>
+        </div>
+      </a>
+
+      <a href="metiers-insolites.html" class="card">
+        <div class="logo-box">
+          <img src="images/fba-metier-insolite.png" alt="Logo FBA Métier Insolite" loading="lazy">
+          <div class="logo-fallback">FBA MÉTIER INSOLITE</div>
+        </div>
+        <div class="card-body">
+          <h3>FBA MÉTIER INSOLITE</h3>
+          <p>
+            Des professions rares,
+            surprenantes et méconnues.
+          </p>
+        </div>
+      </a>
+
+      <a href="fba-reportage.html" class="card">
+        <div class="logo-box">
+          <img src="images/fba-reportage.png" alt="Logo FBA Reportage" loading="lazy">
+          <div class="logo-fallback">FBA REPORTAGE</div>
+        </div>
+        <div class="card-body">
+          <h3>FBA REPORTAGE</h3>
+          <p>
+            Rencontres, découvertes, immersions
+            et histoires racontées sur le terrain.
+          </p>
+        </div>
+      </a>
+
+      <a href="fba-productions.html" class="card">
+        <div class="logo-box">
+          <img src="images/fba-productions.png" alt="Logo FBA Productions" loading="lazy">
+          <div class="logo-fallback">FBA PRODUCTIONS</div>
+        </div>
+        <div class="card-body">
+          <h3>FBA PRODUCTIONS</h3>
+          <p>
+            Des créations audiovisuelles,
+            des projets originaux
+            et des productions signées FBA.
+          </p>
+        </div>
+      </a>
+
+      <a href="fba-wallpapers.html" class="card">
+        <div class="logo-box">
+          <img src="images/fba-wallpapers.png" alt="Logo FBA Wallpapers" loading="lazy">
+          <div class="logo-fallback">FBA WALLPAPERS</div>
+        </div>
+        <div class="card-body">
+          <h3>FBA WALLPAPERS</h3>
+          <p>
+            Des fonds d'écran uniques
+            pour personnaliser vos écrans
+            et donner vie à vos passions.
+          </p>
+        </div>
+      </a>
+
+    </div>
+
   </div>
-  <div class="logo-fallback">FBA REPORTAGE</div>
-  <div class="card-body">
-    <h3>FBA REPORTAGE</h3>
-    <p>Rencontres, découvertes, immersions et histoires racontées sur le terrain.</p>
-  </div>
-</a>
-  
-<a href="fba-productions.html" class="card">
-  <div class="logo-box">
-    <img src="images/fba-productions.png" alt="FBA Productions">
-  </div>
-  <div class="logo-fallback">FBA PRODUCTIONS</div>
-  <div class="card-body">
-    <h3>FBA PRODUCTIONS</h3>
-    <p>Des créations audiovisuelles, des projets originaux et des productions signées FBA.</p>
-  </div>
-</a>
-<a href="fba-wallpapers.html" class="card">
-  <div class="logo-box">
-    <img src="images/fba-wallpapers.png" alt="FBA Wallpapers">
-  </div>
-  <div class="logo-fallback">FBA WALLPAPERS</div>
-  <div class="card-body">
-    <h3>FBA WALLPAPERS</h3>
-    <p>Des fonds d’écran uniques pour personnaliser vos écrans et donner vie à vos passions.</p>
-  </div>
-</a>
-</div>
-</div>
+
 </section>
+
+<section class="featured" id="wallpapers">
+
+  <div class="wrap">
+
+    <div class="feature-panel">
+
+      <div>
+
+        <div class="eyebrow">
+          À découvrir sur FBA
+        </div>
+
+        <h2>
+          FBA WALLPAPERS<br>
+          FORMULE 1
+        </h2>
+
+        <p>
+          Découvrez notre collection dédiée
+          aux pilotes de Formule 1 :
+          22 pilotes et 66 créations,
+          réparties entre Portrait,
+          Racing et Célébration.
+        </p>
+
+        <p>
+          Parcourez les aperçus protégés
+          et composez votre sélection.
+          La boutique est actuellement
+          en préparation.
+        </p>
+
+        <div class="feature-actions">
+
+          <a class="cta" href="fba-wallpapers-f1.html">
+            VOIR LA COLLECTION F1
+          </a>
+
+          <a class="cta secondary" href="boutique.html">
+            DÉCOUVRIR LA BOUTIQUE
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="feature-stats">
+
+        <div class="feature-stat">
+          <strong>22</strong>
+          <span>Pilotes F1</span>
+        </div>
+
+        <div class="feature-stat">
+          <strong>66</strong>
+          <span>Fonds d'écran</span>
+        </div>
+
+        <div class="feature-stat">
+          <strong>3</strong>
+          <span>Créations par pilote</span>
+        </div>
+
+        <div class="feature-stat">
+          <strong>2026</strong>
+          <span>Collection F1</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
 <section class="about" id="apropos">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow">Notre identité</div>
-<h2>Une passion, plusieurs univers</h2>
-<div class="redline"></div>
-</div>
-<p class="intro">FondEcranByAlexis rassemble des univers complémentaires autour de la création de contenus et de la découverte. Chaque branche possède son identité, tout en faisant partie d'un même projet : FBA.</p>
-<div class="values">
-<div class="value"><strong>Créer</strong><p>Imaginer des visuels et des contenus soignés, avec une identité reconnaissable.</p></div>
-<div class="value"><strong>Découvrir</strong><p>Mettre en avant les métiers, les passions, les équipes et les coulisses.</p></div>
-<div class="value"><strong>Partager</strong><p>Faire vivre une communauté autour de contenus accessibles et authentiques.</p></div>
-</div>
-</div>
+
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">Notre identité</div>
+      <h2>Une passion, plusieurs univers</h2>
+      <div class="redline"></div>
+    </div>
+
+    <p class="intro">
+      FondEcranByAlexis rassemble des univers
+      complémentaires autour de la création
+      de contenus et de la découverte.
+      Chaque branche possède son identité,
+      tout en faisant partie d'un même projet : FBA.
+    </p>
+
+    <div class="values">
+
+      <div class="value">
+        <strong>Créer</strong>
+        <p>
+          Imaginer des visuels et des contenus
+          soignés, avec une identité reconnaissable.
+        </p>
+      </div>
+
+      <div class="value">
+        <strong>Découvrir</strong>
+        <p>
+          Mettre en avant les métiers,
+          les passions, les équipes et les coulisses.
+        </p>
+      </div>
+
+      <div class="value">
+        <strong>Partager</strong>
+        <p>
+          Faire vivre une communauté autour
+          de contenus accessibles et authentiques.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
+
 <section id="contact">
-<div class="wrap">
-<div class="contact">
-<div class="eyebrow">Restons en contact</div>
-<h2>Un projet ou une idée ?</h2>
-<p>FBA est en développement. Les coordonnées et les liens vers les réseaux seront ajoutés ici.</p>
-<a class="cta" href="#univers">EXPLORER FBA</a>
-</div>
-</div>
+
+  <div class="wrap">
+
+    <div class="contact">
+
+      <div class="eyebrow">
+        Restons en contact
+      </div>
+
+      <h2>Un projet ou une idée ?</h2>
+
+      <p>
+        FondEcranByAlexis poursuit son développement.
+        De nouveaux contenus, collections
+        et services seront progressivement proposés.
+        Les coordonnées professionnelles
+        seront ajoutées avant l'ouverture commerciale.
+      </p>
+
+      <a class="cta" href="#univers">
+        EXPLORER FBA
+      </a>
+
+    </div>
+
+  </div>
+
 </section>
+
 </main>
-<footer>© 2026 FondEcranByAlexis — L'image prend vie.</footer>
+
+<footer>
+
+  <div class="wrap">
+
+    <div>
+      © 2026 FondEcranByAlexis —
+      L'image prend vie.
+    </div>
+
+    <div class="footer-links">
+      <a href="index.html">Accueil</a>
+      <a href="fba-wallpapers.html">Wallpapers</a>
+      <a href="fba-wallpapers-f1.html">Formule 1</a>
+      <a href="boutique.html">Boutique</a>
+    </div>
+
+  </div>
+
+</footer>
+
+<script>
+"use strict";
+
+/*
+  Afficher un texte de secours uniquement
+  lorsqu'un logo ne peut pas être chargé.
+*/
+
+document.querySelectorAll(".logo-box img")
+  .forEach(img => {
+
+    function handleImageError() {
+      img.closest(".logo-box")
+        ?.classList.add("image-error");
+    }
+
+    img.addEventListener("error", handleImageError);
+
+    if (img.complete && img.naturalWidth === 0) {
+      handleImageError();
+    }
+
+  });
+</script>
+
 </body>
 </html>
