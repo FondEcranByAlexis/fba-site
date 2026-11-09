@@ -1,0 +1,937 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08090d">
+<meta name="description" content="Découvrez les motos légendaires de FBA Wallpapers : classiques, sportives historiques et machines mythiques.">
+<title>Motos légendaires | FBA Wallpapers</title>
+
+<style>
+:root {
+  --bg: #08090d;
+  --panel: #12151c;
+  --red: #ed1726;
+  --white: #f5f6f8;
+  --muted: #a8adb8;
+  --line: #303541;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 3px solid #ff5964;
+  outline-offset: 4px;
+}
+
+.wrap {
+  width: min(1160px, 92%);
+  margin: auto;
+}
+
+/* HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(8,9,13,.95);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.top {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+}
+
+.brand span,
+h1 span,
+h2 span {
+  color: var(--red);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 22px;
+  font-size: 13px;
+}
+
+nav a:hover {
+  color: var(--red);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 470px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+  background:
+    radial-gradient(
+      ellipse at 50% 20%,
+      rgba(237,23,38,.20),
+      transparent 65%
+    ),
+    linear-gradient(
+      180deg,
+      #29231a,
+      #08090d
+    );
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.eyebrow {
+  color: #ff6673;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(42px,8vw,80px);
+  line-height: 1.08;
+  margin: 20px 0;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  color: #c5c9d2;
+  font-size: 16px;
+}
+
+.slogan {
+  margin-top: 25px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+/* BUTTONS */
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.cta {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 20px;
+  background: var(--red);
+  border: 1px solid var(--red);
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+  transition: background .2s;
+}
+
+.cta:hover {
+  background: #ff3442;
+}
+
+.cta.secondary {
+  background: transparent;
+  border-color: #777d89;
+}
+
+.cta.secondary:hover {
+  background: #222631;
+}
+
+/* COLLECTION SECTIONS */
+
+.content-section {
+  padding: 75px 0;
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-head h2 {
+  font-size: clamp(27px,4vw,40px);
+  margin: 12px 0;
+  line-height: 1.2;
+}
+
+.section-head p {
+  max-width: 700px;
+  margin: auto;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.redline {
+  width: 65px;
+  height: 3px;
+  margin: 18px auto 0;
+  background: var(--red);
+}
+
+/* WALLPAPER GRID */
+
+.wallpaper-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 22px;
+}
+
+.wallpaper-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  transition: transform .25s, border-color .25s;
+}
+
+.wallpaper-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--red);
+}
+
+.wallpaper-preview {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  text-align: center;
+  background:
+    radial-gradient(
+      ellipse at center,
+      #453821,
+      #171920 70%
+    );
+  border-bottom: 1px solid var(--line);
+}
+
+.wallpaper-preview strong {
+  font-size: 19px;
+  line-height: 1.3;
+  letter-spacing: 1px;
+}
+
+.wallpaper-preview small {
+  margin-top: 12px;
+  color: #ff9ca5;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.preview-number {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  color: rgba(255,255,255,.3);
+  font-size: 32px;
+  font-weight: 900;
+}
+
+/* CARD INFORMATION */
+
+.wallpaper-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+}
+
+.wallpaper-info h3 {
+  font-size: 17px;
+  margin: 0 0 8px;
+}
+
+.wallpaper-info p {
+  flex: 1;
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0 0 18px;
+}
+
+.collection-label {
+  color: #ff9ca5;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.status {
+  display: block;
+  padding: 11px;
+  background: #252932;
+  border: 1px solid #454b57;
+  border-radius: 7px;
+  color: #b5bac5;
+  font-size: 11px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* COMMERCIAL NOTICE */
+
+.notice {
+  padding: 35px 25px;
+  background: #151016;
+  border: 1px solid #713039;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.notice h2 {
+  font-size: clamp(25px,4vw,35px);
+  margin: 12px 0;
+}
+
+.notice p {
+  max-width: 720px;
+  margin: 0 auto 16px;
+  color: #c1c5ce;
+  font-size: 14px;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 32px 15px;
+  text-align: center;
+  color: #858c99;
+  font-size: 13px;
+}
+
+footer strong {
+  color: #ddd;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+  margin-top: 15px;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .wallpaper-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .top {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  nav {
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  .wallpaper-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 430px;
+    padding: 65px 18px;
+  }
+
+  .content-section {
+    padding: 55px 0;
+  }
+
+  .hero-actions .cta {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .wallpaper-card {
+    transition: none;
+  }
+
+  .wallpaper-card:hover {
+    transform: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+  <div class="wrap top">
+
+    <a class="brand" href="index.html">
+      FOND<span>ECRAN</span>BYALEXIS
+    </a>
+
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="fba-wallpapers.html">Wallpapers</a>
+      <a href="fba-wallpapers-automobile.html">Automobile</a>
+      <a href="fba-wallpapers-motos.html">Motos</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      FBA Wallpapers / Motos
+    </div>
+
+    <h1>
+      MOTOS <span>LÉGENDAIRES</span>
+    </h1>
+
+    <p>
+      Découvrez les machines qui ont
+      marqué l'histoire de la moto :
+      classiques intemporelles,
+      sportives historiques et
+      véritables icônes mécaniques.
+    </p>
+
+    <div class="slogan">
+      DES PASSIONS À ACCROCHER AUX MURS.
+    </div>
+
+    <div class="hero-actions">
+
+      <a href="#classiques" class="cta">
+        EXPLORER LA COLLECTION
+      </a>
+
+      <a href="fba-wallpapers-motos.html"
+         class="cta secondary">
+        RETOUR AUX MOTOS
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SECTION 01 : CLASSIQUES -->
+
+<section class="content-section" id="classiques">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 01 / MOTOS LÉGENDAIRES
+      </div>
+
+      <h2>LES <span>CLASSIQUES</span></h2>
+
+      <p>
+        Des motos intemporelles qui ont
+        marqué leur époque et contribué
+        à façonner l'histoire de la moto.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- HONDA CB750 FOUR -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">01</div>
+          <strong>HONDA CB750 FOUR</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Honda CB750 Four</h3>
+          <p>
+            Présentée en 1968, cette Honda
+            quatre-cylindres a révolutionné
+            le marché des motos de série
+            par ses performances et
+            ses innovations techniques.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- TRIUMPH BONNEVILLE T120 -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">02</div>
+          <strong>TRIUMPH BONNEVILLE T120</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Triumph Bonneville T120</h3>
+          <p>
+            Une icône britannique dont
+            les origines remontent à 1959,
+            célèbre pour son bicylindre
+            et son élégance intemporelle.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- KAWASAKI Z1 900 -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">03</div>
+          <strong>KAWASAKI Z1 900</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Kawasaki Z1 900</h3>
+          <p>
+            Lancée en 1972, cette moto
+            japonaise est devenue une
+            légende grâce à son moteur
+            quatre-cylindres et
+            ses performances remarquables.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 02 : SPORTIVES HISTORIQUES -->
+
+<section class="content-section"
+         id="sportives-historiques"
+         style="background:#0d1016;">
+
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 02 / MOTOS LÉGENDAIRES
+      </div>
+
+      <h2>SPORTIVES <span>HISTORIQUES</span></h2>
+
+      <p>
+        Des machines exceptionnelles
+        qui ont repoussé les limites
+        de l'ingénierie et des performances
+        motocyclistes.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- HONDA NR750 -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">04</div>
+          <strong>HONDA NR750</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Honda NR750</h3>
+          <p>
+            Une moto d'exception lancée
+            en 1992, célèbre pour son
+            moteur V4 à pistons ovales
+            et ses innovations techniques.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- YAMAHA YZF-R7 OW02 -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">05</div>
+          <strong>YAMAHA YZF-R7 OW02</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Yamaha YZF-R7 OW02</h3>
+          <p>
+            Une sportive rare produite
+            en série limitée en 1999,
+            développée pour permettre
+            l'homologation en compétition
+            Superbike.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- SUZUKI GSX-R1100 -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">06</div>
+          <strong>SUZUKI GSX-R1100</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Suzuki GSX-R1100</h3>
+          <p>
+            Une sportive emblématique
+            apparue en 1986, connue
+            pour sa puissance et
+            son héritage directement
+            inspiré de la compétition.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 03 : MACHINES MYTHIQUES -->
+
+<section class="content-section" id="machines-mythiques">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 03 / MOTOS LÉGENDAIRES
+      </div>
+
+      <h2>MACHINES <span>MYTHIQUES</span></h2>
+
+      <p>
+        Des motos au caractère unique,
+        devenues célèbres pour leurs
+        performances, leurs innovations
+        et leur place dans la culture moto.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- SUZUKI HAYABUSA 1999 -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">07</div>
+          <strong>SUZUKI HAYABUSA 1999</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Suzuki Hayabusa — 1999</h3>
+          <p>
+            La première génération
+            de l'Hayabusa, devenue
+            mythique pour sa vitesse,
+            son aérodynamisme et
+            sa silhouette incomparable.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- KAWASAKI NINJA ZX-12R -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">08</div>
+          <strong>KAWASAKI NINJA ZX-12R</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Kawasaki Ninja ZX-12R</h3>
+          <p>
+            Une hypersportive lancée
+            en 2000, conçue pour
+            offrir des performances
+            exceptionnelles à
+            très haute vitesse.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- HONDA CBX1000 -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">09</div>
+          <strong>HONDA CBX1000</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Honda CBX1000</h3>
+          <p>
+            Une moto spectaculaire
+            apparue à la fin des années
+            1970, célèbre pour son
+            impressionnant moteur
+            six-cylindres en ligne.
+          </p>
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- INFORMATIONS COMMERCIALES -->
+
+<section class="content-section"
+         style="background:#0d1016;
+         border-top:1px solid #292d37;">
+
+  <div class="wrap">
+    <div class="notice">
+
+      <div class="eyebrow">
+        FBA WALLPAPERS PREMIUM
+      </div>
+
+      <h2>
+        L'HISTOIRE <span>SUR DEUX ROUES</span>
+      </h2>
+
+      <p>
+        Cette collection accueillera
+        des créations originales
+        consacrées aux motos
+        les plus emblématiques
+        de l'histoire, au format 9:16.
+      </p>
+
+      <p>
+        Les visuels publics seront
+        présentés sous forme d'aperçus
+        basse résolution avec filigrane.
+        Les fichiers haute définition
+        resteront dans un stockage privé.
+      </p>
+
+      <p>
+        Lorsque la boutique sera activée,
+        les visiteurs pourront ajouter
+        les fonds d'écran à leur panier
+        directement sur FBA Wallpapers
+        et finaliser leur commande
+        par paiement sécurisé.
+      </p>
+
+      <p>
+        Les fichiers numériques
+        seront accessibles uniquement
+        après confirmation du paiement.
+      </p>
+
+      <div class="hero-actions">
+
+        <a href="fba-wallpapers-motos.html"
+           class="cta">
+          RETOUR AUX MOTOS
+        </a>
+
+        <a href="fba-wallpapers-automobile.html"
+           class="cta secondary">
+          RETOUR À L'AUTOMOBILE
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="wrap">
+
+    <strong>FONDECRANBYALEXIS</strong>
+
+    <div>
+      FBA WALLPAPERS — MOTOS LÉGENDAIRES
+    </div>
+
+    <div>
+      © 2026 — Tous droits réservés.
+    </div>
+
+    <div class="footer-links">
+
+      <a href="index.html">Accueil</a>
+
+      <a href="fba-wallpapers.html">
+        FBA Wallpapers
+      </a>
+
+      <a href="fba-wallpapers-motos.html">
+        Univers Motos
+      </a>
+
+      <a href="#classiques">
+        Classiques
+      </a>
+
+      <a href="#sportives-historiques">
+        Sportives historiques
+      </a>
+
+      <a href="#machines-mythiques">
+        Machines mythiques
+      </a>
+
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
