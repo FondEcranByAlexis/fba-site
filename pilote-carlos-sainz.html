@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -8,50 +9,71 @@
 <meta name="description" content="Carlos Sainz : biographie, carrière et fonds d'écran Williams Racing par FondEcranByAlexis.">
 
 <title>Carlos Sainz | FBA Wallpapers</title>
+
 <link rel="stylesheet" href="fba-pilotes.css">
+<link rel="stylesheet" href="fba-cart.css">
 
 <style>
-:root{--accent:#169bff}
-.hero{
+:root {
+  --accent: #169bff;
+}
+
+.hero {
   background:
-    radial-gradient(ellipse at 80% 20%,
-      rgba(22,155,255,.25),transparent 55%),
+    radial-gradient(
+      ellipse at 80% 20%,
+      rgba(22,155,255,.25),
+      transparent 55%
+    ),
     linear-gradient(145deg,#101c36,#080b16);
 }
-.hero h1 span,.section h2 span{color:var(--accent)}
-.pill{border-color:rgba(22,155,255,.5)}
-.btn.primary{background:#087cdb;color:#fff}
-.profile .driver-photo{
-  display:flex;flex-direction:column;
-  height:auto;min-height:0;overflow:hidden;
-  border-radius:18px;background:#101827;
+
+.hero h1 span,
+.section h2 span {
+  color: var(--accent);
 }
-.profile .driver-photo img{
-  display:block;width:100%;height:auto;
-  object-fit:contain;
+
+.pill {
+  border-color: rgba(22,155,255,.5);
 }
-.photo-disclaimer{
-  margin:0;padding:12px;
-  color:#b4bfd0;background:#101827;
-  font-size:12px;line-height:1.5;
-  text-align:center;
+
+.btn.primary {
+  background: #087cdb;
+  color: #fff;
 }
-.preview img{
-  display:block;width:100%;height:auto;
-  object-fit:contain;
+
+.profile .driver-photo {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #101827;
 }
-.cart-line{
-  display:flex;align-items:center;
-  gap:12px;padding:12px 0;
+
+.profile .driver-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
-.cart-line img{
-  width:48px;height:72px;
-  object-fit:cover;border-radius:7px;
+
+.photo-disclaimer {
+  margin: 0;
+  padding: 12px;
+  color: #b4bfd0;
+  background: #101827;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
 }
-.cart-line-info{flex:1;min-width:0}
-.cart-line-info strong{
-  display:block;font-size:13px;
-  overflow-wrap:anywhere;
+
+#products .preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 </style>
 </head>
@@ -59,611 +81,491 @@
 <body>
 
 <header>
-<div class="wrap head">
-  <a class="brand" href="index.html">
-    FOND<span>ECRAN</span>BYALEXIS
-  </a>
-  <nav aria-label="Navigation principale">
-    <a href="fba-wallpapers.html">Wallpapers</a>
-    <a href="fba-wallpapers-f1.html">Formule 1</a>
-    <a href="boutique.html">Boutique</a>
-  </nav>
-  <button class="cartbtn" id="open-cart" type="button">
-    Panier (<span id="cart-count">0</span>)
-  </button>
-</div>
+  <div class="wrap head">
+
+    <a class="brand" href="index.html">
+      FOND<span>ECRAN</span>BYALEXIS
+    </a>
+
+    <nav aria-label="Navigation principale">
+      <a href="fba-wallpapers.html">Wallpapers</a>
+      <a href="fba-wallpapers-f1.html">Formule 1</a>
+      <a href="boutique.html">Boutique</a>
+    </nav>
+
+    <button
+      class="fba-cart-trigger"
+      data-fba-cart-open
+      type="button"
+    >
+      Mon panier
+      <span
+        class="fba-cart-badge"
+        data-fba-cart-count
+      >0</span>
+    </button>
+
+  </div>
 </header>
 
 <main>
 
 <section class="hero">
-<div class="wrap">
-  <p class="eyebrow">
-    FBA WALLPAPERS / FORMULA 1 / WILLIAMS
-  </p>
-  <h1>CARLOS<br><span>SAINZ</span></h1>
-  <span class="pill">
-    Williams Racing · N° 55 · Espagne
-  </span>
-  <p>
-    Découvrez Carlos Sainz, pilote espagnol
-    de Williams Racing, et sa collection
-    de fonds d'écran FBA Wallpapers.
-  </p>
-  <div class="actions">
-    <a class="btn primary" href="#wallpapers">
-      Voir ses fonds d'écran
-    </a>
-    <a class="btn" href="#statistiques">
-      Statistiques
-    </a>
+  <div class="wrap">
+
+    <p class="eyebrow">
+      FBA WALLPAPERS / FORMULA 1 / WILLIAMS
+    </p>
+
+    <h1>
+      CARLOS<br>
+      <span>SAINZ</span>
+    </h1>
+
+    <span class="pill">
+      Williams Racing · N° 55 · Espagne
+    </span>
+
+    <p>
+      Découvrez Carlos Sainz, pilote espagnol
+      de Williams Racing, et sa collection
+      de fonds d'écran FBA Wallpapers.
+    </p>
+
+    <div class="actions">
+
+      <a class="btn primary" href="#wallpapers">
+        Voir ses fonds d'écran
+      </a>
+
+      <a class="btn" href="#statistiques">
+        Statistiques
+      </a>
+
+    </div>
+
   </div>
-</div>
 </section>
 
 <section class="section wrap">
-<h2>Présentation <span>du pilote</span></h2>
 
-<div class="profile">
-  <div class="portrait driver-photo">
-    <img
-      src="images/pilotes/carlos-sainz-photo-apercu.jpg"
-      alt="Portrait illustratif de Carlos Sainz en combinaison Williams"
-      loading="lazy">
-    <p class="photo-disclaimer">
-      Portrait généré par intelligence artificielle
-      — illustration non officielle.
-    </p>
-  </div>
+  <h2>
+    Présentation <span>du pilote</span>
+  </h2>
 
-  <div class="panel">
-    <div class="details">
-      <div>
-        <small>Nom complet</small>
-        <strong>Carlos Sainz Vázquez de Castro</strong>
-      </div>
-      <div>
-        <small>Nationalité</small>
-        <strong>Espagnole</strong>
-      </div>
-      <div>
-        <small>Date de naissance</small>
-        <strong>1er septembre 1994</strong>
-      </div>
-      <div>
-        <small>Lieu de naissance</small>
-        <strong>Madrid, Espagne</strong>
-      </div>
-      <div>
-        <small>Débuts en F1</small>
-        <strong>2015 — Toro Rosso</strong>
-      </div>
-      <div>
-        <small>Écurie 2026</small>
-        <strong>Williams Racing</strong>
-      </div>
-      <div>
-        <small>Numéro</small>
-        <strong>55</strong>
-      </div>
-      <div>
-        <small>Coéquipier</small>
-        <strong>Alexander Albon</strong>
+  <div class="profile">
+
+    <div class="portrait driver-photo">
+
+      <img
+        src="images/pilotes/carlos-sainz-photo-apercu.jpg"
+        alt="Portrait illustratif de Carlos Sainz en combinaison Williams"
+        loading="lazy"
+      >
+
+      <p class="photo-disclaimer">
+        Portrait généré par intelligence artificielle
+        — illustration non officielle.
+      </p>
+
+    </div>
+
+    <div class="panel">
+      <div class="details">
+
+        <div>
+          <small>Nom complet</small>
+          <strong>Carlos Sainz Vázquez de Castro</strong>
+        </div>
+
+        <div>
+          <small>Nationalité</small>
+          <strong>Espagnole</strong>
+        </div>
+
+        <div>
+          <small>Date de naissance</small>
+          <strong>1er septembre 1994</strong>
+        </div>
+
+        <div>
+          <small>Lieu de naissance</small>
+          <strong>Madrid, Espagne</strong>
+        </div>
+
+        <div>
+          <small>Débuts en F1</small>
+          <strong>2015 — Toro Rosso</strong>
+        </div>
+
+        <div>
+          <small>Écurie 2026</small>
+          <strong>Williams Racing</strong>
+        </div>
+
+        <div>
+          <small>Numéro</small>
+          <strong>55</strong>
+        </div>
+
+        <div>
+          <small>Coéquipier</small>
+          <strong>Alexander Albon</strong>
+        </div>
+
       </div>
     </div>
+
   </div>
-</div>
 </section>
 
 <section class="section wrap">
-<h2>Biographie <span>& parcours</span></h2>
 
-<div class="bio">
-  <p>
-    Carlos Sainz est un pilote automobile
-    espagnol né le 1er septembre 1994
-    à Madrid. Il est le fils de Carlos Sainz,
-    double champion du monde des rallyes.
-  </p>
+  <h2>
+    Biographie <span>& parcours</span>
+  </h2>
 
-  <p>
-    Après ses débuts en karting, il progresse
-    dans plusieurs championnats de monoplaces.
-    En 2014, il remporte le championnat
-    de Formula Renault 3.5 Series.
-  </p>
+  <div class="bio">
 
-  <p>
-    Il rejoint la Formule 1 en 2015 avec
-    Toro Rosso, où il fait équipe
-    avec Max Verstappen.
-  </p>
+    <p>
+      Carlos Sainz est un pilote automobile
+      espagnol né le 1er septembre 1994
+      à Madrid. Il est le fils de Carlos Sainz,
+      double champion du monde des rallyes.
+    </p>
 
-  <p>
-    En 2017, il rejoint Renault et poursuit
-    sa progression au sein du championnat.
-    Il signe ensuite chez McLaren en 2019.
-  </p>
+    <p>
+      Après ses débuts en karting, il progresse
+      dans plusieurs championnats de monoplaces.
+      En 2014, il remporte le championnat
+      de Formula Renault 3.5 Series.
+    </p>
 
-  <p>
-    Avec McLaren, il décroche son premier
-    podium en Formule 1 lors du Grand Prix
-    du Brésil 2019.
-  </p>
+    <p>
+      Il rejoint la Formule 1 en 2015 avec
+      Toro Rosso, où il fait équipe
+      avec Max Verstappen.
+    </p>
 
-  <p>
-    En 2021, Carlos Sainz rejoint Ferrari,
-    où il devient le coéquipier
-    de Charles Leclerc.
-  </p>
+    <p>
+      En 2017, il rejoint Renault et poursuit
+      sa progression au sein du championnat.
+      Il signe ensuite chez McLaren en 2019.
+    </p>
 
-  <p>
-    Il remporte sa première victoire
-    en Formule 1 au Grand Prix
-    de Grande-Bretagne 2022.
-    Il gagne ensuite à Singapour en 2023,
-    puis en Australie et au Mexique en 2024.
-  </p>
+    <p>
+      Avec McLaren, il décroche son premier
+      podium en Formule 1 lors du Grand Prix
+      du Brésil 2019.
+    </p>
 
-  <p>
-    En 2025, il entame un nouveau chapitre
-    de sa carrière chez Williams Racing,
-    aux côtés d'Alexander Albon.
-  </p>
+    <p>
+      En 2021, Carlos Sainz rejoint Ferrari,
+      où il devient le coéquipier
+      de Charles Leclerc.
+    </p>
 
-  <p>
-    En 2026, Carlos Sainz poursuit
-    sa collaboration avec Williams,
-    dans le contexte d'une nouvelle
-    réglementation technique.
-  </p>
-</div>
+    <p>
+      Il remporte sa première victoire
+      en Formule 1 au Grand Prix
+      de Grande-Bretagne 2022.
+      Il gagne ensuite à Singapour en 2023,
+      puis en Australie et au Mexique en 2024.
+    </p>
+
+    <p>
+      En 2025, il entame un nouveau chapitre
+      de sa carrière chez Williams Racing,
+      aux côtés d'Alexander Albon.
+    </p>
+
+    <p>
+      En 2026, Carlos Sainz poursuit
+      sa collaboration avec Williams,
+      dans le contexte d'une nouvelle
+      réglementation technique.
+    </p>
+
+  </div>
 </section>
 
 <section class="section wrap" id="statistiques">
-<h2>Statistiques <span>de carrière</span></h2>
 
-<div class="stats">
-  <div class="stat">
-    <strong>4</strong>
-    <span>Victoires en F1 jusqu'à fin 2024</span>
-  </div>
-  <div class="stat">
-    <strong>6</strong>
-    <span>Pole positions jusqu'à fin 2024</span>
-  </div>
-  <div class="stat">
-    <strong>2015</strong>
-    <span>Première saison en F1</span>
-  </div>
-  <div class="stat">
-    <strong>2022</strong>
-    <span>Première victoire en F1</span>
-  </div>
-  <div class="stat">
-    <strong>2025</strong>
-    <span>Arrivée chez Williams</span>
-  </div>
-  <div class="stat">
-    <strong>55</strong>
-    <span>Numéro de course</span>
-  </div>
-</div>
+  <h2>
+    Statistiques <span>de carrière</span>
+  </h2>
 
-<p class="note">
-  Les statistiques de victoires et de pole
-  positions ci-dessus sont arrêtées à fin 2024.
-  Elles ne constituent pas un bilan actualisé
-  de la saison 2026.
-</p>
+  <div class="stats">
+
+    <div class="stat">
+      <strong>4</strong>
+      <span>Victoires en F1 jusqu'à fin 2024</span>
+    </div>
+
+    <div class="stat">
+      <strong>6</strong>
+      <span>Pole positions jusqu'à fin 2024</span>
+    </div>
+
+    <div class="stat">
+      <strong>2015</strong>
+      <span>Première saison en F1</span>
+    </div>
+
+    <div class="stat">
+      <strong>2022</strong>
+      <span>Première victoire en F1</span>
+    </div>
+
+    <div class="stat">
+      <strong>2025</strong>
+      <span>Arrivée chez Williams</span>
+    </div>
+
+    <div class="stat">
+      <strong>55</strong>
+      <span>Numéro de course</span>
+    </div>
+
+  </div>
+
+  <p class="note">
+    Les statistiques de victoires et de pole
+    positions ci-dessus sont arrêtées à fin 2024.
+    Elles ne constituent pas un bilan actualisé
+    de la saison 2026.
+  </p>
+
 </section>
 
 <section class="section wrap">
-<h2>Les grandes étapes <span>de sa carrière</span></h2>
 
-<div class="years">
-  <div class="year">
-    <b>2014</b> · Champion de Formula Renault 3.5
+  <h2>
+    Les grandes étapes <span>de sa carrière</span>
+  </h2>
+
+  <div class="years">
+
+    <div class="year">
+      <b>2014</b> · Champion de Formula Renault 3.5
+    </div>
+
+    <div class="year">
+      <b>2015</b> · Débuts en F1 chez Toro Rosso
+    </div>
+
+    <div class="year">
+      <b>2017</b> · Arrivée chez Renault
+    </div>
+
+    <div class="year">
+      <b>2019</b> · McLaren et premier podium
+    </div>
+
+    <div class="year">
+      <b>2021</b> · Arrivée chez Ferrari
+    </div>
+
+    <div class="year">
+      <b>2022</b> · Première victoire à Silverstone
+    </div>
+
+    <div class="year">
+      <b>2023</b> · Victoire à Singapour
+    </div>
+
+    <div class="year">
+      <b>2024</b> · Victoires en Australie et au Mexique
+    </div>
+
+    <div class="year">
+      <b>2025</b> · Débuts avec Williams Racing
+    </div>
+
+    <div class="year">
+      <b>2026</b> · Nouvelle réglementation F1
+    </div>
+
   </div>
-  <div class="year">
-    <b>2015</b> · Débuts en F1 chez Toro Rosso
-  </div>
-  <div class="year">
-    <b>2017</b> · Arrivée chez Renault
-  </div>
-  <div class="year">
-    <b>2019</b> · McLaren et premier podium
-  </div>
-  <div class="year">
-    <b>2021</b> · Arrivée chez Ferrari
-  </div>
-  <div class="year">
-    <b>2022</b> · Première victoire à Silverstone
-  </div>
-  <div class="year">
-    <b>2023</b> · Victoire à Singapour
-  </div>
-  <div class="year">
-    <b>2024</b> · Victoires en Australie et au Mexique
-  </div>
-  <div class="year">
-    <b>2025</b> · Débuts avec Williams Racing
-  </div>
-  <div class="year">
-    <b>2026</b> · Nouvelle réglementation F1
-  </div>
-</div>
 </section>
 
 <section class="section wrap" id="wallpapers">
-<h2>Ses fonds d'écran <span>FBA</span></h2>
-<p class="sub">
-  Trois créations Williams Racing :
-  Portrait, Racing et Célébration.
-  Aperçus protégés par filigrane.
-</p>
-<div class="gallery" id="products"></div>
+
+  <h2>
+    Ses fonds d'écran <span>FBA</span>
+  </h2>
+
+  <p class="sub">
+    Trois créations Williams Racing :
+    Portrait, Racing et Célébration.
+    Aperçus protégés par filigrane.
+  </p>
+
+  <div class="gallery" id="products"></div>
+
 </section>
 
 <section class="section wrap">
-<h2>Tarifs <span>FBA Wallpapers</span></h2>
 
-<div class="packs">
-  <div class="pack">
-    <div>1 fond d'écran</div>
-    <strong>1,99 €</strong>
-    <p>À l'unité</p>
-  </div>
-  <div class="pack">
-    <div>5 fonds d'écran</div>
-    <strong>6,99 €</strong>
-    <p>Pack de 5</p>
-  </div>
-  <div class="pack">
-    <div>10 fonds d'écran</div>
-    <strong>11,99 €</strong>
-    <p>Pack de 10</p>
-  </div>
-</div>
+  <h2>
+    Tarifs <span>FBA Wallpapers</span>
+  </h2>
 
-<p class="note">
-  Boutique en démonstration.
-  Paiements et téléchargements HD non activés.
-</p>
+  <div class="packs">
+
+    <div class="pack">
+      <div>1 fond d'écran</div>
+      <strong>1,99 €</strong>
+      <p>À l'unité</p>
+    </div>
+
+    <div class="pack">
+      <div>5 fonds d'écran</div>
+      <strong>6,99 €</strong>
+      <p>Pack de 5</p>
+    </div>
+
+    <div class="pack">
+      <div>10 fonds d'écran</div>
+      <strong>11,99 €</strong>
+      <p>Pack de 10</p>
+    </div>
+
+  </div>
+
+  <p class="note">
+    Boutique en démonstration.
+    Paiements et téléchargements HD non activés.
+  </p>
+
 </section>
 
 </main>
 
 <footer class="footer">
-<div class="wrap">
-  <p>
-    © 2026 FondEcranByAlexis —
-    Des passions à accrocher aux murs.
-  </p>
-  <p>
-    Créations indépendantes et non officielles.
-  </p>
-</div>
+  <div class="wrap">
+
+    <p>
+      © 2026 FondEcranByAlexis —
+      Des passions à accrocher aux murs.
+    </p>
+
+    <p>
+      Créations indépendantes et non officielles.
+    </p>
+
+  </div>
 </footer>
 
-<aside
-  class="cart-panel"
-  id="cart-panel"
-  aria-label="Panier"
-  aria-hidden="true">
+<!-- PANIER CENTRALISÉ FBA -->
 
-  <div class="cart-top">
-    <h2>Mon panier</h2>
-    <button
-      class="close"
-      id="close-cart"
-      type="button">
-      Fermer
-    </button>
-  </div>
+<script src="fba-cart.js"></script>
+<script src="fba-cart-images.js"></script>
+<script src="fba-cart-ui.js"></script>
 
-  <div id="cart-lines"></div>
-  <p id="cart-discount"></p>
-  <p class="total" id="cart-total"></p>
+<!-- PRODUITS CARLOS SAINZ -->
 
-  <button class="btn primary" disabled>
-    Paiement bientôt disponible
-  </button>
-</aside>
-  
 <script>
 "use strict";
-
-const KEY = "fba_cart_v1";
 
 const products = [
   {
     id: "f1-sainz-01",
-    name: "Carlos Sainz — Portrait",
-    image: "images/f1/f1-sainz-portrait-apercu.jpg"
+    name: "Carlos Sainz — Portrait"
   },
   {
     id: "f1-sainz-02",
-    name: "Carlos Sainz — Racing",
-    image: "images/f1/f1-sainz-racing-apercu.jpg"
+    name: "Carlos Sainz — Racing"
   },
   {
     id: "f1-sainz-03",
-    name: "Carlos Sainz — Célébration",
-    image: "images/f1/f1-sainz-celebration-apercu.jpg"
+    name: "Carlos Sainz — Célébration"
   }
 ];
 
-function getCart() {
-  try {
-    const data = JSON.parse(
-      localStorage.getItem(KEY) || "[]"
-    );
-    return Array.isArray(data)
-      ? data.filter(item => item && item.id)
-      : [];
-  } catch {
-    return [];
-  }
-}
-
-function saveCart(cart) {
-  localStorage.setItem(KEY, JSON.stringify(cart));
-  renderCart();
-}
-
-function euro(value) {
-  return value.toLocaleString("fr-FR", {
-    style: "currency",
-    currency: "EUR"
-  });
-}
-
-function totalFor(count) {
-  const packs10 = Math.floor(count / 10);
-  const rest = count % 10;
-  const packs5 = Math.floor(rest / 5);
-  const singles = rest % 5;
-
-  return packs10 * 11.99 +
-         packs5 * 6.99 +
-         singles * 1.99;
-}
-
-function openCart() {
-  const panel = document.getElementById("cart-panel");
-  panel.classList.add("open");
-  panel.setAttribute("aria-hidden", "false");
-}
-
-function closeCart() {
-  const panel = document.getElementById("cart-panel");
-  panel.classList.remove("open");
-  panel.setAttribute("aria-hidden", "true");
-}
-
 function renderProducts() {
-  const gallery = document.getElementById("products");
+
+  const gallery =
+    document.getElementById("products");
+
+  if (!gallery) return;
+
   gallery.replaceChildren();
 
   products.forEach(product => {
-    const card = document.createElement("article");
+
+    const card =
+      document.createElement("article");
+
     card.className = "product";
 
-    const preview = document.createElement("div");
+    const preview =
+      document.createElement("div");
+
     preview.className = "preview";
 
-    const img = document.createElement("img");
-    img.src = product.image;
-    img.alt = "Aperçu protégé : " + product.name;
-    img.loading = "lazy";
-    preview.append(img);
+    const file =
+      window.FBA_IMAGES?.[product.id];
 
-    const body = document.createElement("div");
+    if (file) {
+
+      const img =
+        document.createElement("img");
+
+      img.src = file;
+      img.alt = "Aperçu protégé : " + product.name;
+      img.loading = "lazy";
+
+      preview.append(img);
+
+    } else {
+
+      const placeholder =
+        document.createElement("div");
+
+      placeholder.className = "placeholder";
+      placeholder.textContent =
+        "APERÇU EN PRÉPARATION";
+
+      preview.append(placeholder);
+
+    }
+
+    const body =
+      document.createElement("div");
+
     body.className = "productbody";
 
-    const title = document.createElement("h3");
+    const title =
+      document.createElement("h3");
+
     title.textContent = product.name;
 
-    const price = document.createElement("div");
+    const price =
+      document.createElement("div");
+
     price.className = "price";
     price.textContent = "1,99 €";
 
-    const button = document.createElement("button");
+    const button =
+      document.createElement("button");
+
     button.className = "btn primary";
     button.type = "button";
     button.textContent = "Ajouter au panier";
 
-    button.addEventListener("click", () => {
-      const cart = getCart();
-
-      if (!cart.some(item => item.id === product.id)) {
-        cart.push(product);
-        saveCart(cart);
-      }
-
-      openCart();
-    });
+    button.dataset.fbaAdd = "";
+    button.dataset.fbaId = product.id;
+    button.dataset.fbaName = product.name;
 
     body.append(title, price, button);
     card.append(preview, body);
     gallery.append(card);
+
   });
 }
-
-function renderCart() {
-  const cart = getCart();
-  const root = document.getElementById("cart-lines");
-
-  root.replaceChildren();
-
-  document.getElementById("cart-count")
-    .textContent = cart.length;
-
-  if (!cart.length) {
-    root.textContent = "Votre panier est vide.";
-  }
-
-  cart.forEach(item => {
-    const line = document.createElement("div");
-    line.className = "cart-line";
-
-     
-const allImages = {
-  "f1-verstappen": [
-    "portrait", "monoplace", "champion"
-  ],
-  "f1-hadjar": [
-    "portrait", "monoplace", "podium"
-  ],
-  "f1-leclerc": [
-    "portrait", "monoplace", "victoire"
-  ],
-  "f1-hamilton": [
-    "portrait", "monoplace", "champion"
-  ],
-  "f1-russell": [
-    "portrait", "monoplace", "celebration"
-  ],
-  "f1-antonelli": [
-    "portrait", "racing", "celebration"
-  ],
-  "f1-norris": [
-    "portrait", "racing", "celebration"
-  ],
-  "f1-piastri": [
-    "portrait", "racing", "celebration"
-  ],
-  "f1-alonso": [
-    "portrait", "racing", "celebration"
-  ],
-  "f1-stroll": [
-    "portrait", "racing", "celebration"
-  ],
-  "f1-albon": [
-    "portrait", "racing", "celebration"
-  ],
-  "f1-sainz": [
-    "portrait", "racing", "celebration"
-  ],
-  "f1-lawson": [
-    "portrait", "racing", "celebration"
-  ],
-  "f1-lindblad": [
-    "portrait", "racing", "celebration"
-  ],
-  "f1-gasly": [
-    "portrait", "racing", "celebration"
-  ],
-  "f1-colapinto": [
-    "portrait", "racing", "celebration"
-  ],
-  "f1-hulkenberg": [
-    "portrait", "racing", "celebration"
-  ],
-  "f1-bortoleto": [
-    "portrait", "racing", "celebration"
-  ],
-  "f1-ocon": [
-    "portrait", "racing", "celebration"
-  ],
-  "f1-bearman": [
-    "portrait", "racing", "celebration"
-  ],
-  "f1-perez": [
-    "portrait", "racing", "celebration"
-  ],
-  "f1-bottas": [
-    "portrait", "racing", "celebration"
-  ]
-};
-
-function findImage(item) {
-  const match = item.id.match(
-    /^(f1-[a-z]+)-0([1-3])$/
-  );
-
-  if (match) {
-    const variants = allImages[match[1]];
-    const index = Number(match[2]) - 1;
-
-    if (variants && variants[index]) {
-      return "images/f1/" +
-        match[1] + "-" +
-        variants[index] + "-apercu.jpg";
-    }
-  }
-
-  return item.image ||
-    products.find(p => p.id === item.id)?.image ||
-    "";
-}
-
-const imgPath = findImage(item);
-    
-
-    if (imgPath) {
-      const img = document.createElement("img");
-      img.src = imgPath;
-      img.alt = "";
-      img.loading = "lazy";
-      line.append(img);
-    }
-
-    const info = document.createElement("div");
-    info.className = "cart-line-info";
-
-    const name = document.createElement("strong");
-    name.textContent = item.name || item.id;
-
-    const price = document.createElement("span");
-    price.textContent = "1,99 €";
-
-    info.append(name, price);
-
-    const remove = document.createElement("button");
-    remove.type = "button";
-    remove.textContent = "Retirer";
-
-    remove.addEventListener("click", () => {
-      saveCart(
-        getCart().filter(p => p.id !== item.id)
-      );
-    });
-
-    line.append(info, remove);
-    root.append(line);
-  });
-
-  const standard = cart.length * 1.99;
-  const total = totalFor(cart.length);
-
-  document.getElementById("cart-discount")
-    .textContent = cart.length
-      ? "Réduction packs : " +
-        euro(Math.max(0, standard - total))
-      : "";
-
-  document.getElementById("cart-total")
-    .textContent = "Total : " + euro(total);
-}
-
-document.getElementById("open-cart")
-  .addEventListener("click", openCart);
-
-document.getElementById("close-cart")
-  .addEventListener("click", closeCart);
-
-document.addEventListener("keydown", event => {
-  if (event.key === "Escape") closeCart();
-});
-
-window.addEventListener("storage", event => {
-  if (event.key === KEY) renderCart();
-});
 
 renderProducts();
-renderCart();
 </script>
 
 </body>
