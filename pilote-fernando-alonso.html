@@ -6,9 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#08090d">
 <meta name="description" content="Fernando Alonso : biographie, palmarès, carrière et fonds d'écran Aston Martin F1 par FondEcranByAlexis.">
+
 <title>Fernando Alonso | FBA Wallpapers</title>
 
 <link rel="stylesheet" href="fba-pilotes.css">
+<link rel="stylesheet" href="fba-cart.css">
 
 <style>
   :root {
@@ -61,6 +63,7 @@
 
 <header>
   <div class="wrap head">
+
     <a class="brand" href="index.html">
       FOND<span>ECRAN</span>BYALEXIS
     </a>
@@ -71,9 +74,18 @@
       <a href="boutique.html">Boutique</a>
     </nav>
 
-    <button class="cartbtn" id="open-cart" type="button">
-      Panier (<span id="cart-count">0</span>)
+    <button
+      class="fba-cart-trigger"
+      data-fba-cart-open
+      type="button"
+    >
+      Mon panier
+      <span
+        class="fba-cart-badge"
+        data-fba-cart-count
+      >0</span>
     </button>
+
   </div>
 </header>
 
@@ -81,6 +93,7 @@
 
 <section class="hero">
   <div class="wrap">
+
     <div class="eyebrow">
       FBA Wallpapers / Formule 1 / Pilotes
     </div>
@@ -110,10 +123,12 @@
         Statistiques
       </a>
     </div>
+
   </div>
 </section>
 
 <section class="section wrap">
+
   <h2>
     Présentation <span class="accent">du pilote</span>
   </h2>
@@ -125,15 +140,18 @@
   <div class="profile">
 
     <div class="portrait alonso-photo">
+
       <img
         src="images/pilotes/fernando-alonso-photo.png"
         alt="Portrait photoréaliste de Fernando Alonso généré par intelligence artificielle"
-        loading="lazy">
+        loading="lazy"
+      >
 
       <p class="photo-disclaimer">
         Portrait généré par intelligence artificielle
         — illustration non officielle.
       </p>
+
     </div>
 
     <div class="panel">
@@ -186,6 +204,7 @@
 </section>
 
 <section class="section wrap">
+
   <h2>
     Biographie <span class="accent">& parcours</span>
   </h2>
@@ -282,6 +301,7 @@
 </section>
 
 <section class="section wrap" id="statistiques">
+
   <h2>
     Statistiques <span class="accent">de carrière</span>
   </h2>
@@ -337,20 +357,20 @@
     <a
       href="https://www.formula1.com/en/drivers/fernando-alonso"
       target="_blank"
-      rel="noopener noreferrer">
-      Formula 1
-    </a>
+      rel="noopener noreferrer"
+    >Formula 1</a>
     et
     <a
       href="https://www.astonmartinf1.com/"
       target="_blank"
-      rel="noopener noreferrer">
-      Aston Martin F1 Team
-    </a>.
+      rel="noopener noreferrer"
+    >Aston Martin F1 Team</a>.
   </p>
+
 </section>
 
 <section class="section wrap">
+
   <h2>
     Son <span class="accent">parcours</span>
   </h2>
@@ -414,11 +434,13 @@
 </section>
 
 <section class="section wrap">
+
   <h2>
     Saison <span class="accent">2026</span>
   </h2>
 
   <div class="bio">
+
     <p>
       Fernando Alonso dispute la saison 2026
       avec Aston Martin. Les résultats,
@@ -431,14 +453,17 @@
       <a
         href="https://www.formula1.com/en/drivers/fernando-alonso"
         target="_blank"
-        rel="noopener noreferrer">
+        rel="noopener noreferrer"
+      >
         Consulter ses statistiques actualisées
       </a>
     </p>
+
   </div>
 </section>
 
 <section class="section wrap" id="wallpapers">
+
   <h2>
     Ses fonds d'écran <span class="accent">FBA</span>
   </h2>
@@ -450,9 +475,11 @@
   </p>
 
   <div class="gallery" id="products"></div>
+
 </section>
 
 <section class="section wrap">
+
   <h2>
     Tarifs <span class="accent">FBA Wallpapers</span>
   </h2>
@@ -484,12 +511,14 @@
     Aucun paiement ni téléchargement HD
     n'est actuellement disponible.
   </p>
+
 </section>
 
 </main>
 
 <footer class="footer">
   <div class="wrap">
+
     © 2026 FondEcranByAlexis —
     Création indépendante, non affiliée
     à Formula 1, Aston Martin
@@ -498,46 +527,20 @@
     <a href="fba-wallpapers-f1.html">
       Retour à la collection F1
     </a>
+
   </div>
 </footer>
 
-<aside
-  class="cart-panel"
-  id="cart-panel"
-  aria-label="Panier"
-  aria-hidden="true">
+<!-- PANIER CENTRALISÉ FBA -->
 
-  <div class="cart-top">
-    <h2>Mon panier</h2>
+<script src="fba-cart.js"></script>
+<script src="fba-cart-images.js"></script>
+<script src="fba-cart-ui.js"></script>
 
-    <button
-      class="close"
-      id="close-cart"
-      type="button">
-      Fermer
-    </button>
-  </div>
-
-  <div id="cart-lines"></div>
-  <p id="cart-discount"></p>
-  <p class="total" id="cart-total"></p>
-
-  <button
-    class="btn primary disabled"
-    type="button"
-    disabled>
-    Paiement prochainement
-  </button>
-
-  <p class="sub">
-    Aucun achat ne peut encore être effectué.
-  </p>
-</aside>
+<!-- PRODUITS FERNANDO ALONSO -->
 
 <script>
 "use strict";
-
-const KEY = "fba_cart_v1";
 
 const products = [
   {
@@ -554,146 +557,12 @@ const products = [
   }
 ];
 
-const previewFiles = {
-
-  "f1-verstappen-01":
-    "images/f1/f1-verstappen-portrait-apercu.jpg",
-  "f1-verstappen-02":
-    "images/f1/f1-verstappen-monoplace-apercu.jpg",
-  "f1-verstappen-03":
-    "images/f1/f1-verstappen-champion-apercu.jpg",
-
-  "f1-hadjar-01":
-    "images/f1/f1-hadjar-portrait-apercu.jpg",
-  "f1-hadjar-02":
-    "images/f1/f1-hadjar-monoplace-apercu.jpg",
-  "f1-hadjar-03":
-    "images/f1/f1-hadjar-podium-apercu.jpg",
-
-  "f1-leclerc-01":
-    "images/f1/f1-leclerc-portrait-apercu.jpg",
-  "f1-leclerc-02":
-    "images/f1/f1-leclerc-monoplace-apercu.jpg",
-  "f1-leclerc-03":
-    "images/f1/f1-leclerc-victoire-apercu.jpg",
-
-  "f1-hamilton-01":
-    "images/f1/f1-hamilton-portrait-apercu.jpg",
-  "f1-hamilton-02":
-    "images/f1/f1-hamilton-monoplace-apercu.jpg",
-  "f1-hamilton-03":
-    "images/f1/f1-hamilton-champion-apercu.jpg",
-
-  "f1-russell-01":
-    "images/f1/f1-russell-portrait-apercu.jpg",
-  "f1-russell-02":
-    "images/f1/f1-russell-monoplace-apercu.jpg",
-  "f1-russell-03":
-    "images/f1/f1-russell-celebration-apercu.jpg",
-
-  "f1-antonelli-01":
-    "images/f1/f1-antonelli-portrait-apercu.jpg",
-  "f1-antonelli-02":
-    "images/f1/f1-antonelli-racing-apercu.jpg",
-  "f1-antonelli-03":
-    "images/f1/f1-antonelli-celebration-apercu.jpg",
-
-  "f1-norris-01":
-    "images/f1/f1-norris-portrait-apercu.jpg",
-  "f1-norris-02":
-    "images/f1/f1-norris-racing-apercu.jpg",
-  "f1-norris-03":
-    "images/f1/f1-norris-celebration-apercu.jpg",
-
-  "f1-piastri-01":
-    "images/f1/f1-piastri-portrait-apercu.jpg",
-  "f1-piastri-02":
-    "images/f1/f1-piastri-racing-apercu.jpg",
-  "f1-piastri-03":
-    "images/f1/f1-piastri-celebration-apercu.jpg",
-
-  "f1-alonso-01":
-    "images/f1/f1-alonso-portrait-apercu.jpg",
-  "f1-alonso-02":
-    "images/f1/f1-alonso-racing-apercu.jpg",
-  "f1-alonso-03":
-    "images/f1/f1-alonso-celebration-apercu.jpg",
-
-  "f1-stroll-01":
-    "images/f1/f1-stroll-portrait-apercu.jpg",
-  "f1-stroll-02":
-    "images/f1/f1-stroll-racing-apercu.jpg",
-  "f1-stroll-03":
-    "images/f1/f1-stroll-celebration-apercu.jpg"
-
-};
-
-function getCart() {
-  try {
-    const data = JSON.parse(
-      localStorage.getItem(KEY) || "[]"
-    );
-
-    return Array.isArray(data)
-      ? data.filter(p =>
-          p &&
-          typeof p.id === "string" &&
-          typeof p.name === "string"
-        )
-      : [];
-  } catch {
-    return [];
-  }
-}
-
-function saveCart(cart) {
-  try {
-    localStorage.setItem(
-      KEY,
-      JSON.stringify(cart)
-    );
-  } catch {}
-
-  renderCart();
-}
-
-function euro(value) {
-  return value.toLocaleString("fr-FR", {
-    style: "currency",
-    currency: "EUR"
-  });
-}
-
-function totalFor(n) {
-  const tens = Math.floor(n / 10);
-  const remaining = n % 10;
-  const fives = Math.floor(remaining / 5);
-  const singles = remaining % 5;
-
-  return tens * 11.99 +
-         fives * 6.99 +
-         singles * 1.99;
-}
-
-function openCart() {
-  const panel =
-    document.getElementById("cart-panel");
-
-  panel.classList.add("open");
-  panel.setAttribute("aria-hidden", "false");
-}
-
-function closeCart() {
-  const panel =
-    document.getElementById("cart-panel");
-
-  panel.classList.remove("open");
-  panel.setAttribute("aria-hidden", "true");
-}
-
 function renderProducts() {
+
   const gallery =
     document.getElementById("products");
+
+  if (!gallery) return;
 
   gallery.replaceChildren();
 
@@ -701,15 +570,19 @@ function renderProducts() {
 
     const card =
       document.createElement("article");
+
     card.className = "product";
 
     const preview =
       document.createElement("div");
+
     preview.className = "preview";
 
-    const file = previewFiles[product.id];
+    const file =
+      window.FBA_IMAGES?.[product.id];
 
     if (file) {
+
       const img =
         document.createElement("img");
 
@@ -718,27 +591,32 @@ function renderProducts() {
       img.loading = "lazy";
 
       preview.append(img);
+
     } else {
+
       const placeholder =
         document.createElement("div");
 
       placeholder.className = "placeholder";
       placeholder.textContent =
-        "FERNANDO ALONSO — VISUEL À INTÉGRER";
+        "APERÇU EN PRÉPARATION";
 
       preview.append(placeholder);
     }
 
     const body =
       document.createElement("div");
+
     body.className = "productbody";
 
     const title =
       document.createElement("h3");
+
     title.textContent = product.name;
 
     const price =
       document.createElement("div");
+
     price.className = "price";
     price.textContent = "1,99 €";
 
@@ -749,146 +627,18 @@ function renderProducts() {
     button.type = "button";
     button.textContent = "Ajouter au panier";
 
-    button.addEventListener("click", () => {
-      const cart = getCart();
-
-      if (!cart.some(p => p.id === product.id)) {
-        cart.push(product);
-        saveCart(cart);
-      }
-
-      openCart();
-    });
+    button.dataset.fbaAdd = "";
+    button.dataset.fbaId = product.id;
+    button.dataset.fbaName = product.name;
 
     body.append(title, price, button);
     card.append(preview, body);
     gallery.append(card);
+
   });
 }
-
-function renderCart() {
-  const cart = getCart();
-
-  const root =
-    document.getElementById("cart-lines");
-
-  root.replaceChildren();
-
-  document.getElementById(
-    "cart-count"
-  ).textContent = cart.length;
-
-  if (!cart.length) {
-    root.textContent = "Votre panier est vide.";
-  }
-
-  cart.forEach(product => {
-
-    const row =
-      document.createElement("div");
-
-    row.className = "cart-line";
-    row.style.display = "flex";
-    row.style.alignItems = "center";
-    row.style.gap = "12px";
-    row.style.padding = "12px 0";
-
-    const file = previewFiles[product.id];
-
-    if (file) {
-      const img =
-        document.createElement("img");
-
-      img.src = file;
-      img.alt = product.name;
-      img.style.width = "55px";
-      img.style.height = "98px";
-      img.style.objectFit = "cover";
-      img.style.borderRadius = "8px";
-      img.style.flexShrink = "0";
-
-      row.append(img);
-    }
-
-    const info =
-      document.createElement("div");
-
-    info.style.flex = "1";
-    info.style.minWidth = "0";
-
-    const name =
-      document.createElement("strong");
-
-    name.textContent = product.name;
-    name.style.display = "block";
-    name.style.fontSize = "13px";
-    name.style.overflowWrap = "anywhere";
-
-    const price =
-      document.createElement("span");
-
-    price.textContent = "1,99 €";
-    price.style.display = "block";
-    price.style.marginTop = "6px";
-
-    info.append(name, price);
-
-    const remove =
-      document.createElement("button");
-
-    remove.type = "button";
-    remove.textContent = "Retirer";
-
-    remove.addEventListener("click", () => {
-      saveCart(
-        getCart().filter(
-          p => p.id !== product.id
-        )
-      );
-    });
-
-    row.append(info, remove);
-    root.append(row);
-  });
-
-  const standard = cart.length * 1.99;
-  const total = totalFor(cart.length);
-
-  document.getElementById(
-    "cart-discount"
-  ).textContent =
-    cart.length
-      ? "Réduction packs : " +
-        euro(Math.max(0, standard - total))
-      : "";
-
-  document.getElementById(
-    "cart-total"
-  ).textContent =
-    "Total : " + euro(total);
-}
-
-document.getElementById("open-cart")
-  .addEventListener("click", openCart);
-
-document.getElementById("close-cart")
-  .addEventListener("click", closeCart);
-
-document.addEventListener("keydown", event => {
-  if (event.key === "Escape") {
-    closeCart();
-  }
-});
-
-window.addEventListener("storage", event => {
-  if (event.key === KEY) {
-    renderCart();
-  }
-});
 
 renderProducts();
-renderCart();
-
 </script>
 
 </body>
