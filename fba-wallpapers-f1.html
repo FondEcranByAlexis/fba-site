@@ -3,387 +3,1234 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080808">
-<meta name="description" content="Collection Formula 1 par FondEcranByAlexis : découvrez les fonds d'écran de Max Verstappen, Isack Hadjar, Charles Leclerc et Lewis Hamilton.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08090d">
+<meta name="description" content="FBA Wallpapers Formula 1 : découvrez les 22 pilotes de la saison 2026, leurs portraits et les collections de fonds d'écran F1.">
 <title>Formula 1 | FBA Wallpapers</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,Helvetica,sans-serif;background:#080808;color:#f2f2f2;line-height:1.6}
-a{color:inherit;text-decoration:none}
-header{background:#0d0d0d;border-bottom:1px solid #292929;padding:20px;text-align:center}
-.brand{font-size:21px;font-weight:900;letter-spacing:2px}
-.brand span,h1 span,h2 span{color:#e32636}
-nav{display:flex;justify-content:center;flex-wrap:wrap;gap:20px;margin-top:12px;font-size:13px}
-nav a:hover{color:#e32636}
-.hero{padding:75px 20px;text-align:center;background:radial-gradient(ellipse at center,#421016,#111 48%,#080808 80%);border-bottom:1px solid #292929}
-.eyebrow{color:#e32636;font-size:12px;font-weight:bold;letter-spacing:4px;margin-bottom:15px}
-h1{font-size:clamp(35px,8vw,65px);letter-spacing:2px;line-height:1.1;margin-bottom:18px}
-.hero p{max-width:650px;margin:auto;color:#c5c5c5}
-.slogan{margin-top:25px;font-size:13px;letter-spacing:3px;color:#aaa;font-weight:bold}
-main{max-width:1150px;margin:auto;padding:50px 20px}
-.section-title{text-align:center;margin:20px 0 30px}
-.section-title h2{font-size:26px;margin-bottom:8px}
-.section-title p{color:#999;font-size:14px}
-.category-nav{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-bottom:45px}
-.category-nav a{border:1px solid #713039;border-radius:25px;padding:9px 17px;font-size:12px;font-weight:bold;transition:.2s}
-.category-nav a:hover,.category-nav a:focus-visible{background:#e32636;border-color:#e32636}
-.wallpaper-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-bottom:55px}
-.wallpaper-card{overflow:hidden;background:#141414;border:1px solid #303030;border-radius:12px;transition:.25s}
-.wallpaper-card:hover{border-color:#e32636;transform:translateY(-4px)}
-.wallpaper-preview{aspect-ratio:9/16;background:linear-gradient(145deg,#351014,#151515 65%,#080808);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:20px;text-align:center;color:#aaa;border-bottom:1px solid #303030;overflow:hidden}
-.wallpaper-preview img{display:block;width:100%;height:100%;object-fit:contain}
-.wallpaper-preview.has-image{padding:0}
-.wallpaper-preview .symbol{font-size:42px;margin-bottom:15px}
-.wallpaper-preview strong{color:#fff;font-size:16px;letter-spacing:1px}
-.wallpaper-preview small{color:#e32636;margin-top:8px;font-size:10px;letter-spacing:2px}
-.wallpaper-info{padding:17px}
-.wallpaper-info h3{font-size:16px;margin-bottom:5px}
-.wallpaper-info p{color:#999;font-size:12px;margin-bottom:15px}
-.view-profile{display:block;text-align:center;padding:11px;background:#e32636;border:1px solid #e32636;border-radius:6px;color:white;font-size:12px;font-weight:bold;transition:.2s}
-.view-profile:hover,.view-profile:focus-visible{background:#b81929;border-color:#b81929}
-.download{display:block;text-align:center;padding:10px;background:#292929;border:1px solid #555;border-radius:6px;color:#999;font-size:12px;font-weight:bold;cursor:not-allowed}
-.notice{max-width:750px;margin:0 auto 45px;padding:20px;border:1px solid #713039;border-radius:10px;background:#170d0f;text-align:center;color:#bbb;font-size:13px}
-.back{display:inline-block;padding:12px 22px;border:1px solid #e32636;border-radius:6px;font-size:13px;font-weight:bold;margin-top:15px}
-.back:hover{background:#e32636}
-.return{text-align:center;margin-top:20px}
-footer{border-top:1px solid #292929;padding:25px 15px;text-align:center;color:#777;font-size:12px}
-footer strong{color:#ddd}
 
-/* Affichage des pilotes : 2 colonnes sur mobile */
-@media (max-width: 750px) {
-  #pilotes .wallpaper-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+<style>
+:root {
+  --bg: #08090d;
+  --panel: #12151c;
+  --red: #ed1726;
+  --white: #f5f6f8;
+  --muted: #a8adb8;
+  --line: #303541;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 3px solid #ff5964;
+  outline-offset: 4px;
+}
+
+.wrap {
+  width: min(1160px, 92%);
+  margin: auto;
+}
+
+/* HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(8,9,13,.94);
+  border-bottom: 1px solid #292d37;
+  backdrop-filter: blur(12px);
+}
+
+.top {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.brand {
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  font-size: 21px;
+  white-space: nowrap;
+}
+
+.brand span,
+h1 span,
+h2 span {
+  color: var(--red);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px 22px;
+  font-size: 14px;
+  color: #d5d8df;
+}
+
+nav a { padding: 8px 0; }
+nav a:hover { color: var(--red); }
+
+/* HERO */
+
+.hero {
+  padding: 85px 0 75px;
+  text-align: center;
+  background: radial-gradient(
+    ellipse at center,
+    #351019 0%,
+    #11141b 48%,
+    #08090d 82%
+  );
+  border-bottom: 1px solid #292d37;
+}
+
+.eyebrow {
+  color: #ff5964;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(42px,9vw,78px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin: 20px 0;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  color: #c1c5ce;
+  font-size: clamp(15px,2vw,19px);
+  line-height: 1.8;
+}
+
+.slogan {
+  margin-top: 25px;
+  color: #a8adb8;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 800;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 14px;
+  max-width: 650px;
+  margin: 35px auto 0;
+}
+
+.hero-stat {
+  padding: 18px 10px;
+  border: 1px solid #42313c;
+  border-radius: 12px;
+  background: rgba(12,14,20,.8);
+}
+
+.hero-stat strong {
+  display: block;
+  color: #ff5964;
+  font-size: clamp(26px,4vw,38px);
+}
+
+.hero-stat span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* SECTIONS */
+
+.content-section {
+  padding: 70px 0;
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.section-head h2 {
+  font-size: clamp(27px,4vw,42px);
+  margin: 12px 0;
+  line-height: 1.2;
+}
+
+.section-head p {
+  color: var(--muted);
+  max-width: 700px;
+  margin: auto;
+}
+
+.redline {
+  width: 64px;
+  height: 3px;
+  background: var(--red);
+  margin: 17px auto 0;
+}
+
+.category-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.category-nav a {
+  padding: 11px 19px;
+  border: 1px solid #713039;
+  border-radius: 25px;
+  font-size: 12px;
+  font-weight: 800;
+  transition: background .2s;
+}
+
+.category-nav a:hover {
+  background: var(--red);
+}
+
+/* DRIVER CARDS */
+
+.wallpaper-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 20px;
+}
+
+.wallpaper-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid #383d49;
+  border-radius: 14px;
+  transition: transform .25s,border-color .25s;
+}
+
+.wallpaper-card:hover {
+  border-color: var(--red);
+  transform: translateY(-4px);
+}
+
+.wallpaper-preview {
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  background: linear-gradient(
+    145deg,#351014,#151515 65%,#080808
+  );
+  border-bottom: 1px solid #303541;
+}
+
+.wallpaper-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.wallpaper-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 18px;
+}
+
+.wallpaper-info h3 {
+  font-size: 18px;
+  margin: 0 0 7px;
+}
+
+.wallpaper-info p {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0 0 18px;
+  flex: 1;
+}
+
+.view-profile {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  background: var(--red);
+  border: 1px solid var(--red);
+  border-radius: 6px;
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.view-profile:hover {
+  background: #b81929;
+}
+
+/* COMING SOON */
+
+.coming-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 20px;
+}
+
+.coming-card {
+  padding: 30px 22px;
+  background: linear-gradient(145deg,#171b24,#0e1016);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  text-align: center;
+}
+
+.coming-card .symbol {
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.coming-card h3 {
+  font-size: 18px;
+  margin: 0 0 12px;
+}
+
+.coming-card p {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 0 18px;
+}
+
+.status {
+  display: inline-block;
+  padding: 7px 12px;
+  border: 1px solid #713039;
+  border-radius: 20px;
+  color: #ed7c86;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+/* NOTICE */
+
+.notice {
+  padding: 28px;
+  border: 1px solid #713039;
+  border-radius: 14px;
+  background: #170d12;
+  text-align: center;
+}
+
+.notice strong {
+  color: #ff7a86;
+  font-size: 15px;
+}
+
+.notice p {
+  max-width: 760px;
+  margin: 12px auto 0;
+  color: #c1c5ce;
+  font-size: 14px;
+}
+
+.return {
+  text-align: center;
+  margin-top: 28px;
+}
+
+.back {
+  display: inline-block;
+  padding: 13px 22px;
+  border: 1px solid var(--red);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.back:hover {
+  background: var(--red);
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid #292d37;
+  padding: 32px 15px;
+  text-align: center;
+  color: #858c99;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+footer strong { color: #ddd; }
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+  margin-top: 15px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .wallpaper-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  .coming-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .top {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  nav {
+    width: 100%;
+    gap: 10px 16px;
+    font-size: 12px;
+  }
+
+  .wallpaper-grid {
     gap: 12px;
   }
 
-  #pilotes .wallpaper-info {
-    padding: 10px;
+  .wallpaper-info {
+    padding: 11px;
   }
 
-  #pilotes .wallpaper-info h3 {
+  .wallpaper-info h3 {
     font-size: 14px;
-    line-height: 1.3;
   }
 
-  #pilotes .wallpaper-info p {
+  .wallpaper-info p {
     font-size: 11px;
-    line-height: 1.4;
   }
 
-  #pilotes .view-profile {
+  .view-profile {
     font-size: 10px;
-    padding: 9px 4px;
+    padding: 10px 5px;
   }
-}
 
-/* Autres collections : 1 colonne sur petit écran */
-@media (max-width: 480px) {
-  #ecuries .wallpaper-grid,
-  #circuits .wallpaper-grid {
+  .coming-grid {
     grid-template-columns: 1fr;
   }
+
+  .hero {
+    padding: 60px 0;
+  }
+
+  .content-section {
+    padding: 52px 0;
+  }
+
+  .hero-stats {
+    gap: 8px;
+  }
+
+  .hero-stat {
+    padding: 14px 5px;
+  }
 }
-  
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  .wallpaper-card {
+    transition: none;
+  }
+
+  .wallpaper-card:hover {
+    transform: none;
+  }
+}
 </style>
 </head>
+
 <body>
+
 <header>
-<a class="brand" href="index.html">FOND<span>ECRAN</span>BYALEXIS</a>
-<nav aria-label="Navigation principale">
-<a href="index.html">ACCUEIL</a>
-<a href="fba-wallpapers.html">WALLPAPERS</a>
-<a href="fba-productions.html">PRODUCTIONS</a>
-</nav>
+  <div class="wrap top">
+
+    <a class="brand" href="index.html">
+      FOND<span>ECRAN</span>BYALEXIS
+    </a>
+
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="fba-wallpapers.html">Wallpapers</a>
+      <a href="#pilotes">Pilotes</a>
+      <a href="#ecuries">Écuries</a>
+      <a href="#circuits">Circuits</a>
+    </nav>
+
+  </div>
 </header>
-<section class="hero">
-<div class="eyebrow">FBA WALLPAPERS PRÉSENTE</div>
-<h1>FORMULA <span>1</span></h1>
-<p>Retrouvez l'univers de la Formule 1 à travers des fonds d'écran consacrés aux pilotes, aux écuries et aux circuits du championnat.</p>
-<div class="slogan">L'IMAGE PREND VIE.</div>
-</section>
+
 <main>
-<div class="section-title">
-<h2>LA COLLECTION <span>FORMULA 1</span></h2>
-<p>Trois univers pour les passionnés de sport automobile.</p>
-</div>
-<div class="category-nav">
-<a href="#pilotes">PILOTES</a>
-<a href="#ecuries">ÉCURIES</a>
-<a href="#circuits">CIRCUITS</a>
-</div>
-<section id="pilotes">
-<div class="section-title">
-<h2>LES <span>PILOTES</span></h2>
-<p>22 pilotes disponibles · 66 fonds d'écran à découvrir.</p>
-</div>
-<div class="wallpaper-grid">
-<article class="wallpaper-card">
-<div class="wallpaper-preview has-image"><img src="images/f1/f1-verstappen-portrait-apercu.jpg" alt="Aperçu du fond d'écran Max Verstappen" loading="lazy"></div>
-<div class="wallpaper-info"><h3>Max Verstappen</h3><p>Red Bull Racing · N° 3 · Portrait, monoplace et champion.</p><a class="view-profile" href="pilote-max-verstappen.html">VOIR LA FICHE</a></div>
-</article>
-<article class="wallpaper-card">
-<div class="wallpaper-preview has-image"><img src="images/f1/f1-hadjar-portrait-apercu.jpg" alt="Aperçu du fond d'écran Isack Hadjar" loading="lazy"></div>
-<div class="wallpaper-info"><h3>Isack Hadjar</h3><p>Red Bull Racing · Portrait, monoplace et podium.</p><a class="view-profile" href="pilote-isack-hadjar.html">VOIR LA FICHE</a></div>
-</article>
-<article class="wallpaper-card">
-<div class="wallpaper-preview has-image"><img src="images/f1/f1-leclerc-portrait-apercu.jpg" alt="Aperçu du fond d'écran Charles Leclerc" loading="lazy"></div>
-<div class="wallpaper-info"><h3>Charles Leclerc</h3><p>Scuderia Ferrari · N° 16 · Portrait, monoplace et victoire.</p><a class="view-profile" href="pilote-charles-leclerc.html">VOIR LA FICHE</a></div>
-</article>
-<article class="wallpaper-card">
-<div class="wallpaper-preview has-image"><img src="images/f1/f1-hamilton-portrait-apercu.jpg" alt="Aperçu du fond d'écran Lewis Hamilton" loading="lazy"></div>
-<div class="wallpaper-info"><h3>Lewis Hamilton</h3><p>Scuderia Ferrari · N° 44 · Portrait, monoplace et septuple champion.</p><a class="view-profile" href="pilote-lewis-hamilton.html">VOIR LA FICHE</a></div>
-</article>
-  
-<!-- MERCEDES -->
-<article class="wallpaper-card">
-<div class="wallpaper-preview has-image">
-<img src="images/f1/f1-russell-portrait-apercu.jpg" alt="George Russell" loading="lazy">
-</div>
-<div class="wallpaper-info">
-<h3>George Russell</h3>
-<p>Mercedes · N° 63 · Portrait, Racing et Célébration.</p>
-<a class="view-profile" href="pilote-george-russell.html">VOIR LA FICHE</a>
-</div>
-</article>
 
-<article class="wallpaper-card">
-<div class="wallpaper-preview has-image">
-<img src="images/f1/f1-antonelli-portrait-apercu.jpg" alt="Kimi Antonelli" loading="lazy">
-</div>
-<div class="wallpaper-info">
-<h3>Kimi Antonelli</h3>
-<p>Mercedes · N° 12 · Portrait, Racing et Célébration.</p>
-<a class="view-profile" href="pilote-kimi-antonelli.html">VOIR LA FICHE</a>
-</div>
-</article>
+<section class="hero">
 
-<!-- MCLAREN -->
-<article class="wallpaper-card">
-<div class="wallpaper-preview has-image">
-<img src="images/f1/f1-norris-portrait-apercu.jpg" alt="Lando Norris" loading="lazy">
-</div>
-<div class="wallpaper-info">
-<h3>Lando Norris</h3>
-<p>McLaren · N° 1 · Portrait, Racing et Célébration.</p>
-<a class="view-profile" href="pilote-lando-norris.html">VOIR LA FICHE</a>
-</div>
-</article>
+  <div class="wrap">
 
-<article class="wallpaper-card">
-<div class="wallpaper-preview has-image">
-<img src="images/f1/f1-piastri-portrait-apercu.jpg" alt="Oscar Piastri" loading="lazy">
-</div>
-<div class="wallpaper-info">
-<h3>Oscar Piastri</h3>
-<p>McLaren · N° 81 · Portrait, Racing et Célébration.</p>
-<a class="view-profile" href="pilote-oscar-piastri.html">VOIR LA FICHE</a>
-</div>
-</article>
+    <div class="eyebrow">
+      FBA Wallpapers présente
+    </div>
 
-<!-- ASTON MARTIN -->
-<article class="wallpaper-card">
-<div class="wallpaper-preview has-image">
-<img src="images/f1/f1-alonso-portrait-apercu.jpg" alt="Fernando Alonso" loading="lazy">
-</div>
-<div class="wallpaper-info">
-<h3>Fernando Alonso</h3>
-<p>Aston Martin · N° 14 · Portrait, Racing et Célébration.</p>
-<a class="view-profile" href="pilote-fernando-alonso.html">VOIR LA FICHE</a>
-</div>
-</article>
+    <h1>
+      FORMULA <span>1</span>
+    </h1>
 
-<article class="wallpaper-card">
-<div class="wallpaper-preview has-image">
-<img src="images/f1/f1-stroll-portrait-apercu.jpg" alt="Lance Stroll" loading="lazy">
-</div>
-<div class="wallpaper-info">
-<h3>Lance Stroll</h3>
-<p>Aston Martin · N° 18 · Portrait, Racing et Célébration.</p>
-<a class="view-profile" href="pilote-lance-stroll.html">VOIR LA FICHE</a>
-</div>
-</article>
-
-<!-- RACING BULLS -->
-<article class="wallpaper-card">
-<div class="wallpaper-preview has-image">
-<img src="images/f1/f1-lawson-portrait-apercu.jpg" alt="Liam Lawson" loading="lazy">
-</div>
-<div class="wallpaper-info">
-<h3>Liam Lawson</h3>
-<p>Racing Bulls · N° 30 · Portrait, Racing et Célébration.</p>
-<a class="view-profile" href="pilote-liam-lawson.html">VOIR LA FICHE</a>
-</div>
-</article>
-
-<article class="wallpaper-card">
-<div class="wallpaper-preview has-image">
-<img src="images/f1/f1-lindblad-portrait-apercu.jpg" alt="Arvid Lindblad" loading="lazy">
-</div>
-<div class="wallpaper-info">
-<h3>Arvid Lindblad</h3>
-<p>Racing Bulls · N° 41 · Portrait, Racing et Célébration.</p>
-<a class="view-profile" href="pilote-arvid-lindblad.html">VOIR LA FICHE</a>
-</div>
-</article>
-  
-<!-- ALPINE -->
-<article class="wallpaper-card">
-<div class="wallpaper-preview has-image">
-<img src="images/f1/f1-gasly-portrait-apercu.jpg" alt="Pierre Gasly" loading="lazy">
-</div>
-<div class="wallpaper-info">
-<h3>Pierre Gasly</h3>
-<p>Alpine · N° 10 · Portrait, Racing et Célébration.</p>
-<a class="view-profile" href="pilote-pierre-gasly.html">VOIR LA FICHE</a>
-</div>
-</article>
-
-<article class="wallpaper-card">
-<div class="wallpaper-preview has-image">
-<img src="images/f1/f1-colapinto-portrait-apercu.jpg" alt="Franco Colapinto" loading="lazy">
-</div>
-<div class="wallpaper-info">
-<h3>Franco Colapinto</h3>
-<p>Alpine · N° 43 · Portrait, Racing et Célébration.</p>
-<a class="view-profile" href="pilote-franco-colapinto.html">VOIR LA FICHE</a>
-</div>
-</article>
-
-<!-- AUDI -->
-<article class="wallpaper-card">
-<div class="wallpaper-preview has-image">
-<img src="images/f1/f1-hulkenberg-portrait-apercu.jpg" alt="Nico Hülkenberg" loading="lazy">
-</div>
-<div class="wallpaper-info">
-<h3>Nico Hülkenberg</h3>
-<p>Audi · N° 27 · Portrait, Racing et Célébration.</p>
-<a class="view-profile" href="pilote-nico-hulkenberg.html">VOIR LA FICHE</a>
-</div>
-</article>
-
-<article class="wallpaper-card">
-<div class="wallpaper-preview has-image">
-<img src="images/f1/f1-bortoleto-portrait-apercu.jpg" alt="Gabriel Bortoleto" loading="lazy">
-</div>
-<div class="wallpaper-info">
-<h3>Gabriel Bortoleto</h3>
-<p>Audi · N° 5 · Portrait, Racing et Célébration.</p>
-<a class="view-profile" href="pilote-gabriel-bortoleto.html">VOIR LA FICHE</a>
-</div>
-</article>
-
-<!-- HAAS -->
-<article class="wallpaper-card">
-<div class="wallpaper-preview has-image">
-<img src="images/f1/f1-ocon-portrait-apercu.jpg" alt="Esteban Ocon" loading="lazy">
-</div>
-<div class="wallpaper-info">
-<h3>Esteban Ocon</h3>
-<p>Haas · N° 31 · Portrait, Racing et Célébration.</p>
-<a class="view-profile" href="pilote-esteban-ocon.html">VOIR LA FICHE</a>
-</div>
-</article>
-
-<article class="wallpaper-card">
-<div class="wallpaper-preview has-image">
-<img src="images/f1/f1-bearman-portrait-apercu.jpg" alt="Oliver Bearman" loading="lazy">
-</div>
-<div class="wallpaper-info">
-<h3>Oliver Bearman</h3>
-<p>Haas · N° 87 · Portrait, Racing et Célébration.</p>
-<a class="view-profile" href="pilote-oliver-bearman.html">VOIR LA FICHE</a>
-</div>
-</article>
-
-<!-- CADILLAC -->
-<article class="wallpaper-card">
-<div class="wallpaper-preview has-image">
-<img src="images/f1/f1-perez-portrait-apercu.jpg" alt="Sergio Pérez" loading="lazy">
-</div>
-<div class="wallpaper-info">
-<h3>Sergio Pérez</h3>
-<p>Cadillac · N° 11 · Portrait, Racing et Célébration.</p>
-<a class="view-profile" href="pilote-sergio-perez.html">VOIR LA FICHE</a>
-</div>
-</article>
-
-<article class="wallpaper-card">
-<div class="wallpaper-preview has-image">
-<img src="images/f1/f1-bottas-portrait-apercu.jpg" alt="Valtteri Bottas" loading="lazy">
-</div>
-<div class="wallpaper-info">
-<h3>Valtteri Bottas</h3>
-<p>Cadillac · N° 77 · Portrait, Racing et Célébration.</p>
-<a class="view-profile" href="pilote-valtteri-bottas.html">VOIR LA FICHE</a>
-</div>
-</article>
-  
-<!-- WILLIAMS RACING — ALEXANDER ALBON -->
-<article class="wallpaper-card">
-  <div class="wallpaper-preview has-image">
-    <img
-      src="images/f1/f1-albon-portrait-apercu.jpg"
-      alt="Alexander Albon"
-      loading="lazy">
-  </div>
-  <div class="wallpaper-info">
-    <h3>Alexander Albon</h3>
     <p>
-      Williams Racing · N° 23 ·
-      Portrait, Racing et Célébration.
+      Retrouvez l'univers de la Formule 1
+      à travers des fonds d'écran consacrés
+      aux pilotes, aux écuries et aux circuits
+      du championnat.
     </p>
-    <a
-      class="view-profile"
-      href="pilote-alexander-albon.html">
-      VOIR LA FICHE
-    </a>
-  </div>
-</article>
 
-<!-- WILLIAMS RACING — CARLOS SAINZ -->
-<article class="wallpaper-card">
-  <div class="wallpaper-preview has-image">
-    <img
-      src="images/f1/f1-sainz-portrait-apercu.jpg"
-      alt="Carlos Sainz"
-      loading="lazy">
+    <div class="slogan">
+      L'IMAGE PREND VIE.
+    </div>
+
+    <div class="hero-stats">
+
+      <div class="hero-stat">
+        <strong>22</strong>
+        <span>Pilotes</span>
+      </div>
+
+      <div class="hero-stat">
+        <strong>66</strong>
+        <span>Créations</span>
+      </div>
+
+      <div class="hero-stat">
+        <strong>2026</strong>
+        <span>Saison F1</span>
+      </div>
+
+    </div>
+
   </div>
-  <div class="wallpaper-info">
-    <h3>Carlos Sainz</h3>
-    <p>
-      Williams Racing · N° 55 ·
-      Portrait, Racing et Célébration.
-    </p>
-    <a
-      class="view-profile"
-      href="pilote-carlos-sainz.html">
-      VOIR LA FICHE
-    </a>
+
+</section>
+
+<section class="content-section" id="pilotes">
+
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        Collection principale
+      </div>
+
+      <h2>
+        LES <span>22 PILOTES</span>
+      </h2>
+
+      <p>
+        Découvrez les portraits et accédez
+        aux trois créations de chaque pilote :
+        Portrait, Racing et Célébration.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="category-nav">
+      <a href="#pilotes">PILOTES</a>
+      <a href="#ecuries">ÉCURIES</a>
+      <a href="#circuits">CIRCUITS</a>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- RED BULL -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <img src="images/f1/f1-verstappen-portrait-apercu.jpg"
+               alt="Max Verstappen" loading="lazy">
+        </div>
+        <div class="wallpaper-info">
+          <h3>Max Verstappen</h3>
+          <p>Red Bull Racing · N° 3</p>
+          <a class="view-profile"
+             href="pilote-max-verstappen.html">
+            VOIR LA FICHE
+          </a>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <img src="images/f1/f1-hadjar-portrait-apercu.jpg"
+               alt="Isack Hadjar" loading="lazy">
+        </div>
+        <div class="wallpaper-info">
+          <h3>Isack Hadjar</h3>
+          <p>Red Bull Racing</p>
+          <a class="view-profile"
+             href="pilote-isack-hadjar.html">
+            VOIR LA FICHE
+          </a>
+        </div>
+      </article>
+
+      <!-- FERRARI -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <img src="images/f1/f1-leclerc-portrait-apercu.jpg"
+               alt="Charles Leclerc" loading="lazy">
+        </div>
+        <div class="wallpaper-info">
+          <h3>Charles Leclerc</h3>
+          <p>Scuderia Ferrari · N° 16</p>
+          <a class="view-profile"
+             href="pilote-charles-leclerc.html">
+            VOIR LA FICHE
+          </a>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <img src="images/f1/f1-hamilton-portrait-apercu.jpg"
+               alt="Lewis Hamilton" loading="lazy">
+        </div>
+        <div class="wallpaper-info">
+          <h3>Lewis Hamilton</h3>
+          <p>Scuderia Ferrari · N° 44</p>
+          <a class="view-profile"
+             href="pilote-lewis-hamilton.html">
+            VOIR LA FICHE
+          </a>
+        </div>
+      </article>
+
+      <!-- MERCEDES -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <img src="images/f1/f1-russell-portrait-apercu.jpg"
+               alt="George Russell" loading="lazy">
+        </div>
+        <div class="wallpaper-info">
+          <h3>George Russell</h3>
+          <p>Mercedes · N° 63</p>
+          <a class="view-profile"
+             href="pilote-george-russell.html">
+            VOIR LA FICHE
+          </a>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <img src="images/f1/f1-antonelli-portrait-apercu.jpg"
+               alt="Kimi Antonelli" loading="lazy">
+        </div>
+        <div class="wallpaper-info">
+          <h3>Kimi Antonelli</h3>
+          <p>Mercedes · N° 12</p>
+          <a class="view-profile"
+             href="pilote-kimi-antonelli.html">
+            VOIR LA FICHE
+          </a>
+        </div>
+      </article>
+
+      <!-- MCLAREN -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <img src="images/f1/f1-norris-portrait-apercu.jpg"
+               alt="Lando Norris" loading="lazy">
+        </div>
+        <div class="wallpaper-info">
+          <h3>Lando Norris</h3>
+          <p>McLaren · N° 1</p>
+          <a class="view-profile"
+             href="pilote-lando-norris.html">
+            VOIR LA FICHE
+          </a>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <img src="images/f1/f1-piastri-portrait-apercu.jpg"
+               alt="Oscar Piastri" loading="lazy">
+        </div>
+        <div class="wallpaper-info">
+          <h3>Oscar Piastri</h3>
+          <p>McLaren · N° 81</p>
+          <a class="view-profile"
+             href="pilote-oscar-piastri.html">
+            VOIR LA FICHE
+          </a>
+        </div>
+      </article>
+
+      <!-- ASTON MARTIN -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <img src="images/f1/f1-alonso-portrait-apercu.jpg"
+               alt="Fernando Alonso" loading="lazy">
+        </div>
+        <div class="wallpaper-info">
+          <h3>Fernando Alonso</h3>
+          <p>Aston Martin · N° 14</p>
+          <a class="view-profile"
+             href="pilote-fernando-alonso.html">
+            VOIR LA FICHE
+          </a>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <img src="images/f1/f1-stroll-portrait-apercu.jpg"
+               alt="Lance Stroll" loading="lazy">
+        </div>
+        <div class="wallpaper-info">
+          <h3>Lance Stroll</h3>
+          <p>Aston Martin · N° 18</p>
+          <a class="view-profile"
+             href="pilote-lance-stroll.html">
+            VOIR LA FICHE
+          </a>
+        </div>
+      </article>
+
+      <!-- RACING BULLS -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <img src="images/f1/f1-lawson-portrait-apercu.jpg"
+               alt="Liam Lawson" loading="lazy">
+        </div>
+        <div class="wallpaper-info">
+          <h3>Liam Lawson</h3>
+          <p>Racing Bulls · N° 30</p>
+          <a class="view-profile"
+             href="pilote-liam-lawson.html">
+            VOIR LA FICHE
+          </a>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <img src="images/f1/f1-lindblad-portrait-apercu.jpg"
+               alt="Arvid Lindblad" loading="lazy">
+        </div>
+        <div class="wallpaper-info">
+          <h3>Arvid Lindblad</h3>
+          <p>Racing Bulls · N° 41</p>
+          <a class="view-profile"
+             href="pilote-arvid-lindblad.html">
+            VOIR LA FICHE
+          </a>
+        </div>
+      </article>
+
+      <!-- ALPINE -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <img src="images/f1/f1-gasly-portrait-apercu.jpg"
+               alt="Pierre Gasly" loading="lazy">
+        </div>
+        <div class="wallpaper-info">
+          <h3>Pierre Gasly</h3>
+          <p>Alpine · N° 10</p>
+          <a class="view-profile"
+             href="pilote-pierre-gasly.html">
+            VOIR LA FICHE
+          </a>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <img src="images/f1/f1-colapinto-portrait-apercu.jpg"
+               alt="Franco Colapinto" loading="lazy">
+        </div>
+        <div class="wallpaper-info">
+          <h3>Franco Colapinto</h3>
+          <p>Alpine · N° 43</p>
+          <a class="view-profile"
+             href="pilote-franco-colapinto.html">
+            VOIR LA FICHE
+          </a>
+        </div>
+      </article>
+
+      <!-- AUDI -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <img src="images/f1/f1-hulkenberg-portrait-apercu.jpg"
+               alt="Nico Hülkenberg" loading="lazy">
+        </div>
+        <div class="wallpaper-info">
+          <h3>Nico Hülkenberg</h3>
+          <p>Audi · N° 27</p>
+          <a class="view-profile"
+             href="pilote-nico-hulkenberg.html">
+            VOIR LA FICHE
+          </a>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <img src="images/f1/f1-bortoleto-portrait-apercu.jpg"
+               alt="Gabriel Bortoleto" loading="lazy">
+        </div>
+        <div class="wallpaper-info">
+          <h3>Gabriel Bortoleto</h3>
+          <p>Audi · N° 5</p>
+          <a class="view-profile"
+             href="pilote-gabriel-bortoleto.html">
+            VOIR LA FICHE
+          </a>
+        </div>
+      </article>
+
+      <!-- HAAS -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <img src="images/f1/f1-ocon-portrait-apercu.jpg"
+               alt="Esteban Ocon" loading="lazy">
+        </div>
+        <div class="wallpaper-info">
+          <h3>Esteban Ocon</h3>
+          <p>Haas · N° 31</p>
+          <a class="view-profile"
+             href="pilote-esteban-ocon.html">
+            VOIR LA FICHE
+          </a>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <img src="images/f1/f1-bearman-portrait-apercu.jpg"
+               alt="Oliver Bearman" loading="lazy">
+        </div>
+        <div class="wallpaper-info">
+          <h3>Oliver Bearman</h3>
+          <p>Haas · N° 87</p>
+          <a class="view-profile"
+             href="pilote-oliver-bearman.html">
+            VOIR LA FICHE
+          </a>
+        </div>
+      </article>
+
+      <!-- CADILLAC -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <img src="images/f1/f1-perez-portrait-apercu.jpg"
+               alt="Sergio Pérez" loading="lazy">
+        </div>
+        <div class="wallpaper-info">
+          <h3>Sergio Pérez</h3>
+          <p>Cadillac · N° 11</p>
+          <a class="view-profile"
+             href="pilote-sergio-perez.html">
+            VOIR LA FICHE
+          </a>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <img src="images/f1/f1-bottas-portrait-apercu.jpg"
+               alt="Valtteri Bottas" loading="lazy">
+        </div>
+        <div class="wallpaper-info">
+          <h3>Valtteri Bottas</h3>
+          <p>Cadillac · N° 77</p>
+          <a class="view-profile"
+             href="pilote-valtteri-bottas.html">
+            VOIR LA FICHE
+          </a>
+        </div>
+      </article>
+
+      <!-- WILLIAMS -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <img src="images/f1/f1-albon-portrait-apercu.jpg"
+               alt="Alexander Albon" loading="lazy">
+        </div>
+        <div class="wallpaper-info">
+          <h3>Alexander Albon</h3>
+          <p>Williams Racing · N° 23</p>
+          <a class="view-profile"
+             href="pilote-alexander-albon.html">
+            VOIR LA FICHE
+          </a>
+        </div>
+      </article>
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <img src="images/f1/f1-sainz-portrait-apercu.jpg"
+               alt="Carlos Sainz" loading="lazy">
+        </div>
+        <div class="wallpaper-info">
+          <h3>Carlos Sainz</h3>
+          <p>Williams Racing · N° 55</p>
+          <a class="view-profile"
+             href="pilote-carlos-sainz.html">
+            VOIR LA FICHE
+          </a>
+        </div>
+      </article>
+
+    </div>
+
   </div>
-</article>
-  
-</div>
+
 </section>
-<section id="ecuries">
-<div class="section-title"><h2>LES <span>ÉCURIES</span></h2><p>Les équipes et leurs monoplaces.</p></div>
-<div class="wallpaper-grid">
-<article class="wallpaper-card"><div class="wallpaper-preview"><div class="symbol">🏎️</div><strong>ÉCURIES F1</strong><small>FOND D'ÉCRAN À AJOUTER</small></div><div class="wallpaper-info"><h3>Collection des écuries</h3><p>Identités visuelles et monoplaces.</p><span class="download">BIENTÔT DISPONIBLE</span></div></article>
-<article class="wallpaper-card"><div class="wallpaper-preview"><div class="symbol">🔧</div><strong>MONOPLACES</strong><small>FOND D'ÉCRAN À AJOUTER</small></div><div class="wallpaper-info"><h3>Les monoplaces</h3><p>Les voitures et leurs détails techniques.</p><span class="download">BIENTÔT DISPONIBLE</span></div></article>
-<article class="wallpaper-card"><div class="wallpaper-preview"><div class="symbol">🏁</div><strong>LIVRÉES F1</strong><small>FOND D'ÉCRAN À AJOUTER</small></div><div class="wallpaper-info"><h3>Livrées des écuries</h3><p>Couleurs et designs des équipes.</p><span class="download">BIENTÔT DISPONIBLE</span></div></article>
-</div>
+
+
+<!-- COLLECTION ÉCURIES -->
+
+<section class="content-section" id="ecuries">
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Univers Formula 1
+      </div>
+
+      <h2>
+        LES <span>ÉCURIES</span>
+      </h2>
+
+      <p>
+        Découvrez prochainement les équipes,
+        leurs monoplaces et leurs livrées
+        à travers des créations FBA Wallpapers.
+      </p>
+
+      <div class="redline"></div>
+
+    </div>
+
+    <div class="coming-grid">
+
+      <!-- ÉCURIES -->
+
+      <article class="coming-card">
+
+        <div class="symbol">🏎️</div>
+
+        <h3>
+          COLLECTION DES ÉCURIES
+        </h3>
+
+        <p>
+          Les équipes du championnat
+          du monde de Formule 1,
+          leurs identités et leurs couleurs.
+        </p>
+
+        <span class="status">
+          PROCHAINEMENT
+        </span>
+
+      </article>
+
+      <!-- MONOPLACES -->
+
+      <article class="coming-card">
+
+        <div class="symbol">🔧</div>
+
+        <h3>
+          LES MONOPLACES
+        </h3>
+
+        <p>
+          Les voitures de compétition,
+          leurs lignes aérodynamiques
+          et leurs détails techniques.
+        </p>
+
+        <span class="status">
+          PROCHAINEMENT
+        </span>
+
+      </article>
+
+      <!-- LIVRÉES -->
+
+      <article class="coming-card">
+
+        <div class="symbol">🏁</div>
+
+        <h3>
+          LES LIVRÉES F1
+        </h3>
+
+        <p>
+          Les couleurs emblématiques
+          et les designs des monoplaces
+          de la saison 2026.
+        </p>
+
+        <span class="status">
+          PROCHAINEMENT
+        </span>
+
+      </article>
+
+    </div>
+
+  </div>
+
 </section>
-<section id="circuits">
-<div class="section-title"><h2>LES <span>CIRCUITS</span></h2><p>Les tracés mythiques du calendrier de Formule 1.</p></div>
-<div class="wallpaper-grid">
-<article class="wallpaper-card"><div class="wallpaper-preview"><div class="symbol">🏁</div><strong>CIRCUITS F1</strong><small>FOND D'ÉCRAN À AJOUTER</small></div><div class="wallpaper-info"><h3>Collection des circuits</h3><p>Les tracés du championnat.</p><span class="download">BIENTÔT DISPONIBLE</span></div></article>
-<article class="wallpaper-card"><div class="wallpaper-preview"><div class="symbol">🏟️</div><strong>GRANDS PRIX</strong><small>FOND D'ÉCRAN À AJOUTER</small></div><div class="wallpaper-info"><h3>Les Grands Prix</h3><p>Les lieux emblématiques de la compétition.</p><span class="download">BIENTÔT DISPONIBLE</span></div></article>
-<article class="wallpaper-card"><div class="wallpaper-preview"><div class="symbol">🌍</div><strong>F1 À TRAVERS LE MONDE</strong><small>FOND D'ÉCRAN À AJOUTER</small></div><div class="wallpaper-info"><h3>La F1 dans le monde</h3><p>Les circuits et leurs environnements.</p><span class="download">BIENTÔT DISPONIBLE</span></div></article>
-</div>
+
+<!-- COLLECTION CIRCUITS -->
+
+<section class="content-section" id="circuits"
+  style="background:#0d1016;border-top:1px solid #292d37;border-bottom:1px solid #292d37;">
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Les circuits légendaires
+      </div>
+
+      <h2>
+        LES <span>CIRCUITS</span>
+      </h2>
+
+      <p>
+        Des tracés mythiques aux
+        Grands Prix les plus emblématiques,
+        explorez bientôt la Formule 1
+        à travers le monde.
+      </p>
+
+      <div class="redline"></div>
+
+    </div>
+
+    <div class="coming-grid">
+
+      <!-- CIRCUITS -->
+
+      <article class="coming-card">
+
+        <div class="symbol">🏁</div>
+
+        <h3>
+          CIRCUITS F1
+        </h3>
+
+        <p>
+          Les tracés du championnat,
+          leurs courbes et leurs
+          caractéristiques uniques.
+        </p>
+
+        <span class="status">
+          PROCHAINEMENT
+        </span>
+
+      </article>
+
+      <!-- GRANDS PRIX -->
+
+      <article class="coming-card">
+
+        <div class="symbol">🏟️</div>
+
+        <h3>
+          LES GRANDS PRIX
+        </h3>
+
+        <p>
+          Monaco, Monza, Spa-Francorchamps
+          et les lieux qui ont marqué
+          l'histoire de la discipline.
+        </p>
+
+        <span class="status">
+          PROCHAINEMENT
+        </span>
+
+      </article>
+
+      <!-- FORMULE 1 MONDIALE -->
+
+      <article class="coming-card">
+
+        <div class="symbol">🌍</div>
+
+        <h3>
+          LA F1 DANS LE MONDE
+        </h3>
+
+        <p>
+          Des circuits urbains
+          aux pistes historiques,
+          un voyage au cœur
+          des destinations de la F1.
+        </p>
+
+        <span class="status">
+          PROCHAINEMENT
+        </span>
+
+      </article>
+
+    </div>
+
+  </div>
+
 </section>
-<div class="notice"><strong>COLLECTION EN DÉVELOPPEMENT</strong><p> Les fiches des 22 pilotes et leurs 66 aperçus sont disponibles. Les collections Écuries et Circuits seront ajoutées progressivement. La boutique reste en démonstration : aucun paiement ni téléchargement HD n'est activé.</p></div>
-<div class="return"><a class="back" href="fba-wallpapers.html">RETOUR À FBA WALLPAPERS</a></div>
+
+<!-- INFORMATIONS BOUTIQUE -->
+
+<section class="content-section">
+
+  <div class="wrap">
+
+    <div class="notice">
+
+      <strong>
+        COLLECTION EN DÉVELOPPEMENT
+      </strong>
+
+      <p>
+        Les fiches des 22 pilotes
+        et leurs 66 aperçus de fonds
+        d'écran sont disponibles.
+      </p>
+
+      <p>
+        Les collections Écuries et Circuits
+        seront enrichies progressivement.
+      </p>
+
+      <p>
+        La boutique est actuellement
+        en préparation. Aucun paiement
+        ni téléchargement HD n'est
+        encore activé.
+      </p>
+
+    </div>
+
+    <div class="return">
+
+      <a class="back"
+         href="fba-wallpapers-automobile.html">
+        RETOUR À AUTOMOBILE & SPORT MÉCANIQUE
+      </a>
+
+    </div>
+
+    <div class="return">
+
+      <a class="back"
+         href="fba-wallpapers.html">
+        TOUS LES UNIVERS FBA
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
 </main>
-<footer><strong>FONDECRANBYALEXIS</strong><br>FBA WALLPAPERS — FORMULA 1<br>© 2026 — Tous droits réservés.</footer>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="wrap">
+
+    <strong>
+      FONDECRANBYALEXIS
+    </strong>
+
+    <div>
+      FBA WALLPAPERS — FORMULA 1
+    </div>
+
+    <div>
+      © 2026 — Tous droits réservés.
+    </div>
+
+    <div class="footer-links">
+
+      <a href="index.html">
+        Accueil
+      </a>
+
+      <a href="fba-wallpapers.html">
+        FBA Wallpapers
+      </a>
+
+      <a href="fba-wallpapers-automobile.html">
+        Automobile
+      </a>
+
+      <a href="#pilotes">
+        Les 22 pilotes
+      </a>
+
+    </div>
+
+  </div>
+
+</footer>
+
 </body>
 </html>
