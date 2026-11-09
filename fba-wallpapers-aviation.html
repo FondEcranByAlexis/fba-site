@@ -4,19 +4,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#080808">
+<meta name="theme-color" content="#08090d">
 
-<meta name="description"
-content="Explorez l'univers Aviation de FBA Wallpapers : aviation civile, avions militaires, hélicoptères et avions légendaires.">
+<meta name="description" content="Découvrez les cinq collections Aviation de FBA Wallpapers : aviation civile, militaire, hélicoptères, avions légendaires et géants du ciel.">
 
 <title>Aviation & Géants du Ciel | FBA Wallpapers</title>
 
 <style>
 :root {
-  --bg: #080808;
-  --surface: #141414;
-  --red: #e32636;
-  --muted: #aaa;
+  --bg: #08090d;
+  --panel: #12151c;
+  --red: #ed1726;
+  --white: #f5f6f8;
+  --muted: #a8adb8;
+  --line: #303541;
 }
 
 * {
@@ -25,12 +26,13 @@ content="Explorez l'univers Aviation de FBA Wallpapers : aviation civile, avions
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 110px;
 }
 
 body {
   margin: 0;
   background: var(--bg);
-  color: #f4f4f4;
+  color: var(--white);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
 }
@@ -40,31 +42,54 @@ a {
   text-decoration: none;
 }
 
+a:focus-visible {
+  outline: 3px solid #ff5964;
+  outline-offset: 4px;
+}
+
+.wrap {
+  width: min(1160px,92%);
+  margin: auto;
+}
+
+/* HEADER */
+
 header {
-  padding: 20px;
-  background: #0d0d0d;
-  border-bottom: 1px solid #303030;
-  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(8,9,13,.95);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.top {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .brand {
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 900;
   letter-spacing: 1.5px;
+  white-space: nowrap;
 }
 
-.brand span {
+.brand span,
+h1 span,
+h2 span {
   color: var(--red);
 }
 
 nav {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 18px;
-  margin-top: 13px;
-  font-size: 12px;
-  font-weight: bold;
+  align-items: center;
+  gap: 12px 22px;
+  font-size: 13px;
 }
 
 nav a:hover {
@@ -74,143 +99,164 @@ nav a:hover {
 /* HERO */
 
 .hero {
-  position: relative;
-  min-height: 520px;
+  min-height: 530px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 90px 20px;
+  padding: 85px 20px;
   text-align: center;
 
   background:
     linear-gradient(
       180deg,
-      rgba(0,0,0,.35),
-      rgba(0,0,0,.85)
+      rgba(0,0,0,.48),
+      rgba(8,9,13,.94)
     ),
     url("images/couvertures/FBA_Wallpapers_Aviation_Premium.png")
     center 38% / cover no-repeat;
 
-  border-bottom: 1px solid #572029;
+  border-bottom: 1px solid var(--line);
 }
 
 .hero-content {
   max-width: 850px;
-  position: relative;
-  z-index: 1;
 }
 
 .eyebrow {
-  color: #ff7a86;
+  color: #ff6673;
   font-size: 12px;
-  font-weight: bold;
+  font-weight: 800;
   letter-spacing: 3px;
-  margin-bottom: 18px;
+  text-transform: uppercase;
 }
 
 h1 {
-  font-size: clamp(35px, 7vw, 68px);
+  font-size: clamp(42px,8vw,80px);
   line-height: 1.08;
-  text-transform: uppercase;
-  margin: 0 0 22px;
+  margin: 20px 0;
   text-shadow: 0 3px 18px #000;
 }
 
-h1 span {
-  color: #ff394c;
-}
-
 .hero p {
-  max-width: 650px;
+  max-width: 720px;
   margin: auto;
-  color: #e0e0e0;
+  color: #e0e2e8;
   font-size: 16px;
   text-shadow: 0 2px 8px #000;
 }
 
-.hero-button {
-  display: inline-block;
-  margin-top: 28px;
-  padding: 13px 25px;
+.slogan {
+  margin-top: 25px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+/* BOUTONS */
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.cta {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 20px;
   background: var(--red);
+  border: 1px solid var(--red);
   border-radius: 7px;
   font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.hero-button:hover {
-  background: #ff4053;
-}
-
-/* CONTENU */
-
-main {
-  max-width: 1180px;
-  margin: auto;
-  padding: 65px 20px;
-}
-
-.section-heading {
+  font-weight: 800;
   text-align: center;
-  margin-bottom: 38px;
+  transition: background .2s;
 }
 
-.section-heading h2 {
-  font-size: clamp(25px, 5vw, 36px);
-  margin: 0 0 10px;
-  text-transform: uppercase;
+.cta:hover {
+  background: #ff3442;
 }
 
-.section-heading h2 span {
-  color: var(--red);
+.cta.secondary {
+  background: transparent;
+  border-color: #777d89;
 }
 
-.section-heading p {
+.cta.secondary:hover {
+  background: #222631;
+}
+
+/* SECTION COLLECTIONS */
+
+.collections-section {
+  padding: 80px 0;
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-head h2 {
+  font-size: clamp(28px,4vw,42px);
+  margin: 12px 0;
+  line-height: 1.2;
+}
+
+.section-head p {
+  max-width: 720px;
+  margin: auto;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 15px;
 }
 
-/* CARTES */
+.redline {
+  width: 65px;
+  height: 3px;
+  margin: 18px auto 0;
+  background: var(--red);
+}
 
-.category-grid {
+/* GRILLE DES COLLECTIONS */
+
+.collection-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 25px;
-  margin-bottom: 70px;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 24px;
 }
 
-.category-card {
+.collection-card {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border: 1px solid #343434;
+  background: var(--panel);
+  border: 1px solid var(--line);
   border-radius: 16px;
-  background: linear-gradient(145deg,#191919,#101010);
-  transition: transform .3s, border-color .3s, box-shadow .3s;
+  transition: transform .25s, border-color .25s;
 }
 
-.category-card:hover {
-  transform: translateY(-6px);
+.collection-card:hover {
+  transform: translateY(-5px);
   border-color: var(--red);
-  box-shadow: 0 12px 35px rgba(227,38,54,.15);
 }
 
-.category-visual {
+.collection-preview {
   position: relative;
-  height: auto;
-aspect-ratio: 9 / 12;
+  aspect-ratio: 9 / 12;
   display: flex;
   align-items: flex-end;
-  padding: 22px;
-  overflow: hidden;
-  isolation: isolate;
-  background-color: #191919;
+  padding: 25px;
+  background-color: #171c26;
   background-size: cover;
   background-position: center;
+  border-bottom: 1px solid var(--line);
+  isolation: isolate;
 }
 
-.category-visual::before {
+.collection-preview::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -218,183 +264,211 @@ aspect-ratio: 9 / 12;
   background: linear-gradient(
     180deg,
     rgba(0,0,0,.05),
-    rgba(0,0,0,.75)
+    rgba(0,0,0,.82)
   );
 }
 
-/* LES QUATRE COUVERTURES */
+.collection-preview h3 {
+  margin: 0;
+  font-size: clamp(23px,3vw,34px);
+  line-height: 1.15;
+  text-transform: uppercase;
+  text-shadow: 0 3px 12px #000;
+}
+
+.collection-number {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 40px;
+  font-weight: 900;
+  color: rgba(255,255,255,.3);
+}
+
+/* COUVERTURES EXISTANTES */
 
 .civile {
   background-image:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,.05),
-      rgba(0,0,0,.45)
-    ),
     url("images/aviation/FBA_Aviation_Civile.png");
 }
 
-
 .militaire {
   background-image:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,.05),
-      rgba(0,0,0,.45)
-    ),
-    url("images/aviation/FBA_Helicopteres.png");
+    url("images/aviation/FBA_Aviation_Militaire.png");
 }
 
 .helicopteres {
   background-image:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,.05),
-      rgba(0,0,0,.45)
-    ),
-    url("images/aviation/FBA_Aviation_Militaire.png");
+    url("images/aviation/FBA_Helicopteres.png");
 }
-  
+
 .legendaires {
   background-image:
-    linear-gradient(
-      180deg,
-      rgba(0,0,0,.05),
-      rgba(0,0,0,.45)
-    ),
     url("images/aviation/FBA_Avions_Legendaires.png");
 }
 
-.category-number {
-  position: absolute;
-  top: 18px;
-  right: 20px;
-  font-size: 42px;
-  font-weight: 900;
-  color: rgba(255,255,255,.2);
+/* COUVERTURE À CRÉER PLUS TARD */
+
+.geants {
+  background:
+    radial-gradient(
+      ellipse at center,
+      #30455d,
+      #12151c 75%
+    );
 }
 
-.category-visual h3 {
-  margin: 0;
-  font-size: clamp(25px,4vw,36px);
-  text-transform: uppercase;
-  line-height: 1.15;
-  text-shadow: 0 3px 12px #000;
+.geants::before {
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(0,0,0,.65)
+  );
 }
 
-.category-content {
+/* INFORMATIONS COLLECTION */
+
+.collection-info {
   display: flex;
   flex-direction: column;
   flex: 1;
   padding: 25px;
 }
 
-.category-content p {
-  margin: 0 0 24px;
-  color: #bcbcbc;
+.collection-info p {
+  color: var(--muted);
   font-size: 14px;
-  flex: 1;
+  margin: 0 0 20px;
 }
 
-.category-link {
-  display: inline-block;
-  align-self: flex-start;
-  padding: 11px 16px;
-  border: 1px solid #a33b48;
+.subcategories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.subcategories span {
+  padding: 7px 10px;
+  border: 1px solid #414754;
+  border-radius: 5px;
+  color: #c8ccd5;
+  font-size: 11px;
+}
+
+.collection-link {
+  display: block;
+  margin-top: auto;
+  padding: 13px 16px;
   border-radius: 7px;
-  color: #ff9ca5;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.category-card:hover .category-link {
   background: var(--red);
   color: white;
-}
-
-/* BAS DE PAGE */
-
-.highlight {
-  padding: 45px 30px;
-  border: 1px solid #67252d;
-  border-radius: 15px;
-  background: radial-gradient(
-    ellipse at center,
-    #351116,
-    #111 75%
-  );
+  font-size: 12px;
+  font-weight: 800;
   text-align: center;
 }
 
-.highlight h2 {
-  font-size: 27px;
-  margin: 0 0 15px;
+.collection-link:hover {
+  background: #ff3442;
 }
 
-.highlight h2 span {
-  color: var(--red);
+/* INFORMATIONS COMMERCIALES */
+
+.notice {
+  padding: 40px 25px;
+  background: #151016;
+  border: 1px solid #713039;
+  border-radius: 15px;
+  text-align: center;
 }
 
-.highlight p {
-  max-width: 700px;
-  margin: auto;
-  color: #bbb;
-  font-size: 15px;
+.notice h2 {
+  font-size: clamp(25px,4vw,36px);
+  margin: 12px 0;
 }
 
-.back {
-  display: inline-block;
-  margin-top: 27px;
-  padding: 12px 20px;
-  border: 1px solid var(--red);
-  border-radius: 7px;
-  font-size: 12px;
-  font-weight: bold;
+.notice p {
+  max-width: 750px;
+  margin: 0 auto 16px;
+  color: #c1c5ce;
+  font-size: 14px;
 }
 
-.back:hover {
-  background: var(--red);
-}
+/* FOOTER */
 
 footer {
-  padding: 30px 15px;
-  border-top: 1px solid #292929;
+  border-top: 1px solid var(--line);
+  padding: 35px 15px;
   text-align: center;
-  color: #888;
-  font-size: 12px;
+  color: #858c99;
+  font-size: 13px;
 }
 
 footer strong {
-  color: #eee;
+  color: #ddd;
 }
 
-/* MOBILE */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+  margin-top: 15px;
+}
 
-@media (max-width: 700px) {
-  .category-grid {
+.footer-links a:hover {
+  color: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .collection-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .top {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  nav {
+    justify-content: center;
+    font-size: 12px;
   }
 
   .hero {
-    min-height: 480px;
-    padding: 75px 18px;
+    min-height: 440px;
+    padding: 65px 18px;
   }
 
-  .category-visual {
-  height: auto;
-  aspect-ratio: 9 / 12;
-  background-position: center;
+  .collections-section {
+    padding: 55px 0;
   }
 
-  main {
-    padding: 45px 16px;
+  .collection-info {
+    padding: 20px;
+  }
+
+  .hero-actions .cta {
+    width: 100%;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    scroll-behavior: auto !important;
-    transition: none !important;
+  html {
+    scroll-behavior: auto;
+  }
+
+  .collection-card {
+    transition: none;
+  }
+
+  .collection-card:hover {
+    transform: none;
   }
 }
 </style>
@@ -403,140 +477,385 @@ footer strong {
 <body>
 
 <header>
-  <a class="brand" href="index.html">
-    FOND<span>ECRAN</span>BYALEXIS
-  </a>
+  <div class="wrap top">
 
-  <nav>
-    <a href="index.html">ACCUEIL</a>
-    <a href="fba-wallpapers.html">WALLPAPERS</a>
-    <a href="fba-studio.html">FBA STUDIO</a>
-  </nav>
+    <a class="brand" href="index.html">
+      FOND<span>ECRAN</span>BYALEXIS
+    </a>
+
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="fba-wallpapers.html">Wallpapers</a>
+      <a href="fba-wallpapers-aviation.html">Aviation</a>
+      <a href="fba-studio.html">FBA Studio</a>
+    </nav>
+
+  </div>
 </header>
+
+<main>
 
 <section class="hero">
   <div class="hero-content">
 
     <div class="eyebrow">
-      FBA WALLPAPERS / UNIVERS 02
+      FBA Wallpapers / Univers 02
     </div>
 
-    <h1>AVIATION <span>& GÉANTS DU CIEL</span></h1>
+    <h1>
+      AVIATION <span>& GÉANTS DU CIEL</span>
+    </h1>
 
     <p>
-      Explorez les merveilles de l'aviation,
-      des avions de ligne aux chasseurs militaires,
-      des hélicoptères aux appareils légendaires.
+      Découvrez les merveilles de
+      l'aéronautique, des avions civils
+      aux chasseurs militaires,
+      des hélicoptères aux machines
+      les plus extraordinaires du ciel.
     </p>
 
-    <a href="#collections" class="hero-button">
-      EXPLORER LES COLLECTIONS
-    </a>
+    <div class="slogan">
+      DES PASSIONS À ACCROCHER AUX MURS.
+    </div>
+
+    <div class="hero-actions">
+
+      <a href="#collections" class="cta">
+        EXPLORER LES COLLECTIONS
+      </a>
+
+      <a href="fba-wallpapers.html"
+         class="cta secondary">
+        RETOUR AUX WALLPAPERS
+      </a>
+
+    </div>
 
   </div>
 </section>
 
-<main>
 
-<section id="collections">
+<!-- COLLECTIONS AVIATION -->
 
-  <div class="section-heading">
-    <h2>CHOISISSEZ <span>VOTRE UNIVERS</span></h2>
-    <p>
-      Quatre univers pour découvrir les machines du ciel.
-    </p>
-  </div>
+<section class="collections-section" id="collections">
+  <div class="wrap">
 
-  <div class="category-grid">
+    <div class="section-head">
+      <div class="eyebrow">
+        FBA WALLPAPERS / AVIATION
+      </div>
 
-    <a href="#aviation-civile" class="category-card">
-      <div class="category-visual civile">
-        <span class="category-number">01</span>
-        <h3>AVIATION CIVILE</h3>
-      </div>
-      <div class="category-content" id="aviation-civile">
-        <p>
-          Airbus, Boeing, avions de ligne,
-          aviation privée et appareils régionaux.
-        </p>
-        <span class="category-link">
-          DÉCOUVRIR L'AVIATION CIVILE
-        </span>
-      </div>
-    </a>
+      <h2>
+        EXPLOREZ <span>LE CIEL</span>
+      </h2>
 
-    <a href="#aviation-militaire" class="category-card">
-      <div class="category-visual militaire">
-        <span class="category-number">02</span>
-        <h3>AVIATION MILITAIRE</h3>
-      </div>
-      <div class="category-content" id="aviation-militaire">
-        <p>
-          Rafale, Mirage, F-35, avions de transport
-          militaire et patrouilles acrobatiques.
-        </p>
-        <span class="category-link">
-          DÉCOUVRIR L'AVIATION MILITAIRE
-        </span>
-      </div>
-    </a>
+      <p>
+        Cinq collections premium consacrées
+        aux plus belles machines volantes.
+        Découvrez les avions civils,
+        militaires, hélicoptères,
+        légendes et géants de l'aviation.
+      </p>
 
-    <a href="#helicopteres" class="category-card">
-      <div class="category-visual helicopteres">
-        <span class="category-number">03</span>
-        <h3>HÉLICOPTÈRES</h3>
-      </div>
-      <div class="category-content" id="helicopteres">
-        <p>
-          Sécurité civile, SAMU, hélicoptères
-          militaires et missions de sauvetage.
-        </p>
-        <span class="category-link">
-          DÉCOUVRIR LES HÉLICOPTÈRES
-        </span>
-      </div>
-    </a>
+      <div class="redline"></div>
+    </div>
 
-    <a href="#avions-legendaires" class="category-card">
-      <div class="category-visual legendaires">
-        <span class="category-number">04</span>
-        <h3>AVIONS LÉGENDAIRES</h3>
-      </div>
-      <div class="category-content" id="avions-legendaires">
-        <p>
-          Concorde, Boeing 747, Antonov An-225
-          et les appareils qui ont marqué l'histoire.
-        </p>
-        <span class="category-link">
-          DÉCOUVRIR LES LÉGENDES
-        </span>
-      </div>
-    </a>
+    <div class="collection-grid">
 
+      <!-- 01 AVIATION CIVILE -->
+
+      <article class="collection-card">
+
+        <div class="collection-preview civile">
+          <span class="collection-number">01</span>
+          <h3>AVIATION CIVILE</h3>
+        </div>
+
+        <div class="collection-info">
+
+          <p>
+            Découvrez les appareils
+            qui transportent chaque jour
+            des millions de passagers
+            et des marchandises
+            aux quatre coins du monde.
+          </p>
+
+          <div class="subcategories">
+            <span>AVIONS DE LIGNE</span>
+            <span>AVIONS CARGO</span>
+            <span>AVIATION PRIVÉE</span>
+          </div>
+
+          <a href="fba-aviation-civile.html"
+             class="collection-link">
+            EXPLORER L'AVIATION CIVILE
+          </a>
+
+        </div>
+      </article>
+
+
+      <!-- 02 AVIATION MILITAIRE -->
+
+      <article class="collection-card">
+
+        <div class="collection-preview militaire">
+          <span class="collection-number">02</span>
+          <h3>AVIATION MILITAIRE</h3>
+        </div>
+
+        <div class="collection-info">
+
+          <p>
+            Entrez dans l'univers
+            des avions de combat,
+            des bombardiers stratégiques
+            et des appareils militaires
+            conçus pour les missions
+            les plus exigeantes.
+          </p>
+
+          <div class="subcategories">
+            <span>AVIONS DE CHASSE</span>
+            <span>BOMBARDIERS</span>
+            <span>TRANSPORT MILITAIRE</span>
+          </div>
+
+          <a href="fba-aviation-militaire.html"
+             class="collection-link">
+            EXPLORER L'AVIATION MILITAIRE
+          </a>
+
+        </div>
+      </article>
+
+
+      <!-- 03 HÉLICOPTÈRES -->
+
+      <article class="collection-card">
+
+        <div class="collection-preview helicopteres">
+          <span class="collection-number">03</span>
+          <h3>HÉLICOPTÈRES</h3>
+        </div>
+
+        <div class="collection-info">
+
+          <p>
+            Des interventions de secours
+            aux opérations militaires,
+            découvrez les hélicoptères
+            qui accomplissent
+            des missions exceptionnelles
+            dans le monde entier.
+          </p>
+
+          <div class="subcategories">
+            <span>HÉLICOPTÈRES DE SECOURS</span>
+            <span>HÉLICOPTÈRES MILITAIRES</span>
+            <span>HÉLICOPTÈRES CIVILS</span>
+          </div>
+
+          <a href="fba-helicopteres.html"
+             class="collection-link">
+            EXPLORER LES HÉLICOPTÈRES
+          </a>
+
+        </div>
+      </article>
+
+
+      <!-- 04 AVIONS LÉGENDAIRES -->
+
+      <article class="collection-card">
+
+        <div class="collection-preview legendaires">
+          <span class="collection-number">04</span>
+          <h3>AVIONS LÉGENDAIRES</h3>
+        </div>
+
+        <div class="collection-info">
+
+          <p>
+            Revivez les grandes heures
+            de l'aéronautique à travers
+            les avions historiques,
+            les machines mythiques
+            et les appareils ayant
+            repoussé les limites du vol.
+          </p>
+
+          <div class="subcategories">
+            <span>AVIONS HISTORIQUES</span>
+            <span>AVIONS MYTHIQUES</span>
+            <span>RECORDS AÉRONAUTIQUES</span>
+          </div>
+
+          <a href="fba-avions-legendaires.html"
+             class="collection-link">
+            EXPLORER LES LÉGENDES
+          </a>
+
+        </div>
+      </article>
+
+
+      <!-- 05 GÉANTS DU CIEL -->
+
+      <article class="collection-card">
+
+        <div class="collection-preview geants">
+          <span class="collection-number">05</span>
+          <h3>GÉANTS DU CIEL</h3>
+        </div>
+
+        <div class="collection-info">
+
+          <p>
+            Découvrez les appareils
+            les plus impressionnants
+            jamais construits :
+            avions gigantesques,
+            transporteurs hors normes
+            et prouesses de l'ingénierie
+            aéronautique.
+          </p>
+
+          <div class="subcategories">
+            <span>AVIONS GÉANTS</span>
+            <span>TRANSPORTEURS EXCEPTIONNELS</span>
+            <span>APPAREILS HORS NORMES</span>
+          </div>
+
+          <a href="fba-geants-du-ciel.html"
+             class="collection-link">
+            EXPLORER LES GÉANTS DU CIEL
+          </a>
+
+        </div>
+      </article>
+
+    </div>
   </div>
 </section>
 
-<section class="highlight">
-  <h2>LA PASSION <span>DU CIEL</span></h2>
 
-  <p>
-    FBA Wallpapers célèbre l'aviation à travers
-    des collections visuelles immersives.
-    De nouvelles créations viendront
-    enrichir régulièrement cet univers.
-  </p>
+<!-- INFORMATIONS COMMERCIALES -->
 
-  <a href="fba-wallpapers.html" class="back">
-    RETOUR AUX COLLECTIONS FBA
-  </a>
+<section class="collections-section"
+         style="background:#0d1016;
+         border-top:1px solid #292d37;">
+
+  <div class="wrap">
+
+    <div class="notice">
+
+      <div class="eyebrow">
+        FBA WALLPAPERS PREMIUM
+      </div>
+
+      <h2>
+        LA PASSION <span>DU CIEL</span>
+      </h2>
+
+      <p>
+        FBA Wallpapers célèbre
+        l'univers aéronautique
+        à travers des créations
+        visuelles premium au format 9:16.
+      </p>
+
+      <p>
+        Les fonds d'écran seront
+        présentés sur le site
+        à travers des aperçus
+        basse résolution avec filigrane.
+        Les fichiers originaux
+        haute définition resteront
+        dans un espace de stockage privé.
+      </p>
+
+      <p>
+        Lorsque la boutique sera
+        opérationnelle, les visiteurs
+        pourront sélectionner leurs
+        créations et les ajouter
+        directement au panier
+        sur FBA Wallpapers.
+      </p>
+
+      <p>
+        La commande sera finalisée
+        via un prestataire de
+        paiement sécurisé.
+        Les fichiers numériques
+        seront accessibles uniquement
+        après confirmation du paiement.
+      </p>
+
+      <div class="hero-actions">
+
+        <a href="fba-wallpapers.html"
+           class="cta">
+          RETOUR AUX WALLPAPERS
+        </a>
+
+        <a href="index.html"
+           class="cta secondary">
+          ACCUEIL FBA
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
 </section>
 
 </main>
 
+
+<!-- FOOTER -->
+
 <footer>
-  <strong>FONDECRANBYALEXIS</strong><br>
-  FBA WALLPAPERS — AVIATION & GÉANTS DU CIEL<br>
-  © 2026 — Tous droits réservés.
+  <div class="wrap">
+
+    <strong>FONDECRANBYALEXIS</strong>
+
+    <div>
+      FBA WALLPAPERS — AVIATION & GÉANTS DU CIEL
+    </div>
+
+    <div>
+      © 2026 — Tous droits réservés.
+    </div>
+
+    <div class="footer-links">
+
+      <a href="index.html">
+        Accueil
+      </a>
+
+      <a href="fba-wallpapers.html">
+        Wallpapers
+      </a>
+
+      <a href="fba-wallpapers-aviation.html">
+        Aviation
+      </a>
+
+      <a href="fba-studio.html">
+        FBA Studio
+      </a>
+
+      <a href="#collections">
+        Collections
+      </a>
+
+    </div>
+
+  </div>
 </footer>
 
 </body>
