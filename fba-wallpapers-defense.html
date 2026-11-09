@@ -2,508 +2,537 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080808">
-  <meta name="description" content="FBA Wallpapers : collection de fonds d'écran consacrés aux armées françaises.">
-  <title>Défense et Armées | FBA Wallpapers</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="Explorez l'univers Défense de FBA Wallpapers : Armée de Terre, Marine nationale, Armée de l'Air et de l'Espace et forces spéciales françaises.">
+<title>Défense & Armées | FBA Wallpapers</title>
 
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+<style>
+:root {
+  --bg: #080808;
+  --red: #e32636;
+  --muted: #aaa;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #080808;
-      color: #f2f2f2;
-      line-height: 1.6;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    a { color: inherit; text-decoration: none; }
+html {
+  scroll-behavior: smooth;
+}
 
-    header {
-      background: #0d0d0d;
-      border-bottom: 1px solid #292929;
-      padding: 20px;
-      text-align: center;
-    }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
 
-    .brand {
-      font-size: 21px;
-      font-weight: 900;
-      letter-spacing: 2px;
-    }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-    .brand span, h1 span, h2 span { color: #e32636; }
+header {
+  padding: 20px;
+  background: #0d0d0d;
+  border-bottom: 1px solid #303030;
+  text-align: center;
+}
 
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 18px;
-      margin-top: 12px;
-      font-size: 13px;
-    }
+.brand {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
 
-    nav a:hover { color: #e32636; }
+.brand span {
+  color: var(--red);
+}
 
-    .hero {
-      padding: 75px 20px;
-      text-align: center;
-      background: radial-gradient(ellipse at center, #421016, #111 48%, #080808 80%);
-      border-bottom: 1px solid #292929;
-    }
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 13px;
+  font-size: 12px;
+  font-weight: bold;
+}
 
-    .eyebrow {
-      color: #e32636;
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 4px;
-      margin-bottom: 15px;
-    }
+nav a:hover {
+  color: var(--red);
+}
 
-    h1 {
-      font-size: clamp(35px, 8vw, 65px);
-      letter-spacing: 2px;
-      line-height: 1.1;
-      margin-bottom: 18px;
-    }
+/* COUVERTURE PRINCIPALE */
 
-    .hero p {
-      max-width: 750px;
-      margin: auto;
-      color: #c5c5c5;
-    }
+.hero {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 20px;
+  text-align: center;
 
-    .slogan {
-      margin-top: 25px;
-      font-size: 13px;
-      letter-spacing: 3px;
-      color: #aaa;
-      font-weight: bold;
-    }
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.35),
+      rgba(0,0,0,.85)
+    ),
+    url("images/couvertures/FBA_Wallpapers_Defense_Premium.png")
+    center 38% / cover no-repeat;
 
-    main {
-      max-width: 1150px;
-      margin: auto;
-      padding: 50px 20px;
-    }
+  border-bottom: 1px solid #572029;
+}
 
-    .section-title {
-      text-align: center;
-      margin: 20px 0 30px;
-    }
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+}
 
-    .section-title h2 {
-      font-size: 26px;
-      margin-bottom: 8px;
-    }
+.eyebrow {
+  color: #ff7a86;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
 
-    .section-title p {
-      color: #999;
-      font-size: 14px;
-    }
+h1 {
+  font-size: clamp(35px,7vw,68px);
+  line-height: 1.08;
+  text-transform: uppercase;
+  margin: 0 0 22px;
+  text-shadow: 0 3px 18px #000;
+}
 
-    .category-nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 45px;
-    }
+h1 span {
+  color: #ff394c;
+}
 
-    .category-nav a {
-      border: 1px solid #713039;
-      border-radius: 25px;
-      padding: 9px 17px;
-      font-size: 12px;
-      font-weight: bold;
-      transition: .2s;
-    }
+.hero p {
+  max-width: 650px;
+  margin: auto;
+  color: #e0e0e0;
+  font-size: 16px;
+  text-shadow: 0 2px 8px #000;
+}
 
-    .category-nav a:hover {
-      background: #e32636;
-      border-color: #e32636;
-    }
+.hero-button {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 13px 25px;
+  background: var(--red);
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: background .2s, transform .2s;
+}
 
-    .wallpaper-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-bottom: 55px;
-    }
+.hero-button:hover {
+  background: #ff4053;
+  transform: translateY(-2px);
+}
 
-    .wallpaper-card {
-      overflow: hidden;
-      background: #141414;
-      border: 1px solid #303030;
-      border-radius: 12px;
-      transition: .25s;
-    }
+/* CONTENU */
 
-    .wallpaper-card:hover {
-      border-color: #e32636;
-      transform: translateY(-4px);
-    }
+main {
+  max-width: 1180px;
+  margin: auto;
+  padding: 65px 20px;
+}
 
-    .wallpaper-preview {
-      aspect-ratio: 9 / 16;
-      background: linear-gradient(145deg, #351014, #151515 65%, #080808);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      text-align: center;
-      color: #aaa;
-      border-bottom: 1px solid #303030;
-    }
+.section-heading {
+  text-align: center;
+  margin-bottom: 38px;
+}
 
-    .wallpaper-preview .symbol {
-      font-size: 42px;
-      margin-bottom: 15px;
-    }
+.section-heading h2 {
+  font-size: clamp(25px,5vw,36px);
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
 
-    .wallpaper-preview strong {
-      color: #fff;
-      font-size: 16px;
-      letter-spacing: 1px;
-    }
+.section-heading h2 span {
+  color: var(--red);
+}
 
-    .wallpaper-preview small {
-      color: #e32636;
-      margin-top: 8px;
-      font-size: 10px;
-      letter-spacing: 2px;
-    }
+.section-heading p {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0;
+}
 
-    .wallpaper-info { padding: 17px; }
+/* CARTES DES UNIVERS */
 
-    .wallpaper-info h3 {
-      font-size: 16px;
-      margin-bottom: 5px;
-    }
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 25px;
+  margin-bottom: 70px;
+}
 
-    .wallpaper-info p {
-      color: #999;
-      font-size: 12px;
-      margin-bottom: 15px;
-    }
+.category-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #343434;
+  border-radius: 16px;
+  background: linear-gradient(145deg,#191919,#101010);
+  transition: transform .3s, border-color .3s, box-shadow .3s;
+}
 
-    .download {
-      display: block;
-      text-align: center;
-      padding: 10px;
-      background: #292929;
-      border: 1px solid #555;
-      border-radius: 6px;
-      color: #777;
-      font-size: 12px;
-      font-weight: bold;
-      cursor: not-allowed;
-    }
+.category-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--red);
+  box-shadow: 0 12px 35px rgba(227,38,54,.15);
+}
 
-    .notice {
-      max-width: 750px;
-      margin: 0 auto 45px;
-      padding: 20px;
-      border: 1px solid #713039;
-      border-radius: 10px;
-      background: #170d0f;
-      text-align: center;
-      color: #bbb;
-      font-size: 13px;
-    }
+.category-visual {
+  position: relative;
+  height: auto;
+  aspect-ratio: 9 / 12;
+  display: flex;
+  align-items: flex-end;
+  padding: 22px;
+  overflow: hidden;
+  isolation: isolate;
+  background-color: #191919;
+  background-size: cover;
+  background-position: center;
+}
 
-    .back {
-      display: inline-block;
-      padding: 12px 22px;
-      border: 1px solid #e32636;
-      border-radius: 6px;
-      font-size: 13px;
-      font-weight: bold;
-      margin-top: 15px;
-    }
+.category-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,.05),
+    rgba(0,0,0,.75)
+  );
+}
 
-    .back:hover { background: #e32636; }
+/* COUVERTURES DÉFENSE */
 
-    .return {
-      text-align: center;
-      margin-top: 20px;
-    }
+.terre {
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.05),
+      rgba(0,0,0,.45)
+    ),
+    url("images/defense/FBA_Armee_de_Terre.png");
+}
 
-    footer {
-      border-top: 1px solid #292929;
-      padding: 25px 15px;
-      text-align: center;
-      color: #777;
-      font-size: 12px;
-    }
+.marine {
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.05),
+      rgba(0,0,0,.45)
+    ),
+    url("images/defense/FBA_Marine_Nationale.png");
+}
 
-    footer strong { color: #ddd; }
+.air {
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.05),
+      rgba(0,0,0,.45)
+    ),
+    url("images/defense/FBA_Armee_de_l_Air.png");
+}
 
-    @media (max-width: 750px) {
-      .wallpaper-grid { grid-template-columns: repeat(2, 1fr); }
-    }
+.speciales {
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.05),
+      rgba(0,0,0,.45)
+    ),
+    url("images/defense/FBA_Forces_Speciales.png");
+}
 
-    @media (max-width: 480px) {
-      .wallpaper-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+.category-number {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-size: 42px;
+  font-weight: 900;
+  color: rgba(255,255,255,.2);
+}
+
+.category-visual h3 {
+  margin: 0;
+  font-size: clamp(25px,4vw,36px);
+  text-transform: uppercase;
+  line-height: 1.15;
+  text-shadow: 0 3px 12px #000;
+}
+
+.category-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 25px;
+}
+
+.category-content p {
+  margin: 0 0 24px;
+  color: #bcbcbc;
+  font-size: 14px;
+  flex: 1;
+}
+
+.category-link {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 11px 16px;
+  border: 1px solid #a33b48;
+  border-radius: 7px;
+  color: #ff9ca5;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* BAS DE PAGE */
+
+.highlight {
+  padding: 45px 30px;
+  border: 1px solid #67252d;
+  border-radius: 15px;
+  background: radial-gradient(
+    ellipse at center,
+    #351116,
+    #111 75%
+  );
+  text-align: center;
+}
+
+.highlight h2 {
+  font-size: 27px;
+  margin: 0 0 15px;
+}
+
+.highlight h2 span {
+  color: var(--red);
+}
+
+.highlight p {
+  max-width: 700px;
+  margin: auto;
+  color: #bbb;
+  font-size: 15px;
+}
+
+.back {
+  display: inline-block;
+  margin-top: 27px;
+  padding: 12px 20px;
+  border: 1px solid var(--red);
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.back:hover {
+  background: var(--red);
+}
+
+footer {
+  padding: 30px 15px;
+  border-top: 1px solid #292929;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+}
+
+footer strong {
+  color: #eee;
+}
+
+/* VERSION MOBILE */
+
+@media (max-width: 700px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 480px;
+    padding: 75px 18px;
+  }
+
+  .category-visual {
+    height: auto;
+    aspect-ratio: 9 / 12;
+    background-position: center;
+  }
+
+  main {
+    padding: 45px 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <a class="brand" href="index.html">FOND<span>ECRAN</span>BYALEXIS</a>
+  <a class="brand" href="index.html">
+    FOND<span>ECRAN</span>BYALEXIS
+  </a>
+
   <nav>
     <a href="index.html">ACCUEIL</a>
     <a href="fba-wallpapers.html">WALLPAPERS</a>
-    <a href="fba-wallpapers-aviation.html">GÉANTS DU CIEL</a>
-    <a href="fba-wallpapers-secours.html">POMPIERS</a>
+    <a href="fba-studio.html">FBA STUDIO</a>
   </nav>
 </header>
 
 <section class="hero">
-  <div class="eyebrow">FBA WALLPAPERS PRÉSENTE</div>
-  <h1>DÉFENSE <span>& ARMÉES</span></h1>
-  <p>
-    Plongez dans l'univers des forces armées françaises.
-    Découvrez les véhicules, les aéronefs, les navires,
-    les équipements et les femmes et les hommes qui servent la France.
-  </p>
-  <div class="slogan">L'IMAGE PREND VIE.</div>
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      FBA WALLPAPERS / UNIVERS 05
+    </div>
+
+    <h1>DÉFENSE <span>& ARMÉES</span></h1>
+
+    <p>
+      Découvrez les forces armées françaises,
+      leurs véhicules, leurs aéronefs,
+      leurs navires et leurs unités spécialisées.
+      Un univers consacré à la technologie,
+      à l'engagement et aux missions militaires.
+    </p>
+
+    <a href="#collections" class="hero-button">
+      EXPLORER LES COLLECTIONS
+    </a>
+
+  </div>
 </section>
 
 <main>
 
-  <div class="section-title">
-    <h2>LA COLLECTION <span>DÉFENSE</span></h2>
-    <p>Quatre univers consacrés aux forces armées françaises.</p>
+<section id="collections">
+
+  <div class="section-heading">
+    <h2>CHOISISSEZ <span>VOTRE UNIVERS</span></h2>
+    <p>
+      Quatre univers consacrés aux forces armées françaises.
+    </p>
   </div>
 
-  <div class="category-nav">
-    <a href="#terre">ARMÉE DE TERRE</a>
-    <a href="#air">ARMÉE DE L'AIR</a>
-    <a href="#marine">MARINE NATIONALE</a>
-    <a href="#speciales">FORCES SPÉCIALES</a>
+  <div class="category-grid">
+
+    <article class="category-card" id="terre">
+      <div class="category-visual terre">
+        <span class="category-number">01</span>
+        <h3>ARMÉE DE TERRE</h3>
+      </div>
+      <div class="category-content">
+        <p>
+          Chars Leclerc, véhicules blindés,
+          équipements et soldats de l'Armée de Terre.
+        </p>
+        <span class="category-link">
+          COLLECTION EN PRÉPARATION
+        </span>
+      </div>
+    </article>
+
+    <article class="category-card" id="marine">
+      <div class="category-visual marine">
+        <span class="category-number">02</span>
+        <h3>MARINE NATIONALE</h3>
+      </div>
+      <div class="category-content">
+        <p>
+          Porte-avions Charles de Gaulle,
+          frégates, sous-marins et navires militaires.
+        </p>
+        <span class="category-link">
+          COLLECTION EN PRÉPARATION
+        </span>
+      </div>
+    </article>
+
+    <article class="category-card" id="air">
+      <div class="category-visual air">
+        <span class="category-number">03</span>
+        <h3>ARMÉE DE L'AIR ET DE L'ESPACE</h3>
+      </div>
+      <div class="category-content">
+        <p>
+          Rafale, avions de transport militaire,
+          bases aériennes et missions aériennes.
+        </p>
+        <span class="category-link">
+          COLLECTION EN PRÉPARATION
+        </span>
+      </div>
+    </article>
+
+    <article class="category-card" id="speciales">
+      <div class="category-visual speciales">
+        <span class="category-number">04</span>
+        <h3>FORCES SPÉCIALES</h3>
+      </div>
+      <div class="category-content">
+        <p>
+          Commandos Marine, forces spéciales terrestres,
+          commandos de l'air et équipements spécialisés.
+        </p>
+        <span class="category-link">
+          COLLECTION EN PRÉPARATION
+        </span>
+      </div>
+    </article>
+
   </div>
+</section>
 
-  <section id="terre">
-    <div class="section-title">
-      <h2>ARMÉE DE <span>TERRE</span></h2>
-      <p>Les soldats, les véhicules et les équipements terrestres.</p>
-    </div>
+<section class="highlight">
 
-    <div class="wallpaper-grid">
+  <h2>LA FORCE <span>EN IMAGES</span></h2>
 
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">🪖</div>
-          <strong>SOLDATS DE L'ARMÉE DE TERRE</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Les soldats</h3>
-          <p>Portraits et scènes de vie des militaires français.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
+  <p>
+    FBA Wallpapers met en lumière les forces armées
+    françaises à travers des collections visuelles
+    immersives. De nouvelles créations viendront
+    enrichir progressivement cet univers.
+  </p>
 
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">🛡️</div>
-          <strong>BLINDÉS ET CHARS</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Véhicules blindés</h3>
-          <p>Chars, véhicules de combat et véhicules de transport.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
+  <a href="fba-wallpapers.html" class="back">
+    RETOUR AUX COLLECTIONS FBA
+  </a>
 
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">🚛</div>
-          <strong>VÉHICULES MILITAIRES</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Véhicules et logistique</h3>
-          <p>Camions, véhicules de soutien et moyens de transport.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <section id="air">
-    <div class="section-title">
-      <h2>ARMÉE DE L'AIR <span>ET DE L'ESPACE</span></h2>
-      <p>Les aéronefs et les missions aériennes françaises.</p>
-    </div>
-
-    <div class="wallpaper-grid">
-
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">✈️</div>
-          <strong>RAFALE</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Rafale</h3>
-          <p>Le chasseur multirôle emblématique de l'aviation française.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">🛩️</div>
-          <strong>AVIONS MILITAIRES</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Aviation militaire</h3>
-          <p>Avions de transport, de reconnaissance et de soutien.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">🚁</div>
-          <strong>HÉLICOPTÈRES MILITAIRES</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Hélicoptères</h3>
-          <p>Les hélicoptères et leurs missions opérationnelles.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <section id="marine">
-    <div class="section-title">
-      <h2>MARINE <span>NATIONALE</span></h2>
-      <p>Les navires, les sous-marins et les marins français.</p>
-    </div>
-
-    <div class="wallpaper-grid">
-
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">🚢</div>
-          <strong>PORTE-AVIONS</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Porte-avions</h3>
-          <p>Le Charles de Gaulle et l'aviation embarquée.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">⚓</div>
-          <strong>FRÉGATES ET NAVIRES</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Navires de guerre</h3>
-          <p>Frégates, bâtiments de soutien et navires de combat.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">🌊</div>
-          <strong>SOUS-MARINS</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Sous-marins</h3>
-          <p>Les forces sous-marines et leurs bâtiments.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <section id="speciales">
-    <div class="section-title">
-      <h2>FORCES <span>SPÉCIALES</span></h2>
-      <p>Des unités spécialisées et des missions exigeantes.</p>
-    </div>
-
-    <div class="wallpaper-grid">
-
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">🎖️</div>
-          <strong>UNITÉS SPÉCIALES TERRESTRES</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Forces spéciales terrestres</h3>
-          <p>Des unités spécialisées de l'Armée de Terre.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">🦅</div>
-          <strong>COMMANDOS DE L'AIR</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Commandos de l'air</h3>
-          <p>Les unités spécialisées de protection et d'intervention.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">⚓</div>
-          <strong>COMMANDOS MARINE</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Commandos Marine</h3>
-          <p>Les unités d'élite de la Marine nationale.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <div class="notice">
-    <strong>COLLECTION EN CONSTRUCTION</strong><br>
-    Les emplacements sont prêts. Les fonds d'écran originaux seront
-    ajoutés progressivement. Les téléchargements seront activés
-    lorsque les fichiers seront disponibles.
-  </div>
-
-  <div class="return">
-    <a class="back" href="fba-wallpapers.html">RETOUR À FBA WALLPAPERS</a>
-  </div>
+</section>
 
 </main>
 
 <footer>
   <strong>FONDECRANBYALEXIS</strong><br>
-  FBA WALLPAPERS — DÉFENSE ET FORCES ARMÉES<br>
+  FBA WALLPAPERS — DÉFENSE & ARMÉES<br>
   © 2026 — Tous droits réservés.
 </footer>
 
