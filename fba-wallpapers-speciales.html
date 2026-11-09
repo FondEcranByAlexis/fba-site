@@ -2,502 +2,484 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080808">
-  <meta name="description" content="FBA Wallpapers : collections spéciales, éditions limitées et créations originales.">
-  <title>Collections Spéciales | FBA Wallpapers</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="FBA Wallpapers : éditions limitées, cinéma et séries, art et créativité, événements et saisons.">
+<title>Collections spéciales | FBA Wallpapers</title>
 
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+<style>
+:root {
+  --bg: #080808;
+  --red: #e32636;
+  --gold: #d6ad59;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #080808;
-      color: #f2f2f2;
-      line-height: 1.6;
-    }
+* { box-sizing: border-box; }
 
-    a { color: inherit; text-decoration: none; }
+html { scroll-behavior: smooth; }
 
-    header {
-      background: #0d0d0d;
-      border-bottom: 1px solid #292929;
-      padding: 20px;
-      text-align: center;
-    }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
 
-    .brand {
-      font-size: 21px;
-      font-weight: 900;
-      letter-spacing: 2px;
-    }
+a { color: inherit; text-decoration: none; }
 
-    .brand span, h1 span, h2 span { color: #e32636; }
+header {
+  background: #0d0d0d;
+  border-bottom: 1px solid #303030;
+  padding: 20px;
+  text-align: center;
+}
 
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 18px;
-      margin-top: 12px;
-      font-size: 13px;
-    }
+.brand {
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
 
-    nav a:hover { color: #e32636; }
+.brand span { color: var(--red); }
 
-    .hero {
-      padding: 75px 20px;
-      text-align: center;
-      background: radial-gradient(ellipse at center, #421016, #111 48%, #080808 80%);
-      border-bottom: 1px solid #292929;
-    }
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 13px;
+  font-size: 12px;
+  font-weight: bold;
+}
 
-    .eyebrow {
-      color: #e32636;
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 4px;
-      margin-bottom: 15px;
-    }
+nav a:hover { color: var(--red); }
 
-    h1 {
-      font-size: clamp(35px, 8vw, 65px);
-      letter-spacing: 2px;
-      line-height: 1.1;
-      margin-bottom: 18px;
-    }
+.hero {
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 85px 20px;
+  text-align: center;
+  background:
+    radial-gradient(
+      ellipse at 50% 35%,
+      #4b2818,
+      #21131a 52%,
+      #080808 90%
+    );
+  border-bottom: 1px solid #61412a;
+}
 
-    .hero p {
-      max-width: 750px;
-      margin: auto;
-      color: #c5c5c5;
-    }
+.hero-content { max-width: 850px; }
 
-    .slogan {
-      margin-top: 25px;
-      font-size: 13px;
-      letter-spacing: 3px;
-      color: #aaa;
-      font-weight: bold;
-    }
+.eyebrow {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
 
-    main {
-      max-width: 1150px;
-      margin: auto;
-      padding: 50px 20px;
-    }
+h1 {
+  font-size: clamp(35px, 7vw, 68px);
+  line-height: 1.1;
+  margin: 0 0 22px;
+}
 
-    .section-title {
-      text-align: center;
-      margin: 20px 0 30px;
-    }
+h1 span { color: #ff394c; }
 
-    .section-title h2 {
-      font-size: 26px;
-      margin-bottom: 8px;
-    }
+.hero p {
+  max-width: 650px;
+  margin: auto;
+  color: #d0d0d0;
+  font-size: 16px;
+}
 
-    .section-title p {
-      color: #999;
-      font-size: 14px;
-    }
+.hero-button {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 13px 25px;
+  background: var(--red);
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: bold;
+}
 
-    .category-nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 45px;
-    }
+.hero-button:hover { background: #ff4053; }
 
-    .category-nav a {
-      border: 1px solid #713039;
-      border-radius: 25px;
-      padding: 9px 17px;
-      font-size: 12px;
-      font-weight: bold;
-      transition: .2s;
-    }
+main {
+  max-width: 1180px;
+  margin: auto;
+  padding: 65px 20px;
+}
 
-    .category-nav a:hover {
-      background: #e32636;
-      border-color: #e32636;
-    }
+.section-heading {
+  text-align: center;
+  margin-bottom: 38px;
+}
 
-    .wallpaper-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-bottom: 55px;
-    }
+.section-heading h2 {
+  font-size: clamp(25px, 5vw, 36px);
+  margin: 0 0 10px;
+}
 
-    .wallpaper-card {
-      overflow: hidden;
-      background: #141414;
-      border: 1px solid #303030;
-      border-radius: 12px;
-      transition: .25s;
-    }
+.section-heading h2 span { color: var(--red); }
 
-    .wallpaper-card:hover {
-      border-color: #e32636;
-      transform: translateY(-4px);
-    }
+.section-heading p {
+  color: #aaa;
+  font-size: 14px;
+  margin: 0;
+}
 
-    .wallpaper-preview {
-      aspect-ratio: 9 / 16;
-      background: linear-gradient(145deg, #351014, #151515 65%, #080808);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      text-align: center;
-      color: #aaa;
-      border-bottom: 1px solid #303030;
-    }
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  margin-bottom: 70px;
+}
 
-    .wallpaper-preview .symbol {
-      font-size: 42px;
-      margin-bottom: 15px;
-    }
+.category-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #343434;
+  border-radius: 16px;
+  background: #141414;
+  transition: transform .3s, border-color .3s;
+}
 
-    .wallpaper-preview strong {
-      color: #fff;
-      font-size: 16px;
-      letter-spacing: 1px;
-    }
+.category-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--red);
+}
 
-    .wallpaper-preview small {
-      color: #e32636;
-      margin-top: 8px;
-      font-size: 10px;
-      letter-spacing: 2px;
-    }
+.category-card.limited { border-color: #70532e; }
 
-    .wallpaper-info { padding: 17px; }
+.category-card.limited:hover {
+  border-color: var(--gold);
+}
 
-    .wallpaper-info h3 {
-      font-size: 16px;
-      margin-bottom: 5px;
-    }
+.category-visual {
+  position: relative;
+  aspect-ratio: 9 / 10;
+  display: flex;
+  align-items: flex-end;
+  padding: 22px;
+  isolation: isolate;
+  background-color: #191919;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-    .wallpaper-info p {
-      color: #999;
-      font-size: 12px;
-      margin-bottom: 15px;
-    }
+.category-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,.03) 20%,
+    rgba(0,0,0,.15) 55%,
+    rgba(0,0,0,.88) 100%
+  );
+}
 
-    .download {
-      display: block;
-      text-align: center;
-      padding: 10px;
-      background: #292929;
-      border: 1px solid #555;
-      border-radius: 6px;
-      color: #777;
-      font-size: 12px;
-      font-weight: bold;
-      cursor: not-allowed;
-    }
+/* ====================================
+   IMAGES — DOSSIER Special
+   ==================================== */
 
-    .notice {
-      max-width: 750px;
-      margin: 0 auto 45px;
-      padding: 20px;
-      border: 1px solid #713039;
-      border-radius: 10px;
-      background: #170d0f;
-      text-align: center;
-      color: #bbb;
-      font-size: 13px;
-    }
+.editions {
+  background-image:
+    url("images/Special/FBA_Editions_Limitees.png");
+}
 
-    .back {
-      display: inline-block;
-      padding: 12px 22px;
-      border: 1px solid #e32636;
-      border-radius: 6px;
-      font-size: 13px;
-      font-weight: bold;
-      margin-top: 15px;
-    }
+.cinema {
+  background-image:
+    url("images/Special/FBA_Cinema_et_Series.png");
+}
 
-    .back:hover { background: #e32636; }
+.art {
+  background-image:
+    url("images/Special/FBA_Art_et_Creativite.png");
+}
 
-    .return {
-      text-align: center;
-      margin-top: 20px;
-    }
+.evenements {
+  background-image:
+    url("images/Special/FBA_Evenements_et_Saisons.png");
+}
 
-    footer {
-      border-top: 1px solid #292929;
-      padding: 25px 15px;
-      text-align: center;
-      color: #777;
-      font-size: 12px;
-    }
+/* ==================================== */
 
-    footer strong { color: #ddd; }
+.category-number {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-size: 42px;
+  font-weight: 900;
+  color: rgba(255,255,255,.4);
+  text-shadow: 0 2px 10px #000;
+}
 
-    @media (max-width: 750px) {
-      .wallpaper-grid { grid-template-columns: repeat(2, 1fr); }
-    }
+.category-visual h3 {
+  margin: 0;
+  font-size: clamp(23px, 4vw, 36px);
+  line-height: 1.15;
+  text-shadow: 0 3px 12px #000;
+}
 
-    @media (max-width: 480px) {
-      .wallpaper-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+.category-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 25px;
+}
+
+.category-content p {
+  margin: 0 0 24px;
+  color: #bcbcbc;
+  font-size: 14px;
+  flex: 1;
+}
+
+.category-status {
+  align-self: flex-start;
+  padding: 11px 16px;
+  border: 1px solid #a33b48;
+  border-radius: 7px;
+  color: #ff9ca5;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.limited .category-status {
+  border-color: #a47d3c;
+  color: #e8c57b;
+}
+
+.highlight {
+  padding: 45px 30px;
+  border: 1px solid #73502c;
+  border-radius: 15px;
+  background:
+    radial-gradient(ellipse at center, #352217, #111 75%);
+  text-align: center;
+}
+
+.highlight h2 {
+  font-size: 27px;
+  margin: 0 0 15px;
+}
+
+.highlight h2 span { color: var(--gold); }
+
+.highlight p {
+  max-width: 700px;
+  margin: auto;
+  color: #bbb;
+  font-size: 15px;
+}
+
+.back {
+  display: inline-block;
+  margin-top: 27px;
+  padding: 12px 20px;
+  border: 1px solid var(--red);
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.back:hover { background: var(--red); }
+
+footer {
+  padding: 30px 15px;
+  border-top: 1px solid #292929;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+}
+
+footer strong { color: #eee; }
+
+@media (max-width: 700px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 420px;
+    padding: 75px 18px;
+  }
+
+  main { padding: 45px 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .category-card { transition: none; }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <a class="brand" href="index.html">FOND<span>ECRAN</span>BYALEXIS</a>
+  <a class="brand" href="index.html">
+    FOND<span>ECRAN</span>BYALEXIS
+  </a>
+
   <nav>
     <a href="index.html">ACCUEIL</a>
     <a href="fba-wallpapers.html">WALLPAPERS</a>
-    <a href="fba-wallpapers-monuments.html">MONUMENTS</a>
-    <a href="fba-wallpapers-gaming.html">GAMING</a>
+    <a href="fba-studio.html">FBA STUDIO</a>
   </nav>
 </header>
 
 <section class="hero">
-  <div class="eyebrow">FBA WALLPAPERS PRÉSENTE</div>
-  <h1>COLLECTIONS <span>SPÉCIALES</span></h1>
-  <p>
-    Découvrez des collections originales, des éditions limitées
-    et des créations exclusives. Un espace dédié aux événements,
-    aux symboles et à l'imagination.
-  </p>
-  <div class="slogan">L'IMAGE PREND VIE.</div>
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      FBA WALLPAPERS / UNIVERS 09
+    </div>
+
+    <h1>
+      COLLECTIONS <span>SPÉCIALES</span>
+    </h1>
+
+    <p>
+      Découvrez les créations les plus exclusives
+      de FBA Wallpapers : éditions limitées,
+      cinéma et séries, art numérique et
+      événements exceptionnels.
+    </p>
+
+    <a href="#collections" class="hero-button">
+      EXPLORER LES COLLECTIONS
+    </a>
+
+  </div>
 </section>
 
 <main>
 
-  <div class="section-title">
-    <h2>LES COLLECTIONS <span>EXCLUSIVES</span></h2>
-    <p>Quatre univers pour des fonds d'écran différents et originaux.</p>
+<section id="collections">
+
+  <div class="section-heading">
+    <h2>DÉCOUVREZ <span>NOS EXCLUSIVITÉS</span></h2>
+    <p>Quatre collections originales à explorer.</p>
   </div>
 
-  <div class="category-nav">
-    <a href="#evenements">ÉVÉNEMENTS</a>
-    <a href="#france">FRANCE</a>
-    <a href="#cinema">CINÉMA ET SÉRIES</a>
-    <a href="#fba">EXCLUSIVITÉS FBA</a>
+  <div class="category-grid">
+
+    <!-- 01 : ÉDITIONS LIMITÉES -->
+    <article class="category-card limited">
+      <div class="category-visual editions">
+        <span class="category-number">01</span>
+        <h3>ÉDITIONS LIMITÉES</h3>
+      </div>
+
+      <div class="category-content">
+        <p>
+          Des créations exclusives et numérotées,
+          identifiées par notre billet d'or signature
+          000/100. Chaque visuel appartient à une
+          série spéciale.
+        </p>
+
+        <span class="category-status">
+          COLLECTION EN PRÉPARATION
+        </span>
+      </div>
+    </article>
+
+    <!-- 02 : CINÉMA ET SÉRIES -->
+    <article class="category-card">
+      <div class="category-visual cinema">
+        <span class="category-number">02</span>
+        <h3>CINÉMA & SÉRIES</h3>
+      </div>
+
+      <div class="category-content">
+        <p>
+          Ambiances cinématographiques,
+          univers de fiction et créations
+          inspirées du grand et du petit écran.
+        </p>
+
+        <span class="category-status">
+          COLLECTION EN PRÉPARATION
+        </span>
+      </div>
+    </article>
+
+    <!-- 03 : ART ET CRÉATIVITÉ -->
+    <article class="category-card">
+      <div class="category-visual art">
+        <span class="category-number">03</span>
+        <h3>ART & CRÉATIVITÉ</h3>
+      </div>
+
+      <div class="category-content">
+        <p>
+          Art numérique, compositions abstraites,
+          créations colorées et expérimentations
+          visuelles originales.
+        </p>
+
+        <span class="category-status">
+          COLLECTION EN PRÉPARATION
+        </span>
+      </div>
+    </article>
+
+    <!-- 04 : ÉVÉNEMENTS ET SAISONS -->
+    <article class="category-card">
+      <div class="category-visual evenements">
+        <span class="category-number">04</span>
+        <h3>ÉVÉNEMENTS & SAISONS</h3>
+      </div>
+
+      <div class="category-content">
+        <p>
+          Noël, Halloween, printemps, été,
+          fêtes de fin d'année et
+          événements exceptionnels.
+        </p>
+
+        <span class="category-status">
+          COLLECTION EN PRÉPARATION
+        </span>
+      </div>
+    </article>
+
   </div>
+</section>
 
-  <section id="evenements">
-    <div class="section-title">
-      <h2>ÉVÉNEMENTS ET <span>CÉLÉBRATIONS</span></h2>
-      <p>Des fonds d'écran pour accompagner les moments de l'année.</p>
-    </div>
+<section class="highlight">
 
-    <div class="wallpaper-grid">
+  <h2>
+    DES CRÉATIONS <span>UNIQUES</span>
+  </h2>
 
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">🎄</div>
-          <strong>NOËL ET FÊTES DE FIN D'ANNÉE</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Noël et fêtes</h3>
-          <p>Ambiances hivernales, décorations et lumières festives.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
+  <p>
+    Les Collections spéciales réunissent
+    les créations les plus originales
+    de FondEcranByAlexis.
 
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">🎃</div>
-          <strong>HALLOWEEN</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Halloween</h3>
-          <p>Ambiances sombres, mystérieuses et fantastiques.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
+    Les éditions limitées seront reconnaissables
+    à leur billet d'or numéroté,
+    intégré discrètement dans chaque composition.
+  </p>
 
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">🎆</div>
-          <strong>FÊTES ET CÉLÉBRATIONS</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Événements spéciaux</h3>
-          <p>Nouvel An, célébrations et moments marquants.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
+  <a href="fba-wallpapers.html" class="back">
+    RETOUR AUX COLLECTIONS FBA
+  </a>
 
-    </div>
-  </section>
-
-  <section id="france">
-    <div class="section-title">
-      <h2>FRANCE ET <span>IDENTITÉ</span></h2>
-      <p>Des créations autour de la France et de ses symboles.</p>
-    </div>
-
-    <div class="wallpaper-grid">
-
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">🇫🇷</div>
-          <strong>DRAPEAU FRANÇAIS</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Bleu, blanc, rouge</h3>
-          <p>Créations graphiques autour du drapeau français.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">⚜️</div>
-          <strong>SYMBOLES DE FRANCE</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Symboles et emblèmes</h3>
-          <p>Une collection inspirée de l'histoire et du patrimoine français.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">🗺️</div>
-          <strong>RÉGIONS DE FRANCE</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Régions françaises</h3>
-          <p>Des créations inspirées des territoires et de leurs paysages.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <section id="cinema">
-    <div class="section-title">
-      <h2>CINÉMA ET <span>SÉRIES</span></h2>
-      <p>Des ambiances visuelles inspirées du grand écran.</p>
-    </div>
-
-    <div class="wallpaper-grid">
-
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">🎬</div>
-          <strong>UNIVERS CINÉMATOGRAPHIQUES</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Ambiances cinéma</h3>
-          <p>Des créations originales aux atmosphères cinématographiques.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">📺</div>
-          <strong>UNIVERS DE SÉRIES</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Ambiances séries</h3>
-          <p>Des visuels inspirés des univers télévisuels.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">🌟</div>
-          <strong>HÉROS ET PERSONNAGES</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Personnages iconiques</h3>
-          <p>Des créations originales autour des héros de fiction.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <section id="fba">
-    <div class="section-title">
-      <h2>EXCLUSIVITÉS <span>FBA</span></h2>
-      <p>Des créations originales imaginées pour FondEcranByAlexis.</p>
-    </div>
-
-    <div class="wallpaper-grid">
-
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">⛰️</div>
-          <strong>COLLECTION SIGNATURE FBA</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Signature FBA</h3>
-          <p>Des fonds d'écran avec l'identité graphique de la marque.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">💎</div>
-          <strong>ÉDITIONS LIMITÉES</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Éditions limitées</h3>
-          <p>Des collections spéciales disponibles pour une durée limitée.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
-          <div class="symbol">🔥</div>
-          <strong>CRÉATIONS ORIGINALES</strong>
-          <small>VISUELS À AJOUTER</small>
-        </div>
-        <div class="wallpaper-info">
-          <h3>Créations exclusives</h3>
-          <p>Des visuels originaux conçus pour l'univers FBA.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <div class="notice">
-    <strong>COLLECTION EN CONSTRUCTION</strong><br>
-    Les emplacements sont prêts. Les fonds d'écran originaux seront
-    ajoutés progressivement. Les téléchargements seront activés
-    lorsque les fichiers seront disponibles.
-  </div>
-
-  <div class="return">
-    <a class="back" href="fba-wallpapers.html">RETOUR À FBA WALLPAPERS</a>
-  </div>
+</section>
 
 </main>
 
