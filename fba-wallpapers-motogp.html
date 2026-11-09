@@ -2,449 +2,1005 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080808">
-  <meta name="description" content="Découvrez les fonds d'écran MotoGP de FBA Wallpapers.">
-  <title>MotoGP | FBA Wallpapers</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08090d">
+<meta name="description" content="Découvrez l'univers MotoGP de FBA Wallpapers : pilotes, équipes, motos de compétition et créations visuelles premium.">
+<title>MotoGP | FBA Wallpapers</title>
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #080808;
-      color: #f2f2f2;
-      line-height: 1.6;
-    }
+<style>
+:root {
+  --bg: #08090d;
+  --panel: #12151c;
+  --red: #ed1726;
+  --white: #f5f6f8;
+  --muted: #a8adb8;
+  --line: #303541;
+}
 
-    a { color: inherit; text-decoration: none; }
+* {
+  box-sizing: border-box;
+}
 
-    header {
-      background: #0d0d0d;
-      border-bottom: 1px solid #292929;
-      padding: 20px;
-      text-align: center;
-    }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
 
-    .brand {
-      font-size: 21px;
-      font-weight: 900;
-      letter-spacing: 2px;
-    }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
 
-    .brand span, h1 span, h2 span { color: #e32636; }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 12px;
-      font-size: 13px;
-    }
+a:focus-visible {
+  outline: 3px solid #ff5964;
+  outline-offset: 4px;
+}
 
-    nav a:hover { color: #e32636; }
+.wrap {
+  width: min(1160px, 92%);
+  margin: auto;
+}
 
-    .hero {
-      padding: 75px 20px;
-      text-align: center;
-      background: radial-gradient(ellipse at center, #421016, #111 48%, #080808 80%);
-      border-bottom: 1px solid #292929;
-    }
+/* HEADER */
 
-    .eyebrow {
-      color: #e32636;
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 4px;
-      margin-bottom: 15px;
-    }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(8,9,13,.94);
+  border-bottom: 1px solid #292d37;
+  backdrop-filter: blur(12px);
+}
 
-    h1 {
-      font-size: clamp(35px, 8vw, 65px);
-      letter-spacing: 2px;
-      line-height: 1.1;
-      margin-bottom: 18px;
-    }
+.top {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
 
-    .hero p {
-      max-width: 650px;
-      margin: auto;
-      color: #c5c5c5;
-    }
+.brand {
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  font-size: 21px;
+  white-space: nowrap;
+}
 
-    .slogan {
-      margin-top: 25px;
-      font-size: 13px;
-      letter-spacing: 3px;
-      color: #aaa;
-      font-weight: bold;
-    }
+.brand span,
+h1 span,
+h2 span {
+  color: var(--red);
+}
 
-    main {
-      max-width: 1150px;
-      margin: auto;
-      padding: 50px 20px;
-    }
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px 22px;
+  font-size: 14px;
+  color: #d5d8df;
+}
 
-    .section-title {
-      text-align: center;
-      margin: 20px 0 30px;
-    }
+nav a {
+  padding: 8px 0;
+}
 
-    .section-title h2 {
-      font-size: 26px;
-      margin-bottom: 8px;
-    }
+nav a:hover {
+  color: var(--red);
+}
 
-    .section-title p {
-      color: #999;
-      font-size: 14px;
-    }
+/* HERO */
 
-    .category-nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 45px;
-    }
+.hero {
+  position: relative;
+  min-height: 490px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8,9,13,.45),
+      rgba(8,9,13,.90)
+    ),
+    url("images/automobile/FBA_MotoGP_Cinematique.png")
+    center / cover no-repeat;
+  border-bottom: 1px solid #292d37;
+}
 
-    .category-nav a {
-      border: 1px solid #713039;
-      border-radius: 25px;
-      padding: 9px 17px;
-      font-size: 12px;
-      font-weight: bold;
-      transition: .2s;
-    }
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
 
-    .category-nav a:hover {
-      background: #e32636;
-      border-color: #e32636;
-    }
+.eyebrow {
+  color: #ff5964;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
 
-    .wallpaper-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-bottom: 55px;
-    }
+h1 {
+  font-size: clamp(44px,9vw,80px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin: 20px 0;
+  text-shadow: 0 3px 18px #000;
+}
 
-    .wallpaper-card {
-      overflow: hidden;
-      background: #141414;
-      border: 1px solid #303030;
-      border-radius: 12px;
-      transition: .25s;
-    }
+.hero p {
+  max-width: 680px;
+  margin: auto;
+  color: #e1e3e9;
+  font-size: clamp(15px,2vw,19px);
+  line-height: 1.8;
+  text-shadow: 0 2px 8px #000;
+}
 
-    .wallpaper-card:hover {
-      border-color: #e32636;
-      transform: translateY(-4px);
-    }
+.slogan {
+  margin-top: 25px;
+  color: #d5d8df;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 800;
+}
 
-    .wallpaper-preview {
-      aspect-ratio: 9 / 16;
-      background: linear-gradient(145deg, #351014, #151515 65%, #080808);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      text-align: center;
-      color: #aaa;
-      border-bottom: 1px solid #303030;
-    }
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+}
 
-    .wallpaper-preview .symbol {
-      font-size: 42px;
-      margin-bottom: 15px;
-    }
+.cta {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 22px;
+  background: var(--red);
+  border: 1px solid var(--red);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+  transition: background .2s, transform .2s;
+}
 
-    .wallpaper-preview strong {
-      color: #fff;
-      font-size: 16px;
-      letter-spacing: 1px;
-    }
+.cta:hover {
+  background: #ff3442;
+  transform: translateY(-2px);
+}
 
-    .wallpaper-preview small {
-      color: #e32636;
-      margin-top: 8px;
-      font-size: 10px;
-      letter-spacing: 2px;
-    }
+.cta.secondary {
+  background: rgba(8,9,13,.65);
+  border-color: #777d89;
+}
 
-    .wallpaper-info { padding: 17px; }
+.cta.secondary:hover {
+  background: #191c25;
+}
 
-    .wallpaper-info h3 {
-      font-size: 16px;
-      margin-bottom: 5px;
-    }
+/* SECTIONS */
 
-    .wallpaper-info p {
-      color: #999;
-      font-size: 12px;
-      margin-bottom: 15px;
-    }
+.content-section {
+  padding: 70px 0;
+}
 
-    .download {
-      display: block;
-      text-align: center;
-      padding: 10px;
-      background: #292929;
-      border: 1px solid #555;
-      border-radius: 6px;
-      color: #777;
-      font-size: 12px;
-      font-weight: bold;
-      cursor: not-allowed;
-    }
+.section-head {
+  text-align: center;
+  margin-bottom: 38px;
+}
 
-    .notice {
-      max-width: 750px;
-      margin: 0 auto 45px;
-      padding: 20px;
-      border: 1px solid #713039;
-      border-radius: 10px;
-      background: #170d0f;
-      text-align: center;
-      color: #bbb;
-      font-size: 13px;
-    }
+.section-head h2 {
+  font-size: clamp(27px,4vw,42px);
+  line-height: 1.2;
+  margin: 12px 0;
+  text-transform: uppercase;
+}
 
-    .back {
-      display: inline-block;
-      padding: 12px 22px;
-      border: 1px solid #e32636;
-      border-radius: 6px;
-      font-size: 13px;
-      font-weight: bold;
-      margin-top: 15px;
-    }
+.section-head p {
+  max-width: 700px;
+  margin: auto;
+  color: var(--muted);
+  font-size: 15px;
+}
 
-    .back:hover { background: #e32636; }
+.redline {
+  height: 3px;
+  width: 64px;
+  background: var(--red);
+  margin: 17px auto 0;
+}
 
-    .return {
-      text-align: center;
-      margin-top: 20px;
-    }
+.category-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
 
-    footer {
-      border-top: 1px solid #292929;
-      padding: 25px 15px;
-      text-align: center;
-      color: #777;
-      font-size: 12px;
-    }
+.category-nav a {
+  padding: 11px 19px;
+  border: 1px solid #713039;
+  border-radius: 25px;
+  font-size: 12px;
+  font-weight: 800;
+  transition: background .2s;
+}
 
-    footer strong { color: #ddd; }
+.category-nav a:hover {
+  background: var(--red);
+}
 
-    @media (max-width: 750px) {
-      .wallpaper-grid { grid-template-columns: repeat(2, 1fr); }
-    }
+/* COLLECTION CARDS */
 
-    @media (max-width: 480px) {
-      .wallpaper-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 20px;
+}
+
+.collection-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: linear-gradient(
+    145deg,#171b24,#0e1016
+  );
+  border: 1px solid #383d49;
+  border-radius: 14px;
+  transition:
+    transform .25s,
+    border-color .25s;
+}
+
+.collection-card:hover {
+  border-color: var(--red);
+  transform: translateY(-4px);
+}
+
+.collection-visual {
+  aspect-ratio: 9 / 12;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  text-align: center;
+  background:
+    radial-gradient(
+      ellipse at center,
+      #351019,
+      #10131a 75%
+    );
+  border-bottom: 1px solid var(--line);
+}
+
+.collection-visual .symbol {
+  font-size: 46px;
+  margin-bottom: 18px;
+}
+
+.collection-visual strong {
+  font-size: 17px;
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+
+.collection-visual small {
+  margin-top: 12px;
+  color: #ff7a86;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+
+.collection-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 22px;
+}
+
+.collection-info h3 {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.collection-info p {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 0 20px;
+  flex: 1;
+}
+
+.status {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 9px 14px;
+  border: 1px solid #713039;
+  border-radius: 20px;
+  color: #ff9ca5;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* NOTICE */
+
+.notice {
+  padding: 35px 25px;
+  border: 1px solid #713039;
+  border-radius: 14px;
+  background: radial-gradient(
+    ellipse at center,
+    #291014,
+    #10131a 75%
+  );
+  text-align: center;
+}
+
+.notice h2 {
+  margin: 0 0 15px;
+  font-size: clamp(25px,4vw,36px);
+}
+
+.notice p {
+  max-width: 760px;
+  margin: 0 auto 15px;
+  color: #c1c5ce;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.notice-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid #292d37;
+  padding: 32px 15px;
+  text-align: center;
+  color: #858c99;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+footer strong {
+  color: #ddd;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+  margin-top: 15px;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+  .collection-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .top {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  nav {
+    width: 100%;
+    gap: 10px 16px;
+    font-size: 12px;
+  }
+
+  .collection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 450px;
+    padding: 70px 18px;
+  }
+
+  .content-section {
+    padding: 52px 0;
+  }
+
+  .collection-visual {
+    aspect-ratio: 9 / 10;
+  }
+
+  .hero-actions .cta {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .collection-card,
+  .cta {
+    transition: none;
+  }
+
+  .collection-card:hover,
+  .cta:hover {
+    transform: none;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <a class="brand" href="index.html">FOND<span>ECRAN</span>BYALEXIS</a>
-  <nav>
-    <a href="index.html">ACCUEIL</a>
-    <a href="fba-wallpapers.html">WALLPAPERS</a>
-    <a href="fba-wallpapers-f1.html">FORMULA 1</a>
-  </nav>
-</header>
 
-<section class="hero">
-  <div class="eyebrow">FBA WALLPAPERS PRÉSENTE</div>
-  <h1>MOTO<span>GP</span></h1>
-  <p>
-    Plongez dans l'univers du championnat du monde MotoGP :
-    pilotes, équipes, motos de compétition et circuits mythiques.
-  </p>
-  <div class="slogan">L'IMAGE PREND VIE.</div>
-</section>
+  <div class="wrap top">
+
+    <a class="brand" href="index.html">
+      FOND<span>ECRAN</span>BYALEXIS
+    </a>
+
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="fba-wallpapers.html">Wallpapers</a>
+      <a href="fba-wallpapers-automobile.html">Automobile</a>
+      <a href="#pilotes">Pilotes</a>
+    </nav>
+
+  </div>
+
+</header>
 
 <main>
 
-  <div class="section-title">
-    <h2>LA COLLECTION <span>MOTOGP</span></h2>
-    <p>Trois univers pour les passionnés de vitesse et de compétition.</p>
-  </div>
+<section class="hero">
 
-  <div class="category-nav">
-    <a href="#pilotes">PILOTES</a>
-    <a href="#equipes">ÉQUIPES</a>
-    <a href="#motos">MOTOS</a>
-  </div>
+  <div class="hero-content">
 
-  <section id="pilotes">
-    <div class="section-title">
-      <h2>LES <span>PILOTES</span></h2>
-      <p>Les pilotes qui repoussent les limites sur la piste.</p>
+    <div class="eyebrow">
+      FBA Wallpapers / Sport mécanique
     </div>
 
-    <div class="wallpaper-grid">
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
+    <h1>
+      MOTO<span>GP</span>
+    </h1>
+
+    <p>
+      Plongez dans l'univers du
+      championnat du monde MotoGP :
+      pilotes, équipes, motos de compétition
+      et circuits mythiques.
+    </p>
+
+    <div class="slogan">
+      L'IMAGE PREND VIE.
+    </div>
+
+    <div class="hero-actions">
+
+      <a href="#pilotes" class="cta">
+        EXPLORER LES COLLECTIONS
+      </a>
+
+      <a href="fba-wallpapers-automobile.html"
+         class="cta secondary">
+        UNIVERS AUTOMOBILE
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- NAVIGATION DES COLLECTIONS -->
+
+<section class="content-section" id="pilotes">
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Univers MotoGP
+      </div>
+
+      <h2>
+        LES <span>PILOTES</span>
+      </h2>
+
+      <p>
+        Découvrez prochainement les pilotes
+        du championnat du monde MotoGP
+        à travers des créations visuelles
+        dédiées à leur passion et à leurs performances.
+      </p>
+
+      <div class="redline"></div>
+
+    </div>
+
+    <div class="category-nav">
+      <a href="#pilotes">PILOTES</a>
+      <a href="#equipes">ÉQUIPES</a>
+      <a href="#motos">MOTOS</a>
+    </div>
+
+    <div class="collection-grid">
+
+      <!-- PILOTES MOTOGP -->
+
+      <article class="collection-card">
+
+        <div class="collection-visual">
           <div class="symbol">🏍️</div>
           <strong>COLLECTION PILOTES</strong>
-          <small>VISUELS À AJOUTER</small>
+          <small>CRÉATIONS EN PRÉPARATION</small>
         </div>
-        <div class="wallpaper-info">
+
+        <div class="collection-info">
+
           <h3>Pilotes MotoGP</h3>
-          <p>Fonds d'écran individuels des pilotes.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
+
+          <p>
+            Des fonds d'écran individuels
+            consacrés aux pilotes du championnat,
+            à leurs motos et à leurs performances.
+          </p>
+
+          <span class="status">
+            PROCHAINEMENT
+          </span>
+
         </div>
+
       </article>
 
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
+      <!-- PORTRAITS -->
+
+      <article class="collection-card">
+
+        <div class="collection-visual">
           <div class="symbol">🏁</div>
           <strong>PORTRAITS MOTOGP</strong>
-          <small>VISUELS À AJOUTER</small>
+          <small>CRÉATIONS EN PRÉPARATION</small>
         </div>
-        <div class="wallpaper-info">
+
+        <div class="collection-info">
+
           <h3>Portraits des pilotes</h3>
-          <p>Portraits et visuels de compétition.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
+
+          <p>
+            Des portraits cinématiques
+            mettant en valeur les pilotes,
+            leurs équipements et leur identité
+            sur les circuits.
+          </p>
+
+          <span class="status">
+            PROCHAINEMENT
+          </span>
+
         </div>
+
       </article>
 
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
+      <!-- LÉGENDES -->
+
+      <article class="collection-card">
+
+        <div class="collection-visual">
           <div class="symbol">🏆</div>
           <strong>LÉGENDES MOTOGP</strong>
-          <small>VISUELS À AJOUTER</small>
+          <small>CRÉATIONS EN PRÉPARATION</small>
         </div>
-        <div class="wallpaper-info">
+
+        <div class="collection-info">
+
           <h3>Légendes du MotoGP</h3>
-          <p>Les grands noms de l'histoire de la discipline.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
+
+          <p>
+            Un hommage visuel aux grands
+            champions qui ont marqué
+            l'histoire de la compétition
+            motocycliste.
+          </p>
+
+          <span class="status">
+            PROCHAINEMENT
+          </span>
+
         </div>
+
       </article>
-    </div>
-  </section>
 
-  <section id="equipes">
-    <div class="section-title">
-      <h2>LES <span>ÉQUIPES</span></h2>
-      <p>Les structures et les couleurs du championnat.</p>
     </div>
 
-    <div class="wallpaper-grid">
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
+  </div>
+
+</section>
+
+<!-- COLLECTION ÉQUIPES -->
+
+<section class="content-section" id="equipes"
+  style="background:#0d1016;border-top:1px solid #292d37;border-bottom:1px solid #292d37;">
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Les équipes du championnat
+      </div>
+
+      <h2>
+        LES <span>ÉQUIPES</span>
+      </h2>
+
+      <p>
+        Explorez prochainement les équipes,
+        leurs identités visuelles,
+        leurs livrées et les coulisses
+        du paddock MotoGP.
+      </p>
+
+      <div class="redline"></div>
+
+    </div>
+
+    <div class="collection-grid">
+
+      <!-- ÉQUIPES -->
+
+      <article class="collection-card">
+
+        <div class="collection-visual">
           <div class="symbol">🏍️</div>
           <strong>ÉQUIPES MOTOGP</strong>
-          <small>VISUELS À AJOUTER</small>
+          <small>CRÉATIONS EN PRÉPARATION</small>
         </div>
-        <div class="wallpaper-info">
+
+        <div class="collection-info">
+
           <h3>Collection des équipes</h3>
-          <p>Les équipes et leurs identités visuelles.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
+
+          <p>
+            Les différentes équipes
+            du championnat, leurs couleurs
+            et leurs machines de compétition.
+          </p>
+
+          <span class="status">
+            PROCHAINEMENT
+          </span>
+
         </div>
+
       </article>
 
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
+      <!-- PADDOCK -->
+
+      <article class="collection-card">
+
+        <div class="collection-visual">
           <div class="symbol">🔧</div>
           <strong>BOX ET PADDOCK</strong>
-          <small>VISUELS À AJOUTER</small>
+          <small>CRÉATIONS EN PRÉPARATION</small>
         </div>
-        <div class="wallpaper-info">
+
+        <div class="collection-info">
+
           <h3>Box et paddock</h3>
-          <p>Les coulisses des équipes et de la compétition.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
+
+          <p>
+            Les mécaniciens, les préparatifs
+            des courses et les coulisses
+            techniques des équipes.
+          </p>
+
+          <span class="status">
+            PROCHAINEMENT
+          </span>
+
         </div>
+
       </article>
 
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
+      <!-- LIVRÉES -->
+
+      <article class="collection-card">
+
+        <div class="collection-visual">
           <div class="symbol">🏁</div>
           <strong>LIVRÉES MOTOGP</strong>
-          <small>VISUELS À AJOUTER</small>
+          <small>CRÉATIONS EN PRÉPARATION</small>
         </div>
-        <div class="wallpaper-info">
+
+        <div class="collection-info">
+
           <h3>Livrées des motos</h3>
-          <p>Couleurs et designs des machines officielles.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
+
+          <p>
+            Les couleurs, les designs
+            et les détails visuels
+            des motos du championnat.
+          </p>
+
+          <span class="status">
+            PROCHAINEMENT
+          </span>
+
         </div>
+
       </article>
-    </div>
-  </section>
 
-  <section id="motos">
-    <div class="section-title">
-      <h2>LES <span>MOTOS</span></h2>
-      <p>Les machines conçues pour la performance.</p>
     </div>
 
-    <div class="wallpaper-grid">
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
+  </div>
+
+</section>
+
+<!-- COLLECTION MOTOS -->
+
+<section class="content-section" id="motos">
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        Technologie et performance
+      </div>
+
+      <h2>
+        LES <span>MOTOS</span>
+      </h2>
+
+      <p>
+        La puissance des prototypes,
+        les innovations techniques
+        et l'intensité des courses
+        à travers des collections immersives.
+      </p>
+
+      <div class="redline"></div>
+
+    </div>
+
+    <div class="collection-grid">
+
+      <!-- MACHINES DE COURSE -->
+
+      <article class="collection-card">
+
+        <div class="collection-visual">
           <div class="symbol">🏍️</div>
           <strong>MACHINES DE COURSE</strong>
-          <small>VISUELS À AJOUTER</small>
+          <small>CRÉATIONS EN PRÉPARATION</small>
         </div>
-        <div class="wallpaper-info">
+
+        <div class="collection-info">
+
           <h3>Motos de compétition</h3>
-          <p>Les prototypes et machines de course.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
+
+          <p>
+            Les prototypes MotoGP,
+            leurs performances et leurs
+            silhouettes conçues pour
+            la compétition.
+          </p>
+
+          <span class="status">
+            PROCHAINEMENT
+          </span>
+
         </div>
+
       </article>
 
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
+      <!-- DÉTAILS TECHNIQUES -->
+
+      <article class="collection-card">
+
+        <div class="collection-visual">
           <div class="symbol">⚙️</div>
           <strong>DÉTAILS TECHNIQUES</strong>
-          <small>VISUELS À AJOUTER</small>
+          <small>CRÉATIONS EN PRÉPARATION</small>
         </div>
-        <div class="wallpaper-info">
+
+        <div class="collection-info">
+
           <h3>Détails et technologies</h3>
-          <p>Aérodynamique, mécanique et innovations.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
+
+          <p>
+            Aérodynamique, mécanique,
+            freinage et innovations
+            qui font évoluer
+            les machines de course.
+          </p>
+
+          <span class="status">
+            PROCHAINEMENT
+          </span>
+
         </div>
+
       </article>
 
-      <article class="wallpaper-card">
-        <div class="wallpaper-preview">
+      <!-- ACTION EN PISTE -->
+
+      <article class="collection-card">
+
+        <div class="collection-visual">
           <div class="symbol">🏆</div>
-          <strong>DUELS ET COURSE</strong>
-          <small>VISUELS À AJOUTER</small>
+          <strong>DUELS ET COURSES</strong>
+          <small>CRÉATIONS EN PRÉPARATION</small>
         </div>
-        <div class="wallpaper-info">
+
+        <div class="collection-info">
+
           <h3>Action en piste</h3>
-          <p>Duels, dépassements et moments forts.</p>
-          <span class="download">BIENTÔT DISPONIBLE</span>
+
+          <p>
+            Dépassements, virages,
+            batailles entre pilotes
+            et moments spectaculaires
+            des Grands Prix.
+          </p>
+
+          <span class="status">
+            PROCHAINEMENT
+          </span>
+
         </div>
+
       </article>
+
     </div>
-  </section>
 
-  <div class="notice">
-    <strong>COLLECTION EN CONSTRUCTION</strong><br>
-    Les emplacements sont prêts. Les fonds d'écran originaux seront
-    ajoutés progressivement. Les téléchargements seront activés
-    lorsque les fichiers seront disponibles.
   </div>
 
-  <div class="return">
-    <a class="back" href="fba-wallpapers.html">RETOUR À FBA WALLPAPERS</a>
+</section>
+
+<!-- INFORMATIONS COLLECTION -->
+
+<section class="content-section">
+
+  <div class="wrap">
+
+    <div class="notice">
+
+      <div class="eyebrow">
+        FBA Wallpapers
+      </div>
+
+      <h2>
+        COLLECTION <span>EN PRÉPARATION</span>
+      </h2>
+
+      <p>
+        L'univers MotoGP est en cours
+        de développement.
+        Les premières créations viendront
+        progressivement enrichir
+        les collections Pilotes,
+        Équipes et Motos.
+      </p>
+
+      <p>
+        Les futurs fonds d'écran seront
+        présentés sous forme d'aperçus
+        protégés. Leur acquisition
+        se fera directement depuis
+        la boutique intégrée au site,
+        une fois celle-ci activée.
+      </p>
+
+      <p>
+        Aucun paiement ni téléchargement
+        haute définition n'est actuellement
+        disponible sur cette page.
+      </p>
+
+      <div class="notice-actions">
+
+        <a href="fba-wallpapers-automobile.html"
+           class="cta">
+          RETOUR À L'AUTOMOBILE
+        </a>
+
+        <a href="fba-wallpapers.html"
+           class="cta secondary">
+          TOUS LES UNIVERS FBA
+        </a>
+
+      </div>
+
+    </div>
+
   </div>
+
+</section>
 
 </main>
 
+<!-- FOOTER -->
+
 <footer>
-  <strong>FONDECRANBYALEXIS</strong><br>
-  FBA WALLPAPERS — MOTOGP<br>
-  © 2026 — Tous droits réservés.
+
+  <div class="wrap">
+
+    <strong>
+      FONDECRANBYALEXIS
+    </strong>
+
+    <div>
+      FBA WALLPAPERS — MOTOGP
+    </div>
+
+    <div>
+      © 2026 — Tous droits réservés.
+    </div>
+
+    <div class="footer-links">
+
+      <a href="index.html">
+        Accueil
+      </a>
+
+      <a href="fba-wallpapers.html">
+        FBA Wallpapers
+      </a>
+
+      <a href="fba-wallpapers-automobile.html">
+        Automobile
+      </a>
+
+      <a href="#pilotes">
+        Pilotes MotoGP
+      </a>
+
+    </div>
+
+  </div>
+
 </footer>
 
 </body>
