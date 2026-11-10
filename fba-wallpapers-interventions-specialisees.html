@@ -1,0 +1,1006 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08090d">
+
+<meta name="description" content="FBA Wallpapers : collection premium Interventions spécialisées. GRIMP, sauvetage-déblaiement, risques NRBC, équipes cynotechniques et secours spécialisés.">
+
+<title>Interventions spécialisées | FBA Wallpapers</title>
+
+<style>
+:root {
+  --bg: #08090d;
+  --panel: #12151c;
+  --red: #ed1726;
+  --white: #f5f6f8;
+  --muted: #a8adb8;
+  --line: #303541;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrap {
+  width: min(1180px, 92%);
+  margin: auto;
+}
+
+/* NAVIGATION */
+
+header {
+  background: #0c0e13;
+  border-bottom: 1px solid var(--line);
+  padding: 22px 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.brand span {
+  color: var(--red);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+nav a {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: bold;
+  transition: color .2s;
+}
+
+nav a:hover {
+  color: var(--red);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  padding: 90px 20px;
+  text-align: center;
+  background:
+    radial-gradient(
+      ellipse at 50% 25%,
+      #4b1925 0%,
+      #22131c 45%,
+      #08090d 88%
+    );
+  border-bottom: 1px solid #51232b;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.eyebrow {
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(38px, 7vw, 76px);
+  line-height: 1.08;
+  margin: 20px 0;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+h1 span,
+h2 span {
+  color: var(--red);
+}
+
+.hero p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #c5c9d1;
+  font-size: 16px;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.cta {
+  display: inline-block;
+  background: var(--red);
+  border: 1px solid var(--red);
+  padding: 14px 24px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .7px;
+  transition: .2s;
+}
+
+.cta:hover {
+  background: #ff4050;
+}
+
+.cta.secondary {
+  background: transparent;
+  border-color: #666b76;
+}
+
+.cta.secondary:hover {
+  border-color: var(--red);
+  background: #291017;
+}
+
+/* SECTIONS */
+
+.content-section {
+  padding: 85px 0;
+}
+
+.content-section.alt {
+  background: #0e1117;
+  border-top: 1px solid #222733;
+  border-bottom: 1px solid #222733;
+}
+
+.section-head {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 45px;
+}
+
+.section-head h2 {
+  font-size: clamp(28px, 5vw, 43px);
+  line-height: 1.2;
+  margin: 15px 0;
+  text-transform: uppercase;
+}
+
+.section-head p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.redline {
+  width: 80px;
+  height: 4px;
+  background: var(--red);
+  margin: 25px auto 0;
+  border-radius: 5px;
+}
+
+/* GRILLE DES FONDS D'ÉCRAN */
+
+.wallpaper-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.wallpaper-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  transition: .25s;
+}
+
+.wallpaper-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--red);
+  box-shadow:
+    0 15px 35px rgba(237,23,38,.12);
+}
+
+.wallpaper-preview {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 25px;
+  text-align: center;
+  background:
+    radial-gradient(
+      ellipse at 50% 35%,
+      #40202a,
+      #161922 75%
+    );
+}
+
+.preview-number {
+  position: absolute;
+  top: 20px;
+  right: 23px;
+  font-size: 40px;
+  font-weight: 900;
+  color: rgba(255,255,255,.35);
+}
+
+.wallpaper-preview strong {
+  font-size: clamp(22px, 3vw, 29px);
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.wallpaper-preview small {
+  color: #bfc4cf;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.wallpaper-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 25px;
+}
+
+.wallpaper-info h3 {
+  font-size: 20px;
+  margin: 0 0 12px;
+}
+
+.wallpaper-info p {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 0 22px;
+  flex: 1;
+}
+
+.collection-label {
+  color: var(--red);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.status {
+  display: inline-block;
+  align-self: flex-start;
+  color: #ff929c;
+  border: 1px solid #81313b;
+  border-radius: 5px;
+  padding: 9px 13px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* INFORMATIONS */
+
+.notice {
+  max-width: 950px;
+  margin: auto;
+  padding: 45px 35px;
+  border: 1px solid #713039;
+  border-radius: 15px;
+  background:
+    radial-gradient(
+      ellipse at top,
+      #32141b,
+      #11141a 80%
+    );
+  text-align: center;
+}
+
+.notice h2 {
+  font-size: clamp(25px, 5vw, 37px);
+  text-transform: uppercase;
+}
+
+.notice p {
+  color: #b8bdc7;
+  max-width: 760px;
+  margin: 16px auto;
+}
+
+/* FOOTER */
+
+footer {
+  background: #07080b;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+footer strong {
+  color: var(--white);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 22px;
+}
+
+.footer-links a:hover {
+  color: var(--red);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .wallpaper-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .header-inner {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .hero {
+    min-height: 440px;
+    padding: 75px 18px;
+  }
+
+  .content-section {
+    padding: 60px 0;
+  }
+
+  .wallpaper-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wallpaper-preview {
+    min-height: 0;
+  }
+
+  .notice {
+    padding: 35px 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .wallpaper-card,
+  .cta {
+    transition: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+  <div class="wrap header-inner">
+
+    <a href="index.html" class="brand">
+      FOND<span>ECRAN</span>BYALEXIS
+    </a>
+
+    <nav>
+      <a href="index.html">ACCUEIL</a>
+      <a href="fba-wallpapers.html">
+        WALLPAPERS
+      </a>
+      <a href="fba-wallpapers-secours.html">
+        SECOURS & INTERVENTION
+      </a>
+      <a href="fba-secours.html">
+        FBA SECOURS
+      </a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      FBA WALLPAPERS / COLLECTION 04
+    </div>
+
+    <h1>
+      INTERVENTIONS
+      <span>SPÉCIALISÉES</span>
+    </h1>
+
+    <p>
+      Découvrez les unités de secours
+      spécialisées dans les opérations
+      complexes : sauvetage en milieux
+      difficiles, risques technologiques,
+      équipes cynotechniques et
+      interventions exceptionnelles.
+    </p>
+
+    <div class="hero-actions">
+
+      <a href="#milieux-difficiles" class="cta">
+        EXPLORER LES FONDS D'ÉCRAN
+      </a>
+
+      <a href="fba-wallpapers-secours.html"
+         class="cta secondary">
+        RETOUR AUX COLLECTIONS
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SECTION 01 : SECOURS EN MILIEUX DIFFICILES -->
+
+<section class="content-section" id="milieux-difficiles">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 01 / INTERVENTIONS SPÉCIALISÉES
+      </div>
+
+      <h2>
+        SECOURS EN
+        <span>MILIEUX DIFFICILES</span>
+      </h2>
+
+      <p>
+        Découvrez les unités spécialisées
+        dans le sauvetage en hauteur,
+        les opérations de déblaiement
+        et les interventions en
+        environnements difficiles d'accès.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- 01 : GRIMP -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">01</div>
+          <strong>GRIMP</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Groupe de reconnaissance et d'intervention en milieu périlleux</h3>
+
+          <p>
+            Une équipe spécialisée
+            dans les interventions
+            en hauteur et les zones
+            difficiles d'accès,
+            utilisant cordes,
+            harnais et équipements
+            techniques de sauvetage.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- 02 : SAUVETAGE-DÉBLAIEMENT -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">02</div>
+          <strong>SAUVETAGE-DÉBLAIEMENT</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Unité de sauvetage-déblaiement</h3>
+
+          <p>
+            Des sauveteurs spécialisés
+            dans la recherche,
+            la localisation et
+            le dégagement de victimes
+            après un effondrement
+            ou une catastrophe.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- 03 : SECOURS EN CANYON -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">03</div>
+          <strong>SECOURS EN CANYON</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Intervention de secours en canyon</h3>
+
+          <p>
+            Une opération de sauvetage
+            dans un environnement
+            encaissé et aquatique,
+            mobilisant des sauveteurs
+            formés aux techniques
+            de progression sur cordes
+            et en eaux vives.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 02 : RISQUES TECHNOLOGIQUES -->
+
+<section class="content-section alt" id="risques">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 02 / RISQUES TECHNOLOGIQUES
+      </div>
+
+      <h2>
+        RISQUES TECHNOLOGIQUES
+        <span>& NRBC</span>
+      </h2>
+
+      <p>
+        Les véhicules, les équipements
+        et les unités spécialisés
+        dans les risques chimiques,
+        radiologiques, biologiques
+        et nucléaires.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- 04 : VÉHICULE RISQUES CHIMIQUES -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">04</div>
+          <strong>RISQUES CHIMIQUES</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Véhicule risques chimiques</h3>
+
+          <p>
+            Un véhicule spécialisé
+            transportant des matériels
+            de détection, de mesure
+            et de protection pour
+            les interventions impliquant
+            des substances dangereuses.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- 05 : CELLULE NRBC -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">05</div>
+          <strong>CELLULE NRBC</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Cellule spécialisée NRBC</h3>
+
+          <p>
+            Un moyen logistique
+            destiné au transport
+            d'équipements spécialisés
+            pour les interventions
+            présentant des risques
+            nucléaires, radiologiques,
+            biologiques ou chimiques.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- 06 : INTERVENTION EN MILIEU CONTAMINÉ -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">06</div>
+          <strong>MILIEU CONTAMINÉ</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Intervention en milieu contaminé</h3>
+
+          <p>
+            Une équipe spécialisée
+            portant des équipements
+            de protection adaptés
+            lors d'une opération
+            de reconnaissance
+            en environnement dangereux.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 03 : UNITÉS ET MOYENS SPÉCIALISÉS -->
+
+<section class="content-section" id="unites">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 03 / MOYENS SPÉCIALISÉS
+      </div>
+
+      <h2>
+        UNITÉS & MOYENS
+        <span>SPÉCIALISÉS</span>
+      </h2>
+
+      <p>
+        Les équipes et moyens
+        techniques mobilisés
+        pour des opérations
+        nécessitant des compétences
+        particulières.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- 07 : ÉQUIPE CYNOTECHNIQUE -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">07</div>
+          <strong>ÉQUIPE CYNOTECHNIQUE</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Équipe cynotechnique de recherche</h3>
+
+          <p>
+            Un binôme composé
+            d'un conducteur
+            et de son chien,
+            spécialisé dans
+            la recherche de personnes
+            disparues ou ensevelies.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- 08 : SAUVETAGE AQUATIQUE -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">08</div>
+          <strong>SAUVETAGE AQUATIQUE</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Unité de sauvetage aquatique</h3>
+
+          <p>
+            Des sauveteurs équipés
+            pour les opérations
+            de secours en rivière,
+            sur les plans d'eau
+            et dans les environnements
+            présentant des risques
+            liés à l'eau.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- 09 : POSTE DE COMMANDEMENT MOBILE -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">09</div>
+          <strong>COMMANDEMENT MOBILE</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Poste de commandement mobile</h3>
+
+          <p>
+            Un dispositif mobile
+            permettant de coordonner
+            les équipes, les véhicules
+            et les moyens de secours
+            lors d'une opération
+            de grande ampleur.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- INFORMATIONS COMMERCIALES -->
+
+<section class="content-section alt">
+  <div class="wrap">
+
+    <div class="notice">
+
+      <div class="eyebrow">
+        FBA WALLPAPERS PREMIUM
+      </div>
+
+      <h2>
+        LES UNITÉS
+        <span>SPÉCIALISÉES</span>
+      </h2>
+
+      <p>
+        Découvrez prochainement
+        des créations originales
+        consacrées aux unités
+        de sauvetage spécialisées,
+        aux véhicules techniques
+        et aux interventions complexes.
+      </p>
+
+      <p>
+        Les fonds d'écran seront
+        conçus au format vertical
+        9:16, avec une résolution
+        cible de 1080 × 1920 pixels.
+      </p>
+
+      <p>
+        Les aperçus publics seront
+        proposés en résolution réduite
+        avec filigrane.
+        Les fichiers originaux
+        haute définition resteront privés.
+      </p>
+
+      <p>
+        Lorsque la boutique sera activée,
+        les visiteurs pourront ajouter
+        leurs fonds d'écran au panier
+        directement sur FBA Wallpapers,
+        puis finaliser leur commande
+        par paiement sécurisé.
+      </p>
+
+      <p>
+        Les fichiers numériques
+        seront accessibles uniquement
+        après confirmation du paiement.
+      </p>
+
+      <div class="hero-actions">
+
+        <a href="fba-wallpapers-secours.html"
+           class="cta">
+          RETOUR AUX SECOURS
+        </a>
+
+        <a href="fba-wallpapers.html"
+           class="cta secondary">
+          TOUTES LES COLLECTIONS
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="wrap">
+
+    <strong>FONDECRANBYALEXIS</strong>
+
+    <div>
+      FBA WALLPAPERS —
+      INTERVENTIONS SPÉCIALISÉES
+    </div>
+
+    <div>
+      © 2026 — Tous droits réservés.
+    </div>
+
+    <div class="footer-links">
+
+      <a href="index.html">
+        Accueil
+      </a>
+
+      <a href="fba-wallpapers.html">
+        Wallpapers
+      </a>
+
+      <a href="fba-wallpapers-secours.html">
+        Secours & Intervention
+      </a>
+
+      <a href="#milieux-difficiles">
+        Milieux difficiles
+      </a>
+
+      <a href="#risques">
+        Risques technologiques
+      </a>
+
+      <a href="#unites">
+        Unités spécialisées
+      </a>
+
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
