@@ -1,0 +1,963 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="theme-color" content="#08090d">
+
+<meta name="description"
+content="Découvrez Aviation militaire par FBA Wallpapers : avions de chasse, bombardiers et transport militaire. Collections premium de fonds d'écran au format 9:16.">
+
+<title>Aviation militaire | FBA Wallpapers</title>
+
+<style>
+:root {
+  --bg: #08090d;
+  --panel: #12151c;
+  --red: #ed1726;
+  --white: #f5f6f8;
+  --muted: #a8adb8;
+  --line: #303541;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 3px solid #ff5964;
+  outline-offset: 4px;
+}
+
+.wrap {
+  width: min(1160px, 92%);
+  margin: auto;
+}
+
+/* HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(8,9,13,.95);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.top {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+}
+
+.brand span,
+h1 span,
+h2 span {
+  color: var(--red);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 22px;
+  font-size: 13px;
+}
+
+nav a:hover {
+  color: var(--red);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 490px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 15%,
+      rgba(91,110,102,.30),
+      transparent 65%
+    ),
+    linear-gradient(
+      180deg,
+      #26332f,
+      #08090d
+    );
+
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.eyebrow {
+  color: #ff6673;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(40px,8vw,78px);
+  line-height: 1.08;
+  margin: 20px 0;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  color: #c5c9d2;
+  font-size: 16px;
+}
+
+.slogan {
+  margin-top: 25px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+/* BOUTONS */
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.cta {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 20px;
+  background: var(--red);
+  border: 1px solid var(--red);
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+  transition: background .2s;
+}
+
+.cta:hover {
+  background: #ff3442;
+}
+
+.cta.secondary {
+  background: transparent;
+  border-color: #777d89;
+}
+
+.cta.secondary:hover {
+  background: #222631;
+}
+
+/* SECTIONS */
+
+.content-section {
+  padding: 75px 0;
+}
+
+.content-section.alt {
+  background: #0d1016;
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-head h2 {
+  font-size: clamp(27px,4vw,40px);
+  margin: 12px 0;
+  line-height: 1.2;
+}
+
+.section-head p {
+  max-width: 700px;
+  margin: auto;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.redline {
+  width: 65px;
+  height: 3px;
+  margin: 18px auto 0;
+  background: var(--red);
+}
+
+/* GRILLE WALLPAPERS */
+
+.wallpaper-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 22px;
+}
+
+.wallpaper-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  transition: transform .25s, border-color .25s;
+}
+
+.wallpaper-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--red);
+}
+
+.wallpaper-preview {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  text-align: center;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      #34413e,
+      #171920 70%
+    );
+
+  border-bottom: 1px solid var(--line);
+}
+
+.wallpaper-preview strong {
+  font-size: 19px;
+  line-height: 1.3;
+  letter-spacing: 1px;
+}
+
+.wallpaper-preview small {
+  margin-top: 12px;
+  color: #ff9ca5;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.preview-number {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  color: rgba(255,255,255,.3);
+  font-size: 32px;
+  font-weight: 900;
+}
+
+/* INFORMATIONS WALLPAPER */
+
+.wallpaper-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+}
+
+.wallpaper-info h3 {
+  font-size: 17px;
+  margin: 0 0 8px;
+}
+
+.wallpaper-info p {
+  flex: 1;
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0 0 18px;
+}
+
+.collection-label {
+  color: #ff9ca5;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.status {
+  display: block;
+  padding: 11px;
+  background: #252932;
+  border: 1px solid #454b57;
+  border-radius: 7px;
+  color: #b5bac5;
+  font-size: 11px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* INFORMATIONS COMMERCIALES */
+
+.notice {
+  padding: 35px 25px;
+  background: #151016;
+  border: 1px solid #713039;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.notice h2 {
+  font-size: clamp(25px,4vw,35px);
+  margin: 12px 0;
+}
+
+.notice p {
+  max-width: 720px;
+  margin: 0 auto 16px;
+  color: #c1c5ce;
+  font-size: 14px;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 32px 15px;
+  text-align: center;
+  color: #858c99;
+  font-size: 13px;
+}
+
+footer strong {
+  color: #ddd;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+  margin-top: 15px;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .wallpaper-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .top {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  nav {
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  .wallpaper-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 430px;
+    padding: 65px 18px;
+  }
+
+  .content-section {
+    padding: 55px 0;
+  }
+
+  .hero-actions .cta {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .wallpaper-card {
+    transition: none;
+  }
+
+  .wallpaper-card:hover {
+    transform: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+  <div class="wrap top">
+
+    <a class="brand" href="index.html">
+      FOND<span>ECRAN</span>BYALEXIS
+    </a>
+
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="fba-wallpapers.html">Wallpapers</a>
+      <a href="fba-wallpapers-aviation.html">Aviation</a>
+      <a href="fba-studio.html">FBA Studio</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      FBA Wallpapers / Aviation / Collection 02
+    </div>
+
+    <h1>
+      AVIATION <span>MILITAIRE</span>
+    </h1>
+
+    <p>
+      Des chasseurs supersoniques aux
+      bombardiers stratégiques,
+      découvrez les appareils
+      emblématiques de l'aviation
+      militaire mondiale.
+    </p>
+
+    <div class="slogan">
+      DES PASSIONS À ACCROCHER AUX MURS.
+    </div>
+
+    <div class="hero-actions">
+
+      <a href="#avions-de-chasse" class="cta">
+        EXPLORER LA COLLECTION
+      </a>
+
+      <a href="fba-wallpapers-aviation.html"
+         class="cta secondary">
+        RETOUR À L'AVIATION
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SECTION 01 : AVIONS DE CHASSE -->
+
+<section class="content-section" id="avions-de-chasse">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 01 / AVIATION MILITAIRE
+      </div>
+
+      <h2>AVIONS <span>DE CHASSE</span></h2>
+
+      <p>
+        Vitesse, maniabilité et technologie :
+        découvrez trois appareils emblématiques
+        de l'aviation de combat moderne.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- DASSAULT RAFALE -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">01</div>
+          <strong>DASSAULT RAFALE</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Dassault Rafale</h3>
+          <p>
+            Avion de combat multirôle français,
+            le Rafale se distingue par sa
+            polyvalence, ses ailes delta
+            et ses plans canards.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- F-22 RAPTOR -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">02</div>
+          <strong>F-22 RAPTOR</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Lockheed Martin F-22 Raptor</h3>
+          <p>
+            Chasseur américain de cinquième
+            génération conçu pour la
+            supériorité aérienne, associant
+            furtivité, supercroisière
+            et grande maniabilité.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- F-35 LIGHTNING II -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">03</div>
+          <strong>F-35 LIGHTNING II</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Lockheed Martin F-35 Lightning II</h3>
+          <p>
+            Avion de combat furtif multirôle
+            de cinquième génération,
+            équipé de capteurs avancés
+            et développé en plusieurs
+            variantes opérationnelles.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 02 : BOMBARDIERS -->
+
+<section class="content-section alt" id="bombardiers">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 02 / AVIATION MILITAIRE
+      </div>
+
+      <h2>BOMBARDIERS <span>STRATÉGIQUES</span></h2>
+
+      <p>
+        Découvrez trois bombardiers américains
+        aux silhouettes remarquables,
+        développés pour les missions
+        de frappe à longue distance.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- B-2 SPIRIT -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">04</div>
+          <strong>B-2 SPIRIT</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Northrop Grumman B-2 Spirit</h3>
+          <p>
+            Bombardier stratégique furtif
+            américain, immédiatement
+            reconnaissable à sa configuration
+            en aile volante.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- B-52 STRATOFORTRESS -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">05</div>
+          <strong>B-52 STRATOFORTRESS</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Boeing B-52 Stratofortress</h3>
+          <p>
+            Bombardier stratégique américain
+            à huit réacteurs, devenu une
+            référence de l'aviation militaire
+            grâce à sa longévité
+            et à sa capacité d'emport.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- B-1B LANCER -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">06</div>
+          <strong>B-1B LANCER</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Rockwell B-1B Lancer</h3>
+          <p>
+            Bombardier supersonique américain
+            à géométrie variable,
+            conçu pour les missions
+            de frappe conventionnelle
+            à longue distance.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 03 : TRANSPORT MILITAIRE -->
+
+<section class="content-section" id="transport-militaire">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 03 / AVIATION MILITAIRE
+      </div>
+
+      <h2>TRANSPORT <span>MILITAIRE</span></h2>
+
+      <p>
+        Des avions capables de transporter
+        du matériel, des véhicules
+        et du personnel sur de grandes
+        distances, parfois jusqu'aux
+        terrains les plus difficiles.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- AIRBUS A400M ATLAS -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">07</div>
+          <strong>AIRBUS A400M ATLAS</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Airbus A400M Atlas</h3>
+          <p>
+            Avion de transport militaire
+            européen à quatre turbopropulseurs,
+            conçu pour le transport
+            stratégique et tactique
+            de charges volumineuses.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- C-17 GLOBEMASTER III -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">08</div>
+          <strong>C-17 GLOBEMASTER III</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Boeing C-17 Globemaster III</h3>
+          <p>
+            Avion de transport militaire
+            lourd américain, capable
+            d'acheminer des véhicules,
+            des équipements et du personnel,
+            avec des capacités d'utilisation
+            sur pistes relativement courtes.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- C-130J SUPER HERCULES -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">09</div>
+          <strong>C-130J SUPER HERCULES</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Lockheed Martin C-130J Super Hercules</h3>
+          <p>
+            Avion de transport tactique
+            quadrimoteur, reconnu pour
+            sa polyvalence, sa robustesse
+            et sa capacité à opérer
+            sur des terrains exigeants.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- INFORMATIONS COMMERCIALES -->
+
+<section class="content-section alt">
+  <div class="wrap">
+
+    <div class="notice">
+
+      <div class="eyebrow">
+        FBA WALLPAPERS PREMIUM
+      </div>
+
+      <h2>
+        LA PUISSANCE <span>DE L'AVIATION</span>
+      </h2>
+
+      <p>
+        Retrouvez prochainement
+        des créations originales
+        consacrées aux appareils
+        emblématiques de l'aviation
+        militaire, au format vertical 9:16.
+      </p>
+
+      <p>
+        Les visuels publics seront
+        proposés en basse résolution
+        avec filigrane. Les fichiers
+        originaux haute définition
+        resteront dans un espace privé.
+      </p>
+
+      <p>
+        Lorsque la boutique sera activée,
+        les visiteurs pourront ajouter
+        les fonds d'écran à leur panier
+        et finaliser leur commande
+        par paiement sécurisé.
+      </p>
+
+      <p>
+        Les fichiers numériques
+        seront accessibles uniquement
+        après confirmation du paiement.
+      </p>
+
+      <div class="hero-actions">
+
+        <a href="fba-wallpapers-aviation.html"
+           class="cta">
+          RETOUR À L'AVIATION
+        </a>
+
+        <a href="fba-wallpapers.html"
+           class="cta secondary">
+          TOUTES LES COLLECTIONS
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="wrap">
+
+    <strong>FONDECRANBYALEXIS</strong>
+
+    <div>
+      FBA WALLPAPERS — AVIATION MILITAIRE
+    </div>
+
+    <div>
+      © 2026 — Tous droits réservés.
+    </div>
+
+    <div class="footer-links">
+
+      <a href="index.html">Accueil</a>
+
+      <a href="fba-wallpapers.html">
+        Wallpapers
+      </a>
+
+      <a href="fba-wallpapers-aviation.html">
+        Univers Aviation
+      </a>
+
+      <a href="#avions-de-chasse">
+        Avions de chasse
+      </a>
+
+      <a href="#bombardiers">
+        Bombardiers
+      </a>
+
+      <a href="#transport-militaire">
+        Transport militaire
+      </a>
+
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
