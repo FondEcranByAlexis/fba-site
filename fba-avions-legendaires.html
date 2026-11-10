@@ -1,0 +1,986 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08090d">
+
+<meta name="description"
+content="Découvrez les avions légendaires de FBA Wallpapers : pionniers de l'aviation, avions historiques et records aéronautiques. Fonds d'écran premium 9:16.">
+
+<title>Avions légendaires | FBA Wallpapers</title>
+
+<style>
+:root {
+  --bg: #08090d;
+  --panel: #12151c;
+  --red: #ed1726;
+  --white: #f5f6f8;
+  --muted: #a8adb8;
+  --line: #303541;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 3px solid #ff5964;
+  outline-offset: 4px;
+}
+
+.wrap {
+  width: min(1160px, 92%);
+  margin: auto;
+}
+
+/* HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(8,9,13,.95);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.top {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+}
+
+.brand span,
+h1 span,
+h2 span {
+  color: var(--red);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 22px;
+  font-size: 13px;
+}
+
+nav a:hover {
+  color: var(--red);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 490px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 15%,
+      rgba(154,107,56,.28),
+      transparent 65%
+    ),
+    linear-gradient(
+      180deg,
+      #33281f,
+      #08090d
+    );
+
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.eyebrow {
+  color: #ff6673;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(38px,8vw,78px);
+  line-height: 1.08;
+  margin: 20px 0;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  color: #c5c9d2;
+  font-size: 16px;
+}
+
+.slogan {
+  margin-top: 25px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+/* BOUTONS */
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.cta {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 20px;
+  background: var(--red);
+  border: 1px solid var(--red);
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+  transition: background .2s;
+}
+
+.cta:hover {
+  background: #ff3442;
+}
+
+.cta.secondary {
+  background: transparent;
+  border-color: #777d89;
+}
+
+.cta.secondary:hover {
+  background: #222631;
+}
+
+/* SECTIONS */
+
+.content-section {
+  padding: 75px 0;
+}
+
+.content-section.alt {
+  background: #0d1016;
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-head h2 {
+  font-size: clamp(27px,4vw,40px);
+  margin: 12px 0;
+  line-height: 1.2;
+}
+
+.section-head p {
+  max-width: 700px;
+  margin: auto;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.redline {
+  width: 65px;
+  height: 3px;
+  margin: 18px auto 0;
+  background: var(--red);
+}
+
+/* GRILLE WALLPAPERS */
+
+.wallpaper-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 22px;
+}
+
+.wallpaper-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  transition: transform .25s, border-color .25s;
+}
+
+.wallpaper-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--red);
+}
+
+.wallpaper-preview {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  text-align: center;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      #493a2b,
+      #171920 70%
+    );
+
+  border-bottom: 1px solid var(--line);
+}
+
+.wallpaper-preview strong {
+  font-size: 19px;
+  line-height: 1.3;
+  letter-spacing: 1px;
+}
+
+.wallpaper-preview small {
+  margin-top: 12px;
+  color: #ff9ca5;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.preview-number {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  color: rgba(255,255,255,.3);
+  font-size: 32px;
+  font-weight: 900;
+}
+
+/* INFORMATIONS WALLPAPER */
+
+.wallpaper-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+}
+
+.wallpaper-info h3 {
+  font-size: 17px;
+  margin: 0 0 8px;
+}
+
+.wallpaper-info p {
+  flex: 1;
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0 0 18px;
+}
+
+.collection-label {
+  color: #ff9ca5;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.status {
+  display: block;
+  padding: 11px;
+  background: #252932;
+  border: 1px solid #454b57;
+  border-radius: 7px;
+  color: #b5bac5;
+  font-size: 11px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* INFORMATIONS COMMERCIALES */
+
+.notice {
+  padding: 35px 25px;
+  background: #151016;
+  border: 1px solid #713039;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.notice h2 {
+  font-size: clamp(25px,4vw,35px);
+  margin: 12px 0;
+}
+
+.notice p {
+  max-width: 720px;
+  margin: 0 auto 16px;
+  color: #c1c5ce;
+  font-size: 14px;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 32px 15px;
+  text-align: center;
+  color: #858c99;
+  font-size: 13px;
+}
+
+footer strong {
+  color: #ddd;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+  margin-top: 15px;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .wallpaper-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .top {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  nav {
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  .wallpaper-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 430px;
+    padding: 65px 18px;
+  }
+
+  .content-section {
+    padding: 55px 0;
+  }
+
+  .hero-actions .cta {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .wallpaper-card {
+    transition: none;
+  }
+
+  .wallpaper-card:hover {
+    transform: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+  <div class="wrap top">
+
+    <a class="brand" href="index.html">
+      FOND<span>ECRAN</span>BYALEXIS
+    </a>
+
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="fba-wallpapers.html">Wallpapers</a>
+      <a href="fba-wallpapers-aviation.html">Aviation</a>
+      <a href="fba-studio.html">FBA Studio</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      FBA Wallpapers / Aviation / Collection 04
+    </div>
+
+    <h1>
+      AVIONS <span>LÉGENDAIRES</span>
+    </h1>
+
+    <p>
+      Des premiers exploits de l'aviation
+      aux machines qui ont repoussé
+      les limites de la vitesse
+      et de la technologie,
+      découvrez les appareils
+      qui ont marqué l'histoire du ciel.
+    </p>
+
+    <div class="slogan">
+      DES PASSIONS À ACCROCHER AUX MURS.
+    </div>
+
+    <div class="hero-actions">
+
+      <a href="#pionniers" class="cta">
+        EXPLORER LA COLLECTION
+      </a>
+
+      <a href="fba-wallpapers-aviation.html"
+         class="cta secondary">
+        RETOUR À L'AVIATION
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SECTION 01 : PIONNIERS DE L'AVIATION -->
+
+<section class="content-section" id="pionniers">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 01 / AVIONS LÉGENDAIRES
+      </div>
+
+      <h2>
+        PIONNIERS <span>DE L'AVIATION</span>
+      </h2>
+
+      <p>
+        Les machines qui ont ouvert
+        la voie à l'aviation moderne
+        et permis aux premiers aviateurs
+        de réaliser des exploits historiques.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- BLÉRIOT XI -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">01</div>
+          <strong>BLÉRIOT XI</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Blériot XI</h3>
+
+          <p>
+            Monoplan historique avec lequel
+            Louis Blériot réalisa la première
+            traversée de la Manche en avion
+            le 25 juillet 1909.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- WRIGHT FLYER -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">02</div>
+          <strong>WRIGHT FLYER</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Wright Flyer</h3>
+
+          <p>
+            Appareil des frères Wright,
+            associé aux premiers vols
+            motorisés, contrôlés et soutenus
+            d'un aéronef plus lourd que l'air,
+            le 17 décembre 1903.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- SPIRIT OF ST. LOUIS -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">03</div>
+          <strong>SPIRIT OF ST. LOUIS</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Spirit of St. Louis</h3>
+
+          <p>
+            Monoplan piloté par Charles
+            Lindbergh lors du premier
+            vol transatlantique en solitaire
+            et sans escale entre New York
+            et Paris, en mai 1927.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 02 : AVIONS HISTORIQUES -->
+
+<section class="content-section alt" id="historiques">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 02 / AVIONS LÉGENDAIRES
+      </div>
+
+      <h2>
+        AVIONS <span>HISTORIQUES</span>
+      </h2>
+
+      <p>
+        Trois appareils devenus
+        emblématiques grâce à leur
+        rôle dans l'histoire militaire
+        et le développement
+        du transport aérien.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- SUPERMARINE SPITFIRE -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">04</div>
+          <strong>SUPERMARINE SPITFIRE</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Supermarine Spitfire</h3>
+
+          <p>
+            Chasseur britannique de
+            la Seconde Guerre mondiale,
+            célèbre pour ses ailes
+            elliptiques et son rôle
+            dans la bataille d'Angleterre.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- P-51 MUSTANG -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">05</div>
+          <strong>P-51 MUSTANG</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>North American P-51 Mustang</h3>
+
+          <p>
+            Chasseur américain reconnu
+            pour son autonomie et ses
+            performances, notamment
+            dans l'escorte des bombardiers
+            alliés pendant la
+            Seconde Guerre mondiale.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- DOUGLAS DC-3 -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">06</div>
+          <strong>DOUGLAS DC-3</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Douglas DC-3</h3>
+
+          <p>
+            Avion bimoteur américain
+            qui transforma le transport
+            aérien commercial dans
+            les années 1930, avant
+            de connaître une longue
+            carrière civile et militaire.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 03 : LÉGENDES ET RECORDS -->
+
+<section class="content-section" id="records">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 03 / AVIONS LÉGENDAIRES
+      </div>
+
+      <h2>
+        LÉGENDES <span>ET RECORDS</span>
+      </h2>
+
+      <p>
+        Des appareils exceptionnels
+        qui ont repoussé les limites
+        de la vitesse, de la technologie
+        et des capacités de transport.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- CONCORDE -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">07</div>
+          <strong>CONCORDE</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Aérospatiale-BAC Concorde</h3>
+
+          <p>
+            Avion de ligne supersonique
+            franco-britannique, célèbre
+            pour sa silhouette élancée
+            et ses traversées
+            transatlantiques à une
+            vitesse supérieure à Mach 2.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- SR-71 BLACKBIRD -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">08</div>
+          <strong>SR-71 BLACKBIRD</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Lockheed SR-71 Blackbird</h3>
+
+          <p>
+            Avion américain de reconnaissance
+            stratégique, conçu pour voler
+            à très haute altitude
+            et à des vitesses
+            supérieures à Mach 3.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- ANTONOV AN-225 MRIYA -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">09</div>
+          <strong>ANTONOV AN-225 MRIYA</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Antonov An-225 Mriya</h3>
+
+          <p>
+            Avion de transport géant
+            ukrainien à six réacteurs,
+            détenteur de nombreux
+            records de charge utile.
+            L'unique exemplaire achevé
+            fut détruit en 2022.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- INFORMATIONS COMMERCIALES -->
+
+<section class="content-section alt">
+  <div class="wrap">
+
+    <div class="notice">
+
+      <div class="eyebrow">
+        FBA WALLPAPERS PREMIUM
+      </div>
+
+      <h2>
+        L'HISTOIRE <span>PREND SON ENVOL</span>
+      </h2>
+
+      <p>
+        Découvrez prochainement
+        des créations originales
+        consacrées aux avions
+        qui ont marqué l'histoire
+        de l'aviation, au format
+        vertical 9:16.
+      </p>
+
+      <p>
+        Les aperçus publics seront
+        proposés en basse résolution
+        avec filigrane. Les fichiers
+        originaux haute définition
+        resteront dans un espace privé.
+      </p>
+
+      <p>
+        Lorsque la boutique sera activée,
+        les visiteurs pourront ajouter
+        leurs fonds d'écran au panier
+        et finaliser leur commande
+        par paiement sécurisé.
+      </p>
+
+      <p>
+        Les fichiers numériques
+        seront accessibles uniquement
+        après confirmation du paiement.
+      </p>
+
+      <div class="hero-actions">
+
+        <a href="fba-wallpapers-aviation.html"
+           class="cta">
+          RETOUR À L'AVIATION
+        </a>
+
+        <a href="fba-wallpapers.html"
+           class="cta secondary">
+          TOUTES LES COLLECTIONS
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="wrap">
+
+    <strong>FONDECRANBYALEXIS</strong>
+
+    <div>
+      FBA WALLPAPERS — AVIONS LÉGENDAIRES
+    </div>
+
+    <div>
+      © 2026 — Tous droits réservés.
+    </div>
+
+    <div class="footer-links">
+
+      <a href="index.html">
+        Accueil
+      </a>
+
+      <a href="fba-wallpapers.html">
+        Wallpapers
+      </a>
+
+      <a href="fba-wallpapers-aviation.html">
+        Univers Aviation
+      </a>
+
+      <a href="#pionniers">
+        Pionniers de l'aviation
+      </a>
+
+      <a href="#historiques">
+        Avions historiques
+      </a>
+
+      <a href="#records">
+        Légendes et records
+      </a>
+
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
