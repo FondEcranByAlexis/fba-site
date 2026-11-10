@@ -5,791 +5,535 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#08090d">
-<meta name="description" content="FBA Wallpapers : fonds d'écran premium consacrés aux pompiers, ambulances, secours aériens, maritimes et interventions spécialisées.">
-
+<meta name="description" content="FBA Wallpapers : fonds d'écran premium dédiés aux pompiers, ambulances, secours aériens et interventions spécialisées.">
 <title>Secours & Intervention | FBA Wallpapers</title>
 
 <style>
 :root {
-  --bg: #08090d;
-  --panel: #12151c;
-  --red: #ed1726;
-  --white: #f5f6f8;
-  --muted: #a8adb8;
-  --line: #303541;
+  --bg:#08090d;
+  --panel:#12151c;
+  --red:#ed1726;
+  --white:#f5f6f8;
+  --muted:#a8adb8;
+  --line:#303541;
 }
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
 body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--white);
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.65;
+  margin:0;
+  background:var(--bg);
+  color:var(--white);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.65;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.wrap {
-  width: min(1180px, 92%);
-  margin: auto;
-}
-
-/* NAVIGATION */
+a {color:inherit;text-decoration:none}
+.wrap {width:min(1180px,92%);margin:auto}
 
 header {
-  background: #0c0e13;
-  border-bottom: 1px solid var(--line);
-  padding: 22px 0;
+  background:#0c0e13;
+  border-bottom:1px solid var(--line);
+  padding:22px 0;
 }
-
 .header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:20px;
 }
-
 .brand {
-  font-size: 22px;
-  font-weight: 900;
-  letter-spacing: 1.5px;
+  font-size:22px;
+  font-weight:900;
+  letter-spacing:1.5px;
 }
-
-.brand span {
-  color: var(--red);
-}
-
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 22px;
-}
-
+.brand span {color:var(--red)}
+nav {display:flex;flex-wrap:wrap;gap:22px}
 nav a {
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: bold;
-  transition: color .2s;
+  color:var(--muted);
+  font-size:12px;
+  font-weight:bold;
 }
-
-nav a:hover {
-  color: var(--red);
-}
-
-/* HERO */
+nav a:hover {color:var(--red)}
 
 .hero {
-  min-height: 540px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  padding: 90px 20px;
-  background:
-    radial-gradient(
-      ellipse at 50% 25%,
-      #50141e 0%,
-      #221018 40%,
-      #08090d 85%
-    );
-  border-bottom: 1px solid #51232b;
+  min-height:540px;
+  display:flex;
+  align-items:center;
+  text-align:center;
+  padding:90px 20px;
+  background:radial-gradient(
+    ellipse at 50% 25%,
+    #50141e 0%,#221018 40%,#08090d 85%
+  );
+  border-bottom:1px solid #51232b;
 }
-
-.hero-content {
-  max-width: 900px;
-  margin: auto;
-}
-
+.hero-content {max-width:900px;margin:auto}
 .eyebrow {
-  color: var(--red);
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+  color:var(--red);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:3px;
+  text-transform:uppercase;
 }
-
 h1 {
-  font-size: clamp(38px, 7vw, 76px);
-  line-height: 1.08;
-  margin: 20px 0;
-  font-weight: 900;
-  text-transform: uppercase;
+  font-size:clamp(38px,7vw,76px);
+  line-height:1.08;
+  margin:20px 0;
+  font-weight:900;
+  text-transform:uppercase;
 }
-
-h1 span,
-h2 span {
-  color: var(--red);
-}
-
+h1 span,h2 span {color:var(--red)}
 .hero p {
-  max-width: 720px;
-  margin: 0 auto;
-  color: #c5c9d1;
-  font-size: 16px;
+  max-width:720px;
+  margin:auto;
+  color:#c5c9d1;
+  font-size:16px;
 }
-
 .hero-actions {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 32px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:32px;
 }
-
 .cta {
-  display: inline-block;
-  background: var(--red);
-  border: 1px solid var(--red);
-  padding: 14px 24px;
-  border-radius: 7px;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: .7px;
-  transition: .2s;
+  display:inline-block;
+  background:var(--red);
+  border:1px solid var(--red);
+  padding:14px 24px;
+  border-radius:7px;
+  font-size:12px;
+  font-weight:800;
+  transition:.2s;
 }
-
-.cta:hover {
-  background: #ff4050;
-}
-
+.cta:hover {background:#ff4050}
 .cta.secondary {
-  background: transparent;
-  border-color: #666b76;
+  background:transparent;
+  border-color:#666b76;
 }
-
 .cta.secondary:hover {
-  border-color: var(--red);
-  background: #291017;
+  border-color:var(--red);
+  background:#291017;
 }
 
-/* SECTIONS */
-
-.content-section {
-  padding: 85px 0;
-}
-
+.content-section {padding:85px 0}
 .content-section.alt {
-  background: #0e1117;
-  border-top: 1px solid #222733;
-  border-bottom: 1px solid #222733;
+  background:#0e1117;
+  border-top:1px solid #222733;
+  border-bottom:1px solid #222733;
 }
-
 .section-head {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 45px;
+  text-align:center;
+  max-width:800px;
+  margin:0 auto 45px;
 }
-
 .section-head h2 {
-  font-size: clamp(28px, 5vw, 43px);
-  line-height: 1.2;
-  margin: 15px 0;
-  text-transform: uppercase;
+  font-size:clamp(28px,5vw,43px);
+  line-height:1.2;
+  margin:15px 0;
+  text-transform:uppercase;
 }
-
 .section-head p {
-  color: var(--muted);
-  font-size: 15px;
+  color:var(--muted);
+  font-size:15px;
 }
-
 .redline {
-  width: 80px;
-  height: 4px;
-  background: var(--red);
-  margin: 25px auto 0;
-  border-radius: 5px;
+  width:80px;
+  height:4px;
+  background:var(--red);
+  margin:25px auto 0;
+  border-radius:5px;
 }
-
-/* GRILLE DES COLLECTIONS */
 
 .collection-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 25px;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:25px;
 }
-
 .collection-card {
-  display: flex;
-  flex-direction: column;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 15px;
-  overflow: hidden;
-  transition: .25s;
+  display:flex;
+  flex-direction:column;
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:15px;
+  overflow:hidden;
+  transition:.25s;
+  cursor:pointer;
 }
-
-.collection-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--red);
-  box-shadow: 0 15px 35px rgba(237,23,38,.12);
+.collection-card:hover,
+.collection-card:focus-visible {
+  transform:translateY(-5px);
+  border-color:var(--red);
+  box-shadow:0 15px 35px rgba(237,23,38,.12);
 }
-
+.collection-card:focus-visible {
+  outline:2px solid var(--red);
+  outline-offset:3px;
+}
 .collection-preview {
-  position: relative;
-  aspect-ratio: 9 / 10;
-  min-height: 270px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 28px;
-  background:
-    radial-gradient(
-      ellipse at 50% 25%,
-      #431b26,
-      #161922 75%
-    );
-  background-size: cover;
-  background-position: center;
-  isolation: isolate;
+  position:relative;
+  aspect-ratio:9/10;
+  min-height:270px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:28px;
+  background:radial-gradient(
+    ellipse at 50% 25%,
+    #431b26,#161922 75%
+  );
+  isolation:isolate;
 }
-
 .collection-preview::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(
-    180deg,
-    rgba(0,0,0,.05),
-    rgba(0,0,0,.85)
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:linear-gradient(
+    180deg,rgba(0,0,0,.05),rgba(0,0,0,.85)
   );
 }
-
 .collection-number {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  color: rgba(255,255,255,.45);
-  font-size: 43px;
-  font-weight: 900;
+  position:absolute;
+  top:20px;
+  right:25px;
+  color:rgba(255,255,255,.45);
+  font-size:43px;
+  font-weight:900;
 }
-
 .collection-preview h3 {
-  margin: 0;
-  font-size: clamp(24px, 4vw, 34px);
-  line-height: 1.2;
-  text-transform: uppercase;
-  text-shadow: 0 3px 12px #000;
+  margin:0;
+  font-size:clamp(24px,4vw,34px);
+  line-height:1.2;
+  text-transform:uppercase;
+  text-shadow:0 3px 12px #000;
 }
-
 .collection-info {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  padding: 27px;
+  display:flex;
+  flex-direction:column;
+  flex:1;
+  padding:27px;
 }
-
 .collection-info p {
-  color: var(--muted);
-  font-size: 14px;
-  margin: 0 0 24px;
-  flex: 1;
+  color:var(--muted);
+  font-size:14px;
+  margin:0 0 24px;
+  flex:1;
 }
-
 .collection-label {
-  color: var(--red);
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  margin-bottom: 14px;
+  color:var(--red);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:2px;
+  margin-bottom:14px;
 }
-
 .status {
-  display: inline-block;
-  align-self: flex-start;
-  color: #ff929c;
-  border: 1px solid #81313b;
-  border-radius: 5px;
-  padding: 9px 13px;
-  font-size: 11px;
-  font-weight: 800;
+  display:inline-block;
+  align-self:flex-start;
+  color:#ff929c;
+  border:1px solid #81313b;
+  border-radius:5px;
+  padding:9px 13px;
+  font-size:11px;
+  font-weight:800;
 }
-
-/* BANDEAU D'INFORMATION */
 
 .notice {
-  max-width: 950px;
-  margin: auto;
-  padding: 45px 35px;
-  border: 1px solid #713039;
-  border-radius: 15px;
-  background:
-    radial-gradient(
-      ellipse at top,
-      #32141b,
-      #11141a 80%
-    );
-  text-align: center;
+  max-width:950px;
+  margin:auto;
+  padding:45px 35px;
+  border:1px solid #713039;
+  border-radius:15px;
+  background:radial-gradient(
+    ellipse at top,#32141b,#11141a 80%
+  );
+  text-align:center;
 }
-
 .notice h2 {
-  font-size: clamp(25px, 5vw, 37px);
-  text-transform: uppercase;
+  font-size:clamp(25px,5vw,37px);
+  text-transform:uppercase;
 }
-
 .notice p {
-  color: #b8bdc7;
-  max-width: 760px;
-  margin: 16px auto;
+  color:#b8bdc7;
+  max-width:760px;
+  margin:16px auto;
 }
-
-/* FOOTER */
-
 footer {
-  background: #07080b;
-  border-top: 1px solid var(--line);
-  text-align: center;
-  padding: 40px 20px;
-  color: var(--muted);
-  font-size: 12px;
+  background:#07080b;
+  border-top:1px solid var(--line);
+  text-align:center;
+  padding:40px 20px;
+  color:var(--muted);
+  font-size:12px;
 }
-
 footer strong {
-  color: var(--white);
-  display: block;
-  margin-bottom: 12px;
+  color:var(--white);
+  display:block;
+  margin-bottom:12px;
 }
-
 .footer-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 22px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+  margin-top:22px;
 }
+.footer-links a:hover {color:var(--red)}
 
-.footer-links a:hover {
-  color: var(--red);
-}
-
-/* MOBILE */
-
-@media (max-width: 700px) {
+@media(max-width:700px) {
   .header-inner {
-    justify-content: center;
-    text-align: center;
+    justify-content:center;
+    text-align:center;
   }
-
-  nav {
-    justify-content: center;
-  }
-
-  .hero {
-    min-height: 440px;
-    padding: 75px 18px;
-  }
-
-  .content-section {
-    padding: 60px 0;
-  }
-
-  .collection-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .collection-preview {
-    min-height: 0;
-  }
-
-  .notice {
-    padding: 35px 22px;
-  }
+  nav {justify-content:center}
+  .hero {min-height:440px;padding:75px 18px}
+  .content-section {padding:60px 0}
+  .collection-grid {grid-template-columns:1fr}
+  .collection-preview {min-height:0}
+  .notice {padding:35px 22px}
 }
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  .collection-card,
-  .cta {
-    transition: none;
-  }
+@media(prefers-reduced-motion:reduce) {
+  html {scroll-behavior:auto}
+  .collection-card,.cta {transition:none}
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-
 <header>
   <div class="wrap header-inner">
-
     <a href="index.html" class="brand">
       FOND<span>ECRAN</span>BYALEXIS
     </a>
-
     <nav>
       <a href="index.html">ACCUEIL</a>
       <a href="fba-wallpapers.html">WALLPAPERS</a>
       <a href="fba-secours.html">FBA SECOURS</a>
       <a href="fba-studio.html">FBA STUDIO</a>
     </nav>
-
   </div>
 </header>
 
 <main>
 
-<!-- PRÉSENTATION DE L'UNIVERS -->
-
 <section class="hero">
   <div class="hero-content">
-
     <div class="eyebrow">
       FBA WALLPAPERS / SECOURS & INTERVENTION
     </div>
-
-    <h1>
-      SECOURS <span>& INTERVENTION</span>
-    </h1>
-
+    <h1>SECOURS <span>& INTERVENTION</span></h1>
     <p>
-      Plongez au cœur de l'action avec
-      des fonds d'écran consacrés
-      aux véhicules d'urgence,
-      aux équipes de secours,
-      aux interventions aériennes et maritimes
+      Plongez au cœur de l'action avec des fonds d'écran
+      consacrés aux véhicules d'urgence, aux équipes de
+      secours, aux interventions aériennes et maritimes
       et aux unités spécialisées.
     </p>
-
     <div class="hero-actions">
-
       <a href="#collections" class="cta">
         EXPLORER LES COLLECTIONS
       </a>
-
-      <a href="fba-wallpapers.html"
-         class="cta secondary">
+      <a href="fba-wallpapers.html" class="cta secondary">
         RETOUR AUX WALLPAPERS
       </a>
-
     </div>
-
   </div>
 </section>
 
-
-<!-- COLLECTIONS SECOURS & INTERVENTION -->
-
 <section class="content-section" id="collections">
   <div class="wrap">
-
     <div class="section-head">
       <div class="eyebrow">
         FBA WALLPAPERS / UNIVERS SECOURS
       </div>
-
       <h2>
-        NOS COLLECTIONS
-        <span>D'INTERVENTION</span>
+        NOS COLLECTIONS <span>D'INTERVENTION</span>
       </h2>
-
       <p>
-        Quatre collections consacrées
-        aux véhicules, aux professionnels
-        et aux moyens d'intervention
+        Quatre collections consacrées aux véhicules,
+        aux professionnels et aux moyens d'intervention
         mobilisés pour protéger et secourir.
       </p>
-
       <div class="redline"></div>
     </div>
 
     <div class="collection-grid">
 
-      <!-- COLLECTION 01 : SAPEURS-POMPIERS -->
-
-      <article class="collection-card">
+      <!-- COLLECTION 01 -->
+      <a class="collection-card"
+         href="fba-wallpapers-pompiers.html">
 
         <div class="collection-preview">
           <span class="collection-number">01</span>
-
-          <h3>
-            SAPEURS-POMPIERS
-            & INCENDIE
-          </h3>
+          <h3>SAPEURS-POMPIERS<br>& INCENDIE</h3>
         </div>
 
         <div class="collection-info">
-
           <p>
-            Camions de pompiers,
-            fourgons pompe-tonne,
-            échelles aériennes,
-            véhicules de secours
-            et équipes engagées
-            dans la lutte contre
+            Camions de pompiers, fourgons pompe-tonne,
+            échelles aériennes, véhicules de secours
+            et équipes engagées dans la lutte contre
             les incendies.
           </p>
-
           <div class="collection-label">
             FBA WALLPAPERS PREMIUM
           </div>
-
           <span class="status">
             COLLECTION EN PRÉPARATION
           </span>
-
         </div>
-      </article>
+      </a>
 
-      <!-- COLLECTION 02 : SECOURS MÉDICAUX -->
-
-      <article class="collection-card">
+      <!-- COLLECTION 02 -->
+      <a class="collection-card"
+         href="fba-wallpapers-ambulances.html">
 
         <div class="collection-preview">
           <span class="collection-number">02</span>
-
-          <h3>
-            AMBULANCES
-            & SECOURS MÉDICAUX
-          </h3>
+          <h3>AMBULANCES<br>& SECOURS MÉDICAUX</h3>
         </div>
 
         <div class="collection-info">
-
           <p>
-            Ambulances,
-            véhicules du SAMU,
-            unités SMUR,
-            secours d'urgence
-            et équipements utilisés
-            pour la prise en charge
-            des patients et des victimes.
+            Ambulances, véhicules du SAMU, unités SMUR,
+            secours d'urgence et équipements utilisés
+            pour la prise en charge des patients
+            et des victimes.
           </p>
-
           <div class="collection-label">
             FBA WALLPAPERS PREMIUM
           </div>
-
           <span class="status">
             COLLECTION EN PRÉPARATION
           </span>
-
         </div>
-      </article>
+      </a>
 
-      <!-- COLLECTION 03 : SECOURS AÉRIENS ET MARITIMES -->
-
-      <article class="collection-card">
+      <!-- COLLECTION 03 -->
+      <a class="collection-card"
+         href="fba-wallpapers-secours-aeriens-maritimes.html">
 
         <div class="collection-preview">
           <span class="collection-number">03</span>
-
-          <h3>
-            SECOURS AÉRIENS
-            & MARITIMES
-          </h3>
+          <h3>SECOURS AÉRIENS<br>& MARITIMES</h3>
         </div>
 
         <div class="collection-info">
-
           <p>
-            Hélicoptères de secours,
-            appareils de recherche
-            et de sauvetage,
-            vedettes de sauvetage,
-            navires spécialisés
-            et interventions
+            Hélicoptères de secours, appareils de
+            recherche et de sauvetage, vedettes,
+            navires spécialisés et interventions
             en mer ou en montagne.
           </p>
-
           <div class="collection-label">
             FBA WALLPAPERS PREMIUM
           </div>
-
           <span class="status">
             COLLECTION EN PRÉPARATION
           </span>
-
         </div>
-      </article>
+      </a>
 
-      <!-- COLLECTION 04 : INTERVENTIONS SPÉCIALISÉES -->
-
-      <article class="collection-card">
+      <!-- COLLECTION 04 -->
+      <a class="collection-card"
+         href="fba-wallpapers-interventions-specialisees.html">
 
         <div class="collection-preview">
           <span class="collection-number">04</span>
-
-          <h3>
-            INTERVENTIONS
-            SPÉCIALISÉES
-          </h3>
+          <h3>INTERVENTIONS<br>SPÉCIALISÉES</h3>
         </div>
 
         <div class="collection-info">
-
           <p>
-            Secours en milieu périlleux,
-            interventions en montagne,
-            équipes cynotechniques,
-            secours aquatiques,
-            unités de déblaiement
-            et moyens techniques
-            d'intervention spécialisés.
+            Secours en milieu périlleux, interventions
+            en montagne, équipes cynotechniques,
+            secours aquatiques, unités de déblaiement
+            et moyens techniques spécialisés.
           </p>
-
           <div class="collection-label">
             FBA WALLPAPERS PREMIUM
           </div>
-
           <span class="status">
             COLLECTION EN PRÉPARATION
           </span>
-
         </div>
-      </article>
+      </a>
 
     </div>
   </div>
 </section>
 
-
-<!-- PRÉSENTATION DE LA COLLECTION -->
-
 <section class="content-section alt">
   <div class="wrap">
-
     <div class="section-head">
-
       <div class="eyebrow">
         FBA WALLPAPERS / NOTRE VISION
       </div>
-
-      <h2>
-        AU CŒUR <span>DE L'ACTION</span>
-      </h2>
-
+      <h2>AU CŒUR <span>DE L'ACTION</span></h2>
       <p>
-        Des créations visuelles consacrées
-        aux moyens d'intervention
-        et à celles et ceux qui
-        assurent les missions de secours.
+        Des créations visuelles consacrées aux moyens
+        d'intervention et à celles et ceux qui assurent
+        les missions de secours.
       </p>
-
       <div class="redline"></div>
-
     </div>
 
     <div class="notice">
-
-      <div class="eyebrow">
-        FBA WALLPAPERS PREMIUM
-      </div>
-
-      <h2>
-        DES FONDS D'ÉCRAN
-        <span>IMMERSIFS</span>
-      </h2>
-
+      <div class="eyebrow">FBA WALLPAPERS PREMIUM</div>
+      <h2>DES FONDS D'ÉCRAN <span>IMMERSIFS</span></h2>
       <p>
-        Les prochaines collections
-        proposeront des fonds d'écran
-        verticaux au format 9:16,
-        adaptés notamment
-        aux smartphones.
+        Les prochaines collections proposeront des fonds
+        d'écran verticaux au format 9:16, adaptés
+        notamment aux smartphones.
       </p>
-
       <p>
-        Les visuels pourront mettre
-        en scène des véhicules
-        d'intervention, des équipements
-        techniques et des ambiances
-        réalistes inspirées du monde
-        du secours.
+        Les visuels pourront mettre en scène des véhicules
+        d'intervention, des équipements techniques
+        et des ambiances réalistes inspirées
+        du monde du secours.
       </p>
-
       <p>
-        Les aperçus publics seront
-        présentés en résolution réduite
-        avec un filigrane.
-        Les fichiers originaux
+        Les aperçus publics seront présentés en résolution
+        réduite avec un filigrane. Les fichiers originaux
         haute définition resteront privés.
       </p>
-
       <p>
-        Lorsque la boutique sera
-        opérationnelle, les commandes
-        pourront être effectuées
-        avec un paiement sécurisé,
-        avant la mise à disposition
-        des fichiers numériques.
+        Lorsque la boutique sera opérationnelle,
+        les visiteurs pourront ajouter leurs créations
+        au panier sur FBA Wallpapers, puis payer
+        de manière sécurisée avant d'accéder
+        aux fichiers numériques.
       </p>
-
       <div class="hero-actions">
-
-        <a href="fba-wallpapers.html"
-           class="cta">
+        <a href="fba-wallpapers.html" class="cta">
           TOUTES LES COLLECTIONS
         </a>
-
-        <a href="fba-secours.html"
-           class="cta secondary">
+        <a href="fba-secours.html" class="cta secondary">
           DÉCOUVRIR FBA SECOURS
         </a>
-
       </div>
-
     </div>
   </div>
 </section>
 
 </main>
 
-
-<!-- PIED DE PAGE -->
-
 <footer>
   <div class="wrap">
-
-    <strong>
-      FONDECRANBYALEXIS
-    </strong>
-
-    <div>
-      FBA WALLPAPERS —
-      SECOURS & INTERVENTION
-    </div>
-
-    <div>
-      © 2026 — Tous droits réservés.
-    </div>
+    <strong>FONDECRANBYALEXIS</strong>
+    <div>FBA WALLPAPERS — SECOURS & INTERVENTION</div>
+    <div>© 2026 — Tous droits réservés.</div>
 
     <div class="footer-links">
-
-      <a href="index.html">
-        Accueil
-      </a>
-
-      <a href="fba-wallpapers.html">
-        Wallpapers
-      </a>
-
-      <a href="fba-secours.html">
-        FBA Secours
-      </a>
-
-      <a href="#collections">
-        Collections
-      </a>
-
+      <a href="index.html">Accueil</a>
+      <a href="fba-wallpapers.html">Wallpapers</a>
+      <a href="fba-secours.html">FBA Secours</a>
+      <a href="#collections">Collections</a>
     </div>
-
   </div>
 </footer>
+
+<!-- FBA Wallpapers - Actualisation navigation Secours et Intervention - 10/11/2026 -->
 
 </body>
 </html>
