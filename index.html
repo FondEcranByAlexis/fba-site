@@ -565,6 +565,27 @@ footer {
     transform: none;
   }
 }
+
+/* Navigation latérale FBA — prototype */
+.fba-menu-toggle{display:flex;flex-direction:column;justify-content:center;gap:5px;width:48px;height:46px;padding:12px;background:#171c28;border:1px solid #3c4555;border-radius:12px;cursor:pointer;position:relative;z-index:102}
+.fba-menu-toggle span{height:2px;width:100%;background:#f5f6f8;border-radius:2px;transition:transform .2s,opacity .2s}
+.fba-menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(7px) rotate(45deg)}
+.fba-menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.fba-menu-toggle[aria-expanded="true"] span:last-child{transform:translateY(-7px) rotate(-45deg)}
+.fba-menu-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:98}
+.fba-menu-panel{position:fixed;top:0;right:0;height:100dvh;width:min(390px,92vw);overflow-y:auto;overscroll-behavior:contain;background:#111723;border-left:1px solid #344052;z-index:99;padding:92px 24px 30px;box-shadow:-18px 0 45px #0008}
+.fba-menu-panel[hidden],.fba-menu-backdrop[hidden]{display:none}
+.fba-menu-panel a,.fba-menu-panel summary{display:block;padding:13px 10px;color:#f5f6f8;border-radius:8px;font-size:15px;cursor:pointer}
+.fba-menu-panel a:hover,.fba-menu-panel summary:hover,.fba-menu-panel a:focus-visible{background:#273244}
+.fba-menu-panel details{border-top:1px solid #303b4b}
+.fba-menu-panel details a{padding-left:28px;color:#d6deed}
+.fba-menu-panel summary{font-weight:700}
+.fba-menu-panel .fba-menu-label{font-size:12px;letter-spacing:2px;color:#aab5c9;text-transform:uppercase;margin:0 0 12px}
+.fba-menu-search{width:100%;background:#080d16;border:1px solid #47566d;border-radius:10px;color:white;padding:13px;margin-bottom:18px;font:inherit}
+.fba-menu-panel .fba-no-results{color:#b9c3d3;font-size:14px}
+body.fba-menu-open{overflow:hidden}
+@media(prefers-reduced-motion:reduce){.fba-menu-toggle span{transition:none}}
+
 </style>
 </head>
 
@@ -577,16 +598,44 @@ footer {
       FBA<span>.</span>
     </a>
 
-    <nav aria-label="Navigation principale">
-      <a href="#univers">Nos univers</a>
-      <a href="#wallpapers">Wallpapers</a>
-      <a href="#apropos">À propos</a>
-      <a href="#contact">Contact</a>
-      <a href="boutique.html">Boutique</a>
-    </nav>
+    <button class="fba-menu-toggle" id="fbaMenuToggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="fbaMenuPanel"><span></span><span></span><span></span></button>
 
   </div>
 </header>
+
+<div class="fba-menu-backdrop" id="fbaMenuBackdrop" hidden></div>
+<aside class="fba-menu-panel" id="fbaMenuPanel" aria-label="Menu FBA" inert hidden>
+  <p class="fba-menu-label">Explorer FBA</p>
+  <label for="fbaMenuSearch" class="fba-menu-label">Rechercher une rubrique</label>
+  <input class="fba-menu-search" id="fbaMenuSearch" type="search" placeholder="Pilotes, jeux, collections…" autocomplete="off">
+  <div id="fbaMenuItems">
+    <a href="index.html">Accueil</a>
+    <details open><summary>FBA Wallpapers</summary>
+      <a href="fba-wallpapers.html">Toutes les collections</a>
+      <a href="fba-wallpapers-f1.html">Formule 1 — 22 pilotes</a>
+      <a href="boutique.html">Boutique et panier</a>
+    </details>
+    <details><summary>FBA Games</summary>
+      <a href="fba-games.html">Découvrir le studio (bientôt)</a>
+      <a href="fba-games.html#business-empire">Business Empire Simulator (bientôt)</a>
+    </details>
+    <details><summary>Nos univers</summary>
+      <a href="metiers.html">Métiers</a>
+      <a href="fba-studio.html">Studio</a>
+      <a href="fba-secours.html">Secours</a>
+      <a href="fba-force-ordre.html">Forces de l'ordre</a>
+      <a href="fba-btp.html">BTP</a>
+      <a href="fba-defense.html">Défense</a>
+      <a href="metiers-insolites.html">Métiers insolites</a>
+      <a href="fba-reportage.html">Reportage</a>
+      <a href="fba-productions.html">Productions</a>
+    </details>
+    <a href="index.html#apropos">À propos</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+  <p class="fba-no-results" id="fbaNoResults" hidden>Aucune rubrique trouvée.</p>
+</aside>
+
 
 <main>
 
@@ -990,6 +1039,56 @@ document.querySelectorAll(".logo-box img")
     }
 
   });
+</script>
+
+
+<script>
+(function(){
+  const toggle=document.getElementById('fbaMenuToggle');
+  const panel=document.getElementById('fbaMenuPanel');
+  const backdrop=document.getElementById('fbaMenuBackdrop');
+  const search=document.getElementById('fbaMenuSearch');
+  const items=document.getElementById('fbaMenuItems');
+  const noResults=document.getElementById('fbaNoResults');
+  let previousFocus=null;
+  function setOpen(open){
+    if(open)previousFocus=document.activeElement;
+    panel.hidden=!open;backdrop.hidden=!open;panel.inert=!open;
+    toggle.setAttribute('aria-expanded',String(open));
+    toggle.setAttribute('aria-label',open?'Fermer le menu':'Ouvrir le menu');
+    document.body.classList.toggle('fba-menu-open',open);
+    if(open)search.focus();else if(previousFocus)previousFocus.focus();
+  }
+  toggle.addEventListener('click',()=>setOpen(panel.hidden));
+  backdrop.addEventListener('click',()=>setOpen(false));
+  document.addEventListener('keydown',event=>{
+    if(panel.hidden)return;
+    if(event.key==='Escape'){setOpen(false);return;}
+    if(event.key==='Tab'){
+      const focusables=[toggle,...panel.querySelectorAll('input,summary,a[href]')].filter(el=>el.getClientRects().length);
+      const i=focusables.indexOf(document.activeElement);
+      if(event.shiftKey&&i===0){event.preventDefault();focusables[focusables.length-1].focus();}
+      else if(!event.shiftKey&&i===focusables.length-1){event.preventDefault();focusables[0].focus();}
+    }
+  });
+  panel.addEventListener('click',event=>{if(event.target.closest('a'))setOpen(false);});
+  search.addEventListener('input',()=>{
+    const term=search.value.trim().toLocaleLowerCase('fr');
+    let visible=0;
+    for(const child of items.children){
+      if(child.tagName==='DETAILS'){
+        const links=[...child.querySelectorAll('a')];
+        const summary=child.querySelector('summary');
+        const parentMatch=summary.textContent.toLocaleLowerCase('fr').includes(term);
+        child.hidden=!parentMatch&&!links.some(a=>a.textContent.toLocaleLowerCase('fr').includes(term));
+        links.forEach(a=>a.hidden=!!term&&!parentMatch&&!a.textContent.toLocaleLowerCase('fr').includes(term));
+        if(term&&!child.hidden)child.open=true;
+      }else child.hidden=!!term&&!child.textContent.toLocaleLowerCase('fr').includes(term);
+      if(!child.hidden)visible++;
+    }
+    noResults.hidden=visible!==0;
+  });
+})();
 </script>
 
 </body>
