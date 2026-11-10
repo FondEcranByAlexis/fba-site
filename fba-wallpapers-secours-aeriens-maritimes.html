@@ -1,0 +1,999 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08090d">
+
+<meta name="description" content="FBA Wallpapers : collection premium Secours aériens et maritimes. Hélicoptères de sauvetage, SNSM, navires de secours et interventions en mer.">
+
+<title>Secours aériens & maritimes | FBA Wallpapers</title>
+
+<style>
+:root {
+  --bg: #08090d;
+  --panel: #12151c;
+  --red: #ed1726;
+  --white: #f5f6f8;
+  --muted: #a8adb8;
+  --line: #303541;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrap {
+  width: min(1180px, 92%);
+  margin: auto;
+}
+
+/* NAVIGATION */
+
+header {
+  background: #0c0e13;
+  border-bottom: 1px solid var(--line);
+  padding: 22px 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.brand span {
+  color: var(--red);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+nav a {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: bold;
+  transition: color .2s;
+}
+
+nav a:hover {
+  color: var(--red);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  padding: 90px 20px;
+  text-align: center;
+  background:
+    radial-gradient(
+      ellipse at 50% 25%,
+      #401a2a 0%,
+      #151c2a 48%,
+      #08090d 88%
+    );
+  border-bottom: 1px solid #51232b;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.eyebrow {
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(38px, 7vw, 76px);
+  line-height: 1.08;
+  margin: 20px 0;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+h1 span,
+h2 span {
+  color: var(--red);
+}
+
+.hero p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #c5c9d1;
+  font-size: 16px;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.cta {
+  display: inline-block;
+  background: var(--red);
+  border: 1px solid var(--red);
+  padding: 14px 24px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .7px;
+  transition: .2s;
+}
+
+.cta:hover {
+  background: #ff4050;
+}
+
+.cta.secondary {
+  background: transparent;
+  border-color: #666b76;
+}
+
+.cta.secondary:hover {
+  border-color: var(--red);
+  background: #291017;
+}
+
+/* SECTIONS */
+
+.content-section {
+  padding: 85px 0;
+}
+
+.content-section.alt {
+  background: #0e1117;
+  border-top: 1px solid #222733;
+  border-bottom: 1px solid #222733;
+}
+
+.section-head {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 45px;
+}
+
+.section-head h2 {
+  font-size: clamp(28px, 5vw, 43px);
+  line-height: 1.2;
+  margin: 15px 0;
+  text-transform: uppercase;
+}
+
+.section-head p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.redline {
+  width: 80px;
+  height: 4px;
+  background: var(--red);
+  margin: 25px auto 0;
+  border-radius: 5px;
+}
+
+/* GRILLE DES FONDS D'ÉCRAN */
+
+.wallpaper-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.wallpaper-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  transition: .25s;
+}
+
+.wallpaper-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--red);
+  box-shadow:
+    0 15px 35px rgba(237,23,38,.12);
+}
+
+.wallpaper-preview {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 25px;
+  text-align: center;
+  background:
+    radial-gradient(
+      ellipse at 50% 35%,
+      #23384c,
+      #161922 75%
+    );
+}
+
+.preview-number {
+  position: absolute;
+  top: 20px;
+  right: 23px;
+  font-size: 40px;
+  font-weight: 900;
+  color: rgba(255,255,255,.35);
+}
+
+.wallpaper-preview strong {
+  font-size: clamp(22px, 3vw, 29px);
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.wallpaper-preview small {
+  color: #bfc4cf;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.wallpaper-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 25px;
+}
+
+.wallpaper-info h3 {
+  font-size: 20px;
+  margin: 0 0 12px;
+}
+
+.wallpaper-info p {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 0 22px;
+  flex: 1;
+}
+
+.collection-label {
+  color: var(--red);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.status {
+  display: inline-block;
+  align-self: flex-start;
+  color: #ff929c;
+  border: 1px solid #81313b;
+  border-radius: 5px;
+  padding: 9px 13px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* INFORMATIONS */
+
+.notice {
+  max-width: 950px;
+  margin: auto;
+  padding: 45px 35px;
+  border: 1px solid #713039;
+  border-radius: 15px;
+  background:
+    radial-gradient(
+      ellipse at top,
+      #32141b,
+      #11141a 80%
+    );
+  text-align: center;
+}
+
+.notice h2 {
+  font-size: clamp(25px, 5vw, 37px);
+  text-transform: uppercase;
+}
+
+.notice p {
+  color: #b8bdc7;
+  max-width: 760px;
+  margin: 16px auto;
+}
+
+/* FOOTER */
+
+footer {
+  background: #07080b;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+footer strong {
+  color: var(--white);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 22px;
+}
+
+.footer-links a:hover {
+  color: var(--red);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .wallpaper-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .header-inner {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .hero {
+    min-height: 440px;
+    padding: 75px 18px;
+  }
+
+  .content-section {
+    padding: 60px 0;
+  }
+
+  .wallpaper-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wallpaper-preview {
+    min-height: 0;
+  }
+
+  .notice {
+    padding: 35px 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .wallpaper-card,
+  .cta {
+    transition: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+  <div class="wrap header-inner">
+
+    <a href="index.html" class="brand">
+      FOND<span>ECRAN</span>BYALEXIS
+    </a>
+
+    <nav>
+      <a href="index.html">ACCUEIL</a>
+      <a href="fba-wallpapers.html">
+        WALLPAPERS
+      </a>
+      <a href="fba-wallpapers-secours.html">
+        SECOURS & INTERVENTION
+      </a>
+      <a href="fba-secours.html">
+        FBA SECOURS
+      </a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      FBA WALLPAPERS / COLLECTION 03
+    </div>
+
+    <h1>
+      SECOURS AÉRIENS
+      <span>& MARITIMES</span>
+    </h1>
+
+    <p>
+      Découvrez les moyens de sauvetage
+      engagés dans les airs et en mer.
+      Hélicoptères de secours,
+      navires de sauvetage,
+      hélitreuillages et interventions
+      en milieu maritime.
+    </p>
+
+    <div class="hero-actions">
+
+      <a href="#aeriens" class="cta">
+        EXPLORER LES FONDS D'ÉCRAN
+      </a>
+
+      <a href="fba-wallpapers-secours.html"
+         class="cta secondary">
+        RETOUR AUX COLLECTIONS
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SECTION 01 : SECOURS AÉRIENS -->
+
+<section class="content-section" id="aeriens">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 01 / SECOURS AÉRIENS
+      </div>
+
+      <h2>
+        SECOURS <span>AÉRIENS</span>
+      </h2>
+
+      <p>
+        Les hélicoptères de secours
+        engagés dans les missions
+        de sauvetage, d'assistance
+        et d'évacuation des victimes.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- 01 : DRAGON SÉCURITÉ CIVILE -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">01</div>
+          <strong>DRAGON SÉCURITÉ CIVILE</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Dragon — Sécurité civile</h3>
+
+          <p>
+            Un hélicoptère de la
+            Sécurité civile française,
+            reconnaissable à sa livrée
+            rouge et jaune, engagé
+            dans des missions
+            de secours et de sauvetage.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- 02 : SAUVETAGE EN MONTAGNE -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">02</div>
+          <strong>SAUVETAGE EN MONTAGNE</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Hélicoptère de secours en montagne</h3>
+
+          <p>
+            Un appareil de secours
+            évoluant en environnement
+            montagneux, au-dessus
+            des reliefs escarpés,
+            pour assister les équipes
+            de sauvetage.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- 03 : SAUVETAGE EN MER -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">03</div>
+          <strong>HÉLICOPTÈRE DE SAUVETAGE EN MER</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Hélicoptère de secours maritime</h3>
+
+          <p>
+            Un hélicoptère engagé
+            dans une mission de
+            recherche et de sauvetage
+            au-dessus de la mer,
+            dans un environnement
+            maritime exigeant.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 02 : SAUVETAGE MARITIME -->
+
+<section class="content-section alt" id="maritimes">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 02 / SAUVETAGE MARITIME
+      </div>
+
+      <h2>
+        SAUVETAGE <span>MARITIME</span>
+      </h2>
+
+      <p>
+        Découvrez les embarcations
+        et navires spécialisés
+        dans l'assistance et
+        le sauvetage des personnes
+        en difficulté en mer.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- 04 : CANOT SNSM -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">04</div>
+          <strong>CANOT SNSM</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Canot de sauvetage SNSM</h3>
+
+          <p>
+            Un canot de sauvetage
+            de la Société nationale
+            de sauvetage en mer,
+            conçu pour intervenir
+            auprès des personnes
+            et embarcations en détresse.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- 05 : VEDETTE DE SAUVETAGE -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">05</div>
+          <strong>VEDETTE DE SAUVETAGE</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Vedette de sauvetage</h3>
+
+          <p>
+            Une embarcation rapide
+            destinée aux opérations
+            de recherche, d'assistance
+            et de sauvetage,
+            notamment dans les zones
+            côtières.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- 06 : NAVIRE HAUTURIER -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">06</div>
+          <strong>NAVIRE DE SECOURS HAUTURIER</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Navire de secours hauturier</h3>
+
+          <p>
+            Un navire adapté
+            aux opérations d'assistance
+            et de sauvetage au large,
+            capable d'évoluer
+            dans des conditions
+            maritimes difficiles.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 03 : INTERVENTIONS -->
+
+<section class="content-section" id="interventions">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 03 / OPÉRATIONS DE SAUVETAGE
+      </div>
+
+      <h2>
+        INTERVENTIONS
+        <span>AÉRIENNES & MARITIMES</span>
+      </h2>
+
+      <p>
+        Des scènes de sauvetage
+        mettant en valeur
+        les techniques, les équipes
+        et les moyens spécialisés
+        engagés dans les opérations.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- 07 : HÉLITREUILLAGE -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">07</div>
+          <strong>HÉLITREUILLAGE</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Opération d'hélitreuillage</h3>
+
+          <p>
+            Une scène immersive
+            représentant un sauveteur
+            descendu au treuil
+            depuis un hélicoptère
+            pour porter assistance
+            à une personne en difficulté.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- 08 : SAUVETAGE EN MER -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">08</div>
+          <strong>SAUVETAGE EN MER</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Intervention de sauvetage en mer</h3>
+
+          <p>
+            Une composition réaliste
+            consacrée aux sauveteurs
+            intervenant auprès
+            d'une embarcation
+            en difficulté,
+            dans une mer agitée.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- 09 : PLONGEURS SAUVETEURS -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">09</div>
+          <strong>PLONGEURS SAUVETEURS</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Intervention de plongeurs sauveteurs</h3>
+
+          <p>
+            Des plongeurs spécialisés
+            engagés dans une opération
+            de recherche ou de secours
+            en milieu aquatique,
+            avec leurs équipements
+            professionnels.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- INFORMATIONS COMMERCIALES -->
+
+<section class="content-section alt">
+  <div class="wrap">
+
+    <div class="notice">
+
+      <div class="eyebrow">
+        FBA WALLPAPERS PREMIUM
+      </div>
+
+      <h2>
+        L'UNIVERS DU
+        <span>SAUVETAGE</span>
+      </h2>
+
+      <p>
+        Découvrez prochainement
+        des créations originales
+        consacrées aux hélicoptères
+        de secours, aux navires
+        de sauvetage et aux opérations
+        aériennes et maritimes.
+      </p>
+
+      <p>
+        Tous les fonds d'écran
+        seront conçus au format
+        vertical 9:16, adapté
+        aux smartphones.
+      </p>
+
+      <p>
+        Les aperçus publics seront
+        proposés en résolution réduite
+        avec filigrane.
+        Les fichiers originaux
+        haute définition resteront privés.
+      </p>
+
+      <p>
+        Lorsque la boutique sera activée,
+        les visiteurs pourront ajouter
+        les fonds d'écran au panier
+        directement sur FBA Wallpapers,
+        puis effectuer leur commande
+        par paiement sécurisé.
+      </p>
+
+      <p>
+        Les fichiers numériques
+        seront accessibles uniquement
+        après confirmation du paiement.
+      </p>
+
+      <div class="hero-actions">
+
+        <a href="fba-wallpapers-secours.html"
+           class="cta">
+          RETOUR AUX SECOURS
+        </a>
+
+        <a href="fba-wallpapers.html"
+           class="cta secondary">
+          TOUTES LES COLLECTIONS
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="wrap">
+
+    <strong>FONDECRANBYALEXIS</strong>
+
+    <div>
+      FBA WALLPAPERS —
+      SECOURS AÉRIENS & MARITIMES
+    </div>
+
+    <div>
+      © 2026 — Tous droits réservés.
+    </div>
+
+    <div class="footer-links">
+
+      <a href="index.html">
+        Accueil
+      </a>
+
+      <a href="fba-wallpapers.html">
+        Wallpapers
+      </a>
+
+      <a href="fba-wallpapers-secours.html">
+        Secours & Intervention
+      </a>
+
+      <a href="#aeriens">
+        Secours aériens
+      </a>
+
+      <a href="#maritimes">
+        Sauvetage maritime
+      </a>
+
+      <a href="#interventions">
+        Interventions
+      </a>
+
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
