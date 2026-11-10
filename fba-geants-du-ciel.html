@@ -1,0 +1,990 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08090d">
+
+<meta name="description"
+content="Les Géants du Ciel par FBA Wallpapers : Airbus A380, Boeing 747, Antonov An-124, BelugaXL et avions extraordinaires. Fonds d'écran premium 9:16.">
+
+<title>Les Géants du Ciel | FBA Wallpapers</title>
+
+<style>
+:root {
+  --bg: #08090d;
+  --panel: #12151c;
+  --red: #ed1726;
+  --white: #f5f6f8;
+  --muted: #a8adb8;
+  --line: #303541;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 3px solid #ff5964;
+  outline-offset: 4px;
+}
+
+.wrap {
+  width: min(1160px, 92%);
+  margin: auto;
+}
+
+/* HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(8,9,13,.95);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.top {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+}
+
+.brand span,
+h1 span,
+h2 span {
+  color: var(--red);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 22px;
+  font-size: 13px;
+}
+
+nav a:hover {
+  color: var(--red);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 10%,
+      rgba(63,96,155,.32),
+      transparent 65%
+    ),
+    linear-gradient(
+      180deg,
+      #192b43,
+      #08090d
+    );
+
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.eyebrow {
+  color: #ff6673;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(38px,8vw,78px);
+  line-height: 1.08;
+  margin: 20px 0;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  color: #c5c9d2;
+  font-size: 16px;
+}
+
+.slogan {
+  margin-top: 25px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+/* BOUTONS */
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.cta {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 20px;
+  background: var(--red);
+  border: 1px solid var(--red);
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+  transition: background .2s;
+}
+
+.cta:hover {
+  background: #ff3442;
+}
+
+.cta.secondary {
+  background: transparent;
+  border-color: #777d89;
+}
+
+.cta.secondary:hover {
+  background: #222631;
+}
+
+/* SECTIONS */
+
+.content-section {
+  padding: 75px 0;
+}
+
+.content-section.alt {
+  background: #0d1016;
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-head h2 {
+  font-size: clamp(27px,4vw,40px);
+  margin: 12px 0;
+  line-height: 1.2;
+}
+
+.section-head p {
+  max-width: 700px;
+  margin: auto;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.redline {
+  width: 65px;
+  height: 3px;
+  margin: 18px auto 0;
+  background: var(--red);
+}
+
+/* GRILLE WALLPAPERS */
+
+.wallpaper-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 22px;
+}
+
+.wallpaper-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  transition: transform .25s, border-color .25s;
+}
+
+.wallpaper-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--red);
+}
+
+.wallpaper-preview {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  text-align: center;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      #2a405c,
+      #171920 70%
+    );
+
+  border-bottom: 1px solid var(--line);
+}
+
+.wallpaper-preview strong {
+  font-size: 19px;
+  line-height: 1.3;
+  letter-spacing: 1px;
+}
+
+.wallpaper-preview small {
+  margin-top: 12px;
+  color: #ff9ca5;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.preview-number {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  color: rgba(255,255,255,.3);
+  font-size: 32px;
+  font-weight: 900;
+}
+
+/* INFORMATIONS WALLPAPER */
+
+.wallpaper-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+}
+
+.wallpaper-info h3 {
+  font-size: 17px;
+  margin: 0 0 8px;
+}
+
+.wallpaper-info p {
+  flex: 1;
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0 0 18px;
+}
+
+.collection-label {
+  color: #ff9ca5;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.status {
+  display: block;
+  padding: 11px;
+  background: #252932;
+  border: 1px solid #454b57;
+  border-radius: 7px;
+  color: #b5bac5;
+  font-size: 11px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* INFORMATIONS COMMERCIALES */
+
+.notice {
+  padding: 35px 25px;
+  background: #151016;
+  border: 1px solid #713039;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.notice h2 {
+  font-size: clamp(25px,4vw,35px);
+  margin: 12px 0;
+}
+
+.notice p {
+  max-width: 720px;
+  margin: 0 auto 16px;
+  color: #c1c5ce;
+  font-size: 14px;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 32px 15px;
+  text-align: center;
+  color: #858c99;
+  font-size: 13px;
+}
+
+footer strong {
+  color: #ddd;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+  margin-top: 15px;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .wallpaper-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .top {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  nav {
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  .wallpaper-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 430px;
+    padding: 65px 18px;
+  }
+
+  .content-section {
+    padding: 55px 0;
+  }
+
+  .hero-actions .cta {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .wallpaper-card {
+    transition: none;
+  }
+
+  .wallpaper-card:hover {
+    transform: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+  <div class="wrap top">
+
+    <a class="brand" href="index.html">
+      FOND<span>ECRAN</span>BYALEXIS
+    </a>
+
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="fba-wallpapers.html">Wallpapers</a>
+      <a href="fba-wallpapers-aviation.html">Aviation</a>
+      <a href="fba-studio.html">FBA Studio</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      FBA Wallpapers / Aviation / Collection 05
+    </div>
+
+    <h1>
+      LES GÉANTS <span>DU CIEL</span>
+    </h1>
+
+    <p>
+      Des avions de ligne géants
+      aux transporteurs de fret
+      hors normes, découvrez
+      les appareils qui ont repoussé
+      les limites de l'aéronautique
+      par leurs dimensions
+      et leurs performances.
+    </p>
+
+    <div class="slogan">
+      DES PASSIONS À ACCROCHER AUX MURS.
+    </div>
+
+    <div class="hero-actions">
+
+      <a href="#passagers" class="cta">
+        EXPLORER LA COLLECTION
+      </a>
+
+      <a href="fba-wallpapers-aviation.html"
+         class="cta secondary">
+        RETOUR À L'AVIATION
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SECTION 01 : GÉANTS DU TRANSPORT DE PASSAGERS -->
+
+<section class="content-section" id="passagers">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 01 / LES GÉANTS DU CIEL
+      </div>
+
+      <h2>
+        GÉANTS <span>DES PASSAGERS</span>
+      </h2>
+
+      <p>
+        Des avions de ligne aux dimensions
+        impressionnantes, conçus pour
+        transporter des centaines de passagers
+        sur de longues distances.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- AIRBUS A380 -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">01</div>
+          <strong>AIRBUS A380</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Airbus A380</h3>
+
+          <p>
+            Le plus grand avion de ligne
+            de transport de passagers
+            produit en série, reconnaissable
+            à son double pont intégral
+            et à ses quatre réacteurs.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- BOEING 747-8 -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">02</div>
+          <strong>BOEING 747-8</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Boeing 747-8 Intercontinental</h3>
+
+          <p>
+            Dernière génération du célèbre
+            Boeing 747, surnommé
+            la Reine du Ciel,
+            avec son pont supérieur
+            caractéristique et ses
+            quatre moteurs.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- BOEING 777-300ER -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">03</div>
+          <strong>BOEING 777-300ER</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Boeing 777-300ER</h3>
+
+          <p>
+            Avion de ligne long-courrier
+            gros-porteur, célèbre pour
+            ses puissants réacteurs
+            et sa capacité à transporter
+            plusieurs centaines de passagers.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 02 : GÉANTS DU FRET -->
+
+<section class="content-section alt" id="fret">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 02 / LES GÉANTS DU CIEL
+      </div>
+
+      <h2>
+        GÉANTS <span>DU FRET</span>
+      </h2>
+
+      <p>
+        Des transporteurs lourds
+        capables d'acheminer des charges
+        exceptionnelles, des véhicules
+        et des équipements volumineux.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- ANTONOV AN-124 RUSLAN -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">04</div>
+          <strong>ANTONOV AN-124 RUSLAN</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Antonov An-124 Ruslan</h3>
+
+          <p>
+            Avion de transport lourd
+            à quatre réacteurs, doté
+            d'une immense soute
+            et de capacités de chargement
+            adaptées aux marchandises
+            particulièrement volumineuses.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- C-5M SUPER GALAXY -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">05</div>
+          <strong>C-5M SUPER GALAXY</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Lockheed C-5M Super Galaxy</h3>
+
+          <p>
+            Avion de transport militaire
+            stratégique américain,
+            modernisé pour transporter
+            des charges très lourdes
+            sur de grandes distances.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- BOEING 747-8F -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">06</div>
+          <strong>BOEING 747-8F</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Boeing 747-8 Freighter</h3>
+
+          <p>
+            Version cargo du Boeing 747-8,
+            conçue pour le transport
+            aérien de marchandises,
+            avec une grande capacité
+            d'emport et un chargement
+            possible par le nez.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 03 : GÉANTS HORS NORMES -->
+
+<section class="content-section" id="hors-normes">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">
+        COLLECTION 03 / LES GÉANTS DU CIEL
+      </div>
+
+      <h2>
+        GÉANTS <span>HORS NORMES</span>
+      </h2>
+
+      <p>
+        Trois machines extraordinaires,
+        conçues pour accomplir
+        des missions uniques
+        ou repousser les limites
+        des dimensions aéronautiques.
+      </p>
+
+      <div class="redline"></div>
+    </div>
+
+    <div class="wallpaper-grid">
+
+      <!-- AIRBUS BELUGAXL -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">07</div>
+          <strong>AIRBUS BELUGAXL</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Airbus BelugaXL</h3>
+
+          <p>
+            Avion cargo spécialisé,
+            développé pour transporter
+            des éléments volumineux
+            d'avions Airbus entre
+            les différents sites
+            de production européens.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- STRATOLAUNCH ROC -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">08</div>
+          <strong>STRATOLAUNCH ROC</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Stratolaunch Roc</h3>
+
+          <p>
+            Avion à double fuselage
+            et six réacteurs, célèbre
+            pour son envergure record
+            de 117 mètres, développé
+            comme plateforme aérienne
+            de lancement et d'essais.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+      <!-- HUGHES H-4 HERCULES -->
+
+      <article class="wallpaper-card">
+        <div class="wallpaper-preview">
+          <div class="preview-number">09</div>
+          <strong>HUGHES H-4 HERCULES</strong>
+          <small>APERÇU À VENIR</small>
+        </div>
+
+        <div class="wallpaper-info">
+          <h3>Hughes H-4 Hercules</h3>
+
+          <p>
+            Hydravion géant américain
+            à huit moteurs, surnommé
+            Spruce Goose, célèbre
+            pour son envergure
+            exceptionnelle et son
+            unique vol en novembre 1947.
+          </p>
+
+          <div class="collection-label">
+            FBA WALLPAPERS PREMIUM
+          </div>
+
+          <span class="status">
+            BIENTÔT DISPONIBLE
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- INFORMATIONS COMMERCIALES -->
+
+<section class="content-section alt">
+  <div class="wrap">
+
+    <div class="notice">
+
+      <div class="eyebrow">
+        FBA WALLPAPERS PREMIUM
+      </div>
+
+      <h2>
+        L'AVIATION <span>À GRANDE ÉCHELLE</span>
+      </h2>
+
+      <p>
+        Découvrez prochainement
+        des créations originales
+        consacrées aux plus
+        impressionnants géants du ciel,
+        au format vertical 9:16.
+      </p>
+
+      <p>
+        Les aperçus publics seront
+        proposés en basse résolution
+        avec filigrane.
+        Les fichiers originaux
+        haute définition resteront
+        dans un espace privé.
+      </p>
+
+      <p>
+        Lorsque la boutique sera activée,
+        les visiteurs pourront ajouter
+        leurs fonds d'écran au panier
+        et finaliser leur commande
+        par paiement sécurisé.
+      </p>
+
+      <p>
+        Les fichiers numériques
+        seront accessibles uniquement
+        après confirmation du paiement.
+      </p>
+
+      <div class="hero-actions">
+
+        <a href="fba-wallpapers-aviation.html"
+           class="cta">
+          RETOUR À L'AVIATION
+        </a>
+
+        <a href="fba-wallpapers.html"
+           class="cta secondary">
+          TOUTES LES COLLECTIONS
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="wrap">
+
+    <strong>FONDECRANBYALEXIS</strong>
+
+    <div>
+      FBA WALLPAPERS — LES GÉANTS DU CIEL
+    </div>
+
+    <div>
+      © 2026 — Tous droits réservés.
+    </div>
+
+    <div class="footer-links">
+
+      <a href="index.html">
+        Accueil
+      </a>
+
+      <a href="fba-wallpapers.html">
+        Wallpapers
+      </a>
+
+      <a href="fba-wallpapers-aviation.html">
+        Univers Aviation
+      </a>
+
+      <a href="#passagers">
+        Géants des passagers
+      </a>
+
+      <a href="#fret">
+        Géants du fret
+      </a>
+
+      <a href="#hors-normes">
+        Géants hors normes
+      </a>
+
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
