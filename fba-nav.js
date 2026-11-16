@@ -1,6 +1,7 @@
 (()=>{'use strict';
 const sections=[
 {title:'FBA Wallpapers',links:[['Toutes les collections','fba-wallpapers.html'],['Formule 1 — 22 pilotes','fba-wallpapers-f1.html'],['Éditions limitées','editions-limitees.html'],['Boutique et panier','boutique.html']]},
+{title:'Téléchargements gratuits',links:[['FBA Free — Tous les fonds','fba-gratuit.html'],['FBA Stars — À venir','fba-gratuit.html#stars']]},
 {title:'FBA Games',links:[['Studio FBA Games (en préparation)',null],['Business Empire Simulator (en préparation)',null]]},
 {title:'Nos univers',links:[['Métiers','metiers.html'],['Studio','fba-studio.html'],['Secours','fba-secours.html'],['Forces de l’ordre','fba-force-ordre.html'],['BTP','fba-btp.html'],['Défense','fba-defense.html'],['Métiers insolites','metiers-insolites.html'],['Reportage','fba-reportage.html'],['Productions','fba-productions.html']]}
 ];
